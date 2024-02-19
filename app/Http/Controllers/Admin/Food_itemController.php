@@ -19,16 +19,12 @@ class Food_itemController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index($restaurant_id)
     {
-        $perPage = 10;
-        if($request->per_page){
-            $perPage= $request->per_page;
-        }
-        $food_items= Food_item::where('restaurant_id', '=',  'restaurant->id');
-        $food_items= Food_item::paginate($perPage);
+
+        $food_items= Food_item::where('restaurant_id', $restaurant_id)->get();
         
-        return view('admin.food_items.index', compact('food_items'));
+        return view('admin.food_items.index', compact('food_items','restaurant_id'));
     }
 
     /**
@@ -36,10 +32,9 @@ class Food_itemController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($restaurant_id)
     {
-        $food_items= Food_item::all();
-        return view('admin.food_items.create', compact('food_items'));
+        return view('admin.food_items.create', compact('restaurant_id'));
     }
 
     /**
@@ -48,11 +43,13 @@ class Food_itemController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreFood_itemRequest $request)
+    public function store(StoreFood_itemRequest $request, $restaurant_id)
     {
         $form_data = $request->validated();
         $food_item = new Food_item();
+        $food_item->restaurant_id = $restaurant_id;
         $food_item->fill($form_data);
+
 
        //controllo se c'è img e aggiungo al db
        if($request->hasFile('image')){
@@ -60,7 +57,7 @@ class Food_itemController extends Controller
         $food_item->image = $path;   
         }
         $food_item->save();
-        return redirect()->route('admin.food_items.show', ['food_item' => $food_item->slug]);
+        return redirect()->route('admin.restaurants.food_items.index' , $restaurant_id);
     }
 
     /**
@@ -69,9 +66,9 @@ class Food_itemController extends Controller
      * @param  food_item  $food_item
      * @return \Illuminate\Http\Response
      */
-    public function show(Food_item $food_item)
+    public function show($restaurant_id, Food_item $food_item)
     {
-        return view('admin.food_items.show', compact('food_item'));
+        return view('admin.food_items.show', compact('food_item' , 'restaurant_id'));
     }
 
     /**
@@ -80,7 +77,7 @@ class Food_itemController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Food_item $food_item)
+    public function edit($restaurant_id)
     {
         return view('admin.food_items.edit', compact('food_item'));
     }
@@ -92,7 +89,7 @@ class Food_itemController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateFood_itemRequest $request, Food_item $food_item)
+    public function update(UpdateFood_itemRequest $request, Food_item $food_item, $restaurant_id)
     {
         $form_data=$request->validated();
 
@@ -105,7 +102,7 @@ class Food_itemController extends Controller
         }
         $food_item->update($form_data);
         
-        return redirect()->route('admin.food_items.show', ['food_item' => $food_item->slug]);
+        return redirect()->route('admin.food_items.show', ['food_item' => $food_item->slug], $restaurant_id);
     }
 
     /**
@@ -114,10 +111,12 @@ class Food_itemController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Food_item $food_item)
+    public function destroy($restaurant_id, Food_item $food_item)
     {
-        // dd($food_item);
+
         $food_item->delete();
-        return redirect()->route('admin.food_items.index')->with('message', "Il piatto: $food_item->name è stato rimosso dal menu.");
+        return redirect()->route('admin.restaurants.food_items.index', $restaurant_id)
+
+        ->with('message', "Il piatto: $food_item->name è stato rimosso dal menu.");
     }
 }

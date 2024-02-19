@@ -43,7 +43,7 @@
                             <td>{{ $restaurant->address }}</td>
                             <td> - </td>
                             <td> 
-                                <a class="btn btn-primary" href="{{ route('admin.food_items.index', ['restaurant' => $restaurant->slug]) }}">
+                                <a class="btn btn-primary" href="{{ route('admin.restaurants.food_items.index', $restaurant->id) }}">
                                     <i class="fa-solid fa-magnifying-glass"></i>
                                 </a>
                             </td>

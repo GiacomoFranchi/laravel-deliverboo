@@ -7,7 +7,7 @@
         </h2>
 
         <div class="text-end">
-            <a class="btn btn-success" href="{{ route('admin.food_items.create') }}">
+            <a class="btn btn-success" href="{{ route('admin.restaurants.food_items.create',  $restaurant_id) }}">
                 <i class="fa-solid fa-plus"></i> Add New Dish
             </a>
         </div>
@@ -56,13 +56,13 @@
                             </td>
 
                             <td class="text-center">
-                                <a href="{{ route('admin.food_items.show', ['food_item' => $food_item->slug]) }}"
+                                <a href="{{ route('admin.restaurants.food_items.show', [$food_item->restaurant_id, 'food_item' => $food_item->slug]) }}"
                                     class="btn btn-primary">
                                     <i class="fa-solid fa-magnifying-glass"></i>
                                 </a>
 
                                 <a class="btn btn-warning"
-                                    href="{{ route('admin.food_items.edit', ['food_item' => $food_item->slug]) }}">
+                                    href="{{ route('admin.restaurants.food_items.edit', [$food_item->restaurant_id, 'food_item' => $food_item->slug]) }}">
                                     <i class="fa-solid fa-pencil"></i>
                                 </a>
                                 
@@ -78,9 +78,7 @@
                 Aggiungi i tuoi Piatti e li visualizzerai qui!
             </div>
         @endif
-        <div>
-            {{ $food_items->links() }}
-        </div>
+
 
     </div>
 

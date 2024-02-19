@@ -15,7 +15,7 @@
         @endif
 
         {{-- Inizio Form --}}
-        <form class="mt-5" action="{{ route('admin.food_items.store') }}" method="POST" enctype="multipart/form-data">
+        <form class="mt-5" action="{{ route('admin.restaurants.food_items.store',$restaurant_id) }}" method="POST" enctype="multipart/form-data">
             @csrf
 
             {{-- NAME --}}

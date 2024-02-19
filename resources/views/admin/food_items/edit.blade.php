@@ -18,7 +18,7 @@
         @endif
 
         {{-- Inizio Form --}}
-        <form action="{{ route('admin.food_items.update', ['food_item' => $food_item->slug]) }}" method="POST"
+        <form action="{{ route('admin.restaurants.food_items.update', ['food_item' => $food_item->slug]) }}" method="POST"
             enctype="multipart/form-data">
             @csrf
             @method('PUT')
