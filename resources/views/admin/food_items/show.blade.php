@@ -24,12 +24,9 @@
                 <h6 class="card-subtitle mb-2 text-muted">Prezzo: {{$food_item->price}}</h6>
 
                 {{-- Descrizione --}}
-                <p class="card-text">Descrizione: {{$project->content}}</p>
+                <p class="card-text">Descrizione: {{$food_item->description}}</p>
             </div>
         </div>
 
-
-        <a class="btn btn-primary my-2" href="{{ route('admin.projects.index') }}">Indietro</a>
-        @include('admin.projects.partials.delete_button')
     </div>
 @endsection
