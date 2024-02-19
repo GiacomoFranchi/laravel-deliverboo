@@ -16,6 +16,9 @@
 
                         {{ __('You are logged in!') }}
                     </div>
+                    <div>
+                        <a class="btn btn-primary" href="{{ route('admin.food_items.index') }}">Menu</a>
+                    </div>
                 </div>
             </div>
         </div>

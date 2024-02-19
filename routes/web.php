@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Admin\RestarauntController;
+use App\Http\Controllers\Admin\Food_itemController;
+use App\Models\Food_item;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,7 +23,7 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return view('admin.dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
@@ -29,6 +32,14 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
 });
+Route::middleware(['auth', 'verified'])
+    ->name('admin.')
+    ->prefix('admin')
+    ->group(function () {
+        Route::resource('food_items', Food_itemController::class)->parameters(['food_items' => 'food_item:slug']);
+        Route::resource('orders', OrderController::class)->parameters(['orders' => 'order:slug']);
+    });
+
 
 
 Route::middleware(['auth', 'verified'])
