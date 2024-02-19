@@ -19,6 +19,8 @@ return new class extends Migration
 
             $table->unsignedBigInteger('cusine_type_id');
             $table->foreign('cusine_type_id')->references('id')->on('cusine_types');
+
+            $table->primary(['restaurant_id', 'cusine_type_id']);
         });
     }
 
