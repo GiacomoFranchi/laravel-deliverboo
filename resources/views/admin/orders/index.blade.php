@@ -24,6 +24,7 @@
                      <td>{{$order->customer_email}}</td>
                     <td>{{$order->customer_address}}</td>
                     <td>{{$order->total_price}}</td>
+                    <td> <a href="{{ route('admin.projects.create')}}" class="btn btn-primary"> Nuovo </a> </td>
                     </td>
 
                 </tr>

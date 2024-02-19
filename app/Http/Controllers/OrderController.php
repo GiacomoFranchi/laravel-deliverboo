@@ -20,7 +20,7 @@ class OrderController extends Controller
      */
     public function index()
     {
-        $restaurantId = Auth::user()->restaurant()->first()->id; 
+        $restaurantId = Auth::user()->restaurants->pluck('id');
        
         $orders = Order::whereHas('food_items', function ($query) use ($restaurantId) {
             $query->where('restaurant_id', $restaurantId);
@@ -70,7 +70,7 @@ class OrderController extends Controller
      */
     public function show(Order $order)
     {
-        $restaurantId = Auth::user()->restaurant()->first()->id;
+        $restaurantId = Auth::user()->restaurants->pluck('id');
 
         //contrrollare se order food item appartiene a ristorante registrato
         $orderBelongsToRestaurant = $order->foodItems()->whereHas('restaurant', function ($query) use ($restaurantId) {

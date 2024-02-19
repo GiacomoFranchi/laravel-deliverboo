@@ -20,7 +20,7 @@ class Order extends Model
         'slug',
     ];
 
-    public function foodItems()
+    public function food_items()
     {
         return $this->belongsToMany(Food_item::class, 'Order_Food_Item');
     }
