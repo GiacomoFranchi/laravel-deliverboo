@@ -42,7 +42,6 @@ class RestarauntController extends Controller
     public function store(StoreRestaurantRequest $request)
     {
         $form_data = $request->validated();
-        dd($request);
         $restaurant = new Restaurant();
         $restaurant->fill($form_data);
 
@@ -66,8 +65,6 @@ class RestarauntController extends Controller
      */
     public function show(Restaurant $restaurant)
     {
-
-        $this->checkUser($restaurant);
         
         return view('admin.restaurants.show', compact('restaurant'));
     }

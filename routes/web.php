@@ -37,7 +37,7 @@ Route::middleware(['auth', 'verified'])
     ->group(function () {
 
         //Restaurants Route
-        Route::resource('restaurants', RestarauntController::class)->parameters(['restaurant' => 'restaurant:slug']);
+        Route::resource('restaurants', RestarauntController::class)->parameters(['restaurants' => 'restaurant:slug']);
 
 
     });
