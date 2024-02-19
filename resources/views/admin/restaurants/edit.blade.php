@@ -45,11 +45,12 @@
                     <div class="invalid-feedback">{{ $message }}</div>
                 @enderror
             </div>
-
+            
+            {{-- Phone Number Input --}}
             <div class="mb -4 has-validation">
                 <label for="phone_number" class="form-label fw-bold">Phone Number</label>
                 <input type="text" class="form-control @error('phone_number') is-invalid @enderror" id="phone_number" name="phone_number"
-                    value="{{ old('phone_number', $restaurant->phone_number) }}">
+                    value="{{ old('phone_number', $restaurant->phone_number) }}" pattern="\+?[0-9()\s-]{8,20}">
 
                 @error('phone_number')
                     <div class="invalid-feedback">{{ $message }}</div>

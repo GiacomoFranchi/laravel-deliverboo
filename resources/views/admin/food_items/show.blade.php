@@ -45,6 +45,7 @@
                 </a>
                 
                 @include('admin.food_items.partials.btn_delete')
+                @include('admin.food_items.partials.modal-delete')
             </div>
 
         </div>
