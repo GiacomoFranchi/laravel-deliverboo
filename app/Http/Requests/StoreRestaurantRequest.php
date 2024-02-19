@@ -32,7 +32,6 @@ class StoreRestaurantRequest extends FormRequest
             'opening_time' => ['required'],
             'closing_time' => ['required'],
             'closure_day' => ['required'], 
-            'cover_image' => ['required', 'image', 'max:2048']
         ];
     }
 
