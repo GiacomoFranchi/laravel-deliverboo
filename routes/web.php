@@ -23,6 +23,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/admin/food-items/create/{restaurant_id?}', [Food_itemController::class, 'create'])->name('admin.food_items.create');
+
 Route::get('/admin/orders/{restaurant}/food-items', [AdminOrderController::class, 'getFoodItemsForRestaurant']);
 
 Route::get('/dashboard', function () {
@@ -55,6 +57,5 @@ Route::middleware(['auth', 'verified'])
 
 
     });
-Route::get('/admin/food-items/{restaurant}', 'OrderController@getFoodItemsForRestaurant');
 
 require __DIR__.'/auth.php';

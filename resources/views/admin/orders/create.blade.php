@@ -83,6 +83,3 @@
     </div>
 @endsection
 
-@section('scripts')
-    <script src="{{ asset('resources/js/restaurantSelect.js') }}"></script>
-@endsection

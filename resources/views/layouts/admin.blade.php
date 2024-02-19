@@ -69,12 +69,6 @@
                                     <i class="fa-solid fa-utensils fa-lg fa-fw"></i> Restaurants
                                 </a>
                             </li>
-                            <li>
-                                <a class="nav-link text-white"
-                                href="{{ route('admin.orders.index') }}">
-                                    <i class="fa-solid fa-utensils fa-lg fa-fw"></i> Restaurants
-                                </a>
-                            </li>
                             <li class="nav-item">
                                 <a class="nav-link text-white {{ Route::currentRouteName() == 'admin.orders.index' ? 'bg-secondary' : '' }}"
                                     href="{{ route('admin.orders.index') }}"> Orders

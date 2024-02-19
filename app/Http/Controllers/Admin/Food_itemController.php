@@ -19,14 +19,31 @@ class Food_itemController extends Controller
      */
     public function index(Request $request)
     {
+
+        //$perPage = $request->input('per_page', 10); // More concise way to set default value
+        //$food_items = Food_item::paginate($perPage);
+
+        // $perPage = 10;
+        // if($request->per_page){
+        //     $perPage= $request->per_page;
+        // }
+        // $food_items= Food_item::all();
+        // $food_items= Food_item::paginate($perPage);
         $perPage = 10;
-        if($request->per_page){
-            $perPage= $request->per_page;
+        if ($request->per_page) {
+            $perPage = $request->per_page;
         }
-        $food_items= Food_item::all();
-        $food_items= Food_item::paginate($perPage);
-        
+
+        // prendi il restaurant id dell'user
+        $userRestaurantIds = auth()->user()->restaurants->pluck('id');
+
+        // prendi i food item che hanno quel restaurant id 
+        $food_items = Food_item::whereIn('restaurant_id',
+            $userRestaurantIds
+        )->paginate($perPage);
+
         return view('admin.food_items.index', compact('food_items'));
+        
     }
 
     /**
@@ -34,10 +51,21 @@ class Food_itemController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        $food_items= Food_item::all();
-        return view('admin.food_items.create', compact('food_items'));
+    public function create(Request $request)
+    { // Fetch all restaurants owned by the authenticated user
+        $restaurants = auth()->user()->restaurants;
+
+
+        $restaurantId = $request->query('restaurant_id');
+        $selectedRestaurant = null;
+
+        // If a specific restaurant ID is provided, attempt to find it within the user's restaurants
+        if ($restaurantId) {
+            $selectedRestaurant = $restaurants->find($restaurantId);
+        }
+
+        // Pass both the list of restaurants and the selected restaurant (if any) to the view
+        return view('admin.food_items.create', compact('restaurants', 'selectedRestaurant'));
     }
 
     /**
@@ -48,17 +76,38 @@ class Food_itemController extends Controller
      */
     public function store(StoreFood_itemRequest $request)
     {
+        // dd($request->all());
+        $userRestaurants = auth()->user()->restaurants;
+
+        //controlla se user ha ristorante
+        if ($userRestaurants->isEmpty()) {
+            // errore se utente non ha ristorante
+            return redirect()->back()->with('errore');
+        }
+
+        // da modificare; per ora, scegli primmo ristorante
+        $selectedRestaurant = $userRestaurants->first();
+
+        // valida i dati
         $form_data = $request->validated();
+
+        // crea nuovo food item
         $food_item = new Food_item();
         $food_item->fill($form_data);
 
-       //controllo se c'è img e aggiungo al db
-       if($request->hasFile('image')){
-        $path = Storage::put('food_image', $request->image);
-        $food_item->image = $path;   
+        // controlla img
+        if ($request->hasFile('image')) {
+            $path = Storage::put('food_image', $request->image);
+            $food_item->image = $path;
         }
 
+        // assegnare id del ristorante a food item
+        $food_item->restaurant_id = $selectedRestaurant->id;
+
+     
         $food_item->save();
+
+        
         return redirect()->route('admin.food_items.show', ['food_item' => $food_item->slug]);
     }
 

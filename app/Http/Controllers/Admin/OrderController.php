@@ -25,7 +25,7 @@ class OrderController extends Controller
         $restaurantId = Auth::user()->restaurants->pluck('id');
 
         $orders = Order::whereHas('food_items', function ($query) use ($restaurantId) {
-            $query->where('restaurant_id', $restaurantId);
+            $query->whereIn('restaurant_id', $restaurantId);
         })->get();
         return view('admin.orders.index', compact('orders'));
     }
@@ -56,7 +56,7 @@ class OrderController extends Controller
         $order = new Order();
         $order->fill($form_input);
         $order->save();
-        $order->foodItems()->attach($request->input('food_item_ids'));
+        $order->foodItems()->attach($request->input('food_items[]'));
         $order->load('food_items');
         $order->total_price = $order->foodItems->sum('price');
         $order->save();
@@ -94,10 +94,11 @@ class OrderController extends Controller
     //test x filtrare piatti da ristorante 
     public function getFoodItemsForRestaurant($restaurantId)
     {
-        $foodItems = Food_item::where(
-            'restaurant_id',
-            $restaurantId
-        )->get();
+        $foodItems = Food_item::where('restaurant_id', $restaurantId)->get();
+
+        if ($foodItems->isEmpty()) {
+            return response()->json(['message' => 'Nessun item trovato.'], 404);
+        }
 
         return response()->json($foodItems);
     }
