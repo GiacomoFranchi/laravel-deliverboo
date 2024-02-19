@@ -25,11 +25,15 @@
 
                 {{-- Descrizione --}}
                 <p class="card-text">Descrizione: {{$food_item->description}}</p>
+                
+                {{-- disponibilità --}}
 
                 @if ($food_item->is_visible)
-                    <p class="card-subtitle mb-2 text-muted">{{$food_item->is_visible}}</p>
-                    
+                    <p class="card-subtitle mb-2 text-muted">Disponibile</p>   
+                @else
+                    <p class="card-subtitle mb-2 text-muted">non disponibile</p>
                 @endif
+
             </div>
         </div>
 
