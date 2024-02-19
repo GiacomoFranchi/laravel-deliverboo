@@ -17,7 +17,7 @@ class Order_Food_Item extends Model
         return $this->belongsTo(Order::class);
     }
 
-    public function foodItem()
+    public function food_item()
     {
         return $this->belongsTo(Food_item::class);
     }

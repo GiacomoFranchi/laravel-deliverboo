@@ -4,6 +4,7 @@ use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Admin\RestaurantController;
 use App\Http\Controllers\Admin\Food_itemController;
+use App\Http\Controllers\Admin\OrderController as AdminOrderController;
 use App\Models\Food_item;
 use Illuminate\Support\Facades\Route;
 
@@ -22,6 +23,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/admin/orders/{restaurant}/food-items', [AdminOrderController::class, 'getFoodItemsForRestaurant']);
+
 Route::get('/dashboard', function () {
     return view('admin.dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -37,7 +40,7 @@ Route::middleware(['auth', 'verified'])
     ->prefix('admin')
     ->group(function () {
         Route::resource('food_items', Food_itemController::class)->parameters(['food_items' => 'food_item:slug']);
-        Route::resource('orders', OrderController::class)->parameters(['orders' => 'order:slug']);
+        Route::resource('orders', AdminOrderController::class)->parameters(['orders' => 'order:slug']);
     });
 
 

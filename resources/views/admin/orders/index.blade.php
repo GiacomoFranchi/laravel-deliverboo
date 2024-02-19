@@ -3,6 +3,8 @@
 @section('content')
 
 <div class="container">
+
+     <a href="{{ route('admin.orders.create')}}" class="btn btn-primary"> Nuovo </a>
         <table class="table">
         <thead>
             <tr>
@@ -24,7 +26,7 @@
                      <td>{{$order->customer_email}}</td>
                     <td>{{$order->customer_address}}</td>
                     <td>{{$order->total_price}}</td>
-                    <td> <a href="{{ route('admin.projects.create')}}" class="btn btn-primary"> Nuovo </a> </td>
+                    <td> </td>
                     </td>
 
                 </tr>

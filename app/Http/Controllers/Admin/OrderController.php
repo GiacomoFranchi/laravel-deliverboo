@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use App\Http\Requests\OrderRequest;
 use App\Http\Requests\UpdateOrderStatusRequest;
@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\Auth;
 
 use App\Models\Order;
 use App\Models\Restaurant;
+
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class OrderController extends Controller
@@ -21,7 +23,7 @@ class OrderController extends Controller
     public function index()
     {
         $restaurantId = Auth::user()->restaurants->pluck('id');
-       
+
         $orders = Order::whereHas('food_items', function ($query) use ($restaurantId) {
             $query->where('restaurant_id', $restaurantId);
         })->get();
@@ -36,10 +38,11 @@ class OrderController extends Controller
     public function create()
     {
         $restaurants = Restaurant::all();
-       
-        return view('admin.orders.create', compact('restaurants'));
+        $food_items = collect();
+
+        return view('admin.orders.create', compact('restaurants', 'food_items'));
     }
-    
+
 
     /**
      * Store a newly created resource in storage.
@@ -58,7 +61,7 @@ class OrderController extends Controller
         $order->total_price = $order->foodItems->sum('price');
         $order->save();
 
-        
+
         return redirect()->route('admin.orders.show', ['order' => $order->slug])->with('message', 'Ordine creato con successo');
     }
 
@@ -91,7 +94,8 @@ class OrderController extends Controller
     //test x filtrare piatti da ristorante 
     public function getFoodItemsForRestaurant($restaurantId)
     {
-        $foodItems = Food_item::where('restaurant_id',
+        $foodItems = Food_item::where(
+            'restaurant_id',
             $restaurantId
         )->get();
 
@@ -106,8 +110,9 @@ class OrderController extends Controller
      */
     public function edit(Order $order)
     {
+        $restaurants = Restaurant::all();
         $food_items = Food_item::all();
-        return view('admin.orders.edit', compact('food_items', 'order'));
+        return view('admin.orders.edit', compact('food_items', 'order', 'restaurants'));
     }
 
     /**

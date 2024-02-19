@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
         let restaurantId = this.value;
 
         // prendi food items
-        fetch('/admin/food-items/' + restaurantId)
+        fetch('/admin/orders/' + restaurantId + '/food-items')
             .then(response => response.json())
             .then(data => {
                 let foodItemsContainer = document.getElementById('foodItemsContainer');
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 });
             })
             .catch(error => {
-                console.error('Error fetching food items:', error);
+                console.error('Errore:', error);
             });
     });
 });
