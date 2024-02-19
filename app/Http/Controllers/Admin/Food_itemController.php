@@ -120,7 +120,7 @@ class Food_itemController extends Controller
     {
 
         $food_item->delete();
-        return redirect()->route('admin.restaurants.food_items.index', $restaurant_id, compact('food_item'))
+        return redirect()->route('admin.restaurants.food_items.index', $restaurant_id)
 
         ->with('message', "Il piatto: $food_item->name è stato rimosso dal menu.");
     }
