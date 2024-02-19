@@ -36,14 +36,14 @@
 
             {{-- IS_VISIBLE --}}
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="is_visible" id="is_visible1">
+                <input class="form-check-input" value='0' type="radio" name="is_visible" id="is_visible1">
                 <label class="form-check-label" for="is_visible1">
                     Non Disponibile
                 </label>
             </div>
             <div class="form-check">
                 <input class="form-check-input" type="radio" value="1" name="is_visible" id="is_visible2" checked>
-                <label class="form-check-label" for="is_visible2" value='0'>
+                <label class="form-check-label" for="is_visible2">
                     Disponibile
                 </label>
             </div>

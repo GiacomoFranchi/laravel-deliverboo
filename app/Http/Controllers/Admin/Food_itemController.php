@@ -51,7 +51,7 @@ class Food_itemController extends Controller
 
        //controllo se c'è img e aggiungo al db
        if($request->hasFile('image')){
-        $path = Storage::put('image', $request->image);
+        $path = Storage::put('food_image', $request->image);
         $food_item->image = $path;   
         }
 
