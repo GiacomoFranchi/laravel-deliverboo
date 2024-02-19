@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Admin\RestarauntController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,6 +27,19 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
 });
+
+
+Route::middleware(['auth', 'verified'])
+    ->name('admin.')
+    ->prefix('admin')
+    ->group(function () {
+
+        //Restaurant Route
+        Route::resource('restaurants', RestarauntController::class)->parameters(['restaurant' => 'restaurant:slug']);
+
+
+    });
 
 require __DIR__.'/auth.php';
