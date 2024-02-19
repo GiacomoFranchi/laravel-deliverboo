@@ -38,7 +38,7 @@
             {{-- DESCRIZIONE --}}
             <div class="mb-3">
                 <label for="description" class="form-label">Descrizione Piatto:</label>
-                <textarea class="form-control" name="description" id="description" rows="5">{{ old('description') }}</textarea>
+                <textarea class="form-control" name="description" id="description" rows="5">{{ old('description', $food_item->description) }}</textarea>
             </div>
 
             {{-- PRICE --}}
@@ -62,11 +62,18 @@
                 </label>
             </div>
 
+            <div class="mb-3">
+                <img id="preview-img" src="" alt="" style="max-height: 250px">
+            </div>
+            
             <button class="btn btn-success" type="submit">Salva</button>
 
         </form>
 
 
-
     </div>
+@endsection
+
+@section('scripts')
+    @vite(['resources/js/image-preview.js'])
 @endsection

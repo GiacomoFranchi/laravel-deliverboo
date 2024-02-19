@@ -57,9 +57,20 @@
                     Disponibile
                 </label>
             </div>
+            
+            <div class="mb-3">
+                <img id="preview-img" src="" alt="" style="max-height: 250px">
+            </div>
 
             <button class="btn btn-success" type="submit">Salva</button>
 
         </form>
     </div>
+
+    
 @endsection
+
+@section('scripts')
+    @vite(['resources/js/image-preview.js'])
+@endsection
+
