@@ -25,7 +25,7 @@ class StoreFood_itemRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => ['required', 'min:3', 'max:100', Rule::unique('projects')->ignore($this->project)],
+            'name' => ['required', 'min:3', 'max:100', Rule::unique('food_items')->ignore($this->food_item)],
             'image' => ['nullable', 'image', 'max:1512'],
             'description' => ['required'],
             'price' => ['required','numeric','min:0'],

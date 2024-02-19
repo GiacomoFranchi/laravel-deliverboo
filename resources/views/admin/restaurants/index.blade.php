@@ -23,6 +23,7 @@
                     <tr>
                         <th scope="col" class="title-column fs-5">Name</th>
                         <th scope="col" class="description-column fs-5">Address</th>
+                        <th scope="col" class="action-column fs-5">Cuisine Type</th>
                         <th scope="col" class="description-column fs-5">Menu</th>
                         <th scope="col" class="action-column fs-5">Actions</th>
                     </tr>
@@ -30,27 +31,34 @@
                 <tbody class="w-100">
                     @foreach ($restaurants as $restaurant)
                         <tr>
-                            <td scope="row">{{ $restaurant->name }}</td>
+                            <td scope="row">
+                                <h6>{{ $restaurant->name }}</h6>
+                            </td>
                             <td>{{ $restaurant->address }}</td>
-                            <td> <a class="btn btn-primary" href="{{ route('admin.food_items.index') }}">Menu</a> </td>
-                            <td class="w-50">
+                            <td> - </td>
+                            <td> 
+                                <a class="btn btn-primary" href="{{ route('admin.food_items.index', ['restaurant' => $restaurant->slug]) }}">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </a>
+                            </td>
+                            <td>
+                                {{-- show button --}}
                                 <a class="btn btn-success"
                                     href="{{ route('admin.restaurants.show', ['restaurant' => $restaurant->slug]) }}">
-                                    Details
+                                    <i class="fa-solid fa-pencil"></i>
                                 </a>
-                                
-                                
-                                
-                                
+
+                                {{-- delete button --}}
                                 <form action="{{ route('admin.restaurants.destroy', ['restaurant' => $restaurant->slug]) }}"
-                                class="d-inline-block" method="POST">
+                                    class="d-inline-block" method="POST">
 
-                                @csrf
-                                @method('DELETE')
+                                    @csrf
+                                    @method('DELETE')
 
-                                <button class="btn btn-danger btn-delete" type="submit" data-title="{{ $restaurant->name }}">
-                                    Delete
-                                </button>
+                                    <button class="btn btn-danger btn-delete" type="submit"
+                                        data-title="{{ $restaurant->name }}">
+                                        <i class="fa-solid fa-trash-can"></i>
+                                    </button>
 
                                 </form>
                             </td>
