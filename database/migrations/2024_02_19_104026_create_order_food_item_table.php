@@ -14,13 +14,16 @@ return new class extends Migration
     public function up()
     {
         Schema::create('order_food_item', function (Blueprint $table) {
-            $table->id();
+
             $table->unsignedBigInteger('order_id');
-            $table->unsignedBigInteger('food_item_id');
-            $table->integer('quantity');
             $table->foreign('order_id')->references('id')->on('orders')->cascadeOnDelete();
+
+            $table->unsignedBigInteger('food_item_id');
             $table->foreign('food_item_id')->references('id')->on('food_items')->cascadeOnDelete();
-            $table->timestamps();
+
+            $table->primary(['dishe_id', 'order_id']);
+
+            $table->unsignedInteger('quantity')->default(1);
         });
     }
 
