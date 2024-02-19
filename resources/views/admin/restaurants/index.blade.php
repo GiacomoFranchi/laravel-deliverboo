@@ -23,6 +23,7 @@
                     <tr>
                         <th scope="col" class="title-column fs-5">Name</th>
                         <th scope="col" class="description-column fs-5">Address</th>
+                        <th scope="col" class="description-column fs-5">Menu</th>
                         <th scope="col" class="action-column fs-5">Actions</th>
                     </tr>
                 </thead>
@@ -31,12 +32,16 @@
                         <tr>
                             <td scope="row">{{ $restaurant->name }}</td>
                             <td>{{ $restaurant->address }}</td>
-                            <td>
+                            <td> <a class="btn btn-primary" href="{{ route('admin.food_items.index') }}">Menu</a> </td>
+                            <td class="w-50">
                                 <a class="btn btn-success"
                                     href="{{ route('admin.restaurants.show', ['restaurant' => $restaurant->slug]) }}">
                                     Details
                                 </a>
-
+                                
+                                
+                                
+                                
                                 <form action="{{ route('admin.restaurants.destroy', ['restaurant' => $restaurant->slug]) }}"
                                 class="d-inline-block" method="POST">
 
@@ -47,7 +52,7 @@
                                     Delete
                                 </button>
 
-                            </form>
+                                </form>
                             </td>
                         </tr>
                     @endforeach
@@ -55,7 +60,7 @@
             </table>
         @else
             <div class="alert alert-warning w-50 mx-auto">
-                There's nothing here yet. Add your first project.
+                There's nothing here yet. Add your first restaurant.
             </div>
         @endif
     </div>

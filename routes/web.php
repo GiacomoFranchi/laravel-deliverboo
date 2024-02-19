@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\Admin\RestarauntController;
+use App\Http\Controllers\Admin\RestaurantController;
 use App\Http\Controllers\Admin\Food_itemController;
 use App\Models\Food_item;
 use Illuminate\Support\Facades\Route;
@@ -48,7 +48,7 @@ Route::middleware(['auth', 'verified'])
     ->group(function () {
 
         //Restaurants Route
-        Route::resource('restaurants', RestarauntController::class)->parameters(['restaurants' => 'restaurant:slug']);
+        Route::resource('restaurants', RestaurantController::class)->parameters(['restaurants' => 'restaurant:slug']);
 
 
     });

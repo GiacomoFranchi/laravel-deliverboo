@@ -2,49 +2,53 @@
 
 @section('content')
     <div class="container mt-5">
-        <h2 class="text-center">Aggiungi un nuovo piatto:</h2>
+        <h2 class="text-center">Modifica piatto:</h2>
 
+        {{-- Messaggi errore di Validazione --}}
         @if ($errors->any())
             <div class="alert alert-danger">
                 <ul>
                     @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
+                        <li>
+                            {{ $error }}
+                        </li>
                     @endforeach
                 </ul>
             </div>
         @endif
 
         {{-- Inizio Form --}}
-        <form class="mt-5" action="{{ route('admin.food_items.store') }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('admin.food_items.update', ['food_item' => $food_item->slug]) }}" method="POST"
+            enctype="multipart/form-data">
             @csrf
-
-            {{-- NAME --}}
-            <div class="mb-3" style="max-height: 250px">
-                <label for="name" class="form-label">Nome Piatto</label>
-                <input type="text" class="form-control" style="max-height: 250px" id="name" name="name"
-                    value="{{ old('name') }}">
+            @method('PUT')
+            {{-- NOME PIATTO --}}
+            <div class="mb-3">
+                <label for="name" class="form-label">Nome Piatto:</label>
+                <input type="text" class="form-control" id="name" name="name"
+                    value="{{ old('name', $food_item->name) }}">
             </div>
 
-            {{-- IMAGE --}}
+            {{-- IMMAGINE --}}
             <div class="mb-3">
-                <label for="image" class="form-label">Immagine: </label>
+                <label for="image" class="form-label">Foto Pietanza:</label>
                 <input type="file" name="image" id="image" class="form-control">
             </div>
 
-            {{-- DESCRIPTION --}}
+            {{-- DESCRIZIONE --}}
             <div class="mb-3">
-                <label for="description" class="form-label">Descrizione</label>
-                <textarea class="form-control" id="description" rows="3" name="description">{{ old('description') }}</textarea>
+                <label for="description" class="form-label">Descrizione Piatto:</label>
+                <textarea class="form-control" name="description" id="description" rows="5">{{ old('description') }}</textarea>
             </div>
 
             {{-- PRICE --}}
             <div class="mb-3">
-                <label for="price" class="form-label">Prezzo</label>
+                <label for="price" class="form-label">Prezzo:</label>
                 <input type="text" class="form-control" style="max-height: 250px" id="price" name="price"
-                    value="{{ old('price') }}">
+                    value="{{ old('price', $food_item->price) }}">
             </div>
 
-            {{-- IS_VISIBLE --}}
+            {{-- DISPONIBILITA --}}
             <div class="form-check">
                 <input class="form-check-input" value='0' type="radio" name="is_visible" id="is_visible1">
                 <label class="form-check-label" for="is_visible1">
@@ -61,5 +65,8 @@
             <button class="btn btn-success" type="submit">Salva</button>
 
         </form>
+
+
+
     </div>
 @endsection

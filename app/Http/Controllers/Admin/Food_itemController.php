@@ -3,9 +3,12 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreFood_itemRequest;
+use App\Http\Requests\UpdateFood_itemRequest;
 use App\Models\Food_item;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use SebastianBergmann\CodeCoverage\Report\Xml\Project;
 
 class Food_itemController extends Controller
 {
@@ -43,9 +46,9 @@ class Food_itemController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreFood_itemRequest $request)
     {
-        $form_data = $request->all();
+        $form_data = $request->validated();
         $food_item = new Food_item();
         $food_item->fill($form_data);
 
@@ -76,9 +79,9 @@ class Food_itemController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Food_item $food_item)
     {
-        //
+        return view('admin.food_items.edit', compact('food_item'));
     }
 
     /**
@@ -88,9 +91,20 @@ class Food_itemController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdateFood_itemRequest $request, Food_item $food_item)
     {
-        //
+        $form_data=$request->validated();
+
+        if($request->hasFile('image')){
+            if($food_item->image){
+                Storage::delete($food_item->image);
+            }
+            $path= Storage::put('food_image', $request->image);
+            $form_data['image'] = $path;
+        }
+        $food_item->update($form_data);
+        
+        return redirect()->route('admin.food_items.show', ['food_item' => $food_item->slug]);
     }
 
     /**
