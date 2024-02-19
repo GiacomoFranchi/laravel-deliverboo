@@ -13,15 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('order_food_item', function (Blueprint $table) {
-
-            $table->unsignedBigInteger('order_id');
-            $table->foreign('order_id')->references('id')->on('orders')->cascadeOnDelete();
+        Schema::create('food_item_order', function (Blueprint $table) {
 
             $table->unsignedBigInteger('food_item_id');
             $table->foreign('food_item_id')->references('id')->on('food_items')->cascadeOnDelete();
+            
+            $table->unsignedBigInteger('order_id');
+            $table->foreign('order_id')->references('id')->on('orders')->cascadeOnDelete();
 
-            $table->primary(['dishe_id', 'order_id']);
+            $table->primary(['food_item_id', 'order_id']);
 
             $table->unsignedInteger('quantity')->default(1);
         });

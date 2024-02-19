@@ -24,14 +24,14 @@ class StoreRestaurantRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required', 'min:5', 'max:100',
-            'address' => 'required',
-            'image' => 'required', 'image', 'max:2048', 
-            'vat_number' => 'nullable', 
-            'phone_number' => 'required',
-            'opening_time' => 'required',
-            'closing_time' => 'required',
-            'closure_day' => 'required', 
+            'name' => ['required', 'min:5', 'max:100'],
+            'address' => ['required'],
+            'image' => ['required', 'image', 'max:2048'], 
+            'vat_number' => ['nullable'], 
+            'phone_number' => ['required', 'string', 'regex:/^\+?[0-9()\s-]{8,20}$/'],
+            'opening_time' => ['required'],
+            'closing_time' => ['required'],
+            'closure_day' => ['required'], 
         ];
     }
 
