@@ -36,7 +36,7 @@ Route::middleware(['auth', 'verified'])
     ->prefix('admin')
     ->group(function () {
 
-        //Restaurant Route
+        //Restaurants Route
         Route::resource('restaurants', RestarauntController::class)->parameters(['restaurant' => 'restaurant:slug']);
 
 
