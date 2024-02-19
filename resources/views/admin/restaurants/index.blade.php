@@ -37,7 +37,7 @@
                                     Details
                                 </a>
 
-                                {{-- <form action="{{ route('admin.restaurants.destroy', ['restaurant' => $restaurant->slug]) }}"
+                                <form action="{{ route('admin.restaurants.destroy', ['restaurant' => $restaurant->slug]) }}"
                                 class="d-inline-block" method="POST">
 
                                 @csrf
@@ -47,7 +47,7 @@
                                     Delete
                                 </button>
 
-                            </form> --}}
+                            </form>
                             </td>
                         </tr>
                     @endforeach
@@ -59,6 +59,7 @@
             </div>
         @endif
     </div>
+
     @include('admin.restaurants.partials.delete-modal')
 @endsection
 
