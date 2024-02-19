@@ -18,7 +18,6 @@ return new class extends Migration
             $table->string('name');
             $table->string('slug');
             $table->string('image');
-            $table->unsignedInteger('user_id');
             $table->string('address');
             $table->string('vat_number')->nullable();
             $table->string('phone_number');
@@ -26,8 +25,6 @@ return new class extends Migration
             $table->time('closing_time');
             $table->string('closure_day');
             $table->timestamps();
-
-            $table->foreign('user_id')->references('id')->on('users')->nullOnDelete();
 
         });
     }
@@ -39,11 +36,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('restaurants', function (Blueprint $table) {
-            $table->dropForeign('restaurants_user_id_foreign');
-            $table->dropColumn('user_id');
-        });
-        
         Schema::dropIfExists('restaurants');
     }
 };

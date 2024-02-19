@@ -58,7 +58,7 @@
             </table>
         @else
             <div class="alert alert-warning w-50 mx-auto">
-                There's nothing here yet. Add your first project.
+                There's nothing here yet. Add your first restaurant.
             </div>
         @endif
     </div>
