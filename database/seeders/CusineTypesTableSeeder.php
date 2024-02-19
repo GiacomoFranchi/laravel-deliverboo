@@ -15,7 +15,7 @@ class CusineTypesTableSeeder extends Seeder
      */
     public function run()
     {
-        $cusine_types = ['Italiana', 'Cinese', 'Messicana', 'Giapponese', 'Indiana', 'Francese', 'Thai', 'Greca', 'Spagnola'];
+        $cusine_types = ['Italian', 'French', 'Chinese', 'Japanese','Greek','Spanish','Turkey','Thai','Mexican','American '];
 
         foreach ($cusine_types as $cusine_type) {
             $new_cusine_type= new Cusine_Type();
