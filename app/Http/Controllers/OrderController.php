@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\OrderRequest;
+use App\Models\Food_item;
 use Illuminate\Support\Facades\Auth;
 
 use App\Models\Order;
@@ -32,7 +33,7 @@ class OrderController extends Controller
      */
     public function create()
     {
-        $food_items = FoodItems::all(); 
+        $food_items = Food_item::all(); 
         return view('admin.orders.create', compact('food_items'));
     }
 
@@ -84,7 +85,7 @@ class OrderController extends Controller
      */
     public function edit(Order $order)
     {
-        $food_items = FoodItems::all();
+        $food_items = Food_item::all();
         return view('admin.orders.edit', compact('food_items', 'order'));
     }
 
@@ -102,10 +103,10 @@ class OrderController extends Controller
         
         if ($order->has('food_items')) {
           
-            $order->foodItems()->sync($request->input('food_items', []));;
+            $order->food_items()->sync($request->input('food_items', []));;
         } else {
 
-            $order->foodItems()->detach();
+            $order->food_items()->detach();
         }
 
         return redirect()->route('admin.orders.show', ['order' => $order->slug])->with('message', 'Ordine aggiornato con successo');
