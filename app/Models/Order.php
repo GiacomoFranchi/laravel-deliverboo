@@ -19,4 +19,9 @@ class Order extends Model
         'total_price',
         'slug',
     ];
+
+    public function foodItems()
+    {
+        return $this->belongsToMany(FoodItem::class, 'Order_Food_Item');
+    }
 }

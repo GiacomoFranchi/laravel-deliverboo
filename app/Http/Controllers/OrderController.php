@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
+
+use App\Models\Order;
 use Illuminate\Http\Request;
 
 class OrderController extends Controller
@@ -13,7 +16,12 @@ class OrderController extends Controller
      */
     public function index()
     {
-        //
+        $restaurantId = Auth::user()->restaurant()->first()->id; 
+       
+        $orders = Order::whereHas('foodItems', function ($query) use ($restaurantId) {
+            $query->where('restaurant_id', $restaurantId);
+        })->get();
+        return view('admin.orders.index', compact('orders'));
     }
 
     /**
