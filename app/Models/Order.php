@@ -11,11 +11,12 @@ class Order extends Model
 
     protected $fillable = [
         'order_time',
-        'customer_name',
-        'customer_address',
-        'customer_email',
-        'customer_phone_number',
+        'customers_name',
+        'customers_address',
+        'customers_email',
+        'customers_phone_number',
         'status',
         'total_price',
+        'slug',
     ];
 }

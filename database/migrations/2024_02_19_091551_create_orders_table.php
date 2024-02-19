@@ -16,12 +16,13 @@ return new class extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
             $table->dateTime('order_time');
-            $table->string('customer_name');
-            $table->string('customer_address');
-            $table->string('customer_email');
-            $table->string('customer_phone_number')->nullable();
+            $table->string('customers_name');
+            $table->string('customers_address');
+            $table->string('customers_email');
+            $table->string('customers_phone_number')->nullable();
             $table->string('status')->nullable();
             $table->decimal('total_price', 8, 2)->nullable();
+            $table->string('slug')->unique();
             $table->timestamps();
         });
     }
