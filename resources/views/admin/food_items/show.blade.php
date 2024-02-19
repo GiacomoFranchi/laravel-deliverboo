@@ -25,6 +25,11 @@
 
                 {{-- Descrizione --}}
                 <p class="card-text">Descrizione: {{$food_item->description}}</p>
+
+                @if ($food_item->is_visible)
+                    <p class="card-subtitle mb-2 text-muted">{{$food_item->is_visible}}</p>
+                    
+                @endif
             </div>
         </div>
 
