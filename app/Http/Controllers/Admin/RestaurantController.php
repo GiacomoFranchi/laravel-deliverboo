@@ -11,7 +11,7 @@ use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
-class RestarauntController extends Controller
+class RestaurantController extends Controller
 {
     /**
      * Display a listing of the resource.
