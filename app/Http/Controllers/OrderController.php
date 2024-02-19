@@ -8,6 +8,7 @@ use App\Models\Food_item;
 use Illuminate\Support\Facades\Auth;
 
 use App\Models\Order;
+use App\Models\Restaurant;
 use Illuminate\Http\Request;
 
 class OrderController extends Controller
@@ -21,7 +22,7 @@ class OrderController extends Controller
     {
         $restaurantId = Auth::user()->restaurant()->first()->id; 
        
-        $orders = Order::whereHas('foodItems', function ($query) use ($restaurantId) {
+        $orders = Order::whereHas('food_items', function ($query) use ($restaurantId) {
             $query->where('restaurant_id', $restaurantId);
         })->get();
         return view('admin.orders.index', compact('orders'));
@@ -34,9 +35,11 @@ class OrderController extends Controller
      */
     public function create()
     {
-        $food_items = FoodItems::all(); 
-        return view('admin.orders.create', compact('food_items'));
+        $restaurants = Restaurant::all();
+       
+        return view('admin.orders.create', compact('restaurants'));
     }
+    
 
     /**
      * Store a newly created resource in storage.
@@ -51,6 +54,9 @@ class OrderController extends Controller
         $order->fill($form_input);
         $order->save();
         $order->foodItems()->attach($request->input('food_item_ids'));
+        $order->load('food_items');
+        $order->total_price = $order->foodItems->sum('price');
+        $order->save();
 
         
         return redirect()->route('admin.orders.show', ['order' => $order->slug])->with('message', 'Ordine creato con successo');
@@ -75,7 +81,21 @@ class OrderController extends Controller
             // se l'ordine non appartiene, abort
             abort(403, 'Unauthorized action.');
         }
+
+        $totalPrice = $order->foodItems->sum(function ($foodItem) {
+            return $foodItem->price * $foodItem->pivot->quantity;
+        });
         return view('admin.orders.show', compact('order'));
+    }
+
+    //test x filtrare piatti da ristorante 
+    public function getFoodItemsForRestaurant($restaurantId)
+    {
+        $foodItems = Food_item::where('restaurant_id',
+            $restaurantId
+        )->get();
+
+        return response()->json($foodItems);
     }
 
     /**

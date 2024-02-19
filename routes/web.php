@@ -52,5 +52,6 @@ Route::middleware(['auth', 'verified'])
 
 
     });
+Route::get('/admin/food-items/{restaurant}', 'OrderController@getFoodItemsForRestaurant');
 
 require __DIR__.'/auth.php';

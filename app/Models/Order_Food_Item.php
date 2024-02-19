@@ -19,7 +19,7 @@ class Order_Food_Item extends Model
 
     public function foodItem()
     {
-        return $this->belongsTo(FoodItem::class);
+        return $this->belongsTo(Food_item::class);
     }
 
 }
