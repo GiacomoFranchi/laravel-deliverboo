@@ -19,9 +19,9 @@ return new class extends Migration
             $table->string('customer_name');
             $table->string('customer_address');
             $table->string('customer_email');
-            $table->string('customer_phone_number');
-            $table->string('status');
-            $table->decimal('total_price', 8, 2);
+            $table->string('customer_phone_number')->nullable();
+            $table->string('status')->nullable();
+            $table->decimal('total_price', 8, 2)->nullable();
             $table->timestamps();
         });
     }
