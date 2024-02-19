@@ -7,6 +7,14 @@
         <div class="text-end">
             <a class="btn btn-success" href="{{ route('admin.food_items.create') }}">Aggiungi Piatto</a>
         </div>
+        
+        {{-- start- DELETE MESSAGE --}}
+        @if (session('message'))
+            <div class="alert alert-success mt-4">
+                {{ session('message') }}
+            </div>
+        @endif
+        {{-- end - DELETE MESSAGE --}}
 
         @if (count($food_items) > 0)
             <table class="table table-striped mt-5">
@@ -43,7 +51,9 @@
                                     href="{{ route('admin.food_items.edit', ['food_item' => $food_item->slug]) }}">
                                     <i class="fa-solid fa-pencil"></i>
                                 </a>
-
+                                
+                                @include('admin.food_items.partials.btn_delete')
+                                @include('admin.food_items.partials.modal-delete')
                             </td>
                         </tr>
                     @endforeach

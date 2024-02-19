@@ -99,8 +99,10 @@ class Food_itemController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Food_item $food_item)
     {
-        //
+        // dd($food_item);
+        $food_item->delete();
+        return redirect()->route('admin.food_items.index')->with('message', "Il piatto: $food_item->name è stato rimosso dal menu.");
     }
 }
