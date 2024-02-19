@@ -38,18 +38,9 @@ Route::middleware(['auth', 'verified'])
     ->group(function () {
         Route::resource('restaurant/food_items', Food_itemController::class)->parameters(['food_items' => 'food_item:slug',]);
         Route::resource('orders', OrderController::class)->parameters(['orders' => 'order:slug']);
-    });
-
-
-
-Route::middleware(['auth', 'verified'])
-    ->name('admin.')
-    ->prefix('admin')
-    ->group(function () {
-
+        
         //Restaurants Route
         Route::resource('restaurants', RestaurantController::class)->parameters(['restaurants' => 'restaurant:slug']);
-
 
     });
 
