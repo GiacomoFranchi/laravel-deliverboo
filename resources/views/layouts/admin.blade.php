@@ -58,9 +58,14 @@
                     <div class="position-sticky pt-3">
                         <ul class="nav flex-column">
                             <li class="nav-item">
-                                <a class="nav-link text-white {{ Route::currentRouteName() == 'dashboard' ? 'bg-secondary' : '' }}"
+                                <a class="nav-link text-white"
                                     href="{{ route('dashboard') }}">
                                     <i class="fa-solid fa-tachometer-alt fa-lg fa-fw"></i> Dashboard
+                                </a>
+
+                                <a class="nav-link text-white"
+                                href="{{ route('admin.restaurants.index') }}">
+                                    <i class="fa-solid fa-utensils fa-lg fa-fw"></i> Restaurants
                                 </a>
                             </li>
                         </ul>
@@ -76,6 +81,8 @@
         </div>
 
     </div>
+
+    @yield('scripts')
 </body>
 
 </html>
