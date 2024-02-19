@@ -40,9 +40,28 @@ document.addEventListener('DOMContentLoaded', async function () {
                 label.className = 'form-check-label';
                 //impostare testo label come nome dell'articolo
                 label.textContent = item.name;
+
+                // input numerico x quantità
+                const quantityInput = document.createElement('input');
+                quantityInput.type = 'number';
+                quantityInput.className = 'form-control ml-2';
+                quantityInput.name = 'quantities[]';
+                quantityInput.style.maxWidth = '80px';
+                quantityInput.min = '1'; // quantità minima
+                quantityInput.value = '1'; // quantità default
+                quantityInput.id = 'quantity' + item.id;
+
+                // disabilità inizialmente qiantità
+                quantityInput.disabled = true;
+
+                // false quando il checkbox viene selezionato
+                input.addEventListener('change', function() {
+                    quantityInput.disabled = !this.checked;
+                });
                 //aggiunge input a div
                 div.appendChild(input);
                 div.appendChild(label);
+                div.appendChild(quantityInput);
                 //aggiungo div a contenitore
                 foodItemsContainer.appendChild(div);
             });

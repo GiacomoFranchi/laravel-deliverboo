@@ -13,7 +13,7 @@ class OrderRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,10 +24,10 @@ class OrderRequest extends FormRequest
     public function rules()
     {
         return [
-            'customer_name' => 'required|string|max:255',
-            'customer_address' => 'required|string|max:255',
-            'customer_email' => 'required|email',
-            'customer_phone_number' => 'nullable|string',
+            'customers_name' => 'required|string|max:255',
+            'customers_address' => 'required|string|max:255',
+            'customers_email' => 'required|email',
+            'customers_phone_number' => 'nullable|string',
             
         ];
     }

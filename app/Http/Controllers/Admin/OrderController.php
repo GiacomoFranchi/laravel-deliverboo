@@ -9,9 +9,12 @@ use Illuminate\Support\Facades\Auth;
 
 use App\Models\Order;
 use App\Models\Restaurant;
+use Illuminate\Support\Str;
 
 use App\Http\Controllers\Controller;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Stringable;
 
 class OrderController extends Controller
 {
@@ -55,10 +58,41 @@ class OrderController extends Controller
         $form_input = $request->validated();
         $order = new Order();
         $order->fill($form_input);
+        $order->order_time = Carbon::now();
+        $slug = Str::slug($request->input('customers_name') . '-' . $order->order_time->format('Y-m-d-H-i-s') . '-' . $order->id);
+
+        $order->slug = $slug;
         $order->save();
-        $order->foodItems()->attach($request->input('food_items[]'));
-        $order->load('food_items');
-        $order->total_price = $order->foodItems->sum('price');
+
+
+        //aggiungi food items all'ordine
+        $foodItemsInput = $request->input('food_items', []);
+        //aggiungere quantità x ogni food item dal form.
+        $quantities = $request->input('quantities', []);
+        //inizializza array x trattenere i dati che saranno usati
+        $attachData = [];
+        //inizalizza total price
+        $totalPrice = 0;
+        //iterare array di food item
+        foreach ($foodItemsInput as $index => $foodItemId) {
+            //trova la quantità del food item correnti, default 1
+            $quantity = isset($quantities[$index]) ? $quantities[$index] : 1;
+            //trova foood item da id
+            $food_items = Food_item::find($foodItemId);
+            //se food item esiste, calcola parte del totale e prepara attach
+            if ($food_items) {
+                //aggiungere al totale, moltiplicare food item * sua quaantità
+                $totalPrice += $food_items->price * $quantity;
+                // attach con la quantità
+                $attachData[$foodItemId] = ['quantity' => $quantity];
+            }
+        }
+
+        // attach i food items con quantities
+        $order->food_items()->attach($attachData);
+
+        // aggiurna l'ordine totale 
+        $order->total_price = $totalPrice;
         $order->save();
 
 
@@ -76,7 +110,7 @@ class OrderController extends Controller
         $restaurantId = Auth::user()->restaurants->pluck('id');
 
         //contrrollare se order food item appartiene a ristorante registrato
-        $orderBelongsToRestaurant = $order->foodItems()->whereHas('restaurant', function ($query) use ($restaurantId) {
+        $orderBelongsToRestaurant = $order->food_items()->whereHas('restaurant', function ($query) use ($restaurantId) {
             $query->where('id', $restaurantId);
         })->exists();
 
@@ -84,10 +118,7 @@ class OrderController extends Controller
             // se l'ordine non appartiene, abort
             abort(403, 'Unauthorized action.');
         }
-
-        $totalPrice = $order->foodItems->sum(function ($foodItem) {
-            return $foodItem->price * $foodItem->pivot->quantity;
-        });
+       
         return view('admin.orders.show', compact('order'));
     }
 

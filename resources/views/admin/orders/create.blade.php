@@ -32,17 +32,10 @@
         </div>
 
         <div class="mb-3">
-                <label for="customers_first_name" class="form-label">Nome</label>
-                <input type="text" class="form-control @error('customers_first_name') is-invalid @enderror" id="customers_first_name" name="customers_first_name" value="{{ old('customers_first_name') }}">
+                <label for="customers_name" class="form-label">Nome</label>
+                <input type="text" class="form-control @error('customers_name') is-invalid @enderror" id="customers_name" name="customers_name" value="{{ old('customers_name') }}">
                 @error('customers_first_name')
                 <div class='invalid-feedback'> {{ $message }}</div>
-                @enderror
-            </div>
-            <div class="mb-3">
-                <label for="customers_last_name" class="form-label">Cognome</label>
-                <input type="text" class="form-control @error('customers_last_name') is-invalid @enderror" id="customers_last_name" name="customers_last_name" value="{{ old('customers_last_name') }}">
-                @error('customers_last_name')
-                    <div class="invalid-feedback"> {{ $message }}</div>
                 @enderror
             </div>
             <div class="mb-3">

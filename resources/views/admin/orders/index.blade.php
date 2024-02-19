@@ -10,7 +10,7 @@
             <tr>
             <th scope="col">Id</th>
             <th scope="col">Nome Cliente</th>
-            <th scope="col">Cognome cliente</th>
+             <th scope="col">email </th>
             <th scope="col">Indirizzo</th>
             <th scope="col">Totale </th>
             <th scope="col">Stato </th>
@@ -21,10 +21,9 @@
             @foreach ($orders as $order)
                <tr>
                     <th scope="row">{{$order->id}}</th>
-                    <td>{{$order->customer_first_name}}</td>
-                    <td>{{$order->customer_last_name}}</td>
-                     <td>{{$order->customer_email}}</td>
-                    <td>{{$order->customer_address}}</td>
+                    <td>{{$order->customers_name}}</td>
+                    <td>{{$order->customers_email}}</td>
+                    <td>{{$order->customers_address}}</td>
                     <td>{{$order->total_price}}</td>
                     <td> </td>
                     </td>

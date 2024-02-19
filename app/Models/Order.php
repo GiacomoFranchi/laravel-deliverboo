@@ -18,7 +18,8 @@ class Order extends Model
         'status',
         'total_price',
         'slug',
-        'food_item_id'
+        'food_item_id',
+        'order_time'
     ];
 
     public function food_items()
