@@ -2,9 +2,9 @@
 
 @section('content')
     <div class="container mt-3 mb-5 w-50">
-        <h2 class="text-center">Add New Project</h2>
+        <h2 class="text-center">Add New Restaurant</h2>
 
-        <form class="mt-5" action="" method="POST" enctype="multipart/form-data">
+        <form class="mt-5" action="{{ route('admin.restaurants.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
 
             {{-- Name Input --}}

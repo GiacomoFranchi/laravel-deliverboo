@@ -11,7 +11,6 @@ class Restaurant extends Model
 {
     use HasFactory;
 
-    use SoftDeletes;
 
     public $fillable = ['name','user_id', 'address','image', 'vat_number', 'phone_number', 'opening_time', 'closing_time', 'closure_day', 'cover_image'];
 
