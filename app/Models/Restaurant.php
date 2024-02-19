@@ -4,10 +4,22 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Str;
 
 class Restaurant extends Model
 {
     use HasFactory;
+
+    use SoftDeletes;
+
+    public $fillable = ['name','user_id', 'address','image', 'vat_number', 'phone_number', 'opening_time', 'closing_time', 'closure_day', 'cover_image'];
+
+    public function setNameAttribute($value)
+    {
+        $this->attributes['name'] = $value;
+        $this->attributes['slug'] = Str::slug($value);
+    }
 
     public function user(){
         return $this->belongsTo(User::class);

@@ -38,7 +38,16 @@ class RestarauntController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $form_data = $request->validated();
+        $restaurant = new Restaurant();
+        $restaurant->fill($form_data);
+
+        if ($request->hasFile('image')) {
+            $path = Storage::put('restaurants_images', $request->image);
+            $restaurant->image = $path;
+        }
+
+        return redirect()->route('admin.restaurants.show', ['restaurant' => $restaurant->slug]);
     }
 
     /**
