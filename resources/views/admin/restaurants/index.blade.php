@@ -59,7 +59,7 @@
             </div>
         @endif
     </div>
-
+    @include('admin.restaurants.partials.delete-modal')
 @endsection
 
 @section('scripts')

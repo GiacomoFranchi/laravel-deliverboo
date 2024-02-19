@@ -55,7 +55,7 @@
             Restaurant
         </a>
 
-        {{-- <form action="{{ route('admin.restaurants.destroy', ['restaurant' => $restaurant->slug]) }}" class="d-inline-block"
+        <form action="{{ route('admin.restaurants.destroy', ['restaurant' => $restaurant->slug]) }}" class="d-inline-block"
             method="POST">
 
             @csrf
@@ -65,9 +65,10 @@
                 Delete
             </button>
 
-        </form> --}}
+        </form>
     </div>
-
+    
+    @include('admin.restaurants.partials.delete-modal')
 @endsection
 
 @section('scripts')
