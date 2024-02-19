@@ -58,29 +58,30 @@
                     <label class="form-label fw-bold" for="opening_time">Opening Time</label>
                     <input type="time" class="form-control @error('opening_time') is-invalid @enderror" id="opening_time"
                         name="opening_time" value="{{ old('opening_time') }}"">
-    
+
                     @error('opening_time')
                         <div class="invalid-feedback">{{ $message }}
                         </div>
                     @enderror
                 </div>
-    
+
                 {{-- Closing Time Input --}}
                 <div class="mb-4 has-validation w-25">
                     <label class="form-label fw-bold" for="closing_time">Closing Time</label>
                     <input type="time" class="form-control @error('closing_time') is-invalid @enderror" id="closing_time"
                         name="closing_time" value="{{ old('closing_time') }}">
-    
+
                     @error('closing_time')
                         <div class="invalid-feedback">{{ $message }}
                         </div>
                     @enderror
                 </div>
-    
+
                 {{-- Address Input --}}
                 <div class="mb-4 has-validation w-50">
                     <label for="closure_day" class="form-label fw-bold">Select closure day:</label>
-                    <select class="form-select @error('closure_day') is-invalid @enderror" name="closure_day" id="closure_day">
+                    <select class="form-select @error('closure_day') is-invalid @enderror" name="closure_day"
+                        id="closure_day">
                         <option @selected(!old('closure_day')) value="none">No closure day</option>
                         <option value="monday">Monday</option>
                         <option value="tuesday">Tuesday</option>
@@ -90,18 +91,18 @@
                         <option value="aaturday">Saturday</option>
                         <option value="aunday">Sunday</option>
                     </select>
-    
+
                     @error('type_id')
                         <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
                 </div>
-
             </div>
 
 
             <div class="mb-4">
                 <label for="image" class="form-label fw-bold">Image</label>
-                <input type="file" class="form-control @error('image') is-invalid @enderror" id="image" name="image">
+                <input type="file" class="form-control @error('image') is-invalid @enderror" id="image"
+                    name="image">
 
                 @error('image')
                     <div class="invalid-feedback">{{ $message }}</div>
