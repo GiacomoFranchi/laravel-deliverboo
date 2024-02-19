@@ -56,7 +56,7 @@ class Food_itemController extends Controller
         }
 
         $food_item->save();
-        return redirect()->route('admin.food_items-show', ['food_item' => $food_item->slug]);
+        return redirect()->route('admin.food_items.show', ['food_item' => $food_item->slug]);
     }
 
     /**

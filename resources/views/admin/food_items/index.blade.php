@@ -27,17 +27,16 @@
                         <td>{{ $food_item->created_at }}</td>
                         <td>{{ $food_item->is_visible }}</td>
                         <td>
-                            <a href="{{ route('admin.food_items.show', ['project' => $project->slug]) }}"
+                            <a href="{{ route('admin.food_items.show', ['food_item' => $food_item->slug]) }}"
                                 class="btn btn-primary">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </a>
 
                             <a class="btn btn-warning"
-                                href="{{ route('admin.food_items.edit', ['project' => $project->slug]) }}">
+                                href="{{ route('admin.food_items.edit', ['food_item' => $food_item->slug]) }}">
                                 <i class="fa-solid fa-pencil"></i>
                             </a>
 
-                            @include('admin.food_items.partials.delete_button')
                         </td>
                     </tr>
                 @endforeach

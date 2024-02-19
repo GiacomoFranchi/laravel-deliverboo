@@ -42,8 +42,8 @@
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="is_visible" id="is_visible2" checked>
-                <label class="form-check-label" for="is_visible2">
+                <input class="form-check-input" type="radio" value="1" name="is_visible" id="is_visible2" checked>
+                <label class="form-check-label" for="is_visible2" value='0'>
                     Disponibile
                 </label>
             </div>
