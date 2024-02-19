@@ -32,7 +32,7 @@
                         <tr>
                             <td scope="row">{{ $restaurant->name }}</td>
                             <td>{{ $restaurant->address }}</td>
-                            <td> <a class="btn btn-primary" href="{{ route('admin.food_items.index') }}">Menu</a> </td>
+                            <td> <a class="btn btn-primary" href="{{ route('admin.food_items.index', ['restaurant' => $restaurant->slug]) }}">Menu</a> </td>
                             <td class="w-50">
                                 <a class="btn btn-success"
                                     href="{{ route('admin.restaurants.show', ['restaurant' => $restaurant->slug]) }}">

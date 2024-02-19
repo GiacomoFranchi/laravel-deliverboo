@@ -6,7 +6,9 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreFood_itemRequest;
 use App\Http\Requests\UpdateFood_itemRequest;
 use App\Models\Food_item;
+use App\Models\Restaurant;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use SebastianBergmann\CodeCoverage\Report\Xml\Project;
 
@@ -23,7 +25,7 @@ class Food_itemController extends Controller
         if($request->per_page){
             $perPage= $request->per_page;
         }
-        $food_items= Food_item::all();
+        $food_items= Food_item::where('restaurant_id', '=',  'restaurant->id');
         $food_items= Food_item::paginate($perPage);
         
         return view('admin.food_items.index', compact('food_items'));
@@ -57,7 +59,6 @@ class Food_itemController extends Controller
         $path = Storage::put('food_image', $request->image);
         $food_item->image = $path;   
         }
-
         $food_item->save();
         return redirect()->route('admin.food_items.show', ['food_item' => $food_item->slug]);
     }
