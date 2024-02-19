@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\OrderRequest;
+use App\Http\Requests\UpdateOrderStatusRequest;
+use App\Models\Food_item;
 use Illuminate\Support\Facades\Auth;
 
 use App\Models\Order;
@@ -84,7 +86,7 @@ class OrderController extends Controller
      */
     public function edit(Order $order)
     {
-        $food_items = FoodItems::all();
+        $food_items = Food_item::all();
         return view('admin.orders.edit', compact('food_items', 'order'));
     }
 
@@ -95,18 +97,23 @@ class OrderController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(OrderRequest $request, Order $order)
+    public function update(UpdateOrderStatusRequest $request, Order $order)
     {
-        $form_input = $request->validated();
-        $order->update($form_input);
-        
-        if ($order->has('food_items')) {
-          
-            $order->foodItems()->sync($request->input('food_items', []));;
-        } else {
+        //cancellato perché solo i clienti possono modificare il loro ordine mentre i ristoratori possono cambiare lo stato
+        // $form_input = $request->validated();
+        // $order->update($form_input);
 
-            $order->foodItems()->detach();
-        }
+        // if ($order->has('food_items')) {
+
+        //     $order->foodItems()->sync($request->input('food_items', []));;
+        // } else {
+
+        //     $order->foodItems()->detach();
+        // }
+        $this->authorize('updateStatus', $order);
+
+        $order->status = $request->validated()['status'];
+        $order->save();
 
         return redirect()->route('admin.orders.show', ['order' => $order->slug])->with('message', 'Ordine aggiornato con successo');
     }
