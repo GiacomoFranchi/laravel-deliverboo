@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\OrderRequest;
 use Illuminate\Support\Facades\Auth;
 
 use App\Models\Order;
@@ -31,7 +32,8 @@ class OrderController extends Controller
      */
     public function create()
     {
-        //
+        $food_items = FoodItems::all(); 
+        return view('admin.orders.create', compact('food_items'));
     }
 
     /**
@@ -40,9 +42,16 @@ class OrderController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(OrderRequest $request)
     {
-        //
+        $form_input = $request->validated();
+        $order = new Order();
+        $order->fill($form_input);
+        $order->save();
+        $order->foodItems()->attach($request->input('food_item_ids'));
+
+        
+        return redirect()->route('admin.orders.show', ['order' => $order->slug])->with('message', 'Ordine creato con successo');
     }
 
     /**
@@ -51,9 +60,20 @@ class OrderController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Order $order)
     {
-        //
+        $restaurantId = Auth::user()->restaurant()->first()->id;
+
+        //contrrollare se order food item appartiene a ristorante registrato
+        $orderBelongsToRestaurant = $order->foodItems()->whereHas('restaurant', function ($query) use ($restaurantId) {
+            $query->where('id', $restaurantId);
+        })->exists();
+
+        if (!$orderBelongsToRestaurant) {
+            // se l'ordine non appartiene, abort
+            abort(403, 'Unauthorized action.');
+        }
+        return view('admin.orders.show', compact('order'));
     }
 
     /**
@@ -62,9 +82,10 @@ class OrderController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Order $order)
     {
-        //
+        $food_items = FoodItems::all();
+        return view('admin.orders.edit', compact('food_items', 'order'));
     }
 
     /**
@@ -74,9 +95,20 @@ class OrderController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(OrderRequest $request, Order $order)
     {
-        //
+        $form_input = $request->validated();
+        $order->update($form_input);
+        
+        if ($order->has('food_items')) {
+          
+            $order->foodItems()->sync($request->input('food_items', []));;
+        } else {
+
+            $order->foodItems()->detach();
+        }
+
+        return redirect()->route('admin.orders.show', ['order' => $order->slug])->with('message', 'Ordine aggiornato con successo');
     }
 
     /**
@@ -85,8 +117,9 @@ class OrderController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Order $order)
     {
-        //
+        $order->delete();
+        return redirect()->route('admin.orders.index')->with('message', 'Ordine spostato nel cestino');
     }
 }
