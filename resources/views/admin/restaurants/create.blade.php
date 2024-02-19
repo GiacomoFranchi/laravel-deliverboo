@@ -77,7 +77,7 @@
                     @enderror
                 </div>
 
-                {{-- Address Input --}}
+                {{-- Closure Day Input --}}
                 <div class="mb-4 has-validation w-50">
                     <label for="closure_day" class="form-label fw-bold">Select closure day:</label>
                     <select class="form-select @error('closure_day') is-invalid @enderror" name="closure_day"
@@ -88,8 +88,8 @@
                         <option value="wednesday">Wednesday</option>
                         <option value="thursday">Thursday</option>
                         <option value="friday">Friday</option>
-                        <option value="aaturday">Saturday</option>
-                        <option value="aunday">Sunday</option>
+                        <option value="saturday">Saturday</option>
+                        <option value="sunday">Sunday</option>
                     </select>
 
                     @error('type_id')

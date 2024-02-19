@@ -34,13 +34,13 @@
             <li class="mt-2 fs-5">
                 <span class="fw-bold ">Opening Time:</span>
                 
-                {{ $restaurant->opening_time }}
+                {{ date("H:i", strtotime($restaurant->opening_time)) }}
             </li>
 
             <li class="mt-2 fs-5">
                 <span class="fw-bold ">Closing Time:</span>
                 
-                {{ $restaurant->closing_time }}
+                {{ date("H:i", strtotime($restaurant->closing_time)) }}
             </li>
 
             <li class="mt-2 fs-5">

@@ -4,8 +4,10 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreRestaurantRequest;
+use App\Http\Requests\UpdateRestaurantRequest;
 use App\Models\Restaurant;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
@@ -65,7 +67,7 @@ class RestarauntController extends Controller
      */
     public function show(Restaurant $restaurant)
     {
-        
+
         return view('admin.restaurants.show', compact('restaurant'));
     }
 
@@ -75,9 +77,10 @@ class RestarauntController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Restaurant $restaurant)
     {
-        //
+        return view('admin.restaurants.edit', compact('restaurant'));
+
     }
 
     /**
@@ -87,9 +90,21 @@ class RestarauntController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdateRestaurantRequest $request, Restaurant $restaurant)
     {
-        //
+        $form_data = $request->validated();
+
+        if ($request->hasFile('image')) {
+            if ($restaurant->image) {
+                Storage::delete($restaurant->image);
+            }
+
+            $path = Storage::put('restaurants_images', $request->image);
+            $form_data['image'] = $path;
+        }
+
+        $restaurant->update($form_data);
+        return redirect()->route('admin.restaurants.show', ['restaurant' => $restaurant->slug]);
     }
 
     /**
