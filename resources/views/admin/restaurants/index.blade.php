@@ -46,6 +46,9 @@
                                 <button class="btn btn-danger btn-delete" type="submit" data-title="{{ $restaurant->name }}">
                                     Delete
                                 </button>
+                                <div>
+                                    <a class="btn btn-primary" href="{{ route('admin.food_items.index') }}">Menu</a>
+                                </div>
 
                             </form>
                             </td>
