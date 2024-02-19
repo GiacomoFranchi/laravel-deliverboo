@@ -6,8 +6,14 @@
 
         <div class="text-end">
             <a class="btn btn-success" href="{{ route('admin.restaurants.create') }}">
-                <i class="fa-regular fa-plus"></i>
+                <i class="fa-regular fa-plus"></i> Add new Restaurant
             </a>
+        </div>
+
+        <div class="text-start">
+            <p>
+                You own a total of <strong>{{ count($restaurants) }}</strong> restaurants.
+            </p>
         </div>
 
         @if (Session::has('message'))
