@@ -77,9 +77,9 @@ class Food_itemController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($restaurant_id)
+    public function edit($restaurant_id,Food_item $food_item)
     {
-        return view('admin.food_items.edit', compact('food_item'));
+        return view('admin.food_items.edit', compact('food_item' , 'restaurant_id'));
     }
 
     /**
@@ -89,9 +89,10 @@ class Food_itemController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateFood_itemRequest $request, Food_item $food_item, $restaurant_id)
+    public function update(UpdateFood_itemRequest $request, $restaurant_id, Food_item $food_item)
     {
         $form_data=$request->validated();
+        $food_item->restaurant_id = $restaurant_id;
 
         if($request->hasFile('image')){
             if($food_item->image){
@@ -101,8 +102,12 @@ class Food_itemController extends Controller
             $form_data['image'] = $path;
         }
         $food_item->update($form_data);
+
+        $food_item->restaurant_id = $restaurant_id;
+        $food_item->fill($form_data);
+
         
-        return redirect()->route('admin.food_items.show', ['food_item' => $food_item->slug], $restaurant_id);
+        return redirect()->route('admin.restaurants.food_items.show', [$food_item->restaurant_id, 'food_item' => $food_item->slug]);
     }
 
     /**
@@ -115,7 +120,7 @@ class Food_itemController extends Controller
     {
 
         $food_item->delete();
-        return redirect()->route('admin.restaurants.food_items.index', $restaurant_id)
+        return redirect()->route('admin.restaurants.food_items.index', $restaurant_id, compact('food_item'))
 
         ->with('message', "Il piatto: $food_item->name è stato rimosso dal menu.");
     }
