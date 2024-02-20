@@ -56,7 +56,7 @@ class RestaurantController extends Controller
         }
 
         $restaurant->user_id = Auth::id();
-        
+        // dd($request->input('cusine_types'));
         $restaurant->save();
         
         if ($request->has('cusine_types')) {

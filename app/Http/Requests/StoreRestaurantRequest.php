@@ -30,7 +30,7 @@ class StoreRestaurantRequest extends FormRequest
             'vat_number' => ['nullable'], 
             'phone_number' => ['required', 'string', 'regex:/^\+?[0-9()\s-]{8,20}$/'],
             'opening_time' => ['required'],
-            'cusine_types' => ['required'],
+            'cusine_types' => ['required', 'array', 'min:1'],
             'closing_time' => ['required'],
             'closure_day' => ['required'], 
         ];
