@@ -25,7 +25,7 @@
                     <td>{{$order->customers_email}}</td>
                     <td>{{$order->customers_address}}</td>
                     <td>{{$order->total_price}}</td>
-                    <td> </td>
+                    <td><a class="btn btn-success" href="{{Route('admin.orders.show', ['order' => $order->slug])}}"> Dettagli </a> </td>
                     </td>
 
                 </tr>

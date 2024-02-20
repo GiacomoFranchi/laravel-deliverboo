@@ -1,6 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
+@dump($order->food_items)
 
 <div class="container mt-5">
      @if (Session::has('message'))
@@ -20,11 +21,11 @@
                  <h3>Elementi:</h3>
                 <ul>
                     @foreach ($order->food_items as $food_item)
-                        <li>{{ $food_item->name }} - Quantità: {{ $food_item->pivot->quantity }}</li> 
+                        <li>{{ $food_item->name }} - Quantità: {{ $food_item->pivot->quantity }} - Prezzo {{$food_item->price}}</li> 
                     @endforeach
                 </ul>
                 
-                <h6> {{ $order->total_price}}</h6>
+                <h6>TOTALE {{ $order->total_price}}</h6>
 
             <div class="btn-wrapper">
                 <a href="{{route('admin.orders.index')}}" class="btn btn-primary">Indietro</a>
