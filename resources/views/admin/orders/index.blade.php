@@ -14,6 +14,7 @@
         <thead>
             <tr>
             <th scope="col">Id</th>
+            <th scope="col">restaurant_id</th>
             <th scope="col">Nome Cliente</th>
              <th scope="col">email </th>
             <th scope="col">Indirizzo</th>
@@ -26,6 +27,9 @@
             @foreach ($orders as $order)
                <tr>
                     <th scope="row">{{$order->id}}</th>
+                    <td>
+                        <p>{{ $order->food_items[0]->restaurant_id}}</p>
+                    </td>
                     <td>{{$order->customers_name}}</td>
                     <td>{{$order->customers_email}}</td>
                     <td>{{$order->customers_address}}</td>
