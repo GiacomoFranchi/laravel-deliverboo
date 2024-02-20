@@ -23,8 +23,8 @@ class RestaurantController extends Controller
     {
 
         $restaurants = Restaurant::where('user_id', '=', Auth::user()->id)->get();
-        $cusinetypes = CusineType::all();
-        return view('admin.restaurants.index', compact('restaurants', 'cusinetypes'));
+        $cusine_types = CusineType::all();
+        return view('admin.restaurants.index', compact('restaurants', 'cusine_types'));
     }
 
     /**
@@ -35,7 +35,7 @@ class RestaurantController extends Controller
     public function create()
     {   
         $cusinetypes = CusineType::all();
-        return view('admin.restaurants.create', compact('cusinetypes'));
+        return view('admin.restaurants.create', compact('cusine_types'));
     }
 
     /**
@@ -59,8 +59,8 @@ class RestaurantController extends Controller
         
         $restaurant->save();
         
-        if ($request->has('cusinetypes')) {
-            $restaurant->cusine_types()->attach($request->cusinetypes);
+        if ($request->has('cusine_types')) {
+            $restaurant->cusine_types()->attach($request->cusine_types);
         }
 
         return redirect()->route('admin.restaurants.show', ['restaurant' => $restaurant->slug]);
@@ -86,8 +86,8 @@ class RestaurantController extends Controller
      */
     public function edit(Restaurant $restaurant)
     {
-        $cusinetypes = CusineType::all();
-        return view('admin.restaurants.edit', compact('restaurant', 'cusinetypes'));
+        $cusine_types = CusineType::all();
+        return view('admin.restaurants.edit', compact('restaurant', 'cusine_types'));
 
     }
 
@@ -113,8 +113,8 @@ class RestaurantController extends Controller
         
         $restaurant->update($form_data);
 
-        if ($request->has('cusinetypes')) {
-            $restaurant->cusine_types()->sync($request->cusinetypes); // sync() va a sincronizzare i nuovi dati da salvare con i dati ottenuti dal $request
+        if ($request->has('cusine_types')) {
+            $restaurant->cusine_types()->sync($request->cusine_types); // sync() va a sincronizzare i nuovi dati da salvare con i dati ottenuti dal $request
         } else {
             $restaurant->cusine_types()->sync([]);
         }
