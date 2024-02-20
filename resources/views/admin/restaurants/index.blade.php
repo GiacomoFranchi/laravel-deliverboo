@@ -6,8 +6,14 @@
 
         <div class="text-end">
             <a class="btn btn-success" href="{{ route('admin.restaurants.create') }}">
-                <i class="fa-regular fa-plus"></i>
+                <i class="fa-regular fa-plus"></i> Add new Restaurant
             </a>
+        </div>
+
+        <div class="text-start">
+            <p>
+                You own a total of <strong>{{ count($restaurants) }}</strong> restaurants.
+            </p>
         </div>
 
         @if (Session::has('message'))
@@ -37,7 +43,7 @@
                             <td>{{ $restaurant->address }}</td>
                             <td> - </td>
                             <td> 
-                                <a class="btn btn-primary" href="{{ route('admin.food_items.create') }}?restaurant_id={{ $restaurant->id }}">
+                                <a class="btn btn-primary" href="{{ route('admin.restaurants.food_items.index', $restaurant->id) }}">
                                     <i class="fa-solid fa-magnifying-glass"></i>
                                 </a>
                             </td>

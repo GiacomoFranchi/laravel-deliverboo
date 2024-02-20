@@ -21,7 +21,7 @@
         @endif
 
         {{-- Inizio Form --}}
-        <form class="mt-5" action="{{ route('admin.food_items.store') }}" method="POST" enctype="multipart/form-data">
+        <form class="mt-5" action="{{ route('admin.restaurants.food_items.store',$restaurant_id) }}" method="POST" enctype="multipart/form-data">
             @csrf
             <input type="hidden" name="restaurant_id" value="{{ $selectedRestaurant ? $selectedRestaurant->id : '' }}">
 
@@ -65,9 +65,20 @@
                     Disponibile
                 </label>
             </div>
+            
+            <div class="mb-3">
+                <img id="preview-img" src="" alt="" style="max-height: 250px">
+            </div>
 
             <button class="btn btn-success" type="submit">Salva</button>
 
         </form>
     </div>
+
+    
 @endsection
+
+@section('scripts')
+    @vite(['resources/js/image-preview.js'])
+@endsection
+

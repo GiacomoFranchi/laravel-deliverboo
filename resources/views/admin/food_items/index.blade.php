@@ -2,12 +2,22 @@
 
 @section('content')
     <div class="container mt-5">
-        <h2>Menu Ristorante</h2>
+        <h2>
+            Restaurant Menu
+        </h2>
 
         <div class="text-end">
-            <a class="btn btn-success" href="{{ route('admin.food_items.create') }}">Aggiungi Piatto</a>
+            <a class="btn btn-success" href="{{ route('admin.restaurants.food_items.create',  $restaurant_id) }}">
+                <i class="fa-solid fa-plus"></i> Add New Dish
+            </a>
         </div>
         
+        <div class="text-start">
+            <p>
+                You have a total of <strong>{{ count($food_items) }}</strong> dishes in your menu.
+            </p>
+        </div>
+
         {{-- start- DELETE MESSAGE --}}
         @if (session('message'))
             <div class="alert alert-success mt-4">
@@ -20,35 +30,39 @@
             <table class="table table-striped mt-5">
                 <thead>
                     <tr>
-                        <th scope="col">id</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Data Aggiunta</th>
-                        <th scope="col">Disponibile</th>
-                        <th scope="col">Actions</th>
+                        <th scope="col">Dish Name</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Price</th>
+                        <th scope="col" class="text-center">Availability</th>
+                        <th scope="col" class="text-center">Actions</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach ($food_items as $food_item)
                         <tr>
-                            <th scope="row">{{ $food_item->id }}</th>
-                            <td>{{ $food_item->name }}</td>
-                            <td>{{ $food_item->created_at }}</td>
-                            <td>
+                            <td scope="row">{{ $food_item->name }}</td>
+                            <td>{{ $food_item->description }}</td>
+                            <td>{{ $food_item->price }}</td>
+                            <td class="text-center">
                                 @if ($food_item->is_visible)
-                                    <p class="card-subtitle mb-2 text-muted">Disponibile</p>
+                                    <p class="card-subtitle mb-2 text-muted">
+                                        <i class="fa-solid fa-square-check"></i>
+                                    </p>
                                 @else
-                                    <p class="card-subtitle mb-2 text-muted">non disponibile</p>
+                                    <p class="card-subtitle mb-2 text-muted">
+                                        <i class="fa-solid fa-square-xmark"></i>
+                                    </p>
                                 @endif
                             </td>
 
-                            <td>
-                                <a href="{{ route('admin.food_items.show', ['food_item' => $food_item->slug]) }}"
+                            <td class="text-center">
+                                <a href="{{ route('admin.restaurants.food_items.show', [$food_item->restaurant_id, 'food_item' => $food_item->slug]) }}"
                                     class="btn btn-primary">
                                     <i class="fa-solid fa-magnifying-glass"></i>
                                 </a>
 
                                 <a class="btn btn-warning"
-                                    href="{{ route('admin.food_items.edit', ['food_item' => $food_item->slug]) }}">
+                                    href="{{ route('admin.restaurants.food_items.edit', [$food_item->restaurant_id, 'food_item' => $food_item->slug]) }}">
                                     <i class="fa-solid fa-pencil"></i>
                                 </a>
                                 
@@ -64,9 +78,7 @@
                 Aggiungi i tuoi Piatti e li visualizzerai qui!
             </div>
         @endif
-        <div>
-            {{ $food_items->links() }}
-        </div>
+
 
     </div>
 

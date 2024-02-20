@@ -36,11 +36,11 @@
 
             </div>
             <div class="card-body">
-                <a class="btn btn-warning" href="{{ route('admin.food_items.edit', ['food_item' => $food_item->slug]) }}">
+                <a class="btn btn-warning" href="{{ route('admin.restaurants.food_items.edit', [$food_item->restaurant_id, 'food_item' => $food_item->slug]) }}">
                     <i class="fa-solid fa-pencil"></i>
                 </a>
     
-                <a class="btn btn-success" href="{{ route('admin.food_items.index') }}">
+                <a class="btn btn-success" href="{{ route('admin.restaurants.food_items.index', [$food_item->restaurant_id, 'food_item' => $food_item->slug]) }}">
                     View all
                 </a>
                 
