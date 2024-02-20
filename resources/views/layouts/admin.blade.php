@@ -74,6 +74,7 @@
                                     href="{{ route('admin.orders.index') }}"> 
                                     <i class="fa-solid fa-receipt fa-lg fa-fw"></i> Orders
                                     
+                                    
                                 </a>
                             </li>
                         </ul>
