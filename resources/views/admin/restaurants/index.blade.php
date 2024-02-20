@@ -41,9 +41,14 @@
                                 <h6>{{ $restaurant->name }}</h6>
                             </td>
                             <td>{{ $restaurant->address }}</td>
-                            <td> {{ $restaurant->cusinetypes }}</td>
-                            <td> 
-                                <a class="btn btn-primary" href="{{ route('admin.restaurants.food_items.index', $restaurant->id) }}">
+                            <td>
+                                @foreach ($restaurant->cusine_types as $cusine_type)
+                                    <span class="badge bg-light text-dark fs-6"> {{ $cusine_type->name }} </span>
+                                @endforeach
+                            </td>
+                            <td>
+                                <a class="btn btn-primary"
+                                    href="{{ route('admin.restaurants.food_items.index', $restaurant->id) }}">
                                     <i class="fa-solid fa-magnifying-glass"></i>
                                 </a>
                             </td>

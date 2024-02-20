@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('cusine_type_restaurant_', function (Blueprint $table) {
+        Schema::create('cusine_type_restaurant', function (Blueprint $table) {
             $table->unsignedBigInteger('restaurant_id');
             $table->foreign('restaurant_id')->references('id')->on('restaurants');
 

@@ -23,8 +23,8 @@ class RestaurantController extends Controller
     {
 
         $restaurants = Restaurant::where('user_id', '=', Auth::user()->id)->get();
-        $cusinetypes = CusineType::all();
-        return view('admin.restaurants.index', compact('restaurants', 'cusinetypes'));
+        $cusine_types = CusineType::all();
+        return view('admin.restaurants.index', compact('restaurants', 'cusine_types'));
     }
 
     /**
@@ -33,8 +33,9 @@ class RestaurantController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
-        return view('admin.restaurants.create');
+    {   
+        $cusine_types = CusineType::all();
+        return view('admin.restaurants.create', compact('cusine_types'));
     }
 
     /**
@@ -54,13 +55,13 @@ class RestaurantController extends Controller
             $restaurant->image = $path;
         }
 
-        if ($request->has('cusinetypes')) {
-            $restaurant->cusinetypes()->attach($request->cusinetypes);
-        }
-
         $restaurant->user_id = Auth::id();
-
+        
         $restaurant->save();
+        
+        if ($request->has('cusine_types')) {
+            $restaurant->cusine_types()->attach($request->cusine_types);
+        }
 
         return redirect()->route('admin.restaurants.show', ['restaurant' => $restaurant->slug]);
     }
@@ -85,8 +86,8 @@ class RestaurantController extends Controller
      */
     public function edit(Restaurant $restaurant)
     {
-        $cusinetypes = CusineType::all();
-        return view('admin.restaurants.edit', compact('restaurant', 'cusinetypes'));
+        $cusine_types = CusineType::all();
+        return view('admin.restaurants.edit', compact('restaurant', 'cusine_types'));
 
     }
 
@@ -106,17 +107,18 @@ class RestaurantController extends Controller
                 Storage::delete($restaurant->image);
             }
 
-            if ($request->has('cusinetypes')) {
-                $restaurant->cusinetypes()->sync($request->cusinetypes); // sync() va a sincronizzare i nuovi dati da salvare con i dati ottenuti dal $request
-            } else {
-                $restaurant->cusinetypes()->sync([]);
-            }
-
             $path = Storage::put('restaurants_images', $request->image);
             $form_data['image'] = $path;
         }
-
+        
         $restaurant->update($form_data);
+
+        if ($request->has('cusine_types')) {
+            $restaurant->cusine_types()->sync($request->cusine_types); // sync() va a sincronizzare i nuovi dati da salvare con i dati ottenuti dal $request
+        } else {
+            $restaurant->cusine_types()->sync([]);
+        }
+
         return redirect()->route('admin.restaurants.show', ['restaurant' => $restaurant->slug]);
     }
 

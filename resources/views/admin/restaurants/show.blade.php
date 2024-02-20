@@ -52,7 +52,9 @@
             <li class="mt-2 fs-5">
                 <span class="fw-bold ">Cusine Types:</span>
 
-                {{ $restaurant->cusinetypes }}
+                @foreach ($restaurant->cusine_types as $cusine_type)
+                    <span class="badge bg-light text-dark fs-6"> {{ $cusine_type->name }} </span>
+                @endforeach
             </li>
         </ul>
 
