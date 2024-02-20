@@ -41,7 +41,7 @@
                                 <h6>{{ $restaurant->name }}</h6>
                             </td>
                             <td>{{ $restaurant->address }}</td>
-                            <td> - </td>
+                            <td> {{ $restaurant->cusinetypes }}</td>
                             <td> 
                                 <a class="btn btn-primary" href="{{ route('admin.restaurants.food_items.index', $restaurant->id) }}">
                                     <i class="fa-solid fa-magnifying-glass"></i>
