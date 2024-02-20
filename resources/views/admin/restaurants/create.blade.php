@@ -116,16 +116,21 @@
             {{-- CHECKBOX FOR CUISINE TYPES --}}
             <div class="mb-3">
                 <h4>Check the Cuisine Types of your restaurant:</h4>
-                @foreach ($cusinetypes as $cusinetype)
+                @foreach ($cusine_types as $cusine_type)
                     <div class="form-check">
-                        <input @checked(in_array($cusinetype->id, old('cusinetypes', []))) type="checkbox" id="cusinetype-{{ $cusinetype->id }}" value="{{ $cusinetype->id }}" name="cusinetypes[]">
-                        <label for="cusinetype-{{ $cusinetype->id }}">
-                            {{ $cusinetype->name }}
+                        <input @checked(in_array($cusine_type->id, old('cusine_type', []))) 
+                        type="checkbox" 
+                        id="cusine_type-{{ $cusine_type->id }}"
+                        class="@error('cusine_types') is-invalid @enderror" 
+                        value="{{ $cusine_type->id }}"
+                        name="cusine_type[]">
+                        <label for="cusine_type-{{ $cusine_type->id }}">
+                            {{ $cusine_type->name }}
                         </label>
                     </div>
                 @endforeach
 
-                @error('cusinetypes')
+                @error('cusine_types')
                     <div class="text-danger">{{ $message }}</div>
                 @enderror
             </div>

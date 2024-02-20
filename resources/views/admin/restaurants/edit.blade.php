@@ -117,10 +117,16 @@
                 <h4>Modify the Cuisine Types of your restaurant:</h4>
                 @foreach ($cusine_types as $cusine_type)
                     <div class="form-check">
-                        <input  @checked( $errors->any() ? in_array($cusine_type->id, old('cusine_types', [])) : $restaurant->cusine_types->contains($cusine_type)) type="checkbox" id="cusine_type-{{ $cusine_type->id }}" value="{{ $cusine_type->id }}" name="cusine_types[]">
+                        <input  @checked( $errors->any() ? in_array($cusine_type->id, old('cusine_types', [])) : $restaurant->cusine_types->contains($cusine_type)) 
+                        type="checkbox" 
+                        id="cusine_type-{{ $cusine_type->id }}" 
+                        class="@error('cusine_types') is-invalid @enderror" 
+                        value="{{ $cusine_type->id }}" 
+                        name="cusine_types[]">
                         <label for="cusine_type-{{ $cusine_type->id }}">{{ $cusine_type->name }}</label>
                     </div>
                 @endforeach
+
                 @error('cusine_types')
                     <div class="text-danger">{{ $message }}</div>
                 @enderror

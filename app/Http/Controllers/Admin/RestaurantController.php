@@ -34,7 +34,7 @@ class RestaurantController extends Controller
      */
     public function create()
     {   
-        $cusinetypes = CusineType::all();
+        $cusine_types = CusineType::all();
         return view('admin.restaurants.create', compact('cusine_types'));
     }
 
