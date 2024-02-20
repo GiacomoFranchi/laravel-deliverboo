@@ -13,6 +13,10 @@
         <div class="col-12 justify-content-center">
             
                 <h2> Ordine numer {{ $order->id}}</h2>
+                @foreach ($order->food_items as $food_item)
+                    <p>Restaurant ID: {{ $food_item->restaurant->id }}</p>
+                @endforeach
+
                 <p>Nome {{$order->customers_name}}</p>
                 <p>Email {{$order->customers_email}}</p>
                 <p>Indirizzo {{$order->customers_address}}</p>

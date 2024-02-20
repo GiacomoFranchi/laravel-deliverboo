@@ -51,6 +51,9 @@
                                     href="{{ route('admin.restaurants.food_items.index', $restaurant->id) }}">
                                     <i class="fa-solid fa-magnifying-glass"></i>
                                 </a>
+                                <a class="btn btn-primary" href="{{ route('admin.restaurant.orders.index', ['restaurant' => $restaurant->id]) }}">
+                                    <i class="fa-solid fa-magnifying-glass">sfs</i>
+                                </a>
                             </td>
                             <td>
                                 {{-- show button --}}

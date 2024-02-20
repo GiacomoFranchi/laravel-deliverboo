@@ -26,6 +26,7 @@ Route::get('/', function () {
 });
 
 Route::get('/admin/orders/{restaurant}/food-items', [AdminOrderController::class, 'getFoodItemsForRestaurant']);
+Route::get('/admin/restaurants/{restaurant}/orders', [AdminOrderController::class, 'indexForRestaurant'])->name('admin.restaurant.orders.index');
 Route::get('/dashboard', function () {
     return view('admin.dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
