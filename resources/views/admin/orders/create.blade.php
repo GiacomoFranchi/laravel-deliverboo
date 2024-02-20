@@ -14,65 +14,73 @@
                 </ul>
             </div>
         @endif
-        
-        <form action="{{route('admin.orders.store')}}" method="POST">
+
+        <form action="{{ route('admin.orders.store') }}" method="POST">
             @csrf
 
-        <div class="mb-3">
-            <label for="restaurant_id" class="form-label">Ristorante</label>
-            <select class="form-control @error('restaurant_id') is-invalid @enderror" id="restaurantSelect" name="restaurant_id">
-                <option value="">Seleziona un ristorante</option>
-                @foreach ($restaurants as $restaurant)
-                    <option value="{{ $restaurant->id }}" {{ old('restaurant_id') == $restaurant->id ? 'selected' : '' }}>{{ $restaurant->name }}</option>
-                @endforeach
-            </select>
-            @error('restaurant_id')
-                <div class="invalid-feedback">{{ $message }}</div>
-            @enderror
-        </div>
+            <div class="mb-3">
+                <label for="restaurant_id" class="form-label">Ristorante</label>
+                <select class="form-control @error('restaurant_id') is-invalid @enderror" id="restaurantSelect"
+                    name="restaurant_id">
+                    <option value="">Seleziona un ristorante</option>
 
-        <div class="mb-3">
+                    @foreach ($restaurants as $restaurant)
+                        <option value="{{ $restaurant->id }}"
+                            {{ old('restaurant_id') == $restaurant->id ? 'selected' : '' }}>{{ $restaurant->name }}</option>
+                    @endforeach
+
+                </select>
+                @error('restaurant_id')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                @enderror
+            </div>
+
+            <div class="mb-3">
                 <label for="customers_name" class="form-label">Nome</label>
-                <input type="text" class="form-control @error('customers_name') is-invalid @enderror" id="customers_name" name="customers_name" value="{{ old('customers_name') }}">
+                <input type="text" class="form-control @error('customers_name') is-invalid @enderror" id="customers_name"
+                    name="customers_name" value="{{ old('customers_name') }}">
                 @error('customers_first_name')
-                <div class='invalid-feedback'> {{ $message }}</div>
+                    <div class='invalid-feedback'> {{ $message }}</div>
                 @enderror
             </div>
             <div class="mb-3">
                 <label for="customers_address" class="form-label">Indirizzo</label>
-                <input type="text" class="form-control @error('customers_address') is-invalid @enderror" id="customers_address" name="customers_address" value="{{ old('customers_address') }}">
+                <input type="text" class="form-control @error('customers_address') is-invalid @enderror"
+                    id="customers_address" name="customers_address" value="{{ old('customers_address') }}">
                 @error('customers_address')
                     <div class="invalid-feedback"> {{ $message }}</div>
                 @enderror
             </div>
-             <div class="mb-3">
+            <div class="mb-3">
                 <label for="customers_phone_number" class="form-label">Numero di telefono</label>
-                <input type="text" class="form-control @error('customers_phone_number') is-invalid @enderror" id="customers_phone_number" name="customers_phone_number" value="{{ old('customers_phone_number') }}">
+                <input type="text" class="form-control @error('customers_phone_number') is-invalid @enderror"
+                    id="customers_phone_number" name="customers_phone_number" value="{{ old('customers_phone_number') }}">
                 @error('customers_phone_number')
                     <div class="invalid-feedback"> {{ $message }}</div>
                 @enderror
             </div>
             <div class="mb-3">
                 <label for="customers_email" class="form-label">Email</label>
-                <input type="email" class="form-control @error('customers_email') is-invalid @enderror" id="customers_email" name="customers_email" value="{{ old('customers_email') }}">
+                <input type="email" class="form-control @error('customers_email') is-invalid @enderror"
+                    id="customers_email" name="customers_email" value="{{ old('customers_email') }}">
                 @error('customers_email')
                     <div class="invalid-feedback"> {{ $message }}</div>
                 @enderror
             </div>
             <div id="foodItemsContainer">
                 @foreach ($food_items as $item)
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" name="food_items[]" id="item{{ $item->id }}" value="{{ $item->id }}">
-                    <label class="form-check-label" for="item{{ $item->id }}">
-                        {{ $item->name }}
-                    </label>
-                </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="food_items[]" id="item{{ $item->id }}"
+                            value="{{ $item->id }}">
+                        <label class="form-check-label" for="item{{ $item->id }}">
+                            {{ $item->name }}
+                        </label>
+                    </div>
                 @endforeach
             </div>
 
             <button type="submit" class="btn btn-success">Invia</button>
         </form>
-        
+
     </div>
 @endsection
-

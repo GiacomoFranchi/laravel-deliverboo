@@ -53,7 +53,7 @@ class OrderController extends Controller
      */
     public function create()
     {
-        $restaurants = Restaurant::all();
+        $restaurants = Auth::user()->restaurants;
         $food_items = collect();
 
         return view('admin.orders.create', compact('restaurants', 'food_items'));
