@@ -48,6 +48,12 @@
 
                 {{ $restaurant->closure_day }}
             </li>
+
+            <li class="mt-2 fs-5">
+                <span class="fw-bold ">Cusine Types:</span>
+
+                {{ $restaurant->cusinetypes }}
+            </li>
         </ul>
 
 
