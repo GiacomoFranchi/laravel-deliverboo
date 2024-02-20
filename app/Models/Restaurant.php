@@ -27,4 +27,8 @@ class Restaurant extends Model
     public function food_items(){
         return $this->hasMany(Food_item::class);
     }
+
+    public function cusine_types() {
+        return $this->belongsToMany(CusineType::class);
+    }
 }
