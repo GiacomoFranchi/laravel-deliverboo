@@ -43,22 +43,7 @@ class Food_itemController extends Controller
      */
     public function store(StoreFood_itemRequest $request, $restaurant_id)
     {
-        // dd($request->all());
-        $userRestaurants = auth()->user()->restaurants;
-
-        //controlla se user ha ristorante
-        if ($userRestaurants->isEmpty()) {
-            // errore se utente non ha ristorante
-            return redirect()->back()->with('errore');
-        }
-
-        // da modificare; per ora, scegli primmo ristorante
-        $selectedRestaurant = $userRestaurants->first();
-
-        // valida i dati
         $form_data = $request->validated();
-
-        // crea nuovo food item
         $food_item = new Food_item();
         $food_item->restaurant_id = $restaurant_id;
         $food_item->fill($form_data);
@@ -69,11 +54,6 @@ class Food_itemController extends Controller
         $path = Storage::put('food_image', $request->image);
         $food_item->image = $path;   
         }
-
-        // assegnare id del ristorante a food item
-        $food_item->restaurant_id = $selectedRestaurant->id;
-
-     
         $food_item->save();
         return redirect()->route('admin.restaurants.food_items.index' , $restaurant_id);
     }
