@@ -32,6 +32,19 @@ class OrderController extends Controller
         })->get();
         return view('admin.orders.index', compact('orders'));
     }
+    public function indexForRestaurant($restaurantId)
+    {
+
+        $restaurant = Restaurant::findOrFail($restaurantId);
+
+        $orders = Order::whereHas('food_items', function ($query) use ($restaurantId) {
+            $query->where('restaurant_id', $restaurantId);
+        })->get();
+
+        $restaurant = Restaurant::findOrFail($restaurantId);
+
+        return view('admin.orders.index', compact('orders', 'restaurant'));
+    }
 
     /**
      * Show the form for creating a new resource.
