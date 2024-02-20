@@ -111,7 +111,7 @@ class OrderController extends Controller
 
         //contrrollare se order food item appartiene a ristorante registrato
         $orderBelongsToRestaurant = $order->food_items()->whereHas('restaurant', function ($query) use ($restaurantId) {
-            $query->where('id', $restaurantId);
+            $query->whereIn('id', $restaurantId);
         })->exists();
 
         if (!$orderBelongsToRestaurant) {

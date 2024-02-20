@@ -4,11 +4,11 @@
     <div class="container mt-5">
         <h2 class="text-center">Aggiungi un nuovo piatto:</h2>
         {{-- debug  --}}
-        @if (isset($selectedRestaurant))
+        {{-- @if (isset($selectedRestaurant))
             <p>Id del ristorante  {{ $selectedRestaurant->id }}</p>
          @else
             <p>Nessun ristorante selezionato</p>
-         @endif
+         @endif --}}
 
         @if ($errors->any())
             <div class="alert alert-danger">
@@ -23,7 +23,7 @@
         {{-- Inizio Form --}}
         <form class="mt-5" action="{{ route('admin.restaurants.food_items.store',$restaurant_id) }}" method="POST" enctype="multipart/form-data">
             @csrf
-            <input type="hidden" name="restaurant_id" value="{{ $selectedRestaurant ? $selectedRestaurant->id : '' }}">
+            {{-- <input type="hidden" name="restaurant_id" value="{{ $selectedRestaurant ? $selectedRestaurant->id : '' }}"> --}}
 
 
             {{-- NAME --}}
