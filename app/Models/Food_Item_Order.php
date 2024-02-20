@@ -9,7 +9,7 @@ class Order_Food_Item extends Model
 {
     use HasFactory;
 
-    protected $table = 'order_food_item';
+    protected $table = 'food_item_order';
     protected $fillable = ['quantity'];
 
     public function order()
@@ -17,7 +17,7 @@ class Order_Food_Item extends Model
         return $this->belongsTo(Order::class);
     }
 
-    public function foodItem()
+    public function food_item()
     {
         return $this->belongsTo(Food_item::class);
     }

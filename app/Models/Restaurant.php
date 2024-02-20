@@ -12,7 +12,7 @@ class Restaurant extends Model
     use HasFactory;
 
 
-    public $fillable = ['name','user_id', 'address','image', 'vat_number', 'phone_number', 'opening_time', 'closing_time', 'closure_day',];
+    public $fillable = ['name','user_id', 'address','image', 'vat_number', 'phone_number', 'opening_time', 'closing_time', 'closure_day'];
 
     public function setNameAttribute($value)
     {
