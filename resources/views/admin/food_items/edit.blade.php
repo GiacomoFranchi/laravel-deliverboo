@@ -18,34 +18,59 @@
         @endif
 
         {{-- Inizio Form --}}
-        <form action="{{ route('admin.restaurants.food_items.update', [$food_item->restaurant_id, 'food_item' => $food_item->slug]) }}" method="POST"
-            enctype="multipart/form-data">
+        <form
+            action="{{ route('admin.restaurants.food_items.update', [$food_item->restaurant_id, 'food_item' => $food_item->slug]) }}"
+            method="POST" enctype="multipart/form-data">
             @csrf
             @method('PUT')
             {{-- NOME PIATTO --}}
             <div class="mb-3">
                 <label for="name" class="form-label">Nome Piatto:</label>
-                <input type="text" class="form-control" id="name" name="name"
-                    value="{{ old('name', $food_item->name) }}">
+                <input type="text" required minlength="3" maxlength="100"
+                    class="form-control @error('name') is-invalid
+                    
+                @enderror"
+                    id="name" name="name" value="{{ old('name', $food_item->name) }}">
+                @error('name')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                @enderror
             </div>
 
             {{-- IMMAGINE --}}
             <div class="mb-3">
                 <label for="image" class="form-label">Foto Pietanza:</label>
-                <input type="file" name="image" id="image" class="form-control">
+                <input type="file" nullable accept="image/*" size="512" name="image" id="image"
+                    class="form-control @error('image') is-invalid
+                    
+                @enderror">
+                @error('image')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                @enderror
             </div>
 
             {{-- DESCRIZIONE --}}
             <div class="mb-3">
                 <label for="description" class="form-label">Descrizione Piatto:</label>
-                <textarea class="form-control" name="description" id="description" rows="5">{{ old('description', $food_item->description) }}</textarea>
+                <textarea required class="form-control @error('description') is-invalid
+                    
+                @enderror"
+                    name="description" id="description" rows="5">{{ old('description', $food_item->description) }}</textarea>
+                @error('description')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                @enderror
             </div>
 
             {{-- PRICE --}}
             <div class="mb-3">
                 <label for="price" class="form-label">Prezzo:</label>
-                <input type="text" class="form-control" style="max-height: 250px" id="price" name="price"
-                    value="{{ old('price', $food_item->price) }}">
+                <input type="text" required  min="0" pattern="^\d{1,3}(\.\d{1,2})?"
+                    class="form-control @error('price') is-invalid
+                    
+                @enderror"
+                    style="max-height: 250px" id="price" name="price" value="{{ old('price', $food_item->price) }}">
+                @error('price')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                @enderror
             </div>
 
             {{-- DISPONIBILITA --}}
@@ -65,7 +90,7 @@
             <div class="mb-3">
                 <img id="preview-img" src="" alt="" style="max-height: 250px">
             </div>
-            
+
             <button class="btn btn-success" type="submit">Salva</button>
 
         </form>
