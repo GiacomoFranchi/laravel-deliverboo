@@ -71,7 +71,8 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-white {{ Route::currentRouteName() == 'admin.orders.index' ? 'bg-secondary' : '' }}"
-                                    href="{{ route('admin.orders.index') }}"> Orders
+                                    href="{{ route('admin.orders.index') }}"> 
+                                    <i class="fa-solid fa-receipt fa-lg fa-fw"></i> Orders
                                 </a>
                             </li>
                         </ul>
