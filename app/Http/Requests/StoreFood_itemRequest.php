@@ -28,7 +28,7 @@ class StoreFood_itemRequest extends FormRequest
             'name' => ['required', 'min:3', 'max:100', Rule::unique('food_items')->ignore($this->food_item)],
             'image' => ['nullable', 'image', 'max:1512'],
             'description' => ['required'],
-            'price' => ['required','numeric','min:0'],
+            'price' => ['required','numeric','min:0', 'max:999'],
             'is_visible' => ['required'],
             'restaurant_id' => ['exists:restaurants,id'],
 
@@ -46,6 +46,7 @@ class StoreFood_itemRequest extends FormRequest
             'price.required' => 'Inserisci un prezzo',
             'price.numeric' => 'solo numeri grazie',
             'price.min' => 'Non può essere il prezzo giusto...',
+            'price.max' => 'Non può essere il prezzo giusto...',
             'is_visible.required' => 'è disponibile o no?'            
         ];
     }
