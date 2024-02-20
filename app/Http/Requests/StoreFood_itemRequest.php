@@ -29,7 +29,9 @@ class StoreFood_itemRequest extends FormRequest
             'image' => ['nullable', 'image', 'max:1512'],
             'description' => ['required'],
             'price' => ['required','numeric','min:0', 'max:999'],
-            'is_visible' => ['required']
+            'is_visible' => ['required'],
+            'restaurant_id' => ['exists:restaurants,id'],
+
         ];
     }
 

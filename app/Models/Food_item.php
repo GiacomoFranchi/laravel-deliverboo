@@ -10,7 +10,7 @@ class Food_item extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'slug', 'image', 'description', 'price','is_visible'];
+    protected $fillable = ['name', 'slug', 'image', 'description', 'price','is_visible', 'restaurant_id'];
 
     public function setNameAttribute($value){
         $this->attributes['name'] = $value;
