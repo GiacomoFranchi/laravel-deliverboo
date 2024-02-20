@@ -18,10 +18,12 @@ class Order extends Model
         'status',
         'total_price',
         'slug',
+        'food_item_id',
+        'order_time'
     ];
 
-    public function foodItems()
+    public function food_items()
     {
-        return $this->belongsToMany(Food_item::class, 'Order_Food_Item');
+        return $this->belongsToMany(Food_item::class, 'Food_Item_Order');
     }
 }

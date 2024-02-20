@@ -3,9 +3,12 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreFood_itemRequest;
+use App\Http\Requests\UpdateFood_itemRequest;
 use App\Models\Food_item;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use SebastianBergmann\CodeCoverage\Report\Xml\Project;
 
 class Food_itemController extends Controller
 {
@@ -14,16 +17,12 @@ class Food_itemController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index($restaurant_id)
     {
-        $perPage = 10;
-        if($request->per_page){
-            $perPage= $request->per_page;
-        }
-        $food_items= Food_item::all();
-        $food_items= Food_item::paginate($perPage);
+
+        $food_items= Food_item::where('restaurant_id', $restaurant_id)->get();
         
-        return view('admin.food_items.index', compact('food_items'));
+        return view('admin.food_items.index', compact('food_items','restaurant_id'));
     }
 
     /**
@@ -31,10 +30,9 @@ class Food_itemController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($restaurant_id)
     {
-        $food_items= Food_item::all();
-        return view('admin.food_items.create', compact('food_items'));
+        return view('admin.food_items.create', compact('restaurant_id'));
     }
 
     /**
@@ -43,20 +41,41 @@ class Food_itemController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreFood_itemRequest $request, $restaurant_id)
     {
-        $form_data = $request->all();
+        // dd($request->all());
+        $userRestaurants = auth()->user()->restaurants;
+
+        //controlla se user ha ristorante
+        if ($userRestaurants->isEmpty()) {
+            // errore se utente non ha ristorante
+            return redirect()->back()->with('errore');
+        }
+
+        // da modificare; per ora, scegli primmo ristorante
+        $selectedRestaurant = $userRestaurants->first();
+
+        // valida i dati
+        $form_data = $request->validated();
+
+        // crea nuovo food item
         $food_item = new Food_item();
+        $food_item->restaurant_id = $restaurant_id;
         $food_item->fill($form_data);
+
 
        //controllo se c'è img e aggiungo al db
        if($request->hasFile('image')){
-        $path = Storage::put('image', $request->image);
+        $path = Storage::put('food_image', $request->image);
         $food_item->image = $path;   
         }
 
+        // assegnare id del ristorante a food item
+        $food_item->restaurant_id = $selectedRestaurant->id;
+
+     
         $food_item->save();
-        return redirect()->route('admin.food_items.show', ['food_item' => $food_item->slug]);
+        return redirect()->route('admin.restaurants.food_items.index' , $restaurant_id);
     }
 
     /**
@@ -65,9 +84,9 @@ class Food_itemController extends Controller
      * @param  food_item  $food_item
      * @return \Illuminate\Http\Response
      */
-    public function show(Food_item $food_item)
+    public function show($restaurant_id, Food_item $food_item)
     {
-        return view('admin.food_items.show', compact('food_item'));
+        return view('admin.food_items.show', compact('food_item' , 'restaurant_id'));
     }
 
     /**
@@ -76,9 +95,9 @@ class Food_itemController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($restaurant_id,Food_item $food_item)
     {
-        //
+        return view('admin.food_items.edit', compact('food_item' , 'restaurant_id'));
     }
 
     /**
@@ -88,9 +107,25 @@ class Food_itemController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdateFood_itemRequest $request, $restaurant_id, Food_item $food_item)
     {
-        //
+        $form_data=$request->validated();
+        $food_item->restaurant_id = $restaurant_id;
+
+        if($request->hasFile('image')){
+            if($food_item->image){
+                Storage::delete($food_item->image);
+            }
+            $path= Storage::put('food_image', $request->image);
+            $form_data['image'] = $path;
+        }
+        $food_item->update($form_data);
+
+        $food_item->restaurant_id = $restaurant_id;
+        $food_item->fill($form_data);
+
+        
+        return redirect()->route('admin.restaurants.food_items.show', [$food_item->restaurant_id, 'food_item' => $food_item->slug]);
     }
 
     /**
@@ -99,8 +134,12 @@ class Food_itemController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($restaurant_id, Food_item $food_item)
     {
-        //
+
+        $food_item->delete();
+        return redirect()->route('admin.restaurants.food_items.index', $restaurant_id)
+
+        ->with('message', "Il piatto: $food_item->name è stato rimosso dal menu.");
     }
 }
