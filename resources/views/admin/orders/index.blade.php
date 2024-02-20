@@ -4,7 +4,12 @@
 
 <div class="container">
 
-     <a href="{{ route('admin.orders.create')}}" class="btn btn-primary"> Nuovo </a>
+     
+     <div class="text-end mt-4">
+        <a href="{{ route('admin.orders.create')}}" class="btn btn-primary"> Create a new Order </a>
+    </div>
+
+     <div class="p-5">
         <table class="table">
         <thead>
             <tr>
@@ -33,7 +38,7 @@
             @endforeach
             
         </tbody>
-    
+    </div>
 </div>
 
     
