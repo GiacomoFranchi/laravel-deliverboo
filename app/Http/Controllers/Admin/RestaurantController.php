@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreRestaurantRequest;
 use App\Http\Requests\UpdateRestaurantRequest;
+use App\Models\CusineType;
 use App\Models\Restaurant;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
@@ -20,8 +21,10 @@ class RestaurantController extends Controller
      */
     public function index()
     {
+
         $restaurants = Restaurant::where('user_id', '=', Auth::user()->id)->get();
-        return view('admin.restaurants.index', compact('restaurants'));
+        $cusinetypes = CusineType::all();
+        return view('admin.restaurants.index', compact('restaurants', 'cusinetypes'));
     }
 
     /**
@@ -51,6 +54,10 @@ class RestaurantController extends Controller
             $restaurant->image = $path;
         }
 
+        if ($request->has('cusinetypes')) {
+            $restaurant->cusinetypes()->attach($request->cusinetypes);
+        }
+
         $restaurant->user_id = Auth::id();
 
         $restaurant->save();
@@ -78,7 +85,8 @@ class RestaurantController extends Controller
      */
     public function edit(Restaurant $restaurant)
     {
-        return view('admin.restaurants.edit', compact('restaurant'));
+        $cusinetypes = CusineType::all();
+        return view('admin.restaurants.edit', compact('restaurant', 'cusinetypes'));
 
     }
 
@@ -96,6 +104,12 @@ class RestaurantController extends Controller
         if ($request->hasFile('image')) {
             if ($restaurant->image) {
                 Storage::delete($restaurant->image);
+            }
+
+            if ($request->has('cusinetypes')) {
+                $restaurant->cusinetypes()->sync($request->cusinetypes); // sync() va a sincronizzare i nuovi dati da salvare con i dati ottenuti dal $request
+            } else {
+                $restaurant->cusinetypes()->sync([]);
             }
 
             $path = Storage::put('restaurants_images', $request->image);
