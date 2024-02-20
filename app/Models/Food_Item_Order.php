@@ -14,12 +14,12 @@ class Order_Food_Item extends Model
 
     public function order()
     {
-        return $this->belongsTo(Order::class);
+        return $this->belongsToMany(Order::class);
     }
 
     public function food_item()
     {
-        return $this->belongsTo(Food_item::class);
+        return $this->belongsToMany(Food_item::class);
     }
 
 }
