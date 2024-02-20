@@ -52,19 +52,18 @@ class Food_itemController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create(Request $request)
-    { // Fetch all restaurants owned by the authenticated user
+    { //prendi tutti i ristoranti dello user autenticato
         $restaurants = auth()->user()->restaurants;
 
 
         $restaurantId = $request->query('restaurant_id');
         $selectedRestaurant = null;
 
-        // If a specific restaurant ID is provided, attempt to find it within the user's restaurants
+        // se c0è un id, trova all'interno di restaurant
         if ($restaurantId) {
             $selectedRestaurant = $restaurants->find($restaurantId);
         }
 
-        // Pass both the list of restaurants and the selected restaurant (if any) to the view
         return view('admin.food_items.create', compact('restaurants', 'selectedRestaurant'));
     }
 
