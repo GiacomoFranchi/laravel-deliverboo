@@ -102,7 +102,7 @@
                 </div>
             </div>
 
-
+            {{-- IMAGE EDIT INPUT FILE --}}
             <div class="mb-3">
                 <label for="image" class="fw-bold">Image</label>
                 <input type="file" class="form-control" id="image" name="image">
@@ -111,8 +111,23 @@
             <div class="mb-2 mx-auto w-100">
                 <img id="preview-img" src="{{ asset('storage/' . $restaurant->image) }}" alt="">
             </div>
-
-            <button class="btn btn-success" type="submit">Save</button>
+            
+            {{-- CHECKBOX FOR CUISINE TYPES --}}
+            <div class="mb-3">
+                <h4>Modify the Cuisine Types of your restaurant:</h4>
+                @foreach ($cusinetypes as $cusinetype)
+                    <div class="form-check">
+                        <input  @checked( $errors->any() ? in_array($cusinetype->id, old('cusinetypes', [])) : $restaurant->cusinetypes->contains($cusinetype)) type="checkbox" id="cusinetype-{{ $cusinetype->id }}" value="{{ $cusinetype->id }}" name="cusinetypes[]">
+                        <label for="cusinetype-{{ $cusinetype->id }}">{{ $cusinetype->name }}</label>
+                    </div>
+                @endforeach
+                @error('cusinetypes')
+                    <div class="text-danger">{{ $message }}</div>
+                @enderror
+            </div>
+            
+            {{-- SUBMIT BUTTON --}}
+            <button class="btn btn-success mb-3" type="submit">Save</button>
 
         </form>
     </div>

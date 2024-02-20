@@ -98,7 +98,7 @@
                 </div>
             </div>
 
-
+            {{-- IMAGE INPUT FILE --}}
             <div class="mb-4">
                 <label for="image" class="form-label fw-bold">Image</label>
                 <input type="file" class="form-control @error('image') is-invalid @enderror" id="image"
@@ -112,7 +112,25 @@
             <div class="mb-3">
                 <img id="preview-img" src="" alt="" style="max-height: 250px">
             </div>
+            
+            {{-- CHECKBOX FOR CUISINE TYPES --}}
+            <div class="mb-3">
+                <h4>Check the Cuisine Types of your restaurant:</h4>
+                @foreach ($cusinetypes as $cusinetype)
+                    <div class="form-check">
+                        <input @checked(in_array($cusinetype->id, old('cusinetypes', []))) type="checkbox" id="cusinetype-{{ $cusinetype->id }}" value="{{ $cusinetype->id }}" name="cusinetypes[]">
+                        <label for="cusinetype-{{ $cusinetype->id }}">
+                            {{ $cusinetype->name }}
+                        </label>
+                    </div>
+                @endforeach
 
+                @error('cusinetypes')
+                    <div class="text-danger">{{ $message }}</div>
+                @enderror
+            </div>
+            
+            {{-- SUBMIT button --}}
             <button class="btn btn-success" type="submit">Save</button>
 
         </form>
