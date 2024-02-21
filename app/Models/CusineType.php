@@ -13,4 +13,10 @@ class CusineType extends Model
     public function restaurants(){
         return $this->belongsToMany(Restaurant::class);
     }
+    
+    // relation 1-to-many with food items
+    public function food_items()
+    {
+        return $this->hasMany(Food_item::class);
+    }
 }

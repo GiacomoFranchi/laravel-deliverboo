@@ -20,4 +20,11 @@ class Food_item extends Model
     public function restaurant(){
         return $this->belongsTo(Restaurant::class);
     }
+    
+
+    // relation 1-to-many with cusineType
+    public function cusineType()
+    {
+        return $this->belongsTo(CusineType::class);
+    }
 }
