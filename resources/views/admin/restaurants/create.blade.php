@@ -44,7 +44,7 @@
             <div class="mb-4 has-validation">
                 <label for="phone_number" class="form-label fw-bold">Phone Number</label>
                 <input type="text" class="form-control @error('phone_number') is-invalid @enderror" id="phone_number"
-                    name="phone_number" value="{{ old('phone_number') }}" pattern="\+?[0-9()\s-]{8,20}">
+                    name="phone_number" value="{{ old('phone_number') }}">
 
                 @error('phone_number')
                     <div class="invalid-feedback">{{ $message }}</div>
@@ -117,7 +117,7 @@
             <div class="mb-3">
                 <h4>Check the Cuisine Types of your restaurant:</h4>
                 @foreach ($cusine_types as $cusine_type)
-                    <div class="form-check">
+                    <div class="form-check form-check-inline">
                         <input @checked(in_array($cusine_type->id, old('cusine_types', []))) type="checkbox" id="cusine_type-{{ $cusine_type->id }}"
                             class="@error('cusine_types') is-invalid @enderror" value="{{ $cusine_type->id }}"
                             name="cusine_types[]">
@@ -137,36 +137,8 @@
 
         </form>
     </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const vat_number = document.getElementById('vat_number');
-
-            vat_number.addEventListener('input', function() {
-                let vat_number = this.value.replace(/\D/g, ''); // Rimuovi tutti i caratteri non numerici
-
-                if (vat_number.length > 13) {
-                    vat_number = vat_number.slice(0, 13); // Limita il numero di caratteri a 13
-                }
-
-                if (!vat_number.startsWith('IT')) {
-                    vat_number = 'IT' + vat_number; // Se l'utente cerca di selezionare il IT ed eliminarlo viene re-inserito
-                }
-
-                this.value = vat_number;
-                console.log(vat_number);
-            });
-
-            vat_number.addEventListener('keydown', function(event) {
-                if (event.key === 'Backspace' && this.selectionStart === 2 && this.value.length === 2) {
-                    event
-                .preventDefault(); // Impedisci la rimozione del prefisso "IT" se il cursore si trova subito dopo il prefisso
-                }
-            });
-        });
-    </script>
 @endsection
 
 @section('scripts')
-    @vite(['resources/js/image-preview.js'])
+    @vite(['resources/js/RestaurantsForms.js'])
 @endsection

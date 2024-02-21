@@ -87,5 +87,5 @@
 @endsection
 
 @section('scripts')
-    @vite(['resources/js/image-preview.js'])
+    @vite(['resources/js/RestaurantsForms.js'])
 @endsection

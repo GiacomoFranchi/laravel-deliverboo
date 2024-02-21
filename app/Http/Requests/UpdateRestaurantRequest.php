@@ -28,7 +28,7 @@ class UpdateRestaurantRequest extends FormRequest
             'address' => ['required'],
             'image' => ['nullable', 'image', 'max:2048'], 
             'vat_number' => ['required', 'min:13' ,'max:13'], 
-            'phone_number' => ['required', 'string', 'regex:/^\+?[0-9()\s-]{8,20}$/'],
+            'phone_number' => ['required', 'string',],
             'opening_time' => ['required'],
             'closing_time' => ['required'],
             'closure_day' => ['required'],

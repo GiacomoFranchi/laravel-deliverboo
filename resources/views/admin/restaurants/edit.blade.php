@@ -50,7 +50,7 @@
             <div class="mb -4 has-validation">
                 <label for="phone_number" class="form-label fw-bold">Phone Number</label>
                 <input type="text" class="form-control @error('phone_number') is-invalid @enderror" id="phone_number" name="phone_number"
-                    value="{{ old('phone_number', $restaurant->phone_number) }}" pattern="\+?[0-9()\s-]{8,20}">
+                    value="{{ old('phone_number', $restaurant->phone_number) }}">
 
                 @error('phone_number')
                     <div class="invalid-feedback">{{ $message }}</div>
@@ -61,7 +61,7 @@
             <div class="d-flex gap-2">
                 {{-- Opening Time Input --}}
                 <div class="mb -4 has-validation w-25">
-                    <label for="opening_time" class="form-label fw-bold">Phone Number</label>
+                    <label for="opening_time" class="form-label fw-bold">Opening Time</label>
                     <input type="time" class="form-control @error('opening_time') is-invalid @enderror" id="opening_time" name="opening_time"
                         value="{{ old('opening_time', $restaurant->opening_time) }}">
     
@@ -72,7 +72,7 @@
 
                 {{-- Closing Time Input --}}
                 <div class="mb -4 has-validation w-25">
-                    <label for="closing_time" class="form-label fw-bold">Phone Number</label>
+                    <label for="closing_time" class="form-label fw-bold">Closing Time</label>
                     <input type="time" class="form-control @error('closing_time') is-invalid @enderror" id="closing_time" name="closing_time"
                         value="{{ old('closing_time', $restaurant->closing_time) }}">
     
@@ -116,7 +116,7 @@
             <div class="mb-3">
                 <h4>Modify the Cuisine Types of your restaurant:</h4>
                 @foreach ($cusine_types as $cusine_type)
-                    <div class="form-check">
+                    <div class="form-check form-check-inline">
                         <input  @checked( $errors->any() ? in_array($cusine_type->id, old('cusine_types', [])) : $restaurant->cusine_types->contains($cusine_type)) 
                         type="checkbox" 
                         id="cusine_type-{{ $cusine_type->id }}" 
@@ -140,5 +140,5 @@
 @endsection
 
 @section('scripts')
-    @vite(['resources/js/image-preview.js'])
+    @vite(['resources/js/RestaurantsForms.js'])
 @endsection
