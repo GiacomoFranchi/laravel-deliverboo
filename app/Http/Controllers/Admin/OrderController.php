@@ -23,28 +23,21 @@ class OrderController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        $restaurantId = Auth::user()->restaurants->pluck('id');
+    public function index(Request $request)
+{
+    $restaurantId = $request->input('restaurant_id');
+    $restaurants = Restaurant::all(); // Recupera tutti i ristoranti per il menu a discesa
 
-        $orders = Order::whereHas('food_items', function ($query) use ($restaurantId) {
-            $query->whereIn('restaurant_id', $restaurantId);
-        })->get();
-        return view('admin.orders.index', compact('orders'));
-    }
-    public function indexForRestaurant($restaurantId)
-    {
-
-        $restaurant = Restaurant::findOrFail($restaurantId);
-
+    if (!$restaurantId) {
+        $orders = Order::all();
+    } else {
         $orders = Order::whereHas('food_items', function ($query) use ($restaurantId) {
             $query->where('restaurant_id', $restaurantId);
         })->get();
-
-        $restaurant = Restaurant::findOrFail($restaurantId);
-
-        return view('admin.orders.index', compact('orders', 'restaurant'));
     }
+
+    return view('admin.orders.index', compact('orders', 'restaurants'));
+}
 
     /**
      * Show the form for creating a new resource.
@@ -131,7 +124,7 @@ class OrderController extends Controller
             // se l'ordine non appartiene, abort
             abort(403, 'Unauthorized action.');
         }
-       
+
         return view('admin.orders.show', compact('order'));
     }
 
