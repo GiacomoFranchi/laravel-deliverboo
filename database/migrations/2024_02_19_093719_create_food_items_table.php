@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('food_items', function(Blueprint $table){
             $table->id();
-            $table->string('name')->unique();
+            $table->string('name')->require();
             $table->string('slug')->unique();
             $table->string('image')->nullable();
             $table->text('description');
