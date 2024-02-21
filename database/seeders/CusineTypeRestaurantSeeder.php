@@ -21,24 +21,23 @@ class CusineTypeRestaurantSeeder extends Seeder
      */
     public function run(Faker $faker)
     {
-        $restaurants= Restaurant::pluck('id')->toArray();
-        $cusine_types= CusineType::pluck('id')->toArray();
-        for($i=0; $i<30; $i++){
+        $restaurants = Restaurant::pluck('id')->toArray();
+        $cusine_types = CusineType::pluck('id')->toArray();
 
-        $restaurantId = $faker->randomElement($restaurants);
-        $cusine_typeId = $faker->randomElement($cusine_types);
-          
-        $pair= DB::table('cusine_type_restaurant')
-        ->where('restaurant_id', $restaurantId)
-        ->where('cusine_type_id', $cusine_typeId)
-        ->exists();
-        
-        if(!$pair){
-            $restaurant = Restaurant::find($restaurantId);
-            $cuisine_type = CusineType::find($cusine_typeId);
-            $restaurant->cusine_types()->attach($cuisine_type);   
-        }
-        
+        for ($i = 0; $i < 30; $i++) {
+            $restaurantId = $faker->randomElement($restaurants);
+            $cusine_typeId = $faker->randomElement($cusine_types);
+
+            $pair = DB::table('cusine_type_restaurant')
+                ->where('restaurant_id', $restaurantId)
+                ->where('cusine_type_id', $cusine_typeId)
+                ->exists();
+
+            if (!$pair) {
+                $restaurant = Restaurant::find($restaurantId);
+                $cusine_type = CusineType::find($cusine_typeId);
+                $restaurant->cusine_types()->attach($cusine_type);
+            }
         }
     }
 }
