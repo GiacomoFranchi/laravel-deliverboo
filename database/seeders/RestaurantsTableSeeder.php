@@ -18,9 +18,9 @@ class RestaurantsTableSeeder extends Seeder
     public function run(Faker $faker)
     {
 
-        for($i=0; $i<15; $i++){
+        for($i=1; $i<15; $i++){
             $restaurant = new Restaurant();
-            $restaurant->user_id = $i;
+            $restaurant->user_id =$faker->numberBetween(1, 3);
             $restaurant->name = $faker->word();
             $restaurant->address = $faker->address();
             $restaurant->vat_number =$faker->numerify('SA###########');
