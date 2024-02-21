@@ -1,7 +1,8 @@
 @extends('layouts.admin')
 
 @section('content')
-    <div class="container">
+    <div class="container mt-5">
+        <h2>Orders</h2>
 
         {{-- NEW ORDER BUTTON --}}
         <div class="text-end mt-4">
@@ -9,11 +10,18 @@
                 <i class="fa-solid fa-plus"></i>
                 Simulate New Order </a>
         </div>
+        
+        {{-- ORDERS COUNT --}}
+        <div class="text-start">
+            <p>
+                A total of <strong>{{ count($orders) }}</strong> orders archieved.
+            </p>
+        </div>
 
         {{-- FILTER FORM --}}
         <form class="row" action="{{ route('admin.orders.index', ['restaurant_id' => $restaurantId]) }}" method="GET">
             <div class="mb-3">
-                <label for="restaurantFilter" class="form-label"><strong>Filter your orders:</strong></label>
+                <label for="restaurantFilter" class="form-label"><strong>Filter your orders by Restaurant:</strong></label>
                 <select class="form-select @error('restaurant_id') is-invalid @enderror" name="restaurant_id"
                     id="restaurant">
                     <option value="">Show All</option>
