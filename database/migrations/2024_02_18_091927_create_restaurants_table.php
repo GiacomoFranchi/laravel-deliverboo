@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('slug');
             $table->string('image')->nullable();
             $table->string('address');
-            $table->string('vat_number')->nullable();
+            $table->string('vat_number');
             $table->string('phone_number');
             $table->time('opening_time');
             $table->time('closing_time');
