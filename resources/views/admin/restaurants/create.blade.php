@@ -118,12 +118,9 @@
                 <h4>Check the Cuisine Types of your restaurant:</h4>
                 @foreach ($cusine_types as $cusine_type)
                     <div class="form-check">
-                        <input @checked(in_array($cusine_type->id, old('cusine_types', []))) 
-                        type="checkbox" 
-                        id="cusine_type-{{ $cusine_type->id }}"
-                        class="@error('cusine_types') is-invalid @enderror" 
-                        value="{{ $cusine_type->id }}"
-                        name="cusine_types[]">
+                        <input @checked(in_array($cusine_type->id, old('cusine_types', []))) type="checkbox" id="cusine_type-{{ $cusine_type->id }}"
+                            class="@error('cusine_types') is-invalid @enderror" value="{{ $cusine_type->id }}"
+                            name="cusine_types[]">
                         <label for="cusine_type-{{ $cusine_type->id }}">
                             {{ $cusine_type->name }}
                         </label>
@@ -140,6 +137,34 @@
 
         </form>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const vat_number = document.getElementById('vat_number');
+
+            vat_number.addEventListener('input', function() {
+                let vat_number = this.value.replace(/\D/g, ''); // Rimuovi tutti i caratteri non numerici
+
+                if (vat_number.length > 13) {
+                    vat_number = vat_number.slice(0, 13); // Limita il numero di caratteri a 13
+                }
+
+                if (!vat_number.startsWith('IT')) {
+                    vat_number = 'IT' + vat_number; // Se l'utente cerca di selezionare il IT ed eliminarlo viene re-inserito
+                }
+
+                this.value = vat_number;
+                console.log(vat_number);
+            });
+
+            vat_number.addEventListener('keydown', function(event) {
+                if (event.key === 'Backspace' && this.selectionStart === 2 && this.value.length === 2) {
+                    event
+                .preventDefault(); // Impedisci la rimozione del prefisso "IT" se il cursore si trova subito dopo il prefisso
+                }
+            });
+        });
+    </script>
 @endsection
 
 @section('scripts')
