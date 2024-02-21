@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
-@dump($order->food_items)
+
 
 <div class="container mt-5">
      @if (Session::has('message'))
