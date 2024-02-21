@@ -54,7 +54,7 @@
                                 </a>
                             </td>
                             <td>
-                                <a class="btn btn-primary" href="{{ route('admin.restaurant.orders.index', ['restaurant' => $restaurant->id]) }}">
+                                <a class="btn btn-primary" href="{{ route('admin.orders.index', ['restaurant_id' => $restaurant->id]) }}">
                                     <i class="fa-solid fa-file-invoice-dollar" style="color: #ffffff;"></i>
                                 </a>
                             </td>
