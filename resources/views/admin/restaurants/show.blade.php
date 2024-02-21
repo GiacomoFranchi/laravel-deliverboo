@@ -1,8 +1,8 @@
 @extends('layouts.admin')
 
 @section('content')
-    <div class="container mt-3 mb-5">
-        <h2 class="fs-1 mb-3">{{ $restaurant->name }}</h2>
+    <div class="container mt-4 mb-5">
+        <h2 class="fs-1 mb-3">Restaurant : {{ $restaurant->name }}</h2>
 
 
         <div>
@@ -12,8 +12,8 @@
 
         <hr>
 
-        <ul>
-            <li class="mt-5 fs-5">
+        <ul class="mb-5">
+            <li class="mt-4 fs-5">
                 <span class="fw-bold ">Address</span>
                 {{ $restaurant->address }}
 
@@ -64,10 +64,10 @@
         </a>
 
         <a class="btn btn-success" href="{{ route('admin.restaurants.index') }}">
-            View all
+            View Restaurants
         </a>
-        <a  class="btn btn-success" href="{{ route('admin.restaurant.orders.index', ['restaurant' => $restaurant->id]) }}" class="btn btn-warning">
-           Vedi ordini 
+        <a  class="btn btn-primary" href="{{ route('admin.restaurant.orders.index', ['restaurant' => $restaurant->id]) }}" class="btn btn-warning">
+           View Orders
         </a>
 
         <form action="{{ route('admin.restaurants.destroy', ['restaurant' => $restaurant->slug]) }}" class="d-inline-block"

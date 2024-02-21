@@ -3,7 +3,7 @@
 @section('content')
 
     <div class="container">
-        <h1>Crea nuovo ordine</h1>
+        <h1 class="mt-3 mb-3">Create a new Order</h1>
 
         @if ($errors->any())
             <div class="alert alert-danger">
@@ -19,10 +19,10 @@
             @csrf
 
             <div class="mb-3">
-                <label for="restaurant_id" class="form-label">Ristorante</label>
+                <label for="restaurant_id" class="form-label">Restaurant</label>
                 <select class="form-control @error('restaurant_id') is-invalid @enderror" id="restaurantSelect"
                     name="restaurant_id">
-                    <option value="">Seleziona un ristorante</option>
+                    <option value="">Select a restaurant</option>
 
                     @foreach ($restaurants as $restaurant)
                         <option value="{{ $restaurant->id }}"
@@ -36,7 +36,7 @@
             </div>
 
             <div class="mb-3">
-                <label for="customers_name" class="form-label">Nome</label>
+                <label for="customers_name" class="form-label">Name</label>
                 <input type="text" class="form-control @error('customers_name') is-invalid @enderror" id="customers_name"
                     name="customers_name" value="{{ old('customers_name') }}">
                 @error('customers_first_name')
@@ -44,7 +44,7 @@
                 @enderror
             </div>
             <div class="mb-3">
-                <label for="customers_address" class="form-label">Indirizzo</label>
+                <label for="customers_address" class="form-label">Address</label>
                 <input type="text" class="form-control @error('customers_address') is-invalid @enderror"
                     id="customers_address" name="customers_address" value="{{ old('customers_address') }}">
                 @error('customers_address')
@@ -52,7 +52,7 @@
                 @enderror
             </div>
             <div class="mb-3">
-                <label for="customers_phone_number" class="form-label">Numero di telefono</label>
+                <label for="customers_phone_number" class="form-label">Telephone number</label>
                 <input type="text" class="form-control @error('customers_phone_number') is-invalid @enderror"
                     id="customers_phone_number" name="customers_phone_number" value="{{ old('customers_phone_number') }}">
                 @error('customers_phone_number')
@@ -79,7 +79,7 @@
                 @endforeach
             </div>
 
-            <button type="submit" class="btn btn-success">Invia</button>
+            <button type="submit" class="btn btn-success">Save</button>
         </form>
 
     </div>
@@ -89,5 +89,3 @@
     </script>
 
 @endsection
-
-
