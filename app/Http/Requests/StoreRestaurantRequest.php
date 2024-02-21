@@ -26,7 +26,7 @@ class StoreRestaurantRequest extends FormRequest
         return [
             'name' => ['required', 'min:5', 'max:100'],
             'address' => ['required'],
-            'image' => ['required', 'image', 'max:2048'], 
+            'image' => ['image', 'max:2048'], 
             'vat_number' => ['nullable'], 
             'phone_number' => ['required', 'string', 'regex:/^\+?[0-9()\s-]{8,20}$/'],
             'opening_time' => ['required'],
@@ -42,6 +42,7 @@ class StoreRestaurantRequest extends FormRequest
             'name.required' => 'Name of the restaurant is required',
             'title.min' => 'Name lenght must be at least of :min letters',
             'title.max' => 'Name lenght must max of :max letters',
+            'image.image' =>'The format of the image is incorrect',
             'address.required' => 'Address of the restaurant is required',
             'opening_time.required' => 'Opening time of the restaurant is required',
             'cusine_types.required' => 'Select at least one type of cuisine',
