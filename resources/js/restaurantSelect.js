@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', async function () {
 
 
@@ -34,6 +35,12 @@ document.addEventListener('DOMContentLoaded', async function () {
                 //imposta valore di imput come id fooditem
                 input.value = item.id;
                 //crea una label x l'input
+
+                //controlla se id dell'item è dentro array old food item
+                if (oldFoodItems.includes(item.id.toString())) {
+                    //controlla se box è stata già selezionata
+                input.checked = true; 
+                }
 
                 const label = document.createElement('label');
                 label.htmlFor = 'item' + item.id;

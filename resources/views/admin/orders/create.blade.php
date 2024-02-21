@@ -83,4 +83,11 @@
         </form>
 
     </div>
+
+    <script type="text/javascript">
+        let oldFoodItems = @json(old('food_items', []));
+    </script>
+
 @endsection
+
+
