@@ -50,12 +50,12 @@
                             <td>
                                 <a class="btn btn-primary"
                                     href="{{ route('admin.restaurants.food_items.index', $restaurant->id) }}">
-                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                    <i class="fa-solid fa-scroll" style="color: #ffffff;"></i>
                                 </a>
                             </td>
                             <td>
                                 <a class="btn btn-primary" href="{{ route('admin.restaurant.orders.index', ['restaurant' => $restaurant->id]) }}">
-                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                    <i class="fa-solid fa-file-invoice-dollar" style="color: #ffffff;"></i>
                                 </a>
                             </td>
                             <td>
