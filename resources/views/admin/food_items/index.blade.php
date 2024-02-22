@@ -41,7 +41,7 @@
                     @foreach ($food_items as $food_item)
                         <tr>
                             <td scope="row">{{ $food_item->name }}</td>
-                            <td>{{ $food_item->description }}</td>
+                            <td class="w-50">{{ $food_item->description }}</td>
                             <td>{{ $food_item->price }}€</td>
                             <td class="text-center">
                                 @if ($food_item->is_visible)
