@@ -4,7 +4,7 @@
     <div class="container mt-3 mb-5">
         <h2 class="text-center">Add New Restaurant</h2>
 
-        <form class="mt-5" action="{{ route('admin.restaurants.store') }}" method="POST" enctype="multipart/form-data">
+        <form id="form" class="mt-5" action="{{ route('admin.restaurants.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
 
             {{-- Name Input --}}
@@ -133,7 +133,7 @@
             </div>
 
             {{-- SUBMIT button --}}
-            <button class="btn btn-success" type="submit">Save</button>
+            <button id="submitButton" class="btn btn-success" type="submit">Save</button>
 
         </form>
     </div>
