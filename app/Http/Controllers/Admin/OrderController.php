@@ -24,20 +24,29 @@ class OrderController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(Request $request)
-    {
-        $restaurantId = $request->input('restaurant_id');
-        $restaurants = Restaurant::all();
+{
+    $user = Auth::user();
 
-        if (!$restaurantId) {
-            $orders = Order::all();
-        } else {
-            $orders = Order::whereHas('food_items', function ($query) use ($restaurantId) {
-                $query->where('restaurant_id', $restaurantId);
-            })->get();
-        }
+    $restaurants = $user->restaurants;
 
-        return view('admin.orders.index', compact('orders', 'restaurants', 'restaurantId'));
+    $restaurantId = $request->input('restaurant_id');
+
+    $orders = Order::query();
+
+    if ($restaurantId) {
+        $orders->whereHas('food_items', function ($query) use ($restaurantId) {
+            $query->where('restaurant_id', $restaurantId);
+        });
+    } else {
+        $orders->whereHas('food_items.restaurant', function ($query) use ($restaurants) {
+            $query->whereIn('id', $restaurants->pluck('id'));
+        });
     }
+
+    $orders = $orders->get();
+
+    return view('admin.orders.index', compact('orders', 'restaurants', 'restaurantId'));
+}
 
     /**
      * Show the form for creating a new resource.

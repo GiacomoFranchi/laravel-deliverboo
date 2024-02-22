@@ -14,7 +14,7 @@
         {{-- ORDERS COUNT --}}
         <div class="text-start">
             <p>
-                A total of <strong>{{ count($orders) }}</strong> orders archieved.
+                {{-- A total of <strong>{{ count($orders) }}</strong> orders archieved. --}}
             </p>
         </div>
 
