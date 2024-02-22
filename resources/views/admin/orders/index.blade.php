@@ -10,7 +10,7 @@
                 <i class="fa-solid fa-plus"></i>
                 Simulate New Order </a>
         </div>
-        
+
         {{-- ORDERS COUNT --}}
         <div class="text-start">
             <p>
@@ -59,8 +59,8 @@
                         <tr>
                             <th scope="row">{{ $order->id }}</th>
                             <td>
-                                @if (count($order->food_items) > 0)
-                                    <p>{{ $order->food_items[0]->restaurant->name }}</p>
+                                @if ($order->restaurant)
+                                    <p>{{ $order->restaurant->name }}</p>
                                 @endif
                             </td>
                             <td>{{ $order->customers_name }}</td>
@@ -69,7 +69,8 @@
                             <td>{{ $order->total_price }}</td>
                             <td> - </td>
                             <td>
-                                <a class="btn btn-success" href="{{ route('admin.orders.show', ['order' => $order->slug]) }}">
+                                <a class="btn btn-success"
+                                    href="{{ route('admin.orders.show', ['order' => $order->slug]) }}">
                                     Details
                                 </a>
                             </td>
