@@ -1,11 +1,11 @@
 @extends('layouts.admin')
 
 @section('content')
-    <div class="container w-50 mt-3 mb-5">
+    <div class="container mt-3 mb-5">
         <h2 class="text-center">Edit Restaurant Info</h2>
 
 
-        <form class="mt-5" 
+        <form class="mt-5 w-100" 
             action="{{ route('admin.restaurants.update', ['restaurant' => $restaurant->slug]) }}" 
             method="POST"
             enctype="multipart/form-data">
@@ -14,7 +14,7 @@
             @method('PUT')
 
             {{-- Name Input --}}
-            <div class="mb-4 has-validation">
+            <div class="mb-4 has-validation w-100">
                 <label for="title" class="form-label fw-bold">Name</label>
                 <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name"
                     value="{{ old('name', $restaurant->name) }}">

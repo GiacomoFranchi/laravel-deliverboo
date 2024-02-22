@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\Api\CuisineTypeController;
+use App\Http\Controllers\Api\FoodItemController;
+use App\Http\Controllers\Api\RestaurantController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -17,3 +20,9 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+Route::get('/restaurants', [RestaurantController::class, 'index']);
+Route::get('/restaurant/{slug}', [RestaurantController::class, 'show']);
+Route::get('/cuisine_types', [CuisineTypeController::class, 'index']);
+Route::get('/food_items', [FoodItemController::class, 'index']);

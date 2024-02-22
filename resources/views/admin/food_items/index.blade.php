@@ -7,11 +7,11 @@
         </h2>
 
         <div class="text-end">
-            <a class="btn btn-success" href="{{ route('admin.restaurants.food_items.create',  $restaurant_id) }}">
+            <a class="btn btn-success" href="{{ route('admin.restaurants.food_items.create', $restaurant_id) }}">
                 <i class="fa-solid fa-plus"></i> Add New Dish
             </a>
         </div>
-        
+
         <div class="text-start">
             <p>
                 You have a total of <strong>{{ count($food_items) }}</strong> dishes in your menu.
@@ -42,7 +42,7 @@
                         <tr>
                             <td scope="row">{{ $food_item->name }}</td>
                             <td>{{ $food_item->description }}</td>
-                            <td>{{ $food_item->price }}</td>
+                            <td>{{ $food_item->price }}€</td>
                             <td class="text-center">
                                 @if ($food_item->is_visible)
                                     <p class="card-subtitle mb-2 text-muted">
@@ -65,7 +65,7 @@
                                     href="{{ route('admin.restaurants.food_items.edit', [$food_item->restaurant_id, 'food_item' => $food_item->slug]) }}">
                                     <i class="fa-solid fa-pencil"></i>
                                 </a>
-                                
+
                                 @include('admin.food_items.partials.btn_delete')
                                 @include('admin.food_items.partials.modal-delete')
                             </td>
@@ -75,7 +75,7 @@
             </table>
         @else
             <div class="alert alert-warning mt-5 text-center">
-                Aggiungi i tuoi Piatti e li visualizzerai qui!
+                Add your Dishes and you will see them here!
             </div>
         @endif
 

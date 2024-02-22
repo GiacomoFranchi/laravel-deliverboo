@@ -68,11 +68,14 @@ document.addEventListener('DOMContentLoaded', async function () {
                 if (oldFoodItems.includes(item.id.toString())) {
                     input.checked = true;
                 }
+                console.log(oldFoodItems);
 
                 const label = document.createElement('label');
                 label.htmlFor = 'item' + item.id;
                 label.className = 'form-check-label';
                 label.textContent = item.name;
+
+                const foundItem = oldFoodItems.find(oldItem => oldItem.id === item.id.toString());
 
                 const quantityInput = document.createElement('input');
                 quantityInput.type = 'number';
@@ -80,10 +83,23 @@ document.addEventListener('DOMContentLoaded', async function () {
                 quantityInput.name = 'quantities[]';
                 quantityInput.style.maxWidth = '80px';
                 quantityInput.min = '1';
-                quantityInput.value = '1'; // quantità di default
+                //quantità già salvata se esiste
+                quantityInput.value = foundItem ? foundItem.quantity : '1'
+                // quantityInput.value = '1'; // quantità di default
                 quantityInput.id = 'quantity' + item.id;
                 //abulita l'input quantità solo con selezione di fooditem
                 quantityInput.disabled = !input.checked; 
+
+                quantityInput.addEventListener('input', function(){
+                    let foundIndex = oldFoodItems.findIndex(oldItem => oldItem.id === item.id.toString());
+                    
+                     if (foundIndex !== -1) {
+                     oldFoodItems[foundIndex].quantity = this.value;
+                    } else {
+                      oldFoodItems.push({id: item.id.toString(), quantity: this.value});
+                    }
+                    sessionStorage.setItem('selectedFoodItems', JSON.stringify(oldFoodItems));
+                })
 
                 // visibilità checkbox quantità a seconda della selezione
                 input.addEventListener('change', function() {

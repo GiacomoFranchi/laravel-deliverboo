@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container mt-5">
-        <h2 class="text-center">Modifica piatto:</h2>
+        <h2 class="text-center">Edit dish:</h2>
 
         {{-- Messaggi errore di Validazione --}}
         @if ($errors->any())
@@ -25,7 +25,7 @@
             @method('PUT')
             {{-- NOME PIATTO --}}
             <div class="mb-3">
-                <label for="name" class="form-label">Nome Piatto:</label>
+                <label for="name" class="form-label">Plate Name:</label>
                 <input type="text" required minlength="3" maxlength="100"
                     class="form-control @error('name') is-invalid
                     
@@ -38,7 +38,7 @@
 
             {{-- IMMAGINE --}}
             <div class="mb-3">
-                <label for="image" class="form-label">Foto Pietanza:</label>
+                <label for="image" class="form-label">Image of the dish:</label>
                 <input type="file" nullable accept="image/*" size="512" name="image" id="image"
                     class="form-control @error('image') is-invalid
                     
@@ -50,7 +50,7 @@
 
             {{-- DESCRIZIONE --}}
             <div class="mb-3">
-                <label for="description" class="form-label">Descrizione Piatto:</label>
+                <label for="description" class="form-label">Plate Description:</label>
                 <textarea required class="form-control @error('description') is-invalid
                     
                 @enderror"
@@ -62,7 +62,7 @@
 
             {{-- PRICE --}}
             <div class="mb-3">
-                <label for="price" class="form-label">Prezzo:</label>
+                <label for="price" class="form-label">Price:</label>
                 <input type="text" required  min="0" pattern="^\d{1,3}(\.\d{1,2})?"
                     class="form-control @error('price') is-invalid
                     
@@ -77,13 +77,13 @@
             <div class="form-check">
                 <input class="form-check-input" value='0' type="radio" name="is_visible" id="is_visible1">
                 <label class="form-check-label" for="is_visible1">
-                    Non Disponibile
+                    Non Available
                 </label>
             </div>
             <div class="form-check">
                 <input class="form-check-input" type="radio" value="1" name="is_visible" id="is_visible2" checked>
                 <label class="form-check-label" for="is_visible2">
-                    Disponibile
+                   Available
                 </label>
             </div>
 
@@ -91,7 +91,7 @@
                 <img id="preview-img" src="" alt="" style="max-height: 250px">
             </div>
 
-            <button class="btn btn-success" type="submit">Salva</button>
+            <button class="btn btn-success" type="submit">Save</button>
 
         </form>
 
