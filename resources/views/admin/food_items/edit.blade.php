@@ -27,7 +27,7 @@
             {{-- NOME PIATTO --}}
             <div class="mb-3">
                 <label for="name" class="form-label">Plate Name:</label>
-                <input type="text" required minlength="3" maxlength="100"
+                <input type="text" required minlength="5" maxlength="100"
                     class="form-control @error('name') is-invalid
                     
                 @enderror"
@@ -52,7 +52,7 @@
             {{-- DESCRIZIONE --}}
             <div class="mb-3">
                 <label for="description" class="form-label">Plate Description:</label>
-                <textarea required class="form-control @error('description') is-invalid
+                <textarea required minlength="5" class="form-control @error('description') is-invalid
                     
                 @enderror"
                     name="description" id="description" rows="5">{{ old('description', $food_item->description) }}</textarea>

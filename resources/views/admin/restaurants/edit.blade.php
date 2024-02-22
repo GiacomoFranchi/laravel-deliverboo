@@ -16,7 +16,7 @@
             {{-- Name Input --}}
             <div class="mb-4 has-validation w-100">
                 <label for="title" class="form-label fw-bold">Name</label>
-                <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name"
+                <input minlength="5" type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name"
                     value="{{ old('name', $restaurant->name) }}">
 
                 @error('name')
@@ -27,7 +27,7 @@
             {{-- Address Input --}}
             <div class="mb -4 has-validation">
                 <label for="address" class="form-label fw-bold">Address</label>
-                <input type="text" class="form-control @error('address') is-invalid @enderror" id="address" name="address"
+                <input minlength="5" type="text" class="form-control @error('address') is-invalid @enderror" id="address" name="address"
                     value="{{ old('address', $restaurant->address) }}">
 
                 @error('address')

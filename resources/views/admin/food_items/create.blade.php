@@ -20,7 +20,7 @@
             {{-- NAME --}}
             <div class="mb-3" style="max-height: 250px">
                 <label for="name" class="form-label">Dish Name</label>
-                <input required minlength="3" maxlength="100" type="text"
+                <input required minlength="5" maxlength="100" type="text"
                     class="form-control @error('name') is-invalid 
                 @enderror" style="max-height: 250px"
                     id="name" name="name" value="{{ old('name') }}">
@@ -43,7 +43,7 @@
             {{-- DESCRIPTION --}}
             <div class="mb-3">
                 <label for="description" class="form-label">Description</label>
-                <textarea required class="form-control @error('description') is-invalid
+                <textarea required minlength="5" class="form-control @error('description') is-invalid
                     
                 @enderror"
                     id="description" rows="3" name="description">{{ old('description') }}</textarea>
