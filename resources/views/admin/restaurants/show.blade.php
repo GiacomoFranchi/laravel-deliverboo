@@ -67,7 +67,7 @@
             View Restaurants
         </a>
         <a  class="btn btn-success" href="{{ route('admin.orders.index', ['restaurant_id' => $restaurant->id]) }}" class="btn btn-warning">
-           Vedi ordini 
+           View Orders
         </a>
 
         <form action="{{ route('admin.restaurants.destroy', ['restaurant' => $restaurant->slug]) }}" class="d-inline-block"

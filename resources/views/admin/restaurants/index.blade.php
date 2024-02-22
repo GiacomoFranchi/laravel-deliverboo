@@ -42,7 +42,7 @@
                                 <h6>{{ $restaurant->name }}</h6>
                             </td>
                             <td>{{ $restaurant->address }}</td>
-                            <td>
+                            <td class="w-25">
                                 @foreach ($restaurant->cusine_types as $cusine_type)
                                     <span class="badge bg-light text-dark fs-6"> {{ $cusine_type->name }} </span>
                                 @endforeach
