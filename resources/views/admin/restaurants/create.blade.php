@@ -10,7 +10,7 @@
             {{-- Name Input --}}
             <div class="mb-4 has-validation">
                 <label for="name" class="form-label fw-bold">Name</label>
-                <input minlength="5" type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name"
+                <input required minlength="5" type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name"
                     value="{{ old('name') }}">
 
                 @error('name')
@@ -21,7 +21,7 @@
             {{-- Address Input --}}
             <div class="mb-4 has-validation">
                 <label for="address" class="form-label fw-bold">Address</label>
-                <input minlength="5" type="text" class="form-control @error('address') is-invalid @enderror" id="address"
+                <input required minlength="5" type="text" class="form-control @error('address') is-invalid @enderror" id="address"
                     name="address" value="{{ old('address') }}">
 
                 @error('address')
@@ -32,7 +32,7 @@
             {{-- VAT Number Input --}}
             <div class="mb-4 has-validation">
                 <label for="vat_number" class="form-label fw-bold">VAT Number</label>
-                <input type="text" class="form-control @error('vat_number') is-invalid @enderror" id="vat_number"
+                <input required type="text" class="form-control @error('vat_number') is-invalid @enderror" id="vat_number"
                     name="vat_number" value="{{ old('vat_number') }}">
 
                 @error('vat_number')
