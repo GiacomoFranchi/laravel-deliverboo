@@ -59,8 +59,8 @@
                         <tr>
                             <th scope="row">{{ $order->id }}</th>
                             <td>
-                                @if ($order->restaurant)
-                                    <p>{{ $order->restaurant->name }}</p>
+                                @if (count($order->food_items) > 0)
+                                    <p>{{ $order->food_items[0]->restaurant->name }}</p>
                                 @endif
                             </td>
                             <td>{{ $order->customers_name }}</td>
