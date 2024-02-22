@@ -11,7 +11,7 @@
          @endif --}}
 
         {{-- Inizio Form --}}
-        <form class="mt-5" action="{{ route('admin.restaurants.food_items.store', $restaurant_id) }}" method="POST"
+        <form id="form" class="mt-5" action="{{ route('admin.restaurants.food_items.store', $restaurant_id) }}" method="POST"
             enctype="multipart/form-data">
             @csrf
             {{-- <input type="hidden" name="restaurant_id" value="{{ $selectedRestaurant ? $selectedRestaurant->id : '' }}"> --}}
@@ -81,7 +81,7 @@
                 <img id="preview-img" src="" alt="" style="max-height: 250px">
             </div>
 
-            <button class="btn btn-success" type="submit">Save</button>
+            <button id="submitButton" class="btn btn-success" type="submit">Save</button>
 
         </form>
     </div>

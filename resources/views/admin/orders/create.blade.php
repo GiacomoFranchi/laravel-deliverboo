@@ -15,7 +15,7 @@
             </div>
         @endif
 
-        <form action="{{ route('admin.orders.store') }}" method="POST">
+        <form id="form" action="{{ route('admin.orders.store') }}" method="POST">
             @csrf
 
             <div class="mb-3">
@@ -79,7 +79,7 @@
                 @endforeach
             </div>
 
-            <button type="submit" class="btn btn-success">Save</button>
+            <button id="submitButton" type="submit" class="btn btn-success">Save</button>
         </form>
 
     </div>

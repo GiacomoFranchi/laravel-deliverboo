@@ -5,7 +5,7 @@
         <h2 class="text-center">Edit Restaurant Info</h2>
 
 
-        <form class="mt-5 w-100" 
+        <form id="form" class="mt-5 w-100" 
             action="{{ route('admin.restaurants.update', ['restaurant' => $restaurant->slug]) }}" 
             method="POST"
             enctype="multipart/form-data">
@@ -133,7 +133,7 @@
             </div>
             
             {{-- SUBMIT BUTTON --}}
-            <button class="btn btn-success mb-3" type="submit">Save</button>
+            <button id="submitButton" class="btn btn-success mb-3" type="submit">Save</button>
 
         </form>
     </div>

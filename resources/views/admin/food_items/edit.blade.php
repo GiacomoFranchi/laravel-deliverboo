@@ -19,6 +19,7 @@
 
         {{-- Inizio Form --}}
         <form
+            id="form"
             action="{{ route('admin.restaurants.food_items.update', [$food_item->restaurant_id, 'food_item' => $food_item->slug]) }}"
             method="POST" enctype="multipart/form-data">
             @csrf
@@ -91,7 +92,7 @@
                 <img id="preview-img" src="" alt="" style="max-height: 250px">
             </div>
 
-            <button class="btn btn-success" type="submit">Save</button>
+            <button id="submitButton" class="btn btn-success" type="submit">Save</button>
 
         </form>
 
