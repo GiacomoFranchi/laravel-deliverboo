@@ -26,7 +26,7 @@ class DatabaseSeeder extends Seeder
             CusineTypesTableSeeder::class,
             CusineTypeRestaurantSeeder::class,
             Food_itemsTableSeeder::class,
-            //OrderTableSeeder::class,
+            // //OrderTableSeeder::class,
         ]);
     }
 }

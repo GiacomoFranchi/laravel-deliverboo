@@ -23,28 +23,30 @@ class OrderController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        $restaurantId = Auth::user()->restaurants->pluck('id');
+    public function index(Request $request)
+{
+    $user = Auth::user();
 
-        $orders = Order::whereHas('food_items', function ($query) use ($restaurantId) {
-            $query->whereIn('restaurant_id', $restaurantId);
-        })->get();
-        return view('admin.orders.index', compact('orders'));
-    }
-    public function indexForRestaurant($restaurantId)
-    {
+    $restaurants = $user->restaurants;
 
-        $restaurant = Restaurant::findOrFail($restaurantId);
+    $restaurantId = $request->input('restaurant_id');
 
-        $orders = Order::whereHas('food_items', function ($query) use ($restaurantId) {
+    $orders = Order::query();
+
+    if ($restaurantId) {
+        $orders->whereHas('food_items', function ($query) use ($restaurantId) {
             $query->where('restaurant_id', $restaurantId);
-        })->get();
-
-        $restaurant = Restaurant::findOrFail($restaurantId);
-
-        return view('admin.orders.index', compact('orders', 'restaurant'));
+        });
+    } else {
+        $orders->whereHas('food_items.restaurant', function ($query) use ($restaurants) {
+            $query->whereIn('id', $restaurants->pluck('id'));
+        });
     }
+
+    $orders = $orders->get();
+
+    return view('admin.orders.index', compact('orders', 'restaurants', 'restaurantId'));
+}
 
     /**
      * Show the form for creating a new resource.
@@ -131,7 +133,7 @@ class OrderController extends Controller
             // se l'ordine non appartiene, abort
             abort(403, 'Unauthorized action.');
         }
-       
+
         return view('admin.orders.show', compact('order'));
     }
 
