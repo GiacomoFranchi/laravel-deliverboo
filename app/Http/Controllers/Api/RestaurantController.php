@@ -19,10 +19,10 @@ class RestaurantController extends Controller
 
     public function show(string $slug)
     {
-        $restaurants = Restaurant::with(['cusine_types', 'food_items'])->where('slug', $slug)->firstOrFail();
+        $restaurant = Restaurant::with(['cusine_types', 'food_items'])->where('slug', $slug)->firstOrFail();
         return response()->json([
             'succes' => true,
-            'results' => $restaurants
+            'results' => $restaurant
         ]);
     }
 }
