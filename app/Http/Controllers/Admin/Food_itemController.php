@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreFood_itemRequest;
 use App\Http\Requests\UpdateFood_itemRequest;
 use App\Models\Food_item;
+use App\Models\Restaurant;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
@@ -18,8 +19,16 @@ class Food_itemController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($restaurant_id)
+    public function index($restaurant_id, Food_item $food_item)
     {
+        $userId = Auth::id();
+        $foodItemBelongsToUser = $food_item=Restaurant::where('id', $restaurant_id)
+        ->where('user_id', $userId)
+        ->exists();
+
+        if (!$foodItemBelongsToUser) {
+            abort(403, 'Unauthorized action.');
+        }
 
         $food_items= Food_item::where('restaurant_id', $restaurant_id)->get();
         
@@ -70,9 +79,9 @@ class Food_itemController extends Controller
         $userId = Auth::id();
 
     $foodItemBelongsToUser = $food_item->restaurant()
-                                       ->where('id', $restaurant_id)
-                                       ->where('user_id', $userId)
-                                       ->exists();
+                            ->where('id', $restaurant_id)
+                            ->where('user_id', $userId)
+                            ->exists();
 
     if (!$foodItemBelongsToUser) {
         abort(403, 'Unauthorized action.');
