@@ -15,7 +15,7 @@ class Food_item extends Model
 
     public function setNameAttribute($value){
         $this->attributes['name'] = $value;
-        $this->attributes['slug'] = Str::slug($value) . '-' . $this->restaurant_id;
+        $this->attributes['slug'] = Str::slug($value) . '-' . $this->restaurant_id . '-'. (rand(0, 10000) * rand(1, 10));
     }
     
     public function restaurant(){
