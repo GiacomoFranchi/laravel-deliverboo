@@ -71,3 +71,12 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+
+//funzione per rimuovere anteprima immagine
+const deleteImageButton = document.getElementById('delete-img-btn')
+
+deleteImageButton.addEventListener('click', function(event) {
+    event.preventDefault();
+    previewImgElem.remove();
+}) 

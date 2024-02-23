@@ -107,8 +107,16 @@
                 <label for="image" class="fw-bold">Image</label>
                 <input type="file" class="form-control" id="image" name="image">
             </div>
+             
+            <form action=""
+                class="d-inline-block" method="POST">
+                @csrf
+                @method('DELETE')
+                <button id="delete-img-btn" class="btn btn-danger">Elimina</button>
+            </form>
+            
 
-            <div class="mb-2 mx-auto w-100">
+            <div class="m-2 mx-auto w-100">
                 <img id="preview-img" src="{{ asset('storage/' . $restaurant->image) }}" alt="" style="max-height: 250px">
             </div>
             

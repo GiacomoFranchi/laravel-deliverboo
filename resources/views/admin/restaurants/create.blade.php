@@ -108,8 +108,17 @@
                     <div class="invalid-feedback">{{ $message }}</div>
                 @enderror
             </div>
+            <form action=""
+                class="d-inline-block" method="POST">
 
-            <div class="mb-3">
+                @csrf
+                @method('DELETE')
+
+                <button id="delete-img-btn" class="btn btn-danger">Elimina</button>
+
+            </form>
+
+            <div class="m-3">
                 <img id="preview-img" src="" alt="" style="max-height: 250px">
             </div>
 

@@ -139,5 +139,14 @@ class RestaurantController extends Controller
 
         return redirect()->route('admin.restaurants.index')->with('message', 'The restaurant "' . $restaurant->name . '" has been deleted');
     }
+
+    public function deleteImage($slug) {
+        $restaurant = Restaurant::where('slug', $slug)->first();
+        $restaurant->delete();
+        
+        if ($restaurant->image) {
+            Storage::delete($restaurant->image);
+        }
+    }
 }
 
