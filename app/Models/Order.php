@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 
 class Order extends Model
 {
@@ -26,5 +27,22 @@ class Order extends Model
     {
         return $this->belongsToMany(Food_item::class, 'Food_Item_Order')
             ->withPivot('quantity');
+    }
+
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::creating(function ($order) {
+            
+            $order->slug = Str::uuid();
+        });
+
+        static::created(function ($order) {
+
+            $order->slug = Str::slug($order->customers_name . '-' . $order->order_time->format('Y-m-d-H-i-s') . '-' . $order->id);
+
+            $order->save();
+        });
     }
 }

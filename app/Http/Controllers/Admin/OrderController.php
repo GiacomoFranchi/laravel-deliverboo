@@ -157,6 +157,7 @@ class OrderController extends Controller
      */
     public function edit(Order $order)
     {
+        $this->authorize('update', $order);
         $restaurants = Restaurant::all();
         $food_items = Food_item::all();
         return view('admin.orders.edit', compact('food_items', 'order', 'restaurants'));
@@ -198,6 +199,7 @@ class OrderController extends Controller
      */
     public function destroy(Order $order)
     {
+        $this->authorize('delete', $order);
         $order->delete();
         return redirect()->route('admin.orders.index')->with('message', 'Ordine spostato nel cestino');
     }
