@@ -109,7 +109,7 @@
             </div>
 
             <div class="mb-2 mx-auto w-100">
-                <img id="preview-img" src="{{ asset('storage/' . $restaurant->image) }}" alt="">
+                <img id="preview-img" src="{{ asset('storage/' . $restaurant->image) }}" alt="" style="max-height: 250px">
             </div>
             
             {{-- CHECKBOX FOR CUISINE TYPES --}}
