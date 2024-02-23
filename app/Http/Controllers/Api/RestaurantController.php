@@ -26,10 +26,11 @@ class RestaurantController extends Controller
         ]);
     }
 
-    public function ShowRestaurantsByCuisineType($cusine_types_name)
+    public function ShowRestaurantsByCuisineType($cusine_types_names)
     {
-        $restaurants = Restaurant::whereHas('cusine_types', function ($query) use ($cusine_types_name) {
-            $query->where('name', $cusine_types_name); 
+        $cusine_types_names = explode(',', $cusine_types_names);
+        $restaurants = Restaurant::whereHas('cusine_types', function ($query) use ($cusine_types_names) {
+            $query->whereIn('name', $cusine_types_names);
         })->get();
 
         return response()->json([
