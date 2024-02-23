@@ -2,7 +2,9 @@
 
 namespace Database\Seeders;
 
+use App\Models\Food_item;
 use App\Models\Order;
+use App\Models\Restaurant;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Faker\Generator as Faker;
@@ -18,23 +20,42 @@ class OrderTableSeeder extends Seeder
     public function run(Faker $faker)
     {
 
-        for ($i=0; $i < 5; $i++) {
 
-            $order = new Order;
-            $order->order_time = $faker->dateTimeBetween('now', '+1 week')->format('Y-m-d H:i:s');
-            $order->customers_name = $faker->name;
-            $order->customers_address = $faker->address;
-            $order->customers_email = $faker->email;
-            $order->customers_phone_number = $faker->phoneNumber;
-            $order->status = null;
-            $order->total_price = null;
-            $order->save();
-            
-       
-            $slug = Str::slug($order->customers_name . '-' . $order->order_time . '-' . $order->id, '-');
-            $order->slug = $slug;
-            $order->save();
+        $restaurants = Restaurant::all();
+
+        foreach ($restaurants as $restaurant) {
+            $foodItems = $restaurant->food_items; 
+
+            for ($i = 0; $i < 5; $i++) { 
+                $order = Order::create([
+                    'order_time' => $faker->dateTimeBetween('now'),
+                    'customers_name' => $faker->name,
+                    'customers_address' => $faker->address,
+                    'customers_email' => $faker->email,
+                    'customers_phone_number' => $faker->phoneNumber,
+                    'status' => 'pending', 
+                    
+                ]);
+
+                $totalPrice = 0;
+                $selectedFoodItems = $foodItems->random(1); 
+
+                foreach ($selectedFoodItems as $foodItem) {
+                    $quantity = rand(1, 5); 
+                    $totalPrice += $foodItem->price * $quantity; 
+
+                    
+                    $order->food_items()->attach($foodItem->id, ['quantity' => $quantity]);
+                }
+
+               
+                $order->total_price = $totalPrice;
+                $order->save();
+            }
         }
-        
     }
+
+
+        
+
 }
