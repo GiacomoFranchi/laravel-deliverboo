@@ -7,6 +7,7 @@ use App\Http\Requests\StoreFood_itemRequest;
 use App\Http\Requests\UpdateFood_itemRequest;
 use App\Models\Food_item;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use SebastianBergmann\CodeCoverage\Report\Xml\Project;
 
@@ -66,6 +67,17 @@ class Food_itemController extends Controller
      */
     public function show($restaurant_id, Food_item $food_item)
     {
+        $userId = Auth::id();
+
+    $foodItemBelongsToUser = $food_item->restaurant()
+                                       ->where('id', $restaurant_id)
+                                       ->where('user_id', $userId)
+                                       ->exists();
+
+    if (!$foodItemBelongsToUser) {
+        abort(403, 'Unauthorized action.');
+    }
+    
         return view('admin.food_items.show', compact('food_item' , 'restaurant_id'));
     }
 
