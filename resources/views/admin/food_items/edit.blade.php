@@ -49,6 +49,10 @@
                 @enderror
             </div>
 
+            <div class="mb-2 mx-auto w-100">
+                <img id="preview-img" src="{{ asset('storage/' . $food_item->image )}}" alt="" style="max-height: 250px">
+            </div>
+
             {{-- DESCRIZIONE --}}
             <div class="mb-3">
                 <label for="description" class="form-label">Plate Description:</label>
@@ -88,9 +92,7 @@
                 </label>
             </div>
 
-            <div class="mb-3">
-                <img id="preview-img" src="" alt="" style="max-height: 250px">
-            </div>
+            
 
             <button id="submitButton" class="btn btn-success" type="submit">Save</button>
 

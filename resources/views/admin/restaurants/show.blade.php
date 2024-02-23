@@ -66,7 +66,7 @@
         <a class="btn btn-success" href="{{ route('admin.restaurants.index') }}">
             View Restaurants
         </a>
-        <a  class="btn btn-success" href="{{ route('admin.orders.index', ['restaurant_id' => $restaurant->id]) }}" class="btn btn-warning">
+        <a  class="btn btn-primary" href="{{ route('admin.orders.index', ['restaurant_id' => $restaurant->id]) }}" class="btn btn-warning">
            View Orders
         </a>
 

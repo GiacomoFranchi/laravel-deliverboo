@@ -1,47 +1,66 @@
 @extends('layouts.admin')
 
 @section('content')
-    <div class="container mt-5">
-        <div class="card my-4" style="width: 18rem;">
-            <div class="card-body">
-
+    <div class="container mt-5 mb-5">
+        <div>
+            <div>
                 {{-- Name --}}
-                <h5 class="card-title">{{ $food_item->name }}</h5>
+                <h2 class="fs-1 mb-3">Dish: {{ $food_item->name }}</h2>
 
                 {{-- Controllo se esiste img --}}
                 @if ($food_item->image)
-                    <div class="mb-3">
-                        <img style="width: 250px" src="{{ asset('storage/' . $food_item->image) }}" alt="">
+                    <div class="mb-4">
+                        <img src="{{ asset('storage/' . $food_item->image) }}" alt="">
                     </div>
                 @else
                     <p>No image loaded</p>
                 @endif
 
-                {{-- Data Creazione --}}
-                <h6 class="card-subtitle mb-2 text-muted">Created on: {{ $food_item->created_at }}</h6>
+                <hr>
 
-                {{-- Prezzo --}}
-                <h6 class="card-subtitle mb-2 text-muted">Price: {{ $food_item->price }} €</h6>
+                <ul>
 
-                {{-- Descrizione --}}
-                <p class="card-text">Description: {{ $food_item->description }}</p>
+                    {{-- Data Creazione --}}
+                    <li class="mt-4 fs-5">
+                        <span class="fw-bold ">Created on: {{ $food_item->created_at }}
+                        </span>
+                    </li>
 
-                {{-- disponibilità --}}
 
-                @if ($food_item->is_visible)
-                    <p class="card-subtitle mb-2 text-muted">Available</p>
-                @else
-                    <p class="card-subtitle mb-2 text-muted">Not available</p>
-                @endif
+                    {{-- Prezzo --}}
+                    <li class="mt-2 fs-5">
+                        <span class="fw-bold "> Price: {{ $food_item->price }} €
+                        </span>
+                    </li>
+
+                    {{-- Descrizione --}}
+                    <li class="mt-2 fs-5">
+                        <span class="fw-bold "> Description: {{ $food_item->description }}
+                        </span>
+                    </li>
+                    
+
+                    {{-- disponibilità --}}
+
+                    @if ($food_item->is_visible)
+                        <li class="mt-2 fs-5">
+                            <span class="fw-bold ">
+                                Available
+                            </span>
+                        </li>
+                    @else
+                        <p class="card-subtitle mb-2 text-muted">Not available</p>
+                    @endif
 
             </div>
-            <div class="card-body">
-                <a class="btn btn-warning"
+            </ul>
+            <div class="mt-4">
+                <a class="btn btn-warning me-1"
                     href="{{ route('admin.restaurants.food_items.edit', [$food_item->restaurant_id, 'food_item' => $food_item->slug]) }}">
                     <i class="fa-solid fa-pencil"></i>
                 </a>
 
-                <a class="btn btn-success"
+                <a class="btn btn-success me-1"
                     href="{{ route('admin.restaurants.food_items.index', [$food_item->restaurant_id, 'food_item' => $food_item->slug]) }}">
                     View the Menu
                 </a>
