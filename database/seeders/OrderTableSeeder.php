@@ -33,7 +33,7 @@ class OrderTableSeeder extends Seeder
                     'customers_address' => $faker->address,
                     'customers_email' => $faker->email,
                     'customers_phone_number' => $faker->phoneNumber,
-                    'status' => 'pending', 
+                    'status' => null, 
                     
                 ]);
 
