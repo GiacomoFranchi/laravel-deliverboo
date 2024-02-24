@@ -76,6 +76,7 @@ if(image) {
             const reader = new FileReader();
             reader.addEventListener("load", function() {
                 previewImgElem.src = reader.result;
+                previewImgElem.style.display = '';
             })
             reader.readAsDataURL(selectedFile);
         }
@@ -87,5 +88,6 @@ document.getElementById('delete-img-btn').addEventListener('click', function() {
     const imageInput = document.getElementById('image');
     const previewImgElem = document.getElementById('preview-img');
     imageInput.value = '';
+    previewImgElem.src = '';
     previewImgElem.style.display = 'none';
 });

@@ -118,7 +118,7 @@
 
             </form> --}}
 
-            <button id="delete-img-btn" class="btn btn-danger">Elimina</button>
+            <button id="delete-img-btn" class="btn btn-danger" type="button">Elimina</button>
 
             <div class="m-3">
                 <img id="preview-img" src="" alt="" style="max-height: 250px">

@@ -108,7 +108,7 @@
                 <input type="file" class="form-control" id="image" name="image">
             </div>
              
-            <button id="delete-img-btn" class="btn btn-danger">Elimina</button>
+            <button id="delete-img-btn" class="btn btn-danger" type="button">Elimina</button>
 
             <div class="m-2 mx-auto w-100">
                 <img id="preview-img" src="{{ asset('storage/' . $restaurant->image) }}" alt="" style="max-height: 250px">
