@@ -9,7 +9,7 @@
     "VAT": "IT14930483009",
     "phoneNumber": "066553541",
     "cuisineType": ["Italiano", "Pizza"],
-    "image": "storage/Rist_italiano.jpg",
+    "image": "Rist_italiano.jpg",
     "foodItem":[
         {"id":1,"name":"Pizza Margherita","price":8,"description":"natoque penatibus et magnis dis parturient","thumb":null},
         {"id":2,"name":"Pizza Tonno e Cipolle","price":12,"description":"lectus aliquam sit amet diam in","thumb":null},
@@ -34,7 +34,7 @@
     "VAT": "IT149304831111",
     "phoneNumber": "066553658",
     "cuisineType": ["Cinese"],
-    "image": "storage/Rist_cinese.jpg",
+    "image": "Rist_cinese.jpg",
     "foodItem":[
         {"id":14,"name":"Manzo con funghi e bambù","price":8,"description":"natoque penatibus et magnis dis parturient","thumb":null},
         {"id":15,"name":"Riso alla Cantonese","price":12,"description":"lectus aliquam sit amet diam in","thumb":null},
@@ -59,7 +59,7 @@
     "VAT": "FR987654321",
     "phoneNumber": "0143543210",
     "cuisineType": ["Francese"],
-    "image": "storage/Rist_francese.jpg",
+    "image": "Rist_francese.jpg",
     "foodItem": [
         {"id": 27, "name": "Soupe à l'oignon", "price": 9, "description": "Classic French onion soup with croutons and cheese", "thumb": null},
         {"id": 28, "name": "Quiche Lorraine", "price": 12, "description": "Savory tart with bacon, eggs, and cheese", "thumb": null},
@@ -80,7 +80,7 @@
     "VAT": "IT123456789",
     "phoneNumber": "06912345678",
     "cuisineType": ["Spagnolo"],
-    "image": "storage/Rist_spagnolo.jpg",
+    "image": "Rist_spagnolo.jpg",
     "foodItem": [
         {"id": 37, "name": "Patatas Bravas", "price": 6, "description": "Fried potatoes with spicy tomato sauce", "thumb": null},
         {"id": 38, "name": "Gambas al ajillo", "price": 15, "description": "Shrimp cooked in garlic", "thumb": null},
@@ -101,7 +101,7 @@
     "VAT": "JP987654321",
     "phoneNumber": "0312345678",
     "cuisineType": ["Giapponese"],
-    "image": "storage/Rist_giapponese.jpg",
+    "image": "Rist_giapponese.jpg",
     "foodItem": [
         {"id": 47, "name": "Nigiri Sushi", "price": 3, "description": "Rice ball with a slice of fish on top", "thumb": null},
         {"id": 48, "name": "Sashimi", "price": 4, "description": "Sliced raw fish", "thumb": null},
@@ -122,7 +122,7 @@
     "VAT": "IT771654321",
     "phoneNumber": "0633545678",
     "cuisineType": ["Greco"],
-    "image": "storage/Rist_greco.jpg",
+    "image": "Rist_greco.jpg",
     "foodItem": [
                 {
             "id": 57,
@@ -163,7 +163,7 @@
     "VAT": "IT987654321",
     "phoneNumber": "0612345678",
     "cuisineType": ["Americano"],
-    "image": "storage/Rist_americano.jpg",
+    "image": "Rist_americano.jpg",
     "foodItem": [
     {
         "id": 65,
@@ -202,7 +202,7 @@
   "VAT": "IT998877665",
   "phoneNumber": "0623456789",
   "cuisineType": ["Messicano"],
-   "image": "storage/Rist_messicano.jpg",
+   "image": "Rist_messicano.jpg",
   "foodItem": [
     {
       "id": 69,
@@ -241,7 +241,7 @@
   "VAT": "IT112233445",
   "phoneNumber": "0634567890",
   "cuisineType": ["Thai"],
-  "image": "storage/Rist_thai.jpg",
+  "image": "Rist_thai.jpg",
   "foodItem": [
     {
       "id": 73,
@@ -280,7 +280,7 @@
   "VAT": "IT987654321",
   "phoneNumber": "0643210987",
   "cuisineType": ["Kebab"],
-   "image": "storage/Rist_kebab.jpg",
+   "image": "Rist_kebab.jpg",
   "foodItem": [
     {
       "id": 77,
