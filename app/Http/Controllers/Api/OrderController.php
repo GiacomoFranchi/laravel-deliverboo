@@ -25,13 +25,13 @@ class OrderController extends Controller
                 $order->order_time = Carbon::now();
                 // $order->restaurant_id = $restaurant->id; 
                 //slug temporaneo per non avere errori in fase di invio dati al db
-                $order->slug = 'temporary-slug'; 
+                // $order->slug = 'temporary-slug'; 
                 $order->save();
 
                 //slug definitivo
-                $slug = Str::slug($request->input('customers_name') . '-' . $order->order_time->format('Y-m-d-H-i-s') . '-' . $order->id);
-                $order->slug = $slug;
-                $order->save();
+                // $slug = Str::slug($request->input('customers_name') . '-' . $order->order_time->format('Y-m-d-H-i-s') . '-' . $order->id);
+                // $order->slug = $slug;
+                // $order->save();
                 $totalPrice = 0;
 
                 //// processare ogni food item inviato da f.e.

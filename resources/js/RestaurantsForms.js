@@ -1,21 +1,3 @@
-// inserimento della img preview nel form
-const previewImgElem = document.getElementById('preview-img');
-
-const image = document.getElementById('image');
-
-if(image) {
-    image.addEventListener('change', function() {
-        const selectedFile = this.files[0];
-        console.log(selectedFile);
-        if(selectedFile) {
-            const reader = new FileReader();
-            reader.addEventListener("load", function() {
-                previewImgElem.src = reader.result;
-            })
-            reader.readAsDataURL(selectedFile);
-        }
-    })
-}
 
 // Controllo nell'nserimento della partita IVA nel form
 document.addEventListener('DOMContentLoaded', function() {
@@ -74,9 +56,36 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 //funzione per rimuovere anteprima immagine
-const deleteImageButton = document.getElementById('delete-img-btn')
+// const deleteImageButton = document.getElementById('delete-img-btn')
 
-deleteImageButton.addEventListener('click', function(event) {
-    event.preventDefault();
-    previewImgElem.remove();
-}) 
+// deleteImageButton.addEventListener('click', function(event) {
+//     event.preventDefault();
+//     previewImgElem.remove();
+// }) 
+
+// inserimento della img preview nel form
+const previewImgElem = document.getElementById('preview-img');
+
+const image = document.getElementById('image');
+
+if(image) {
+    image.addEventListener('change', function() {
+        const selectedFile = this.files[0];
+        console.log(selectedFile);
+        if(selectedFile) {
+            const reader = new FileReader();
+            reader.addEventListener("load", function() {
+                previewImgElem.src = reader.result;
+            })
+            reader.readAsDataURL(selectedFile);
+        }
+    })
+}
+
+
+document.getElementById('delete-img-btn').addEventListener('click', function() {
+    const imageInput = document.getElementById('image');
+    const previewImgElem = document.getElementById('preview-img');
+    imageInput.value = '';
+    previewImgElem.style.display = 'none';
+});
