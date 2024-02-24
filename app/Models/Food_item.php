@@ -14,8 +14,13 @@ class Food_item extends Model
     protected $fillable = ['name', 'slug', 'image', 'description', 'price','is_visible', 'restaurant_id'];
 
     public function setNameAttribute($value){
-        $this->attributes['name'] = $value;
-        $this->attributes['slug'] = Str::slug($value) . '-' . $this->restaurant_id;
+        if ($this->restaurant_id && $value) {
+            $hash = md5($value . now()->timestamp);
+            $shortHash = substr($hash, 0, 5);
+
+            $this->attributes['name'] = $value;
+            $this->attributes['slug'] = Str::slug($value) . '-' . $this->restaurant_id . '-' . $shortHash;
+        }
     }
     
     public function restaurant(){
