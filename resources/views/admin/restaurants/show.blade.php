@@ -5,8 +5,8 @@
         <h2 class="fs-1 mb-3">Restaurant : {{ $restaurant->name }}</h2>
 
 
-        <div>
-            <img src="{{ asset('storage/' . $restaurant->image) }}" alt="">
+        <div class="col-4">
+            <img class="img-fluid" src="{{ asset('storage/' . $restaurant->image) }}" alt="">
         </div>
 
 

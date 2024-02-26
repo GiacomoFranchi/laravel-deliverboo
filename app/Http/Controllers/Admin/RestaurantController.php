@@ -101,16 +101,16 @@ class RestaurantController extends Controller
     public function update(UpdateRestaurantRequest $request, Restaurant $restaurant)
     {
         $form_data = $request->validated();
-
-        if ($request->hasFile('image')) {
+        if ($request->has('image')) {
             if ($restaurant->image) {
                 Storage::delete($restaurant->image);
             }
 
             $path = Storage::put('restaurants_images', $request->image);
             $form_data['image'] = $path;
+        }else{
+            $restaurant->image = null;
         }
-        
         $restaurant->update($form_data);
 
         if ($request->has('cusine_types')) {

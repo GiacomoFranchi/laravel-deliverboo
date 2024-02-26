@@ -47,7 +47,7 @@ return [
 
         ],
         [
-
+            //greco
             ['name' => "Tomatokeftedes"],
             ['name' => "Htapodi xudato"],
             ['name' => "Choriatiki"],
@@ -57,7 +57,7 @@ return [
 
         ],
         [
-
+            //spagnolo
             ['name' => "Paella valenciana"],
             ['name' => "Gazpacho andaluso e Salmorejo"],
             ['name' => "Cocido Madrileño"],
@@ -77,7 +77,7 @@ return [
 
         ],
         [
-
+            //thai
             ['name' => "Pad Thai"],
             ['name' => "Khao Pad"],
             ['name' => "Tom Yum Goong"],
@@ -97,7 +97,7 @@ return [
 
         ],
         [
-
+            //american
             ['name' => "BBQ ribs"],
             ['name' => "Mac and Cheese"],
             ['name' => "Mexican Burger"],

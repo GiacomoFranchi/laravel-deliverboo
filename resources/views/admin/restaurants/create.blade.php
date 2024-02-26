@@ -108,7 +108,7 @@
                     <div class="invalid-feedback">{{ $message }}</div>
                 @enderror
             </div>
-            <form action=""
+            {{-- <form action=""
                 class="d-inline-block" method="POST">
 
                 @csrf
@@ -116,7 +116,9 @@
 
                 <button id="delete-img-btn" class="btn btn-danger">Elimina</button>
 
-            </form>
+            </form> --}}
+
+            <button id="delete-img-btn" class="btn btn-danger" type="button">Elimina</button>
 
             <div class="m-3">
                 <img id="preview-img" src="" alt="" style="max-height: 250px">
