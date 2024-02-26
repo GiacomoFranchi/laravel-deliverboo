@@ -47,10 +47,12 @@
                 @error('image')
                     <div class="invalid-feedback">{{ $message }}</div>
                 @enderror
+
+                <button id="delete-img-btn" class="mt-2 btn btn-danger" type="button">Elimina</button>
             </div>
 
-            <div class="mb-2 mx-auto w-100">
-                <img id="preview-img" src="{{ asset('storage/' . $food_item->image )}}" alt="" style="max-height: 250px">
+            <div class="m-2 mx-auto w-100">
+                <img id="preview-img" src="{{ asset('storage/' . $food_item->image) }}" alt="" style="max-height: 250px">
             </div>
 
             {{-- DESCRIZIONE --}}
@@ -103,5 +105,6 @@
 @endsection
 
 @section('scripts')
-    @vite(['resources/js/image-preview.js'])
+    @vite(['resources/js/RestaurantsForms.js'], ['resources/js/image-preview.js'])
+
 @endsection
