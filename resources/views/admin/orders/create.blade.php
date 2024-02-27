@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+{{-- @extends('layouts.admin')
 
 @section('content')
 
@@ -88,4 +88,4 @@
         let oldFoodItems = @json(old('food_items', []));
     </script>
 
-@endsection
+@endsection --}}
