@@ -7,56 +7,55 @@ use App\Http\Requests\GuestOrderRequest;
 use App\Models\Food_item;
 use App\Models\Order;
 use App\Models\Restaurant;
+use App\Services\BraintreeService;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
-
+use Symfony\Component\HttpFoundation\Response;
 class OrderController extends Controller
 {
-    public function store(GuestOrderRequest $request){
 
-        //mettere tutto dentro una db:transaction
-        DB::transaction(
-            function () use ($request) {
-                //creare ordine
-                $order = new Order();
-                $order->fill($request->except('food_items'));
-                $order->order_time = Carbon::now();
-                // $order->restaurant_id = $restaurant->id; 
-                //slug temporaneo per non avere errori in fase di invio dati al db
-                // $order->slug = 'temporary-slug'; 
-                $order->save();
+    protected $braintreeService;
 
-                //slug definitivo
-                // $slug = Str::slug($request->input('customers_name') . '-' . $order->order_time->format('Y-m-d-H-i-s') . '-' . $order->id);
-                // $order->slug = $slug;
-                // $order->save();
-                $totalPrice = 0;
+    public function __construct(BraintreeService $braintreeService) 
+    {
+        $this->braintreeService = $braintreeService;
+    }
 
-                //// processare ogni food item inviato da f.e.
-                foreach ($request->food_items as $foodItem) {
-                    //trovare il fooditem x id o fail se non va 
-                    $item = Food_item::findOrFail($foodItem['id']);
-                    //trovare la quantità dalla richiesta e mettere a default 1 se non viene inserita
-                    $quantity = $foodItem['quantity'];
-                    //calcola il prezzo totale prezzo * quantità
-                    $totalPrice += $item->price * $quantity;
+    public function store(GuestOrderRequest $request)
+    {
+        $totalPrice = 0;
 
-                    // attacchare separatamente i food item con la quantità da inviare alla pivot
-                    $order->food_items()->attach($item->id, ['quantity' => $quantity]);
-                }
+        DB::beginTransaction();
+        try {
+            $order = new Order();
+            $order->fill($request->except('food_items'));
+            $order->order_time = Carbon::now();
+            $order->save();
 
-                // aggiornare il total price dopo che tutti gli item sono stati processati
-                $order->total_price = $totalPrice;
-                $order->save();
+            foreach ($request->food_items as $foodItem) {
+                $item = Food_item::findOrFail($foodItem['id']);
+                $quantity = $foodItem['quantity'] ?? 1; 
+                $totalPrice += $item->price * $quantity;
+                $order->food_items()->attach($item->id, ['quantity' => $quantity]);
             }
-        );
 
-       
-        return response()->json([
-            'message' => 'Ordine creato con successo'
-        ], 201); 
+            $order->total_price = $totalPrice;
+            $order->save();
+
+            $paymentResult = $this->braintreeService->processPayment($request->payment_method_nonce, $totalPrice);
+            if ($paymentResult->success) {
+                DB::commit();
+                return response()->json(['message' => 'Ordine creato e processato'], Response::HTTP_CREATED);
+            } else {
+                DB::rollBack();
+                return response()->json(['error' => 'Processo di pagamento non riuscito'], Response::HTTP_BAD_REQUEST);
+            }
+        } catch (\Exception $e) {
+            DB::rollBack();
+            return response()->json(['error' => 'Si è verificato un errore'], Response::HTTP_INTERNAL_SERVER_ERROR);
+        }
     }
 }
 

@@ -4,6 +4,7 @@ use App\Http\Controllers\Api\CuisineTypeController;
 use App\Http\Controllers\Api\FoodItemController;
 use App\Http\Controllers\Api\OrderController;
 use App\Http\Controllers\Api\RestaurantController;
+use App\Http\Controllers\BrainTreeController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -29,4 +30,5 @@ Route::get('/restaurants/cusine_type/{cusine_types_name}', [RestaurantController
 Route::get('/cusine_types', [CuisineTypeController::class, 'index']);
 Route::get('/food_items', [FoodItemController::class, 'index']);
 Route::post('/restaurant/{slug}/orders', [OrderController::class, 'store']);
-
+Route::get('/braintree/token', [BrainTreeController::class, 'getToken'])->name('braintree.token');
+Route::post('/braintree/checkout', [BrainTreeController::class, 'checkout'])->name('braintree.checkout');

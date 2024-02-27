@@ -2,17 +2,11 @@
 
 namespace App\Providers;
 
-use Illuminate\Support\ServiceProvider;
-
-
-
-namespace App\Providers;
-
-use App\Services\BraintreeService;
+use App\PaymentService;
 use Illuminate\Support\ServiceProvider;
 use Braintree\Gateway;
 
-class BraintreeServiceProvider extends ServiceProvider
+class PaymentServiceProvider extends ServiceProvider
 {
     /**
      * Register services.
@@ -30,8 +24,8 @@ class BraintreeServiceProvider extends ServiceProvider
             ]);
         });
 
-        $this->app->singleton(BraintreeService::class, function ($app) {
-            return new BraintreeService($app->make(Gateway::class));
+        $this->app->singleton(PaymentService::class, function ($app) {
+            return new PaymentService($app->make(Gateway::class));
         });
     }
 
@@ -45,4 +39,3 @@ class BraintreeServiceProvider extends ServiceProvider
         //
     }
 }
-
