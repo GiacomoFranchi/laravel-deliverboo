@@ -1,329 +1,5362 @@
-
 {
- "Restaurants": 
- [ 
+  "Restaurants": [
     {
-    "id": 1,
-    "name": "Ristorante del sole",
-    "address": "Piazza del sole, 15",
-    "VAT": "IT14930483009",
-    "phoneNumber": "066553541",
-    "cuisineType": ["Italiano", "Pizza"],
-    "image": "Rist_italiano.jpg",
-    "foodItem":[
-        {"id":1,"name":"Pizza Margherita","price":8,"description":"Classic Margherita pizza","thumb":null},
-        {"id":2,"name":"Pizza Tonno e Cipolle","price":12,"description":"Tuna and Onion Pizza","thumb":null},
-        {"id":3,"name":"Lasagna bianca vegetariana","price":12,"description":"Vegetarian white lasagna","thumb":null},
-        {"id":4,"name":"Pizza Napoli","price":9,"description":"Neapolitan pizza","thumb":null},
-        {"id":5,"name":"Tiramisù classico","price":11,"description":"Classic Tiramisu","thumb":null},
-        {"id":6,"name":"Filetto di Manzo","price":18,"description":"Beef Fillet","thumb":null},
-        {"id":7,"name":"Patate novelle al forno","price":18,"description":"Roasted Potatoes","thumb":null},
-        {"id":8,"name":"Spaghetti alla puttanesca","price":17,"description":"Spaghetti Puttanesca","thumb":null},
-        {"id":9,"name":"Orata alla piastra","price":12,"description":"Grilled Sea Bream","thumb":null},
-        {"id":10,"name":"Torta della nonna","price":7,"description":"Grandma's Cake","thumb":null},
-        {"id":11,"name":"Risotto alla crema di scampi","price":12,"description":"Creamy Shrimp Risotto","thumb":null},
-        {"id":12,"name":"Pizza all'ortolana","price":7,"description":"Vegetarian Pizza","thumb":null},
-        {"id":13,"name":"Pizza ai quattro formaggi","price":7,"description":"Four Cheese Pizza","thumb":null}
-    ]
-    },
-    {
-    
-    "id": 2,
-    "name": "Ristorante della luna",
-    "address": "Piazza delle cinque lune, 12",
-    "VAT": "IT149304831111",
-    "phoneNumber": "066553658",
-    "cuisineType": ["Cinese"],
-    "image": "Rist_cinese.jpg",
-    "foodItem":[
-        {"id":14,"name":"Manzo con funghi e bambù","price":8,"description":"Beef with Mushrooms and Bamboo Shoots","thumb":null},
-        {"id":15,"name":"Riso alla Cantonese","price":12,"description":"Cantonese Fried Rice","thumb":null},
-        {"id":16,"name":"Pollo con ananas fresco","price":12,"description":"Chicken with Fresh Pineapple","thumb":null},
-        {"id":17,"name":"Verdure  miste saltate","price":9,"description":"Mixed Stir-Fried Vegetables","thumb":null},
-        {"id":18,"name":"Spaghetti di riso con gamberi","price":11,"description":"Rice Noodles with Shrimp","thumb":null},
-        {"id":19,"name":"Spaghetti di soia con verdure","price":18,"description":"Soy Noodles with Vegetables","thumb":null},
-        {"id":20,"name":"Maiale in salsa agrodolce","price":18,"description":"Sweet and Sour Pork","thumb":null},
-        {"id":21,"name":"Ravioli alla griglia","price":17,"description":"Grilled Ravioli","thumb":null},
-        {"id":22,"name":"Sashimi di salmone","price":12,"description":"Salmon Sashimi","thumb":null},
-        {"id":23,"name":"Katsudon","price":7,"description":"Katsudon","thumb":null},
-        {"id":24,"name":"Yakitori","price":12,"description":"Yakitori","thumb":null},
-        {"id":25,"name":"Takoyaki","price":7,"description":"Takoyaki","thumb":null},
-        {"id":26,"name":"Onigiri","price":7,"description":"Onigiri","thumb":null}
-        ]
-    },
-
-    {
-    "id": 3,
-    "name": "Le Bistrot Parisien",
-    "address": "Piazza Fiume, 18",
-    "VAT": "FR987654321",
-    "phoneNumber": "0143543210",
-    "cuisineType": ["Francese"],
-    "image": "Rist_francese.jpg",
-    "foodItem": [
-        {"id": 27, "name": "Soupe à l'oignon", "price": 9, "description": "Classic French onion soup with croutons and cheese", "thumb": null},
-        {"id": 28, "name": "Quiche Lorraine", "price": 12, "description": "Savory tart with bacon, eggs, and cheese", "thumb": null},
-        {"id": 29, "name": "Ratatouille", "price": 15, "description": "Traditional vegetable stew from Provence", "thumb": null},
-        {"id": 30, "name": "Boeuf Bourguignon", "price": 22, "description": "Beef stewed in red wine with mushrooms and onions", "thumb": null},
-        {"id": 31, "name": "Crème brûlée", "price": 10, "description": "Custard dessert with a caramelized sugar top", "thumb": null},
-        {"id": 32, "name": "Tarte Tatin", "price": 11, "description": "Upside-down apple tart", "thumb": null},
-        {"id": 33, "name": "Moules marinières", "price": 18, "description": "Mussels cooked in white wine sauce", "thumb": null},
-        {"id": 34, "name": "Coq au vin", "price": 20, "description": "Chicken cooked in red wine with bacon, mushrooms, and onions", "thumb": null},
-        {"id": 35, "name": "Salade Niçoise", "price": 16, "description": "Mixed salad with tuna, eggs, and olives", "thumb": null},
-        {"id": 36, "name": "Escargots", "price": 13, "description": "Snails baked in butter and garlic", "thumb": null}
-        ]
-    },
-    {
-    "id": 4,
-    "name": "Casa de Tapas",
-    "address": "Via della Esperanza, 22",
-    "VAT": "IT123456789",
-    "phoneNumber": "06912345678",
-    "cuisineType": ["Spagnolo"],
-    "image": "Rist_spagnolo.jpg",
-    "foodItem": [
-        {"id": 37, "name": "Patatas Bravas", "price": 6, "description": "Fried potatoes with spicy tomato sauce", "thumb": null},
-        {"id": 38, "name": "Gambas al ajillo", "price": 15, "description": "Shrimp cooked in garlic", "thumb": null},
-        {"id": 39, "name": "Jamón ibérico", "price": 20, "description": "Cured Iberian ham", "thumb": null},
-        {"id": 40, "name": "Tortilla española", "price": 10, "description": "Spanish omelette with potatoes and onions", "thumb": null},
-        {"id": 41, "name": "Chorizo al vino", "price": 12, "description": "Chorizo cooked in wine", "thumb": null},
-        {"id": 42, "name": "Croquetas de jamón", "price": 8, "description": "Ham croquettes", "thumb": null},
-        {"id": 43, "name": "Pulpo a la gallega", "price": 18, "description": "Galician style octopus", "thumb": null},
-        {"id": 44, "name": "Pimientos de Padrón", "price": 7, "description": "Fried green peppers", "thumb": null},
-        {"id": 45, "name": "Queso Manchego", "price": 9, "description": "Sheep's milk cheese from La Mancha", "thumb": null},
-        {"id": 46, "name": "Tarta de Santiago", "price": 7, "description": "Almond cake from Galicia", "thumb": null}
-        ]
-    },
-    {
-    "id": 5,
-    "name": "Sushi Zen",
-    "address": "Via del corso, 19",
-    "VAT": "JP987654321",
-    "phoneNumber": "0312345678",
-    "cuisineType": ["Giapponese"],
-    "image": "Rist_giapponese.jpg",
-    "foodItem": [
-        {"id": 47, "name": "Nigiri Sushi", "price": 3, "description": "Rice ball with a slice of fish on top", "thumb": null},
-        {"id": 48, "name": "Sashimi", "price": 4, "description": "Sliced raw fish", "thumb": null},
-        {"id": 49, "name": "Maki Sushi", "price": 5, "description": "Rolled sushi with seaweed outside", "thumb": null},
-        {"id": 50, "name": "Temaki Sushi", "price": 6, "description": "Hand-rolled cone-shaped sushi", "thumb": null},
-        {"id": 51, "name": "Chirashi Sushi", "price": 12, "description": "Bowl of sushi rice topped with various sashimi", "thumb": null},
-        {"id": 52, "name": "Edamame", "price": 2, "description": "Boiled soybeans in the pod", "thumb": null},
-        {"id": 53, "name": "Misoshiru", "price": 3, "description": "Miso soup with tofu and seaweed", "thumb": null},
-        {"id": 54, "name": "Tempura", "price": 8, "description": "Battered and deep-fried vegetables or seafood", "thumb": null},
-        {"id": 55, "name": "Unagi Don", "price": 15, "description": "Grilled eel over rice", "thumb": null},
-        {"id": 56, "name": "Kaiseki", "price": 30, "description": "Traditional multi-course Japanese dinner", "thumb": null}
-    ]
-    },
-    {
-    "id": 6,
-    "name": "Ilios - Ristorante Greco",
-    "address": "Via Piave, 30",
-    "VAT": "IT771654321",
-    "phoneNumber": "0633545678",
-    "cuisineType": ["Greco"],
-    "image": "Rist_greco.jpg",
-    "foodItem": [
-                {
-            "id": 57,
-            "name": "Moussaka",
-            "price": 12,
-            "description": "Layered eggplant, potato, and minced meat casserole topped with béchamel sauce",
-            "thumb": null
+      "id": 1,
+      "name": "Ristorante del sole",
+      "address": "Piazza del sole, 15",
+      "VAT": "IT14930483009",
+      "phoneNumber": "066553541",
+      "cuisineType": [
+        "Italiano",
+        "Pizza"
+      ],
+      "image": "Rist_italiano.jpg",
+      "foodItem": [
+        {
+          "id": 1,
+          "name": "Pizza Margherita",
+          "price": 8,
+          "description": "Classic Margherita pizza",
+          "thumb": null
         },
         {
-            "id": 58,
-            "name": "Souvlaki",
-            "price": 10,
-            "description": "Grilled skewers of marinated meat, typically served with pita and tzatziki",
-            "thumb": null
+          "id": 2,
+          "name": "Pizza Tonno e Cipolle",
+          "price": 12,
+          "description": "Tuna and Onion Pizza",
+          "thumb": null
         },
         {
-            "id": 59,
-            "name": "Spanakopita",
-            "price": 8,
-            "description": "Spinach and feta cheese pie wrapped in phyllo pastry",
-            "thumb": null
+          "id": 3,
+          "name": "Lasagna bianca vegetariana",
+          "price": 12,
+          "description": "Vegetarian white lasagna",
+          "thumb": null
         },
         {
-            "id": 60,
-            "name": "Tzatziki",
-            "price": 5,
-            "description": "Yogurt, cucumber, and garlic dip, perfect as an appetizer or side",
-            "thumb": null
+          "id": 4,
+          "name": "Pizza Napoli",
+          "price": 9,
+          "description": "Neapolitan pizza",
+          "thumb": null
+        },
+        {
+          "id": 5,
+          "name": "Tiramisù classico",
+          "price": 11,
+          "description": "Classic Tiramisu",
+          "thumb": null
+        },
+        {
+          "id": 6,
+          "name": "Filetto di Manzo",
+          "price": 18,
+          "description": "Beef Fillet",
+          "thumb": null
+        },
+        {
+          "id": 7,
+          "name": "Patate novelle al forno",
+          "price": 18,
+          "description": "Roasted Potatoes",
+          "thumb": null
+        },
+        {
+          "id": 8,
+          "name": "Spaghetti alla puttanesca",
+          "price": 17,
+          "description": "Spaghetti Puttanesca",
+          "thumb": null
+        },
+        {
+          "id": 9,
+          "name": "Orata alla piastra",
+          "price": 12,
+          "description": "Grilled Sea Bream",
+          "thumb": null
+        },
+        {
+          "id": 10,
+          "name": "Torta della nonna",
+          "price": 7,
+          "description": "Grandma's Cake",
+          "thumb": null
+        },
+        {
+          "id": 11,
+          "name": "Risotto alla crema di scampi",
+          "price": 12,
+          "description": "Creamy Shrimp Risotto",
+          "thumb": null
+        },
+        {
+          "id": 12,
+          "name": "Pizza all'ortolana",
+          "price": 7,
+          "description": "Vegetarian Pizza",
+          "thumb": null
+        },
+        {
+          "id": 13,
+          "name": "Pizza ai quattro formaggi",
+          "price": 7,
+          "description": "Four Cheese Pizza",
+          "thumb": null
         }
-    ]
-    },
-
-
-    {
-    "id": 7,
-    "name": "Wall-Mart  Paradise",
-    "address": "Via Washington, 19",
-    "VAT": "IT987654321",
-    "phoneNumber": "0612345678",
-    "cuisineType": ["Americano"],
-    "image": "Rist_americano.jpg",
-    "foodItem": [
-    {
-        "id": 65,
-        "name": "Cheeseburger",
-        "price": 10,
-        "description": "Grilled beef patty with cheese on a bun, often served with lettuce, tomato, onion, and pickles",
-        "thumb": null
+      ]
     },
     {
-        "id": 66,
-        "name": "BBQ Ribs",
-        "price": 15,
-        "description": "Slow-cooked pork ribs coated in BBQ sauce and served with sides like coleslaw and cornbread",
-        "thumb": null
+      "id": 2,
+      "name": "Ristorante della luna",
+      "address": "Piazza delle cinque lune, 12",
+      "VAT": "IT149304831111",
+      "phoneNumber": "066553658",
+      "cuisineType": [
+        "Cinese"
+      ],
+      "image": "Rist_cinese.jpg",
+      "foodItem": [
+        {
+          "id": 14,
+          "name": "Manzo con funghi e bambù",
+          "price": 8,
+          "description": "Beef with Mushrooms and Bamboo Shoots",
+          "thumb": null
+        },
+        {
+          "id": 15,
+          "name": "Riso alla Cantonese",
+          "price": 12,
+          "description": "Cantonese Fried Rice",
+          "thumb": null
+        },
+        {
+          "id": 16,
+          "name": "Pollo con ananas fresco",
+          "price": 12,
+          "description": "Chicken with Fresh Pineapple",
+          "thumb": null
+        },
+        {
+          "id": 17,
+          "name": "Verdure  miste saltate",
+          "price": 9,
+          "description": "Mixed Stir-Fried Vegetables",
+          "thumb": null
+        },
+        {
+          "id": 18,
+          "name": "Spaghetti di riso con gamberi",
+          "price": 11,
+          "description": "Rice Noodles with Shrimp",
+          "thumb": null
+        },
+        {
+          "id": 19,
+          "name": "Spaghetti di soia con verdure",
+          "price": 18,
+          "description": "Soy Noodles with Vegetables",
+          "thumb": null
+        },
+        {
+          "id": 20,
+          "name": "Maiale in salsa agrodolce",
+          "price": 18,
+          "description": "Sweet and Sour Pork",
+          "thumb": null
+        },
+        {
+          "id": 21,
+          "name": "Ravioli alla griglia",
+          "price": 17,
+          "description": "Grilled Ravioli",
+          "thumb": null
+        },
+        {
+          "id": 22,
+          "name": "Sashimi di salmone",
+          "price": 12,
+          "description": "Salmon Sashimi",
+          "thumb": null
+        },
+        {
+          "id": 23,
+          "name": "Katsudon",
+          "price": 7,
+          "description": "Katsudon",
+          "thumb": null
+        },
+        {
+          "id": 24,
+          "name": "Yakitori",
+          "price": 12,
+          "description": "Yakitori",
+          "thumb": null
+        },
+        {
+          "id": 25,
+          "name": "Takoyaki",
+          "price": 7,
+          "description": "Takoyaki",
+          "thumb": null
+        },
+        {
+          "id": 26,
+          "name": "Onigiri",
+          "price": 7,
+          "description": "Onigiri",
+          "thumb": null
+        }
+      ]
     },
     {
-        "id": 67,
-        "name": "Buffalo Wings",
-        "price": 9,
-        "description": "Deep-fried chicken wings coated in a vinegar-based cayenne pepper hot sauce and butter",
-        "thumb": null
+      "id": 3,
+      "name": "Le Bistrot Parisien",
+      "address": "Piazza Fiume, 18",
+      "VAT": "FR987654321",
+      "phoneNumber": "0143543210",
+      "cuisineType": [
+        "Francese"
+      ],
+      "image": "Rist_francese.jpg",
+      "foodItem": [
+        {
+          "id": 27,
+          "name": "Soupe à l'oignon",
+          "price": 9,
+          "description": "Classic French onion soup with croutons and cheese",
+          "thumb": null
+        },
+        {
+          "id": 28,
+          "name": "Quiche Lorraine",
+          "price": 12,
+          "description": "Savory tart with bacon, eggs, and cheese",
+          "thumb": null
+        },
+        {
+          "id": 29,
+          "name": "Ratatouille",
+          "price": 15,
+          "description": "Traditional vegetable stew from Provence",
+          "thumb": null
+        },
+        {
+          "id": 30,
+          "name": "Boeuf Bourguignon",
+          "price": 22,
+          "description": "Beef stewed in red wine with mushrooms and onions",
+          "thumb": null
+        },
+        {
+          "id": 31,
+          "name": "Crème brûlée",
+          "price": 10,
+          "description": "Custard dessert with a caramelized sugar top",
+          "thumb": null
+        },
+        {
+          "id": 32,
+          "name": "Tarte Tatin",
+          "price": 11,
+          "description": "Upside-down apple tart",
+          "thumb": null
+        },
+        {
+          "id": 33,
+          "name": "Moules marinières",
+          "price": 18,
+          "description": "Mussels cooked in white wine sauce",
+          "thumb": null
+        },
+        {
+          "id": 34,
+          "name": "Coq au vin",
+          "price": 20,
+          "description": "Chicken cooked in red wine with bacon, mushrooms, and onions",
+          "thumb": null
+        },
+        {
+          "id": 35,
+          "name": "Salade Niçoise",
+          "price": 16,
+          "description": "Mixed salad with tuna, eggs, and olives",
+          "thumb": null
+        },
+        {
+          "id": 36,
+          "name": "Escargots",
+          "price": 13,
+          "description": "Snails baked in butter and garlic",
+          "thumb": null
+        }
+      ]
     },
     {
-        "id": 68,
-        "name": "Apple Pie",
-        "price": 7,
-        "description": "Classic dessert made with a spiced apple filling in a flaky pastry crust",
-        "thumb": null
-    }
-    ]
+      "id": 4,
+      "name": "Casa de Tapas",
+      "address": "Via della Esperanza, 22",
+      "VAT": "IT123456789",
+      "phoneNumber": "06912345678",
+      "cuisineType": [
+        "Spagnolo"
+      ],
+      "image": "Rist_spagnolo.jpg",
+      "foodItem": [
+        {
+          "id": 37,
+          "name": "Patatas Bravas",
+          "price": 6,
+          "description": "Fried potatoes with spicy tomato sauce",
+          "thumb": null
+        },
+        {
+          "id": 38,
+          "name": "Gambas al ajillo",
+          "price": 15,
+          "description": "Shrimp cooked in garlic",
+          "thumb": null
+        },
+        {
+          "id": 39,
+          "name": "Jamón ibérico",
+          "price": 20,
+          "description": "Cured Iberian ham",
+          "thumb": null
+        },
+        {
+          "id": 40,
+          "name": "Tortilla española",
+          "price": 10,
+          "description": "Spanish omelette with potatoes and onions",
+          "thumb": null
+        },
+        {
+          "id": 41,
+          "name": "Chorizo al vino",
+          "price": 12,
+          "description": "Chorizo cooked in wine",
+          "thumb": null
+        },
+        {
+          "id": 42,
+          "name": "Croquetas de jamón",
+          "price": 8,
+          "description": "Ham croquettes",
+          "thumb": null
+        },
+        {
+          "id": 43,
+          "name": "Pulpo a la gallega",
+          "price": 18,
+          "description": "Galician style octopus",
+          "thumb": null
+        },
+        {
+          "id": 44,
+          "name": "Pimientos de Padrón",
+          "price": 7,
+          "description": "Fried green peppers",
+          "thumb": null
+        },
+        {
+          "id": 45,
+          "name": "Queso Manchego",
+          "price": 9,
+          "description": "Sheep's milk cheese from La Mancha",
+          "thumb": null
+        },
+        {
+          "id": 46,
+          "name": "Tarta de Santiago",
+          "price": 7,
+          "description": "Almond cake from Galicia",
+          "thumb": null
+        }
+      ]
     },
     {
-  "id": 8,
-  "name": "TexMix Fiesta",
-  "address": "Corso Grande, 102",
-  "VAT": "IT998877665",
-  "phoneNumber": "0623456789",
-  "cuisineType": ["Messicano"],
-   "image": "Rist_messicano.jpg",
-  "foodItem": [
+      "id": 5,
+      "name": "Sushi Zen",
+      "address": "Via del corso, 19",
+      "VAT": "JP987654321",
+      "phoneNumber": "0312345678",
+      "cuisineType": [
+        "Giapponese"
+      ],
+      "image": "Rist_giapponese.jpg",
+      "foodItem": [
+        {
+          "id": 47,
+          "name": "Nigiri Sushi",
+          "price": 3,
+          "description": "Rice ball with a slice of fish on top",
+          "thumb": null
+        },
+        {
+          "id": 48,
+          "name": "Sashimi",
+          "price": 4,
+          "description": "Sliced raw fish",
+          "thumb": null
+        },
+        {
+          "id": 49,
+          "name": "Maki Sushi",
+          "price": 5,
+          "description": "Rolled sushi with seaweed outside",
+          "thumb": null
+        },
+        {
+          "id": 50,
+          "name": "Temaki Sushi",
+          "price": 6,
+          "description": "Hand-rolled cone-shaped sushi",
+          "thumb": null
+        },
+        {
+          "id": 51,
+          "name": "Chirashi Sushi",
+          "price": 12,
+          "description": "Bowl of sushi rice topped with various sashimi",
+          "thumb": null
+        },
+        {
+          "id": 52,
+          "name": "Edamame",
+          "price": 2,
+          "description": "Boiled soybeans in the pod",
+          "thumb": null
+        },
+        {
+          "id": 53,
+          "name": "Misoshiru",
+          "price": 3,
+          "description": "Miso soup with tofu and seaweed",
+          "thumb": null
+        },
+        {
+          "id": 54,
+          "name": "Tempura",
+          "price": 8,
+          "description": "Battered and deep-fried vegetables or seafood",
+          "thumb": null
+        },
+        {
+          "id": 55,
+          "name": "Unagi Don",
+          "price": 15,
+          "description": "Grilled eel over rice",
+          "thumb": null
+        },
+        {
+          "id": 56,
+          "name": "Kaiseki",
+          "price": 30,
+          "description": "Traditional multi-course Japanese dinner",
+          "thumb": null
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Ilios - Ristorante Greco",
+      "address": "Via Piave, 30",
+      "VAT": "IT771654321",
+      "phoneNumber": "0633545678",
+      "cuisineType": [
+        "Greco"
+      ],
+      "image": "Rist_greco.jpg",
+      "foodItem": [
+        {
+          "id": 57,
+          "name": "Moussaka",
+          "price": 12,
+          "description": "Layered eggplant, potato, and minced meat casserole topped with béchamel sauce",
+          "thumb": null
+        },
+        {
+          "id": 58,
+          "name": "Souvlaki",
+          "price": 10,
+          "description": "Grilled skewers of marinated meat, typically served with pita and tzatziki",
+          "thumb": null
+        },
+        {
+          "id": 59,
+          "name": "Spanakopita",
+          "price": 8,
+          "description": "Spinach and feta cheese pie wrapped in phyllo pastry",
+          "thumb": null
+        },
+        {
+          "id": 60,
+          "name": "Tzatziki",
+          "price": 5,
+          "description": "Yogurt, cucumber, and garlic dip, perfect as an appetizer or side",
+          "thumb": null
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Wall-Mart  Paradise",
+      "address": "Via Washington, 19",
+      "VAT": "IT987654321",
+      "phoneNumber": "0612345678",
+      "cuisineType": [
+        "Americano"
+      ],
+      "image": "Rist_americano.jpg",
+      "foodItem": [
+        {
+          "id": 65,
+          "name": "Cheeseburger",
+          "price": 10,
+          "description": "Grilled beef patty with cheese on a bun, often served with lettuce, tomato, onion, and pickles",
+          "thumb": null
+        },
+        {
+          "id": 66,
+          "name": "BBQ Ribs",
+          "price": 15,
+          "description": "Slow-cooked pork ribs coated in BBQ sauce and served with sides like coleslaw and cornbread",
+          "thumb": null
+        },
+        {
+          "id": 67,
+          "name": "Buffalo Wings",
+          "price": 9,
+          "description": "Deep-fried chicken wings coated in a vinegar-based cayenne pepper hot sauce and butter",
+          "thumb": null
+        },
+        {
+          "id": 68,
+          "name": "Apple Pie",
+          "price": 7,
+          "description": "Classic dessert made with a spiced apple filling in a flaky pastry crust",
+          "thumb": null
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "TexMix Fiesta",
+      "address": "Corso Grande, 102",
+      "VAT": "IT998877665",
+      "phoneNumber": "0623456789",
+      "cuisineType": [
+        "Messicano"
+      ],
+      "image": "Rist_messicano.jpg",
+      "foodItem": [
+        {
+          "id": 69,
+          "name": "Nachos Supreme",
+          "price": 8,
+          "description": "Crispy corn tortillas topped with melted cheese, jalapeños, beans, and guacamole",
+          "thumb": null
+        },
+        {
+          "id": 70,
+          "name": "Chicken Fajitas",
+          "price": 14,
+          "description": "Grilled chicken strips served on a sizzling platter with peppers, onions, and tortillas",
+          "thumb": null
+        },
+        {
+          "id": 71,
+          "name": "Beef Tacos",
+          "price": 10,
+          "description": "Soft or crunchy tacos filled with seasoned beef, lettuce, cheese, and salsa",
+          "thumb": null
+        },
+        {
+          "id": 72,
+          "name": "Chili Con Carne",
+          "price": 12,
+          "description": "Spicy stew containing chili peppers, meat, tomatoes, beans, and spices",
+          "thumb": null
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Bangkok Bistro",
+      "address": "Via Orientale, 58",
+      "VAT": "IT112233445",
+      "phoneNumber": "0634567890",
+      "cuisineType": [
+        "Thai"
+      ],
+      "image": "Rist_thai.jpg",
+      "foodItem": [
+        {
+          "id": 73,
+          "name": "Pad Thai",
+          "price": 10,
+          "description": "Stir-fried rice noodles with eggs, tofu, tamarind pulp, and shrimp or chicken, garnished with peanuts",
+          "thumb": null
+        },
+        {
+          "id": 74,
+          "name": "Green Curry Chicken",
+          "price": 12,
+          "description": "Spicy and sweet green curry with chicken, eggplants, bamboo shoots, and basil leaves",
+          "thumb": null
+        },
+        {
+          "id": 75,
+          "name": "Tom Yum Goong",
+          "price": 13,
+          "description": "Hot and sour Thai soup with shrimp, mushrooms, tomatoes, lemongrass, galangal, and lime leaves",
+          "thumb": null
+        },
+        {
+          "id": 76,
+          "name": "Mango Sticky Rice",
+          "price": 7,
+          "description": "Sweet sticky rice with fresh mango slices and coconut milk",
+          "thumb": null
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Kebab King",
+      "address": "Via della Libertà, 45",
+      "VAT": "IT987654321",
+      "phoneNumber": "0643210987",
+      "cuisineType": [
+        "Kebab"
+      ],
+      "image": "Rist_kebab.jpg",
+      "foodItem": [
+        {
+          "id": 77,
+          "name": "Doner Kebab",
+          "price": 8,
+          "description": "Rotisserie grilled meat, served in a pita with salad and sauces",
+          "thumb": null
+        },
+        {
+          "id": 78,
+          "name": "Shish Kebab",
+          "price": 10,
+          "description": "Skewered and grilled cubes of meat, served with grilled vegetables",
+          "thumb": null
+        },
+        {
+          "id": 79,
+          "name": "Adana Kebab",
+          "price": 12,
+          "description": "Hand-minced meat kebab mounted on a wide iron skewer and grilled on an open mangal filled with burning charcoal",
+          "thumb": null
+        },
+        {
+          "id": 80,
+          "name": "Kebab Platter",
+          "price": 15,
+          "description": "A platter of mixed kebabs, including doner, shish, and Adana, served with sides of rice and salad",
+          "thumb": null
+        },
+        {
+          "id": 81,
+          "name": "Falafel Wrap",
+          "price": 7,
+          "description": "Deep-fried chickpea balls served in a wrap with vegetables and tahini sauce",
+          "thumb": null
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "name": "Pizzeria Ristorante",
+      "address": "Piazza Centrale, 15",
+      "VAT": "IT14930488889",
+      "phoneNumber": "066554541",
+      "cuisineType": [
+        "Italiano",
+        "Pizza"
+      ],
+      "image": "Rist_italiano2.jpg",
+      "foodItem": [
+        {
+          "id": 1,
+          "name": "Pizza Margherita",
+          "price": 8,
+          "description": "Classic Margherita pizza",
+          "thumb": null
+        },
+        {
+          "id": 2,
+          "name": "Pizza Tonno e Cipolle",
+          "price": 12,
+          "description": "Tuna and Onion Pizza",
+          "thumb": null
+        },
+        {
+          "id": 3,
+          "name": "Lasagna bianca vegetariana",
+          "price": 12,
+          "description": "Vegetarian white lasagna",
+          "thumb": null
+        },
+        {
+          "id": 4,
+          "name": "Pizza Napoli",
+          "price": 9,
+          "description": "Neapolitan pizza",
+          "thumb": null
+        },
+        {
+          "id": 5,
+          "name": "Tiramisù classico",
+          "price": 11,
+          "description": "Classic Tiramisu",
+          "thumb": null
+        },
+        {
+          "id": 6,
+          "name": "Filetto di Manzo",
+          "price": 18,
+          "description": "Beef Fillet",
+          "thumb": null
+        },
+        {
+          "id": 7,
+          "name": "Patate novelle al forno",
+          "price": 18,
+          "description": "Roasted Potatoes",
+          "thumb": null
+        },
+        {
+          "id": 8,
+          "name": "Spaghetti alla puttanesca",
+          "price": 17,
+          "description": "Spaghetti Puttanesca",
+          "thumb": null
+        },
+        {
+          "id": 9,
+          "name": "Orata alla piastra",
+          "price": 12,
+          "description": "Grilled Sea Bream",
+          "thumb": null
+        },
+        {
+          "id": 10,
+          "name": "Torta della nonna",
+          "price": 7,
+          "description": "Grandma's Cake",
+          "thumb": null
+        },
+        {
+          "id": 11,
+          "name": "Risotto alla crema di scampi",
+          "price": 12,
+          "description": "Creamy Shrimp Risotto",
+          "thumb": null
+        },
+        {
+          "id": 12,
+          "name": "Pizza all'ortolana",
+          "price": 7,
+          "description": "Vegetarian Pizza",
+          "thumb": null
+        },
+        {
+          "id": 13,
+          "name": "Pizza ai quattro formaggi",
+          "price": 7,
+          "description": "Four Cheese Pizza",
+          "thumb": null
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "name": "La Perla",
+      "address": "Piazza Centrale, 15",
+      "VAT": "IT14930488889",
+      "phoneNumber": "066554541",
+      "cuisineType": [
+        "Italiano",
+        "Pizza"
+      ],
+      "image": "Rist_italiano3.jpeg",
+      "foodItem": [
+        {
+          "id": 1,
+          "name": "Pizza Margherita",
+          "price": 8,
+          "description": "Classic Margherita pizza",
+          "thumb": null
+        },
+        {
+          "id": 2,
+          "name": "Pizza Tonno e Cipolle",
+          "price": 12,
+          "description": "Tuna and Onion Pizza",
+          "thumb": null
+        },
+        {
+          "id": 3,
+          "name": "Lasagna bianca vegetariana",
+          "price": 12,
+          "description": "Vegetarian white lasagna",
+          "thumb": null
+        },
+        {
+          "id": 4,
+          "name": "Pizza Napoli",
+          "price": 9,
+          "description": "Neapolitan pizza",
+          "thumb": null
+        },
+        {
+          "id": 5,
+          "name": "Tiramisù classico",
+          "price": 11,
+          "description": "Classic Tiramisu",
+          "thumb": null
+        },
+        {
+          "id": 6,
+          "name": "Filetto di Manzo",
+          "price": 18,
+          "description": "Beef Fillet",
+          "thumb": null
+        },
+        {
+          "id": 7,
+          "name": "Patate novelle al forno",
+          "price": 18,
+          "description": "Roasted Potatoes",
+          "thumb": null
+        },
+        {
+          "id": 8,
+          "name": "Spaghetti alla puttanesca",
+          "price": 17,
+          "description": "Spaghetti Puttanesca",
+          "thumb": null
+        },
+        {
+          "id": 9,
+          "name": "Orata alla piastra",
+          "price": 12,
+          "description": "Grilled Sea Bream",
+          "thumb": null
+        },
+        {
+          "id": 10,
+          "name": "Torta della nonna",
+          "price": 7,
+          "description": "Grandma's Cake",
+          "thumb": null
+        },
+        {
+          "id": 11,
+          "name": "Risotto alla crema di scampi",
+          "price": 12,
+          "description": "Creamy Shrimp Risotto",
+          "thumb": null
+        },
+        {
+          "id": 12,
+          "name": "Pizza all'ortolana",
+          "price": 7,
+          "description": "Vegetarian Pizza",
+          "thumb": null
+        },
+        {
+          "id": 13,
+          "name": "Pizza ai quattro formaggi",
+          "price": 7,
+          "description": "Four Cheese Pizza",
+          "thumb": null
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "name": "Da nonna Imma",
+      "address": "Piazza Centrale, 15",
+      "VAT": "IT14930488889",
+      "phoneNumber": "066554541",
+      "cuisineType": [
+        "Italiano",
+        "Pizza"
+      ],
+      "image": "Rist_italiano4.jpg",
+      "foodItem": [
+        {
+          "id": 1,
+          "name": "Pizza Margherita",
+          "price": 8,
+          "description": "Classic Margherita pizza",
+          "thumb": null
+        },
+        {
+          "id": 2,
+          "name": "Pizza Tonno e Cipolle",
+          "price": 12,
+          "description": "Tuna and Onion Pizza",
+          "thumb": null
+        },
+        {
+          "id": 3,
+          "name": "Lasagna bianca vegetariana",
+          "price": 12,
+          "description": "Vegetarian white lasagna",
+          "thumb": null
+        },
+        {
+          "id": 4,
+          "name": "Pizza Napoli",
+          "price": 9,
+          "description": "Neapolitan pizza",
+          "thumb": null
+        },
+        {
+          "id": 5,
+          "name": "Tiramisù classico",
+          "price": 11,
+          "description": "Classic Tiramisu",
+          "thumb": null
+        },
+        {
+          "id": 6,
+          "name": "Filetto di Manzo",
+          "price": 18,
+          "description": "Beef Fillet",
+          "thumb": null
+        },
+        {
+          "id": 7,
+          "name": "Patate novelle al forno",
+          "price": 18,
+          "description": "Roasted Potatoes",
+          "thumb": null
+        },
+        {
+          "id": 8,
+          "name": "Spaghetti alla puttanesca",
+          "price": 17,
+          "description": "Spaghetti Puttanesca",
+          "thumb": null
+        },
+        {
+          "id": 9,
+          "name": "Orata alla piastra",
+          "price": 12,
+          "description": "Grilled Sea Bream",
+          "thumb": null
+        },
+        {
+          "id": 10,
+          "name": "Torta della nonna",
+          "price": 7,
+          "description": "Grandma's Cake",
+          "thumb": null
+        },
+        {
+          "id": 11,
+          "name": "Risotto alla crema di scampi",
+          "price": 12,
+          "description": "Creamy Shrimp Risotto",
+          "thumb": null
+        },
+        {
+          "id": 12,
+          "name": "Pizza all'ortolana",
+          "price": 7,
+          "description": "Vegetarian Pizza",
+          "thumb": null
+        },
+        {
+          "id": 13,
+          "name": "Pizza ai quattro formaggi",
+          "price": 7,
+          "description": "Four Cheese Pizza",
+          "thumb": null
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "name": "Pizzeria Ristorante da Totò",
+      "address": "Piazza Centrale, 15",
+      "VAT": "IT14930488889",
+      "phoneNumber": "066554541",
+      "cuisineType": [
+        "Italiano",
+        "Pizza"
+      ],
+      "image": "Rist_italiano2.jpg",
+      "foodItem": [
+        {
+          "id": 1,
+          "name": "Pizza Margherita",
+          "price": 8,
+          "description": "Classic Margherita pizza",
+          "thumb": null
+        },
+        {
+          "id": 2,
+          "name": "Pizza Tonno e Cipolle",
+          "price": 12,
+          "description": "Tuna and Onion Pizza",
+          "thumb": null
+        },
+        {
+          "id": 3,
+          "name": "Lasagna bianca vegetariana",
+          "price": 12,
+          "description": "Vegetarian white lasagna",
+          "thumb": null
+        },
+        {
+          "id": 4,
+          "name": "Pizza Napoli",
+          "price": 9,
+          "description": "Neapolitan pizza",
+          "thumb": null
+        },
+        {
+          "id": 5,
+          "name": "Tiramisù classico",
+          "price": 11,
+          "description": "Classic Tiramisu",
+          "thumb": null
+        },
+        {
+          "id": 6,
+          "name": "Filetto di Manzo",
+          "price": 18,
+          "description": "Beef Fillet",
+          "thumb": null
+        },
+        {
+          "id": 7,
+          "name": "Patate novelle al forno",
+          "price": 18,
+          "description": "Roasted Potatoes",
+          "thumb": null
+        },
+        {
+          "id": 8,
+          "name": "Spaghetti alla puttanesca",
+          "price": 17,
+          "description": "Spaghetti Puttanesca",
+          "thumb": null
+        },
+        {
+          "id": 9,
+          "name": "Orata alla piastra",
+          "price": 12,
+          "description": "Grilled Sea Bream",
+          "thumb": null
+        },
+        {
+          "id": 10,
+          "name": "Torta della nonna",
+          "price": 7,
+          "description": "Grandma's Cake",
+          "thumb": null
+        },
+        {
+          "id": 11,
+          "name": "Risotto alla crema di scampi",
+          "price": 12,
+          "description": "Creamy Shrimp Risotto",
+          "thumb": null
+        },
+        {
+          "id": 12,
+          "name": "Pizza all'ortolana",
+          "price": 7,
+          "description": "Vegetarian Pizza",
+          "thumb": null
+        },
+        {
+          "id": 13,
+          "name": "Pizza ai quattro formaggi",
+          "price": 7,
+          "description": "Four Cheese Pizza",
+          "thumb": null
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "name": "Pizzeria Trattoria",
+      "address": "Piazza Centrale, 15",
+      "VAT": "IT14930488889",
+      "phoneNumber": "066554541",
+      "cuisineType": [
+        "Italiano",
+        "Pizza"
+      ],
+      "image": "Rist_italiano4.jpg",
+      "foodItem": [
+        {
+          "id": 1,
+          "name": "Pizza Margherita",
+          "price": 8,
+          "description": "Classic Margherita pizza",
+          "thumb": null
+        },
+        {
+          "id": 2,
+          "name": "Pizza Tonno e Cipolle",
+          "price": 12,
+          "description": "Tuna and Onion Pizza",
+          "thumb": null
+        },
+        {
+          "id": 3,
+          "name": "Lasagna bianca vegetariana",
+          "price": 12,
+          "description": "Vegetarian white lasagna",
+          "thumb": null
+        },
+        {
+          "id": 4,
+          "name": "Pizza Napoli",
+          "price": 9,
+          "description": "Neapolitan pizza",
+          "thumb": null
+        },
+        {
+          "id": 5,
+          "name": "Tiramisù classico",
+          "price": 11,
+          "description": "Classic Tiramisu",
+          "thumb": null
+        },
+        {
+          "id": 6,
+          "name": "Filetto di Manzo",
+          "price": 18,
+          "description": "Beef Fillet",
+          "thumb": null
+        },
+        {
+          "id": 7,
+          "name": "Patate novelle al forno",
+          "price": 18,
+          "description": "Roasted Potatoes",
+          "thumb": null
+        },
+        {
+          "id": 8,
+          "name": "Spaghetti alla puttanesca",
+          "price": 17,
+          "description": "Spaghetti Puttanesca",
+          "thumb": null
+        },
+        {
+          "id": 9,
+          "name": "Orata alla piastra",
+          "price": 12,
+          "description": "Grilled Sea Bream",
+          "thumb": null
+        },
+        {
+          "id": 10,
+          "name": "Torta della nonna",
+          "price": 7,
+          "description": "Grandma's Cake",
+          "thumb": null
+        },
+        {
+          "id": 11,
+          "name": "Risotto alla crema di scampi",
+          "price": 12,
+          "description": "Creamy Shrimp Risotto",
+          "thumb": null
+        },
+        {
+          "id": 12,
+          "name": "Pizza all'ortolana",
+          "price": 7,
+          "description": "Vegetarian Pizza",
+          "thumb": null
+        },
+        {
+          "id": 13,
+          "name": "Pizza ai quattro formaggi",
+          "price": 7,
+          "description": "Four Cheese Pizza",
+          "thumb": null
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "name": "TrattoPizzeria",
+      "address": "Piazza Centrale, 15",
+      "VAT": "IT14930488889",
+      "phoneNumber": "066554541",
+      "cuisineType": [
+        "Italiano",
+        "Pizza"
+      ],
+      "image": "Rist_italiano3.jpeg",
+      "foodItem": [
+        {
+          "id": 1,
+          "name": "Pizza Margherita",
+          "price": 8,
+          "description": "Classic Margherita pizza",
+          "thumb": null
+        },
+        {
+          "id": 2,
+          "name": "Pizza Tonno e Cipolle",
+          "price": 12,
+          "description": "Tuna and Onion Pizza",
+          "thumb": null
+        },
+        {
+          "id": 3,
+          "name": "Lasagna bianca vegetariana",
+          "price": 12,
+          "description": "Vegetarian white lasagna",
+          "thumb": null
+        },
+        {
+          "id": 4,
+          "name": "Pizza Napoli",
+          "price": 9,
+          "description": "Neapolitan pizza",
+          "thumb": null
+        },
+        {
+          "id": 5,
+          "name": "Tiramisù classico",
+          "price": 11,
+          "description": "Classic Tiramisu",
+          "thumb": null
+        },
+        {
+          "id": 6,
+          "name": "Filetto di Manzo",
+          "price": 18,
+          "description": "Beef Fillet",
+          "thumb": null
+        },
+        {
+          "id": 7,
+          "name": "Patate novelle al forno",
+          "price": 18,
+          "description": "Roasted Potatoes",
+          "thumb": null
+        },
+        {
+          "id": 8,
+          "name": "Spaghetti alla puttanesca",
+          "price": 17,
+          "description": "Spaghetti Puttanesca",
+          "thumb": null
+        },
+        {
+          "id": 9,
+          "name": "Orata alla piastra",
+          "price": 12,
+          "description": "Grilled Sea Bream",
+          "thumb": null
+        },
+        {
+          "id": 10,
+          "name": "Torta della nonna",
+          "price": 7,
+          "description": "Grandma's Cake",
+          "thumb": null
+        },
+        {
+          "id": 11,
+          "name": "Risotto alla crema di scampi",
+          "price": 12,
+          "description": "Creamy Shrimp Risotto",
+          "thumb": null
+        },
+        {
+          "id": 12,
+          "name": "Pizza all'ortolana",
+          "price": 7,
+          "description": "Vegetarian Pizza",
+          "thumb": null
+        },
+        {
+          "id": 13,
+          "name": "Pizza ai quattro formaggi",
+          "price": 7,
+          "description": "Four Cheese Pizza",
+          "thumb": null
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "name": "Papillon",
+      "address": "Piazza Centrale, 15",
+      "VAT": "IT14930488889",
+      "phoneNumber": "066554541",
+      "cuisineType": [
+        "Italiano",
+        "Pizza"
+      ],
+      "image": "Rist_italiano2.jpg",
+      "foodItem": [
+        {
+          "id": 1,
+          "name": "Pizza Margherita",
+          "price": 8,
+          "description": "Classic Margherita pizza",
+          "thumb": null
+        },
+        {
+          "id": 2,
+          "name": "Pizza Tonno e Cipolle",
+          "price": 12,
+          "description": "Tuna and Onion Pizza",
+          "thumb": null
+        },
+        {
+          "id": 3,
+          "name": "Lasagna bianca vegetariana",
+          "price": 12,
+          "description": "Vegetarian white lasagna",
+          "thumb": null
+        },
+        {
+          "id": 4,
+          "name": "Pizza Napoli",
+          "price": 9,
+          "description": "Neapolitan pizza",
+          "thumb": null
+        },
+        {
+          "id": 5,
+          "name": "Tiramisù classico",
+          "price": 11,
+          "description": "Classic Tiramisu",
+          "thumb": null
+        },
+        {
+          "id": 6,
+          "name": "Filetto di Manzo",
+          "price": 18,
+          "description": "Beef Fillet",
+          "thumb": null
+        },
+        {
+          "id": 7,
+          "name": "Patate novelle al forno",
+          "price": 18,
+          "description": "Roasted Potatoes",
+          "thumb": null
+        },
+        {
+          "id": 8,
+          "name": "Spaghetti alla puttanesca",
+          "price": 17,
+          "description": "Spaghetti Puttanesca",
+          "thumb": null
+        },
+        {
+          "id": 9,
+          "name": "Orata alla piastra",
+          "price": 12,
+          "description": "Grilled Sea Bream",
+          "thumb": null
+        },
+        {
+          "id": 10,
+          "name": "Torta della nonna",
+          "price": 7,
+          "description": "Grandma's Cake",
+          "thumb": null
+        },
+        {
+          "id": 11,
+          "name": "Risotto alla crema di scampi",
+          "price": 12,
+          "description": "Creamy Shrimp Risotto",
+          "thumb": null
+        },
+        {
+          "id": 12,
+          "name": "Pizza all'ortolana",
+          "price": 7,
+          "description": "Vegetarian Pizza",
+          "thumb": null
+        },
+        {
+          "id": 13,
+          "name": "Pizza ai quattro formaggi",
+          "price": 7,
+          "description": "Four Cheese Pizza",
+          "thumb": null
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "name": "Due Fratelli",
+      "address": "Piazza Centrale, 15",
+      "VAT": "IT14930488889",
+      "phoneNumber": "066554541",
+      "cuisineType": [
+        "Italiano",
+        "Pizza"
+      ],
+      "image": "Rist_italiano4.jpg",
+      "foodItem": [
+        {
+          "id": 1,
+          "name": "Pizza Margherita",
+          "price": 8,
+          "description": "Classic Margherita pizza",
+          "thumb": null
+        },
+        {
+          "id": 2,
+          "name": "Pizza Tonno e Cipolle",
+          "price": 12,
+          "description": "Tuna and Onion Pizza",
+          "thumb": null
+        },
+        {
+          "id": 3,
+          "name": "Lasagna bianca vegetariana",
+          "price": 12,
+          "description": "Vegetarian white lasagna",
+          "thumb": null
+        },
+        {
+          "id": 4,
+          "name": "Pizza Napoli",
+          "price": 9,
+          "description": "Neapolitan pizza",
+          "thumb": null
+        },
+        {
+          "id": 5,
+          "name": "Tiramisù classico",
+          "price": 11,
+          "description": "Classic Tiramisu",
+          "thumb": null
+        },
+        {
+          "id": 6,
+          "name": "Filetto di Manzo",
+          "price": 18,
+          "description": "Beef Fillet",
+          "thumb": null
+        },
+        {
+          "id": 7,
+          "name": "Patate novelle al forno",
+          "price": 18,
+          "description": "Roasted Potatoes",
+          "thumb": null
+        },
+        {
+          "id": 8,
+          "name": "Spaghetti alla puttanesca",
+          "price": 17,
+          "description": "Spaghetti Puttanesca",
+          "thumb": null
+        },
+        {
+          "id": 9,
+          "name": "Orata alla piastra",
+          "price": 12,
+          "description": "Grilled Sea Bream",
+          "thumb": null
+        },
+        {
+          "id": 10,
+          "name": "Torta della nonna",
+          "price": 7,
+          "description": "Grandma's Cake",
+          "thumb": null
+        },
+        {
+          "id": 11,
+          "name": "Risotto alla crema di scampi",
+          "price": 12,
+          "description": "Creamy Shrimp Risotto",
+          "thumb": null
+        },
+        {
+          "id": 12,
+          "name": "Pizza all'ortolana",
+          "price": 7,
+          "description": "Vegetarian Pizza",
+          "thumb": null
+        },
+        {
+          "id": 13,
+          "name": "Pizza ai quattro formaggi",
+          "price": 7,
+          "description": "Four Cheese Pizza",
+          "thumb": null
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "name": "Affumicato",
+      "address": "Piazza Centrale, 15",
+      "VAT": "IT14930488889",
+      "phoneNumber": "066554541",
+      "cuisineType": [
+        "Italiano",
+        "Pizza"
+      ],
+      "image": "Rist_italiano3.jpeg",
+      "foodItem": [
+        {
+          "id": 1,
+          "name": "Pizza Margherita",
+          "price": 8,
+          "description": "Classic Margherita pizza",
+          "thumb": null
+        },
+        {
+          "id": 2,
+          "name": "Pizza Tonno e Cipolle",
+          "price": 12,
+          "description": "Tuna and Onion Pizza",
+          "thumb": null
+        },
+        {
+          "id": 3,
+          "name": "Lasagna bianca vegetariana",
+          "price": 12,
+          "description": "Vegetarian white lasagna",
+          "thumb": null
+        },
+        {
+          "id": 4,
+          "name": "Pizza Napoli",
+          "price": 9,
+          "description": "Neapolitan pizza",
+          "thumb": null
+        },
+        {
+          "id": 5,
+          "name": "Tiramisù classico",
+          "price": 11,
+          "description": "Classic Tiramisu",
+          "thumb": null
+        },
+        {
+          "id": 6,
+          "name": "Filetto di Manzo",
+          "price": 18,
+          "description": "Beef Fillet",
+          "thumb": null
+        },
+        {
+          "id": 7,
+          "name": "Patate novelle al forno",
+          "price": 18,
+          "description": "Roasted Potatoes",
+          "thumb": null
+        },
+        {
+          "id": 8,
+          "name": "Spaghetti alla puttanesca",
+          "price": 17,
+          "description": "Spaghetti Puttanesca",
+          "thumb": null
+        },
+        {
+          "id": 9,
+          "name": "Orata alla piastra",
+          "price": 12,
+          "description": "Grilled Sea Bream",
+          "thumb": null
+        },
+        {
+          "id": 10,
+          "name": "Torta della nonna",
+          "price": 7,
+          "description": "Grandma's Cake",
+          "thumb": null
+        },
+        {
+          "id": 11,
+          "name": "Risotto alla crema di scampi",
+          "price": 12,
+          "description": "Creamy Shrimp Risotto",
+          "thumb": null
+        },
+        {
+          "id": 12,
+          "name": "Pizza all'ortolana",
+          "price": 7,
+          "description": "Vegetarian Pizza",
+          "thumb": null
+        },
+        {
+          "id": 13,
+          "name": "Pizza ai quattro formaggi",
+          "price": 7,
+          "description": "Four Cheese Pizza",
+          "thumb": null
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "name": "Ricette di nonna",
+      "address": "Piazza Centrale, 15",
+      "VAT": "IT14930488889",
+      "phoneNumber": "066554541",
+      "cuisineType": [
+        "Italiano",
+        "Pizza"
+      ],
+      "image": "Rist_italiano.jpg",
+      "foodItem": [
+        {
+          "id": 1,
+          "name": "Pizza Margherita",
+          "price": 8,
+          "description": "Classic Margherita pizza",
+          "thumb": null
+        },
+        {
+          "id": 2,
+          "name": "Pizza Tonno e Cipolle",
+          "price": 12,
+          "description": "Tuna and Onion Pizza",
+          "thumb": null
+        },
+        {
+          "id": 3,
+          "name": "Lasagna bianca vegetariana",
+          "price": 12,
+          "description": "Vegetarian white lasagna",
+          "thumb": null
+        },
+        {
+          "id": 4,
+          "name": "Pizza Napoli",
+          "price": 9,
+          "description": "Neapolitan pizza",
+          "thumb": null
+        },
+        {
+          "id": 5,
+          "name": "Tiramisù classico",
+          "price": 11,
+          "description": "Classic Tiramisu",
+          "thumb": null
+        },
+        {
+          "id": 6,
+          "name": "Filetto di Manzo",
+          "price": 18,
+          "description": "Beef Fillet",
+          "thumb": null
+        },
+        {
+          "id": 7,
+          "name": "Patate novelle al forno",
+          "price": 18,
+          "description": "Roasted Potatoes",
+          "thumb": null
+        },
+        {
+          "id": 8,
+          "name": "Spaghetti alla puttanesca",
+          "price": 17,
+          "description": "Spaghetti Puttanesca",
+          "thumb": null
+        },
+        {
+          "id": 9,
+          "name": "Orata alla piastra",
+          "price": 12,
+          "description": "Grilled Sea Bream",
+          "thumb": null
+        },
+        {
+          "id": 10,
+          "name": "Torta della nonna",
+          "price": 7,
+          "description": "Grandma's Cake",
+          "thumb": null
+        },
+        {
+          "id": 11,
+          "name": "Risotto alla crema di scampi",
+          "price": 12,
+          "description": "Creamy Shrimp Risotto",
+          "thumb": null
+        },
+        {
+          "id": 12,
+          "name": "Pizza all'ortolana",
+          "price": 7,
+          "description": "Vegetarian Pizza",
+          "thumb": null
+        },
+        {
+          "id": 13,
+          "name": "Pizza ai quattro formaggi",
+          "price": 7,
+          "description": "Four Cheese Pizza",
+          "thumb": null
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "name": "La Muraglia Cinese",
+      "address": "Piazza delle cinque lune, 12",
+      "VAT": "IT149304831111",
+      "phoneNumber": "066553658",
+      "cuisineType": [
+        "Cinese"
+      ],
+      "image": "Rist_cinese1.jpg",
+      "foodItem": [
+        {
+          "id": 14,
+          "name": "Manzo con funghi e bambù",
+          "price": 8,
+          "description": "Beef with Mushrooms and Bamboo Shoots",
+          "thumb": null
+        },
+        {
+          "id": 15,
+          "name": "Riso alla Cantonese",
+          "price": 12,
+          "description": "Cantonese Fried Rice",
+          "thumb": null
+        },
+        {
+          "id": 16,
+          "name": "Pollo con ananas fresco",
+          "price": 12,
+          "description": "Chicken with Fresh Pineapple",
+          "thumb": null
+        },
+        {
+          "id": 17,
+          "name": "Verdure  miste saltate",
+          "price": 9,
+          "description": "Mixed Stir-Fried Vegetables",
+          "thumb": null
+        },
+        {
+          "id": 18,
+          "name": "Spaghetti di riso con gamberi",
+          "price": 11,
+          "description": "Rice Noodles with Shrimp",
+          "thumb": null
+        },
+        {
+          "id": 19,
+          "name": "Spaghetti di soia con verdure",
+          "price": 18,
+          "description": "Soy Noodles with Vegetables",
+          "thumb": null
+        },
+        {
+          "id": 20,
+          "name": "Maiale in salsa agrodolce",
+          "price": 18,
+          "description": "Sweet and Sour Pork",
+          "thumb": null
+        },
+        {
+          "id": 21,
+          "name": "Ravioli alla griglia",
+          "price": 17,
+          "description": "Grilled Ravioli",
+          "thumb": null
+        },
+        {
+          "id": 22,
+          "name": "Sashimi di salmone",
+          "price": 12,
+          "description": "Salmon Sashimi",
+          "thumb": null
+        },
+        {
+          "id": 23,
+          "name": "Katsudon",
+          "price": 7,
+          "description": "Katsudon",
+          "thumb": null
+        },
+        {
+          "id": 24,
+          "name": "Yakitori",
+          "price": 12,
+          "description": "Yakitori",
+          "thumb": null
+        },
+        {
+          "id": 25,
+          "name": "Takoyaki",
+          "price": 7,
+          "description": "Takoyaki",
+          "thumb": null
+        },
+        {
+          "id": 26,
+          "name": "Onigiri",
+          "price": 7,
+          "description": "Onigiri",
+          "thumb": null
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "name": "Yin-Yang",
+      "address": "Piazza delle cinque lune, 12",
+      "VAT": "IT149304831111",
+      "phoneNumber": "066553658",
+      "cuisineType": [
+        "Cinese"
+      ],
+      "image": "Rist_cinese2.jpg",
+      "foodItem": [
+        {
+          "id": 14,
+          "name": "Manzo con funghi e bambù",
+          "price": 8,
+          "description": "Beef with Mushrooms and Bamboo Shoots",
+          "thumb": null
+        },
+        {
+          "id": 15,
+          "name": "Riso alla Cantonese",
+          "price": 12,
+          "description": "Cantonese Fried Rice",
+          "thumb": null
+        },
+        {
+          "id": 16,
+          "name": "Pollo con ananas fresco",
+          "price": 12,
+          "description": "Chicken with Fresh Pineapple",
+          "thumb": null
+        },
+        {
+          "id": 17,
+          "name": "Verdure  miste saltate",
+          "price": 9,
+          "description": "Mixed Stir-Fried Vegetables",
+          "thumb": null
+        },
+        {
+          "id": 18,
+          "name": "Spaghetti di riso con gamberi",
+          "price": 11,
+          "description": "Rice Noodles with Shrimp",
+          "thumb": null
+        },
+        {
+          "id": 19,
+          "name": "Spaghetti di soia con verdure",
+          "price": 18,
+          "description": "Soy Noodles with Vegetables",
+          "thumb": null
+        },
+        {
+          "id": 20,
+          "name": "Maiale in salsa agrodolce",
+          "price": 18,
+          "description": "Sweet and Sour Pork",
+          "thumb": null
+        },
+        {
+          "id": 21,
+          "name": "Ravioli alla griglia",
+          "price": 17,
+          "description": "Grilled Ravioli",
+          "thumb": null
+        },
+        {
+          "id": 22,
+          "name": "Sashimi di salmone",
+          "price": 12,
+          "description": "Salmon Sashimi",
+          "thumb": null
+        },
+        {
+          "id": 23,
+          "name": "Katsudon",
+          "price": 7,
+          "description": "Katsudon",
+          "thumb": null
+        },
+        {
+          "id": 24,
+          "name": "Yakitori",
+          "price": 12,
+          "description": "Yakitori",
+          "thumb": null
+        },
+        {
+          "id": 25,
+          "name": "Takoyaki",
+          "price": 7,
+          "description": "Takoyaki",
+          "thumb": null
+        },
+        {
+          "id": 26,
+          "name": "Onigiri",
+          "price": 7,
+          "description": "Onigiri",
+          "thumb": null
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "name": "Sapore di Tramonto",
+      "address": "Piazza delle cinque lune, 12",
+      "VAT": "IT149304831111",
+      "phoneNumber": "066553658",
+      "cuisineType": [
+        "Cinese"
+      ],
+      "image": "Rist_cinese3.jpg",
+      "foodItem": [
+        {
+          "id": 14,
+          "name": "Manzo con funghi e bambù",
+          "price": 8,
+          "description": "Beef with Mushrooms and Bamboo Shoots",
+          "thumb": null
+        },
+        {
+          "id": 15,
+          "name": "Riso alla Cantonese",
+          "price": 12,
+          "description": "Cantonese Fried Rice",
+          "thumb": null
+        },
+        {
+          "id": 16,
+          "name": "Pollo con ananas fresco",
+          "price": 12,
+          "description": "Chicken with Fresh Pineapple",
+          "thumb": null
+        },
+        {
+          "id": 17,
+          "name": "Verdure  miste saltate",
+          "price": 9,
+          "description": "Mixed Stir-Fried Vegetables",
+          "thumb": null
+        },
+        {
+          "id": 18,
+          "name": "Spaghetti di riso con gamberi",
+          "price": 11,
+          "description": "Rice Noodles with Shrimp",
+          "thumb": null
+        },
+        {
+          "id": 19,
+          "name": "Spaghetti di soia con verdure",
+          "price": 18,
+          "description": "Soy Noodles with Vegetables",
+          "thumb": null
+        },
+        {
+          "id": 20,
+          "name": "Maiale in salsa agrodolce",
+          "price": 18,
+          "description": "Sweet and Sour Pork",
+          "thumb": null
+        },
+        {
+          "id": 21,
+          "name": "Ravioli alla griglia",
+          "price": 17,
+          "description": "Grilled Ravioli",
+          "thumb": null
+        },
+        {
+          "id": 22,
+          "name": "Sashimi di salmone",
+          "price": 12,
+          "description": "Salmon Sashimi",
+          "thumb": null
+        },
+        {
+          "id": 23,
+          "name": "Katsudon",
+          "price": 7,
+          "description": "Katsudon",
+          "thumb": null
+        },
+        {
+          "id": 24,
+          "name": "Yakitori",
+          "price": 12,
+          "description": "Yakitori",
+          "thumb": null
+        },
+        {
+          "id": 25,
+          "name": "Takoyaki",
+          "price": 7,
+          "description": "Takoyaki",
+          "thumb": null
+        },
+        {
+          "id": 26,
+          "name": "Onigiri",
+          "price": 7,
+          "description": "Onigiri",
+          "thumb": null
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "name": "Da Cheng",
+      "address": "Piazza delle cinque lune, 12",
+      "VAT": "IT149304831111",
+      "phoneNumber": "066553658",
+      "cuisineType": [
+        "Cinese"
+      ],
+      "image": "Rist_cinese1.jpg",
+      "foodItem": [
+        {
+          "id": 14,
+          "name": "Manzo con funghi e bambù",
+          "price": 8,
+          "description": "Beef with Mushrooms and Bamboo Shoots",
+          "thumb": null
+        },
+        {
+          "id": 15,
+          "name": "Riso alla Cantonese",
+          "price": 12,
+          "description": "Cantonese Fried Rice",
+          "thumb": null
+        },
+        {
+          "id": 16,
+          "name": "Pollo con ananas fresco",
+          "price": 12,
+          "description": "Chicken with Fresh Pineapple",
+          "thumb": null
+        },
+        {
+          "id": 17,
+          "name": "Verdure  miste saltate",
+          "price": 9,
+          "description": "Mixed Stir-Fried Vegetables",
+          "thumb": null
+        },
+        {
+          "id": 18,
+          "name": "Spaghetti di riso con gamberi",
+          "price": 11,
+          "description": "Rice Noodles with Shrimp",
+          "thumb": null
+        },
+        {
+          "id": 19,
+          "name": "Spaghetti di soia con verdure",
+          "price": 18,
+          "description": "Soy Noodles with Vegetables",
+          "thumb": null
+        },
+        {
+          "id": 20,
+          "name": "Maiale in salsa agrodolce",
+          "price": 18,
+          "description": "Sweet and Sour Pork",
+          "thumb": null
+        },
+        {
+          "id": 21,
+          "name": "Ravioli alla griglia",
+          "price": 17,
+          "description": "Grilled Ravioli",
+          "thumb": null
+        },
+        {
+          "id": 22,
+          "name": "Sashimi di salmone",
+          "price": 12,
+          "description": "Salmon Sashimi",
+          "thumb": null
+        },
+        {
+          "id": 23,
+          "name": "Katsudon",
+          "price": 7,
+          "description": "Katsudon",
+          "thumb": null
+        },
+        {
+          "id": 24,
+          "name": "Yakitori",
+          "price": 12,
+          "description": "Yakitori",
+          "thumb": null
+        },
+        {
+          "id": 25,
+          "name": "Takoyaki",
+          "price": 7,
+          "description": "Takoyaki",
+          "thumb": null
+        },
+        {
+          "id": 26,
+          "name": "Onigiri",
+          "price": 7,
+          "description": "Onigiri",
+          "thumb": null
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "name": "Lanterna cinese",
+      "address": "Piazza delle cinque lune, 12",
+      "VAT": "IT149304831111",
+      "phoneNumber": "066553658",
+      "cuisineType": [
+        "Cinese"
+      ],
+      "image": "Rist_cinese2.jpg",
+      "foodItem": [
+        {
+          "id": 14,
+          "name": "Manzo con funghi e bambù",
+          "price": 8,
+          "description": "Beef with Mushrooms and Bamboo Shoots",
+          "thumb": null
+        },
+        {
+          "id": 15,
+          "name": "Riso alla Cantonese",
+          "price": 12,
+          "description": "Cantonese Fried Rice",
+          "thumb": null
+        },
+        {
+          "id": 16,
+          "name": "Pollo con ananas fresco",
+          "price": 12,
+          "description": "Chicken with Fresh Pineapple",
+          "thumb": null
+        },
+        {
+          "id": 17,
+          "name": "Verdure  miste saltate",
+          "price": 9,
+          "description": "Mixed Stir-Fried Vegetables",
+          "thumb": null
+        },
+        {
+          "id": 18,
+          "name": "Spaghetti di riso con gamberi",
+          "price": 11,
+          "description": "Rice Noodles with Shrimp",
+          "thumb": null
+        },
+        {
+          "id": 19,
+          "name": "Spaghetti di soia con verdure",
+          "price": 18,
+          "description": "Soy Noodles with Vegetables",
+          "thumb": null
+        },
+        {
+          "id": 20,
+          "name": "Maiale in salsa agrodolce",
+          "price": 18,
+          "description": "Sweet and Sour Pork",
+          "thumb": null
+        },
+        {
+          "id": 21,
+          "name": "Ravioli alla griglia",
+          "price": 17,
+          "description": "Grilled Ravioli",
+          "thumb": null
+        },
+        {
+          "id": 22,
+          "name": "Sashimi di salmone",
+          "price": 12,
+          "description": "Salmon Sashimi",
+          "thumb": null
+        },
+        {
+          "id": 23,
+          "name": "Katsudon",
+          "price": 7,
+          "description": "Katsudon",
+          "thumb": null
+        },
+        {
+          "id": 24,
+          "name": "Yakitori",
+          "price": 12,
+          "description": "Yakitori",
+          "thumb": null
+        },
+        {
+          "id": 25,
+          "name": "Takoyaki",
+          "price": 7,
+          "description": "Takoyaki",
+          "thumb": null
+        },
+        {
+          "id": 26,
+          "name": "Onigiri",
+          "price": 7,
+          "description": "Onigiri",
+          "thumb": null
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "name": "La Pergola",
+      "address": "Piazza delle cinque lune, 12",
+      "VAT": "IT149304831111",
+      "phoneNumber": "066553658",
+      "cuisineType": [
+        "Cinese"
+      ],
+      "image": "Rist_cinese3.jpg",
+      "foodItem": [
+        {
+          "id": 14,
+          "name": "Manzo con funghi e bambù",
+          "price": 8,
+          "description": "Beef with Mushrooms and Bamboo Shoots",
+          "thumb": null
+        },
+        {
+          "id": 15,
+          "name": "Riso alla Cantonese",
+          "price": 12,
+          "description": "Cantonese Fried Rice",
+          "thumb": null
+        },
+        {
+          "id": 16,
+          "name": "Pollo con ananas fresco",
+          "price": 12,
+          "description": "Chicken with Fresh Pineapple",
+          "thumb": null
+        },
+        {
+          "id": 17,
+          "name": "Verdure  miste saltate",
+          "price": 9,
+          "description": "Mixed Stir-Fried Vegetables",
+          "thumb": null
+        },
+        {
+          "id": 18,
+          "name": "Spaghetti di riso con gamberi",
+          "price": 11,
+          "description": "Rice Noodles with Shrimp",
+          "thumb": null
+        },
+        {
+          "id": 19,
+          "name": "Spaghetti di soia con verdure",
+          "price": 18,
+          "description": "Soy Noodles with Vegetables",
+          "thumb": null
+        },
+        {
+          "id": 20,
+          "name": "Maiale in salsa agrodolce",
+          "price": 18,
+          "description": "Sweet and Sour Pork",
+          "thumb": null
+        },
+        {
+          "id": 21,
+          "name": "Ravioli alla griglia",
+          "price": 17,
+          "description": "Grilled Ravioli",
+          "thumb": null
+        },
+        {
+          "id": 22,
+          "name": "Sashimi di salmone",
+          "price": 12,
+          "description": "Salmon Sashimi",
+          "thumb": null
+        },
+        {
+          "id": 23,
+          "name": "Katsudon",
+          "price": 7,
+          "description": "Katsudon",
+          "thumb": null
+        },
+        {
+          "id": 24,
+          "name": "Yakitori",
+          "price": 12,
+          "description": "Yakitori",
+          "thumb": null
+        },
+        {
+          "id": 25,
+          "name": "Takoyaki",
+          "price": 7,
+          "description": "Takoyaki",
+          "thumb": null
+        },
+        {
+          "id": 26,
+          "name": "Onigiri",
+          "price": 7,
+          "description": "Onigiri",
+          "thumb": null
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "name": "Le Senn",
+      "address": "Piazza Fiume, 18",
+      "VAT": "FR987654321",
+      "phoneNumber": "0143543210",
+      "cuisineType": [
+        "Francese"
+      ],
+      "image": "Rist_francese2.jpg",
+      "foodItem": [
+        {
+          "id": 27,
+          "name": "Soupe à l'oignon",
+          "price": 9,
+          "description": "Classic French onion soup with croutons and cheese",
+          "thumb": null
+        },
+        {
+          "id": 28,
+          "name": "Quiche Lorraine",
+          "price": 12,
+          "description": "Savory tart with bacon, eggs, and cheese",
+          "thumb": null
+        },
+        {
+          "id": 29,
+          "name": "Ratatouille",
+          "price": 15,
+          "description": "Traditional vegetable stew from Provence",
+          "thumb": null
+        },
+        {
+          "id": 30,
+          "name": "Boeuf Bourguignon",
+          "price": 22,
+          "description": "Beef stewed in red wine with mushrooms and onions",
+          "thumb": null
+        },
+        {
+          "id": 31,
+          "name": "Crème brûlée",
+          "price": 10,
+          "description": "Custard dessert with a caramelized sugar top",
+          "thumb": null
+        },
+        {
+          "id": 32,
+          "name": "Tarte Tatin",
+          "price": 11,
+          "description": "Upside-down apple tart",
+          "thumb": null
+        },
+        {
+          "id": 33,
+          "name": "Moules marinières",
+          "price": 18,
+          "description": "Mussels cooked in white wine sauce",
+          "thumb": null
+        },
+        {
+          "id": 34,
+          "name": "Coq au vin",
+          "price": 20,
+          "description": "Chicken cooked in red wine with bacon, mushrooms, and onions",
+          "thumb": null
+        },
+        {
+          "id": 35,
+          "name": "Salade Niçoise",
+          "price": 16,
+          "description": "Mixed salad with tuna, eggs, and olives",
+          "thumb": null
+        },
+        {
+          "id": 36,
+          "name": "Escargots",
+          "price": 13,
+          "description": "Snails baked in butter and garlic",
+          "thumb": null
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "name": "Parisien cuisine",
+      "address": "Piazza Fiume, 18",
+      "VAT": "FR987654321",
+      "phoneNumber": "0143543210",
+      "cuisineType": [
+        "Francese"
+      ],
+      "image": "Rist_francese3.jpg",
+      "foodItem": [
+        {
+          "id": 27,
+          "name": "Soupe à l'oignon",
+          "price": 9,
+          "description": "Classic French onion soup with croutons and cheese",
+          "thumb": null
+        },
+        {
+          "id": 28,
+          "name": "Quiche Lorraine",
+          "price": 12,
+          "description": "Savory tart with bacon, eggs, and cheese",
+          "thumb": null
+        },
+        {
+          "id": 29,
+          "name": "Ratatouille",
+          "price": 15,
+          "description": "Traditional vegetable stew from Provence",
+          "thumb": null
+        },
+        {
+          "id": 30,
+          "name": "Boeuf Bourguignon",
+          "price": 22,
+          "description": "Beef stewed in red wine with mushrooms and onions",
+          "thumb": null
+        },
+        {
+          "id": 31,
+          "name": "Crème brûlée",
+          "price": 10,
+          "description": "Custard dessert with a caramelized sugar top",
+          "thumb": null
+        },
+        {
+          "id": 32,
+          "name": "Tarte Tatin",
+          "price": 11,
+          "description": "Upside-down apple tart",
+          "thumb": null
+        },
+        {
+          "id": 33,
+          "name": "Moules marinières",
+          "price": 18,
+          "description": "Mussels cooked in white wine sauce",
+          "thumb": null
+        },
+        {
+          "id": 34,
+          "name": "Coq au vin",
+          "price": 20,
+          "description": "Chicken cooked in red wine with bacon, mushrooms, and onions",
+          "thumb": null
+        },
+        {
+          "id": 35,
+          "name": "Salade Niçoise",
+          "price": 16,
+          "description": "Mixed salad with tuna, eggs, and olives",
+          "thumb": null
+        },
+        {
+          "id": 36,
+          "name": "Escargots",
+          "price": 13,
+          "description": "Snails baked in butter and garlic",
+          "thumb": null
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "name": "Da Quasimodo",
+      "address": "Piazza Fiume, 18",
+      "VAT": "FR987654321",
+      "phoneNumber": "0143543210",
+      "cuisineType": [
+        "Francese"
+      ],
+      "image": "Rist_francese.jpg",
+      "foodItem": [
+        {
+          "id": 27,
+          "name": "Soupe à l'oignon",
+          "price": 9,
+          "description": "Classic French onion soup with croutons and cheese",
+          "thumb": null
+        },
+        {
+          "id": 28,
+          "name": "Quiche Lorraine",
+          "price": 12,
+          "description": "Savory tart with bacon, eggs, and cheese",
+          "thumb": null
+        },
+        {
+          "id": 29,
+          "name": "Ratatouille",
+          "price": 15,
+          "description": "Traditional vegetable stew from Provence",
+          "thumb": null
+        },
+        {
+          "id": 30,
+          "name": "Boeuf Bourguignon",
+          "price": 22,
+          "description": "Beef stewed in red wine with mushrooms and onions",
+          "thumb": null
+        },
+        {
+          "id": 31,
+          "name": "Crème brûlée",
+          "price": 10,
+          "description": "Custard dessert with a caramelized sugar top",
+          "thumb": null
+        },
+        {
+          "id": 32,
+          "name": "Tarte Tatin",
+          "price": 11,
+          "description": "Upside-down apple tart",
+          "thumb": null
+        },
+        {
+          "id": 33,
+          "name": "Moules marinières",
+          "price": 18,
+          "description": "Mussels cooked in white wine sauce",
+          "thumb": null
+        },
+        {
+          "id": 34,
+          "name": "Coq au vin",
+          "price": 20,
+          "description": "Chicken cooked in red wine with bacon, mushrooms, and onions",
+          "thumb": null
+        },
+        {
+          "id": 35,
+          "name": "Salade Niçoise",
+          "price": 16,
+          "description": "Mixed salad with tuna, eggs, and olives",
+          "thumb": null
+        },
+        {
+          "id": 36,
+          "name": "Escargots",
+          "price": 13,
+          "description": "Snails baked in butter and garlic",
+          "thumb": null
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "name": "Lumache Bistrò",
+      "address": "Piazza Fiume, 18",
+      "VAT": "FR987654321",
+      "phoneNumber": "0143543210",
+      "cuisineType": [
+        "Francese"
+      ],
+      "image": "Rist_francese1.jpg",
+      "foodItem": [
+        {
+          "id": 27,
+          "name": "Soupe à l'oignon",
+          "price": 9,
+          "description": "Classic French onion soup with croutons and cheese",
+          "thumb": null
+        },
+        {
+          "id": 28,
+          "name": "Quiche Lorraine",
+          "price": 12,
+          "description": "Savory tart with bacon, eggs, and cheese",
+          "thumb": null
+        },
+        {
+          "id": 29,
+          "name": "Ratatouille",
+          "price": 15,
+          "description": "Traditional vegetable stew from Provence",
+          "thumb": null
+        },
+        {
+          "id": 30,
+          "name": "Boeuf Bourguignon",
+          "price": 22,
+          "description": "Beef stewed in red wine with mushrooms and onions",
+          "thumb": null
+        },
+        {
+          "id": 31,
+          "name": "Crème brûlée",
+          "price": 10,
+          "description": "Custard dessert with a caramelized sugar top",
+          "thumb": null
+        },
+        {
+          "id": 32,
+          "name": "Tarte Tatin",
+          "price": 11,
+          "description": "Upside-down apple tart",
+          "thumb": null
+        },
+        {
+          "id": 33,
+          "name": "Moules marinières",
+          "price": 18,
+          "description": "Mussels cooked in white wine sauce",
+          "thumb": null
+        },
+        {
+          "id": 34,
+          "name": "Coq au vin",
+          "price": 20,
+          "description": "Chicken cooked in red wine with bacon, mushrooms, and onions",
+          "thumb": null
+        },
+        {
+          "id": 35,
+          "name": "Salade Niçoise",
+          "price": 16,
+          "description": "Mixed salad with tuna, eggs, and olives",
+          "thumb": null
+        },
+        {
+          "id": 36,
+          "name": "Escargots",
+          "price": 13,
+          "description": "Snails baked in butter and garlic",
+          "thumb": null
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "name": "CatreVent",
+      "address": "Piazza Fiume, 18",
+      "VAT": "FR987654321",
+      "phoneNumber": "0143543210",
+      "cuisineType": [
+        "Francese"
+      ],
+      "image": "Rist_francese2.jpg",
+      "foodItem": [
+        {
+          "id": 27,
+          "name": "Soupe à l'oignon",
+          "price": 9,
+          "description": "Classic French onion soup with croutons and cheese",
+          "thumb": null
+        },
+        {
+          "id": 28,
+          "name": "Quiche Lorraine",
+          "price": 12,
+          "description": "Savory tart with bacon, eggs, and cheese",
+          "thumb": null
+        },
+        {
+          "id": 29,
+          "name": "Ratatouille",
+          "price": 15,
+          "description": "Traditional vegetable stew from Provence",
+          "thumb": null
+        },
+        {
+          "id": 30,
+          "name": "Boeuf Bourguignon",
+          "price": 22,
+          "description": "Beef stewed in red wine with mushrooms and onions",
+          "thumb": null
+        },
+        {
+          "id": 31,
+          "name": "Crème brûlée",
+          "price": 10,
+          "description": "Custard dessert with a caramelized sugar top",
+          "thumb": null
+        },
+        {
+          "id": 32,
+          "name": "Tarte Tatin",
+          "price": 11,
+          "description": "Upside-down apple tart",
+          "thumb": null
+        },
+        {
+          "id": 33,
+          "name": "Moules marinières",
+          "price": 18,
+          "description": "Mussels cooked in white wine sauce",
+          "thumb": null
+        },
+        {
+          "id": 34,
+          "name": "Coq au vin",
+          "price": 20,
+          "description": "Chicken cooked in red wine with bacon, mushrooms, and onions",
+          "thumb": null
+        },
+        {
+          "id": 35,
+          "name": "Salade Niçoise",
+          "price": 16,
+          "description": "Mixed salad with tuna, eggs, and olives",
+          "thumb": null
+        },
+        {
+          "id": 36,
+          "name": "Escargots",
+          "price": 13,
+          "description": "Snails baked in butter and garlic",
+          "thumb": null
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "name": "Lupin",
+      "address": "Piazza Fiume, 18",
+      "VAT": "FR987654321",
+      "phoneNumber": "0143543210",
+      "cuisineType": [
+        "Francese"
+      ],
+      "image": "Rist_francese.jpg",
+      "foodItem": [
+        {
+          "id": 27,
+          "name": "Soupe à l'oignon",
+          "price": 9,
+          "description": "Classic French onion soup with croutons and cheese",
+          "thumb": null
+        },
+        {
+          "id": 28,
+          "name": "Quiche Lorraine",
+          "price": 12,
+          "description": "Savory tart with bacon, eggs, and cheese",
+          "thumb": null
+        },
+        {
+          "id": 29,
+          "name": "Ratatouille",
+          "price": 15,
+          "description": "Traditional vegetable stew from Provence",
+          "thumb": null
+        },
+        {
+          "id": 30,
+          "name": "Boeuf Bourguignon",
+          "price": 22,
+          "description": "Beef stewed in red wine with mushrooms and onions",
+          "thumb": null
+        },
+        {
+          "id": 31,
+          "name": "Crème brûlée",
+          "price": 10,
+          "description": "Custard dessert with a caramelized sugar top",
+          "thumb": null
+        },
+        {
+          "id": 32,
+          "name": "Tarte Tatin",
+          "price": 11,
+          "description": "Upside-down apple tart",
+          "thumb": null
+        },
+        {
+          "id": 33,
+          "name": "Moules marinières",
+          "price": 18,
+          "description": "Mussels cooked in white wine sauce",
+          "thumb": null
+        },
+        {
+          "id": 34,
+          "name": "Coq au vin",
+          "price": 20,
+          "description": "Chicken cooked in red wine with bacon, mushrooms, and onions",
+          "thumb": null
+        },
+        {
+          "id": 35,
+          "name": "Salade Niçoise",
+          "price": 16,
+          "description": "Mixed salad with tuna, eggs, and olives",
+          "thumb": null
+        },
+        {
+          "id": 36,
+          "name": "Escargots",
+          "price": 13,
+          "description": "Snails baked in butter and garlic",
+          "thumb": null
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "name": "Le Baguette",
+      "address": "Piazza Fiume, 18",
+      "VAT": "FR987654321",
+      "phoneNumber": "0143543210",
+      "cuisineType": [
+        "Francese"
+      ],
+      "image": "Rist_francese1.jpg",
+      "foodItem": [
+        {
+          "id": 27,
+          "name": "Soupe à l'oignon",
+          "price": 9,
+          "description": "Classic French onion soup with croutons and cheese",
+          "thumb": null
+        },
+        {
+          "id": 28,
+          "name": "Quiche Lorraine",
+          "price": 12,
+          "description": "Savory tart with bacon, eggs, and cheese",
+          "thumb": null
+        },
+        {
+          "id": 29,
+          "name": "Ratatouille",
+          "price": 15,
+          "description": "Traditional vegetable stew from Provence",
+          "thumb": null
+        },
+        {
+          "id": 30,
+          "name": "Boeuf Bourguignon",
+          "price": 22,
+          "description": "Beef stewed in red wine with mushrooms and onions",
+          "thumb": null
+        },
+        {
+          "id": 31,
+          "name": "Crème brûlée",
+          "price": 10,
+          "description": "Custard dessert with a caramelized sugar top",
+          "thumb": null
+        },
+        {
+          "id": 32,
+          "name": "Tarte Tatin",
+          "price": 11,
+          "description": "Upside-down apple tart",
+          "thumb": null
+        },
+        {
+          "id": 33,
+          "name": "Moules marinières",
+          "price": 18,
+          "description": "Mussels cooked in white wine sauce",
+          "thumb": null
+        },
+        {
+          "id": 34,
+          "name": "Coq au vin",
+          "price": 20,
+          "description": "Chicken cooked in red wine with bacon, mushrooms, and onions",
+          "thumb": null
+        },
+        {
+          "id": 35,
+          "name": "Salade Niçoise",
+          "price": 16,
+          "description": "Mixed salad with tuna, eggs, and olives",
+          "thumb": null
+        },
+        {
+          "id": 36,
+          "name": "Escargots",
+          "price": 13,
+          "description": "Snails baked in butter and garlic",
+          "thumb": null
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "name": "Casa de Burritos",
+      "address": "Via della Esperanza, 22",
+      "VAT": "IT123456789",
+      "phoneNumber": "06912345678",
+      "cuisineType": [
+        "Spagnolo"
+      ],
+      "image": "Rist_spagnolo1.jpg",
+      "foodItem": [
+        {
+          "id": 37,
+          "name": "Patatas Bravas",
+          "price": 6,
+          "description": "Fried potatoes with spicy tomato sauce",
+          "thumb": null
+        },
+        {
+          "id": 38,
+          "name": "Gambas al ajillo",
+          "price": 15,
+          "description": "Shrimp cooked in garlic",
+          "thumb": null
+        },
+        {
+          "id": 39,
+          "name": "Jamón ibérico",
+          "price": 20,
+          "description": "Cured Iberian ham",
+          "thumb": null
+        },
+        {
+          "id": 40,
+          "name": "Tortilla española",
+          "price": 10,
+          "description": "Spanish omelette with potatoes and onions",
+          "thumb": null
+        },
+        {
+          "id": 41,
+          "name": "Chorizo al vino",
+          "price": 12,
+          "description": "Chorizo cooked in wine",
+          "thumb": null
+        },
+        {
+          "id": 42,
+          "name": "Croquetas de jamón",
+          "price": 8,
+          "description": "Ham croquettes",
+          "thumb": null
+        },
+        {
+          "id": 43,
+          "name": "Pulpo a la gallega",
+          "price": 18,
+          "description": "Galician style octopus",
+          "thumb": null
+        },
+        {
+          "id": 44,
+          "name": "Pimientos de Padrón",
+          "price": 7,
+          "description": "Fried green peppers",
+          "thumb": null
+        },
+        {
+          "id": 45,
+          "name": "Queso Manchego",
+          "price": 9,
+          "description": "Sheep's milk cheese from La Mancha",
+          "thumb": null
+        },
+        {
+          "id": 46,
+          "name": "Tarta de Santiago",
+          "price": 7,
+          "description": "Almond cake from Galicia",
+          "thumb": null
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "name": "Spagnolos",
+      "address": "Via della Esperanza, 22",
+      "VAT": "IT123456789",
+      "phoneNumber": "06912345678",
+      "cuisineType": [
+        "Spagnolo"
+      ],
+      "image": "Rist_spagnolo2.jpg",
+      "foodItem": [
+        {
+          "id": 37,
+          "name": "Patatas Bravas",
+          "price": 6,
+          "description": "Fried potatoes with spicy tomato sauce",
+          "thumb": null
+        },
+        {
+          "id": 38,
+          "name": "Gambas al ajillo",
+          "price": 15,
+          "description": "Shrimp cooked in garlic",
+          "thumb": null
+        },
+        {
+          "id": 39,
+          "name": "Jamón ibérico",
+          "price": 20,
+          "description": "Cured Iberian ham",
+          "thumb": null
+        },
+        {
+          "id": 40,
+          "name": "Tortilla española",
+          "price": 10,
+          "description": "Spanish omelette with potatoes and onions",
+          "thumb": null
+        },
+        {
+          "id": 41,
+          "name": "Chorizo al vino",
+          "price": 12,
+          "description": "Chorizo cooked in wine",
+          "thumb": null
+        },
+        {
+          "id": 42,
+          "name": "Croquetas de jamón",
+          "price": 8,
+          "description": "Ham croquettes",
+          "thumb": null
+        },
+        {
+          "id": 43,
+          "name": "Pulpo a la gallega",
+          "price": 18,
+          "description": "Galician style octopus",
+          "thumb": null
+        },
+        {
+          "id": 44,
+          "name": "Pimientos de Padrón",
+          "price": 7,
+          "description": "Fried green peppers",
+          "thumb": null
+        },
+        {
+          "id": 45,
+          "name": "Queso Manchego",
+          "price": 9,
+          "description": "Sheep's milk cheese from La Mancha",
+          "thumb": null
+        },
+        {
+          "id": 46,
+          "name": "Tarta de Santiago",
+          "price": 7,
+          "description": "Almond cake from Galicia",
+          "thumb": null
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "name": "Spidy Gonzalez",
+      "address": "Via della Esperanza, 22",
+      "VAT": "IT123456789",
+      "phoneNumber": "06912345678",
+      "cuisineType": [
+        "Spagnolo"
+      ],
+      "image": "Rist_spagnolo3.jpg",
+      "foodItem": [
+        {
+          "id": 37,
+          "name": "Patatas Bravas",
+          "price": 6,
+          "description": "Fried potatoes with spicy tomato sauce",
+          "thumb": null
+        },
+        {
+          "id": 38,
+          "name": "Gambas al ajillo",
+          "price": 15,
+          "description": "Shrimp cooked in garlic",
+          "thumb": null
+        },
+        {
+          "id": 39,
+          "name": "Jamón ibérico",
+          "price": 20,
+          "description": "Cured Iberian ham",
+          "thumb": null
+        },
+        {
+          "id": 40,
+          "name": "Tortilla española",
+          "price": 10,
+          "description": "Spanish omelette with potatoes and onions",
+          "thumb": null
+        },
+        {
+          "id": 41,
+          "name": "Chorizo al vino",
+          "price": 12,
+          "description": "Chorizo cooked in wine",
+          "thumb": null
+        },
+        {
+          "id": 42,
+          "name": "Croquetas de jamón",
+          "price": 8,
+          "description": "Ham croquettes",
+          "thumb": null
+        },
+        {
+          "id": 43,
+          "name": "Pulpo a la gallega",
+          "price": 18,
+          "description": "Galician style octopus",
+          "thumb": null
+        },
+        {
+          "id": 44,
+          "name": "Pimientos de Padrón",
+          "price": 7,
+          "description": "Fried green peppers",
+          "thumb": null
+        },
+        {
+          "id": 45,
+          "name": "Queso Manchego",
+          "price": 9,
+          "description": "Sheep's milk cheese from La Mancha",
+          "thumb": null
+        },
+        {
+          "id": 46,
+          "name": "Tarta de Santiago",
+          "price": 7,
+          "description": "Almond cake from Galicia",
+          "thumb": null
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "name": "Il Paejaro",
+      "address": "Via della Esperanza, 22",
+      "VAT": "IT123456789",
+      "phoneNumber": "06912345678",
+      "cuisineType": [
+        "Spagnolo"
+      ],
+      "image": "Rist_spagnolo1.jpg",
+      "foodItem": [
+        {
+          "id": 37,
+          "name": "Patatas Bravas",
+          "price": 6,
+          "description": "Fried potatoes with spicy tomato sauce",
+          "thumb": null
+        },
+        {
+          "id": 38,
+          "name": "Gambas al ajillo",
+          "price": 15,
+          "description": "Shrimp cooked in garlic",
+          "thumb": null
+        },
+        {
+          "id": 39,
+          "name": "Jamón ibérico",
+          "price": 20,
+          "description": "Cured Iberian ham",
+          "thumb": null
+        },
+        {
+          "id": 40,
+          "name": "Tortilla española",
+          "price": 10,
+          "description": "Spanish omelette with potatoes and onions",
+          "thumb": null
+        },
+        {
+          "id": 41,
+          "name": "Chorizo al vino",
+          "price": 12,
+          "description": "Chorizo cooked in wine",
+          "thumb": null
+        },
+        {
+          "id": 42,
+          "name": "Croquetas de jamón",
+          "price": 8,
+          "description": "Ham croquettes",
+          "thumb": null
+        },
+        {
+          "id": 43,
+          "name": "Pulpo a la gallega",
+          "price": 18,
+          "description": "Galician style octopus",
+          "thumb": null
+        },
+        {
+          "id": 44,
+          "name": "Pimientos de Padrón",
+          "price": 7,
+          "description": "Fried green peppers",
+          "thumb": null
+        },
+        {
+          "id": 45,
+          "name": "Queso Manchego",
+          "price": 9,
+          "description": "Sheep's milk cheese from La Mancha",
+          "thumb": null
+        },
+        {
+          "id": 46,
+          "name": "Tarta de Santiago",
+          "price": 7,
+          "description": "Almond cake from Galicia",
+          "thumb": null
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "name": "Como a Madrid",
+      "address": "Via della Esperanza, 22",
+      "VAT": "IT123456789",
+      "phoneNumber": "06912345678",
+      "cuisineType": [
+        "Spagnolo"
+      ],
+      "image": "Rist_spagnolo.jpg",
+      "foodItem": [
+        {
+          "id": 37,
+          "name": "Patatas Bravas",
+          "price": 6,
+          "description": "Fried potatoes with spicy tomato sauce",
+          "thumb": null
+        },
+        {
+          "id": 38,
+          "name": "Gambas al ajillo",
+          "price": 15,
+          "description": "Shrimp cooked in garlic",
+          "thumb": null
+        },
+        {
+          "id": 39,
+          "name": "Jamón ibérico",
+          "price": 20,
+          "description": "Cured Iberian ham",
+          "thumb": null
+        },
+        {
+          "id": 40,
+          "name": "Tortilla española",
+          "price": 10,
+          "description": "Spanish omelette with potatoes and onions",
+          "thumb": null
+        },
+        {
+          "id": 41,
+          "name": "Chorizo al vino",
+          "price": 12,
+          "description": "Chorizo cooked in wine",
+          "thumb": null
+        },
+        {
+          "id": 42,
+          "name": "Croquetas de jamón",
+          "price": 8,
+          "description": "Ham croquettes",
+          "thumb": null
+        },
+        {
+          "id": 43,
+          "name": "Pulpo a la gallega",
+          "price": 18,
+          "description": "Galician style octopus",
+          "thumb": null
+        },
+        {
+          "id": 44,
+          "name": "Pimientos de Padrón",
+          "price": 7,
+          "description": "Fried green peppers",
+          "thumb": null
+        },
+        {
+          "id": 45,
+          "name": "Queso Manchego",
+          "price": 9,
+          "description": "Sheep's milk cheese from La Mancha",
+          "thumb": null
+        },
+        {
+          "id": 46,
+          "name": "Tarta de Santiago",
+          "price": 7,
+          "description": "Almond cake from Galicia",
+          "thumb": null
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "name": "Casa de Tapas 2",
+      "address": "Via della Esperanza, 22",
+      "VAT": "IT123456789",
+      "phoneNumber": "06912345678",
+      "cuisineType": [
+        "Spagnolo"
+      ],
+      "image": "Rist_spagnolo3.jpg",
+      "foodItem": [
+        {
+          "id": 37,
+          "name": "Patatas Bravas",
+          "price": 6,
+          "description": "Fried potatoes with spicy tomato sauce",
+          "thumb": null
+        },
+        {
+          "id": 38,
+          "name": "Gambas al ajillo",
+          "price": 15,
+          "description": "Shrimp cooked in garlic",
+          "thumb": null
+        },
+        {
+          "id": 39,
+          "name": "Jamón ibérico",
+          "price": 20,
+          "description": "Cured Iberian ham",
+          "thumb": null
+        },
+        {
+          "id": 40,
+          "name": "Tortilla española",
+          "price": 10,
+          "description": "Spanish omelette with potatoes and onions",
+          "thumb": null
+        },
+        {
+          "id": 41,
+          "name": "Chorizo al vino",
+          "price": 12,
+          "description": "Chorizo cooked in wine",
+          "thumb": null
+        },
+        {
+          "id": 42,
+          "name": "Croquetas de jamón",
+          "price": 8,
+          "description": "Ham croquettes",
+          "thumb": null
+        },
+        {
+          "id": 43,
+          "name": "Pulpo a la gallega",
+          "price": 18,
+          "description": "Galician style octopus",
+          "thumb": null
+        },
+        {
+          "id": 44,
+          "name": "Pimientos de Padrón",
+          "price": 7,
+          "description": "Fried green peppers",
+          "thumb": null
+        },
+        {
+          "id": 45,
+          "name": "Queso Manchego",
+          "price": 9,
+          "description": "Sheep's milk cheese from La Mancha",
+          "thumb": null
+        },
+        {
+          "id": 46,
+          "name": "Tarta de Santiago",
+          "price": 7,
+          "description": "Almond cake from Galicia",
+          "thumb": null
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "name": "Sushi Jun",
+      "address": "Via del corso, 19",
+      "VAT": "JP987654321",
+      "phoneNumber": "0312345678",
+      "cuisineType": [
+        "Giapponese"
+      ],
+      "image": "Rist_giapponese1.jpg",
+      "foodItem": [
+        {
+          "id": 47,
+          "name": "Nigiri Sushi",
+          "price": 3,
+          "description": "Rice ball with a slice of fish on top",
+          "thumb": null
+        },
+        {
+          "id": 48,
+          "name": "Sashimi",
+          "price": 4,
+          "description": "Sliced raw fish",
+          "thumb": null
+        },
+        {
+          "id": 49,
+          "name": "Maki Sushi",
+          "price": 5,
+          "description": "Rolled sushi with seaweed outside",
+          "thumb": null
+        },
+        {
+          "id": 50,
+          "name": "Temaki Sushi",
+          "price": 6,
+          "description": "Hand-rolled cone-shaped sushi",
+          "thumb": null
+        },
+        {
+          "id": 51,
+          "name": "Chirashi Sushi",
+          "price": 12,
+          "description": "Bowl of sushi rice topped with various sashimi",
+          "thumb": null
+        },
+        {
+          "id": 52,
+          "name": "Edamame",
+          "price": 2,
+          "description": "Boiled soybeans in the pod",
+          "thumb": null
+        },
+        {
+          "id": 53,
+          "name": "Misoshiru",
+          "price": 3,
+          "description": "Miso soup with tofu and seaweed",
+          "thumb": null
+        },
+        {
+          "id": 54,
+          "name": "Tempura",
+          "price": 8,
+          "description": "Battered and deep-fried vegetables or seafood",
+          "thumb": null
+        },
+        {
+          "id": 55,
+          "name": "Unagi Don",
+          "price": 15,
+          "description": "Grilled eel over rice",
+          "thumb": null
+        },
+        {
+          "id": 56,
+          "name": "Kaiseki",
+          "price": 30,
+          "description": "Traditional multi-course Japanese dinner",
+          "thumb": null
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "name": "Sushi Place",
+      "address": "Via del corso, 19",
+      "VAT": "JP987654321",
+      "phoneNumber": "0312345678",
+      "cuisineType": [
+        "Giapponese"
+      ],
+      "image": "Rist_giapponese2.jpg",
+      "foodItem": [
+        {
+          "id": 47,
+          "name": "Nigiri Sushi",
+          "price": 3,
+          "description": "Rice ball with a slice of fish on top",
+          "thumb": null
+        },
+        {
+          "id": 48,
+          "name": "Sashimi",
+          "price": 4,
+          "description": "Sliced raw fish",
+          "thumb": null
+        },
+        {
+          "id": 49,
+          "name": "Maki Sushi",
+          "price": 5,
+          "description": "Rolled sushi with seaweed outside",
+          "thumb": null
+        },
+        {
+          "id": 50,
+          "name": "Temaki Sushi",
+          "price": 6,
+          "description": "Hand-rolled cone-shaped sushi",
+          "thumb": null
+        },
+        {
+          "id": 51,
+          "name": "Chirashi Sushi",
+          "price": 12,
+          "description": "Bowl of sushi rice topped with various sashimi",
+          "thumb": null
+        },
+        {
+          "id": 52,
+          "name": "Edamame",
+          "price": 2,
+          "description": "Boiled soybeans in the pod",
+          "thumb": null
+        },
+        {
+          "id": 53,
+          "name": "Misoshiru",
+          "price": 3,
+          "description": "Miso soup with tofu and seaweed",
+          "thumb": null
+        },
+        {
+          "id": 54,
+          "name": "Tempura",
+          "price": 8,
+          "description": "Battered and deep-fried vegetables or seafood",
+          "thumb": null
+        },
+        {
+          "id": 55,
+          "name": "Unagi Don",
+          "price": 15,
+          "description": "Grilled eel over rice",
+          "thumb": null
+        },
+        {
+          "id": 56,
+          "name": "Kaiseki",
+          "price": 30,
+          "description": "Traditional multi-course Japanese dinner",
+          "thumb": null
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "name": "Ishi-Sushi",
+      "address": "Via del corso, 19",
+      "VAT": "JP987654321",
+      "phoneNumber": "0312345678",
+      "cuisineType": [
+        "Giapponese"
+      ],
+      "image": "Rist_giapponese3.jpg",
+      "foodItem": [
+        {
+          "id": 47,
+          "name": "Nigiri Sushi",
+          "price": 3,
+          "description": "Rice ball with a slice of fish on top",
+          "thumb": null
+        },
+        {
+          "id": 48,
+          "name": "Sashimi",
+          "price": 4,
+          "description": "Sliced raw fish",
+          "thumb": null
+        },
+        {
+          "id": 49,
+          "name": "Maki Sushi",
+          "price": 5,
+          "description": "Rolled sushi with seaweed outside",
+          "thumb": null
+        },
+        {
+          "id": 50,
+          "name": "Temaki Sushi",
+          "price": 6,
+          "description": "Hand-rolled cone-shaped sushi",
+          "thumb": null
+        },
+        {
+          "id": 51,
+          "name": "Chirashi Sushi",
+          "price": 12,
+          "description": "Bowl of sushi rice topped with various sashimi",
+          "thumb": null
+        },
+        {
+          "id": 52,
+          "name": "Edamame",
+          "price": 2,
+          "description": "Boiled soybeans in the pod",
+          "thumb": null
+        },
+        {
+          "id": 53,
+          "name": "Misoshiru",
+          "price": 3,
+          "description": "Miso soup with tofu and seaweed",
+          "thumb": null
+        },
+        {
+          "id": 54,
+          "name": "Tempura",
+          "price": 8,
+          "description": "Battered and deep-fried vegetables or seafood",
+          "thumb": null
+        },
+        {
+          "id": 55,
+          "name": "Unagi Don",
+          "price": 15,
+          "description": "Grilled eel over rice",
+          "thumb": null
+        },
+        {
+          "id": 56,
+          "name": "Kaiseki",
+          "price": 30,
+          "description": "Traditional multi-course Japanese dinner",
+          "thumb": null
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "name": "MU Dimsum",
+      "address": "Via del corso, 19",
+      "VAT": "JP987654321",
+      "phoneNumber": "0312345678",
+      "cuisineType": [
+        "Giapponese"
+      ],
+      "image": "Rist_giapponese2.jpg",
+      "foodItem": [
+        {
+          "id": 47,
+          "name": "Nigiri Sushi",
+          "price": 3,
+          "description": "Rice ball with a slice of fish on top",
+          "thumb": null
+        },
+        {
+          "id": 48,
+          "name": "Sashimi",
+          "price": 4,
+          "description": "Sliced raw fish",
+          "thumb": null
+        },
+        {
+          "id": 49,
+          "name": "Maki Sushi",
+          "price": 5,
+          "description": "Rolled sushi with seaweed outside",
+          "thumb": null
+        },
+        {
+          "id": 50,
+          "name": "Temaki Sushi",
+          "price": 6,
+          "description": "Hand-rolled cone-shaped sushi",
+          "thumb": null
+        },
+        {
+          "id": 51,
+          "name": "Chirashi Sushi",
+          "price": 12,
+          "description": "Bowl of sushi rice topped with various sashimi",
+          "thumb": null
+        },
+        {
+          "id": 52,
+          "name": "Edamame",
+          "price": 2,
+          "description": "Boiled soybeans in the pod",
+          "thumb": null
+        },
+        {
+          "id": 53,
+          "name": "Misoshiru",
+          "price": 3,
+          "description": "Miso soup with tofu and seaweed",
+          "thumb": null
+        },
+        {
+          "id": 54,
+          "name": "Tempura",
+          "price": 8,
+          "description": "Battered and deep-fried vegetables or seafood",
+          "thumb": null
+        },
+        {
+          "id": 55,
+          "name": "Unagi Don",
+          "price": 15,
+          "description": "Grilled eel over rice",
+          "thumb": null
+        },
+        {
+          "id": 56,
+          "name": "Kaiseki",
+          "price": 30,
+          "description": "Traditional multi-course Japanese dinner",
+          "thumb": null
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "name": "Kandoo Restaurant",
+      "address": "Via del corso, 19",
+      "VAT": "JP987654321",
+      "phoneNumber": "0312345678",
+      "cuisineType": [
+        "Giapponese"
+      ],
+      "image": "Rist_giapponese.jpg",
+      "foodItem": [
+        {
+          "id": 47,
+          "name": "Nigiri Sushi",
+          "price": 3,
+          "description": "Rice ball with a slice of fish on top",
+          "thumb": null
+        },
+        {
+          "id": 48,
+          "name": "Sashimi",
+          "price": 4,
+          "description": "Sliced raw fish",
+          "thumb": null
+        },
+        {
+          "id": 49,
+          "name": "Maki Sushi",
+          "price": 5,
+          "description": "Rolled sushi with seaweed outside",
+          "thumb": null
+        },
+        {
+          "id": 50,
+          "name": "Temaki Sushi",
+          "price": 6,
+          "description": "Hand-rolled cone-shaped sushi",
+          "thumb": null
+        },
+        {
+          "id": 51,
+          "name": "Chirashi Sushi",
+          "price": 12,
+          "description": "Bowl of sushi rice topped with various sashimi",
+          "thumb": null
+        },
+        {
+          "id": 52,
+          "name": "Edamame",
+          "price": 2,
+          "description": "Boiled soybeans in the pod",
+          "thumb": null
+        },
+        {
+          "id": 53,
+          "name": "Misoshiru",
+          "price": 3,
+          "description": "Miso soup with tofu and seaweed",
+          "thumb": null
+        },
+        {
+          "id": 54,
+          "name": "Tempura",
+          "price": 8,
+          "description": "Battered and deep-fried vegetables or seafood",
+          "thumb": null
+        },
+        {
+          "id": 55,
+          "name": "Unagi Don",
+          "price": 15,
+          "description": "Grilled eel over rice",
+          "thumb": null
+        },
+        {
+          "id": 56,
+          "name": "Kaiseki",
+          "price": 30,
+          "description": "Traditional multi-course Japanese dinner",
+          "thumb": null
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "name": "Sushi Zen 2",
+      "address": "Via del corso, 19",
+      "VAT": "JP987654321",
+      "phoneNumber": "0312345678",
+      "cuisineType": [
+        "Giapponese"
+      ],
+      "image": "Rist_giapponese1.jpg",
+      "foodItem": [
+        {
+          "id": 47,
+          "name": "Nigiri Sushi",
+          "price": 3,
+          "description": "Rice ball with a slice of fish on top",
+          "thumb": null
+        },
+        {
+          "id": 48,
+          "name": "Sashimi",
+          "price": 4,
+          "description": "Sliced raw fish",
+          "thumb": null
+        },
+        {
+          "id": 49,
+          "name": "Maki Sushi",
+          "price": 5,
+          "description": "Rolled sushi with seaweed outside",
+          "thumb": null
+        },
+        {
+          "id": 50,
+          "name": "Temaki Sushi",
+          "price": 6,
+          "description": "Hand-rolled cone-shaped sushi",
+          "thumb": null
+        },
+        {
+          "id": 51,
+          "name": "Chirashi Sushi",
+          "price": 12,
+          "description": "Bowl of sushi rice topped with various sashimi",
+          "thumb": null
+        },
+        {
+          "id": 52,
+          "name": "Edamame",
+          "price": 2,
+          "description": "Boiled soybeans in the pod",
+          "thumb": null
+        },
+        {
+          "id": 53,
+          "name": "Misoshiru",
+          "price": 3,
+          "description": "Miso soup with tofu and seaweed",
+          "thumb": null
+        },
+        {
+          "id": 54,
+          "name": "Tempura",
+          "price": 8,
+          "description": "Battered and deep-fried vegetables or seafood",
+          "thumb": null
+        },
+        {
+          "id": 55,
+          "name": "Unagi Don",
+          "price": 15,
+          "description": "Grilled eel over rice",
+          "thumb": null
+        },
+        {
+          "id": 56,
+          "name": "Kaiseki",
+          "price": 30,
+          "description": "Traditional multi-course Japanese dinner",
+          "thumb": null
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "name": "Samurai",
+      "address": "Via del corso, 19",
+      "VAT": "JP987654321",
+      "phoneNumber": "0312345678",
+      "cuisineType": [
+        "Giapponese"
+      ],
+      "image": "Rist_giapponese3.jpg",
+      "foodItem": [
+        {
+          "id": 47,
+          "name": "Nigiri Sushi",
+          "price": 3,
+          "description": "Rice ball with a slice of fish on top",
+          "thumb": null
+        },
+        {
+          "id": 48,
+          "name": "Sashimi",
+          "price": 4,
+          "description": "Sliced raw fish",
+          "thumb": null
+        },
+        {
+          "id": 49,
+          "name": "Maki Sushi",
+          "price": 5,
+          "description": "Rolled sushi with seaweed outside",
+          "thumb": null
+        },
+        {
+          "id": 50,
+          "name": "Temaki Sushi",
+          "price": 6,
+          "description": "Hand-rolled cone-shaped sushi",
+          "thumb": null
+        },
+        {
+          "id": 51,
+          "name": "Chirashi Sushi",
+          "price": 12,
+          "description": "Bowl of sushi rice topped with various sashimi",
+          "thumb": null
+        },
+        {
+          "id": 52,
+          "name": "Edamame",
+          "price": 2,
+          "description": "Boiled soybeans in the pod",
+          "thumb": null
+        },
+        {
+          "id": 53,
+          "name": "Misoshiru",
+          "price": 3,
+          "description": "Miso soup with tofu and seaweed",
+          "thumb": null
+        },
+        {
+          "id": 54,
+          "name": "Tempura",
+          "price": 8,
+          "description": "Battered and deep-fried vegetables or seafood",
+          "thumb": null
+        },
+        {
+          "id": 55,
+          "name": "Unagi Don",
+          "price": 15,
+          "description": "Grilled eel over rice",
+          "thumb": null
+        },
+        {
+          "id": 56,
+          "name": "Kaiseki",
+          "price": 30,
+          "description": "Traditional multi-course Japanese dinner",
+          "thumb": null
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "name": "Kassios - Ristorante Greco",
+      "address": "Via Piave, 30",
+      "VAT": "IT771654321",
+      "phoneNumber": "0633545678",
+      "cuisineType": [
+        "Greco"
+      ],
+      "image": "Rist_greco1.jpg",
+      "foodItem": [
+        {
+          "id": 57,
+          "name": "Moussaka",
+          "price": 12,
+          "description": "Layered eggplant, potato, and minced meat casserole topped with béchamel sauce",
+          "thumb": null
+        },
+        {
+          "id": 58,
+          "name": "Souvlaki",
+          "price": 10,
+          "description": "Grilled skewers of marinated meat, typically served with pita and tzatziki",
+          "thumb": null
+        },
+        {
+          "id": 59,
+          "name": "Spanakopita",
+          "price": 8,
+          "description": "Spinach and feta cheese pie wrapped in phyllo pastry",
+          "thumb": null
+        },
+        {
+          "id": 60,
+          "name": "Tzatziki",
+          "price": 5,
+          "description": "Yogurt, cucumber, and garlic dip, perfect as an appetizer or side",
+          "thumb": null
+        }
+      ]
+    },
+    {
+      "id": 52,
+      "name": "Zeus's Place",
+      "address": "Via Piave, 30",
+      "VAT": "IT771654321",
+      "phoneNumber": "0633545678",
+      "cuisineType": [
+        "Greco"
+      ],
+      "image": "Rist_greco2.jpg",
+      "foodItem": [
+        {
+          "id": 57,
+          "name": "Moussaka",
+          "price": 12,
+          "description": "Layered eggplant, potato, and minced meat casserole topped with béchamel sauce",
+          "thumb": null
+        },
+        {
+          "id": 58,
+          "name": "Souvlaki",
+          "price": 10,
+          "description": "Grilled skewers of marinated meat, typically served with pita and tzatziki",
+          "thumb": null
+        },
+        {
+          "id": 59,
+          "name": "Spanakopita",
+          "price": 8,
+          "description": "Spinach and feta cheese pie wrapped in phyllo pastry",
+          "thumb": null
+        },
+        {
+          "id": 60,
+          "name": "Tzatziki",
+          "price": 5,
+          "description": "Yogurt, cucumber, and garlic dip, perfect as an appetizer or side",
+          "thumb": null
+        }
+      ]
+    },
+    {
+      "id": 53,
+      "name": "Pusillipus",
+      "address": "Via Piave, 30",
+      "VAT": "IT771654321",
+      "phoneNumber": "0633545678",
+      "cuisineType": [
+        "Greco"
+      ],
+      "image": "Rist_greco3.jpg",
+      "foodItem": [
+        {
+          "id": 57,
+          "name": "Moussaka",
+          "price": 12,
+          "description": "Layered eggplant, potato, and minced meat casserole topped with béchamel sauce",
+          "thumb": null
+        },
+        {
+          "id": 58,
+          "name": "Souvlaki",
+          "price": 10,
+          "description": "Grilled skewers of marinated meat, typically served with pita and tzatziki",
+          "thumb": null
+        },
+        {
+          "id": 59,
+          "name": "Spanakopita",
+          "price": 8,
+          "description": "Spinach and feta cheese pie wrapped in phyllo pastry",
+          "thumb": null
+        },
+        {
+          "id": 60,
+          "name": "Tzatziki",
+          "price": 5,
+          "description": "Yogurt, cucumber, and garlic dip, perfect as an appetizer or side",
+          "thumb": null
+        }
+      ]
+    },
+    {
+      "id": 54,
+      "name": "Dai Proci",
+      "address": "Via Piave, 30",
+      "VAT": "IT771654321",
+      "phoneNumber": "0633545678",
+      "cuisineType": [
+        "Greco"
+      ],
+      "image": "Rist_greco1.jpg",
+      "foodItem": [
+        {
+          "id": 57,
+          "name": "Moussaka",
+          "price": 12,
+          "description": "Layered eggplant, potato, and minced meat casserole topped with béchamel sauce",
+          "thumb": null
+        },
+        {
+          "id": 58,
+          "name": "Souvlaki",
+          "price": 10,
+          "description": "Grilled skewers of marinated meat, typically served with pita and tzatziki",
+          "thumb": null
+        },
+        {
+          "id": 59,
+          "name": "Spanakopita",
+          "price": 8,
+          "description": "Spinach and feta cheese pie wrapped in phyllo pastry",
+          "thumb": null
+        },
+        {
+          "id": 60,
+          "name": "Tzatziki",
+          "price": 5,
+          "description": "Yogurt, cucumber, and garlic dip, perfect as an appetizer or side",
+          "thumb": null
+        }
+      ]
+    },
+    {
+      "id": 55,
+      "name": "Aristotele's Domus",
+      "address": "Via Piave, 30",
+      "VAT": "IT771654321",
+      "phoneNumber": "0633545678",
+      "cuisineType": [
+        "Greco"
+      ],
+      "image": "Rist_greco.jpg",
+      "foodItem": [
+        {
+          "id": 57,
+          "name": "Moussaka",
+          "price": 12,
+          "description": "Layered eggplant, potato, and minced meat casserole topped with béchamel sauce",
+          "thumb": null
+        },
+        {
+          "id": 58,
+          "name": "Souvlaki",
+          "price": 10,
+          "description": "Grilled skewers of marinated meat, typically served with pita and tzatziki",
+          "thumb": null
+        },
+        {
+          "id": 59,
+          "name": "Spanakopita",
+          "price": 8,
+          "description": "Spinach and feta cheese pie wrapped in phyllo pastry",
+          "thumb": null
+        },
+        {
+          "id": 60,
+          "name": "Tzatziki",
+          "price": 5,
+          "description": "Yogurt, cucumber, and garlic dip, perfect as an appetizer or side",
+          "thumb": null
+        }
+      ]
+    },
+    {
+      "id": 56,
+      "name": "Atene Restaurant",
+      "address": "Via Piave, 30",
+      "VAT": "IT771654321",
+      "phoneNumber": "0633545678",
+      "cuisineType": [
+        "Greco"
+      ],
+      "image": "Rist_greco3.jpg",
+      "foodItem": [
+        {
+          "id": 57,
+          "name": "Moussaka",
+          "price": 12,
+          "description": "Layered eggplant, potato, and minced meat casserole topped with béchamel sauce",
+          "thumb": null
+        },
+        {
+          "id": 58,
+          "name": "Souvlaki",
+          "price": 10,
+          "description": "Grilled skewers of marinated meat, typically served with pita and tzatziki",
+          "thumb": null
+        },
+        {
+          "id": 59,
+          "name": "Spanakopita",
+          "price": 8,
+          "description": "Spinach and feta cheese pie wrapped in phyllo pastry",
+          "thumb": null
+        },
+        {
+          "id": 60,
+          "name": "Tzatziki",
+          "price": 5,
+          "description": "Yogurt, cucumber, and garlic dip, perfect as an appetizer or side",
+          "thumb": null
+        }
+      ]
+    },
+    {
+      "id": 57,
+      "name": "Olimpus",
+      "address": "Via Piave, 30",
+      "VAT": "IT771654321",
+      "phoneNumber": "0633545678",
+      "cuisineType": [
+        "Greco"
+      ],
+      "image": "Rist_greco2.jpg",
+      "foodItem": [
+        {
+          "id": 57,
+          "name": "Moussaka",
+          "price": 12,
+          "description": "Layered eggplant, potato, and minced meat casserole topped with béchamel sauce",
+          "thumb": null
+        },
+        {
+          "id": 58,
+          "name": "Souvlaki",
+          "price": 10,
+          "description": "Grilled skewers of marinated meat, typically served with pita and tzatziki",
+          "thumb": null
+        },
+        {
+          "id": 59,
+          "name": "Spanakopita",
+          "price": 8,
+          "description": "Spinach and feta cheese pie wrapped in phyllo pastry",
+          "thumb": null
+        },
+        {
+          "id": 60,
+          "name": "Tzatziki",
+          "price": 5,
+          "description": "Yogurt, cucumber, and garlic dip, perfect as an appetizer or side",
+          "thumb": null
+        }
+      ]
+    },
+    {
+      "id": 58,
+      "name": "Mr Donald",
+      "address": "Via Washington, 19",
+      "VAT": "IT987654321",
+      "phoneNumber": "0612345678",
+      "cuisineType": [
+        "Americano"
+      ],
+      "image": "Rist_americano1.jpg",
+      "foodItem": [
+        {
+          "id": 65,
+          "name": "Cheeseburger",
+          "price": 10,
+          "description": "Grilled beef patty with cheese on a bun, often served with lettuce, tomato, onion, and pickles",
+          "thumb": null
+        },
+        {
+          "id": 66,
+          "name": "BBQ Ribs",
+          "price": 15,
+          "description": "Slow-cooked pork ribs coated in BBQ sauce and served with sides like coleslaw and cornbread",
+          "thumb": null
+        },
+        {
+          "id": 67,
+          "name": "Buffalo Wings",
+          "price": 9,
+          "description": "Deep-fried chicken wings coated in a vinegar-based cayenne pepper hot sauce and butter",
+          "thumb": null
+        },
+        {
+          "id": 68,
+          "name": "Apple Pie",
+          "price": 7,
+          "description": "Classic dessert made with a spiced apple filling in a flaky pastry crust",
+          "thumb": null
+        }
+      ]
+    },
+    {
+      "id": 59,
+      "name": "Burger Queen",
+      "address": "Via Washington, 19",
+      "VAT": "IT987654321",
+      "phoneNumber": "0612345678",
+      "cuisineType": [
+        "Americano"
+      ],
+      "image": "Rist_americano2.jpg",
+      "foodItem": [
+        {
+          "id": 65,
+          "name": "Cheeseburger",
+          "price": 10,
+          "description": "Grilled beef patty with cheese on a bun, often served with lettuce, tomato, onion, and pickles",
+          "thumb": null
+        },
+        {
+          "id": 66,
+          "name": "BBQ Ribs",
+          "price": 15,
+          "description": "Slow-cooked pork ribs coated in BBQ sauce and served with sides like coleslaw and cornbread",
+          "thumb": null
+        },
+        {
+          "id": 67,
+          "name": "Buffalo Wings",
+          "price": 9,
+          "description": "Deep-fried chicken wings coated in a vinegar-based cayenne pepper hot sauce and butter",
+          "thumb": null
+        },
+        {
+          "id": 68,
+          "name": "Apple Pie",
+          "price": 7,
+          "description": "Classic dessert made with a spiced apple filling in a flaky pastry crust",
+          "thumb": null
+        }
+      ]
+    },
+    {
+      "id": 60,
+      "name": "Fatty Joe",
+      "address": "Via Washington, 19",
+      "VAT": "IT987654321",
+      "phoneNumber": "0612345678",
+      "cuisineType": [
+        "Americano"
+      ],
+      "image": "Rist_americano3.jpg",
+      "foodItem": [
+        {
+          "id": 65,
+          "name": "Cheeseburger",
+          "price": 10,
+          "description": "Grilled beef patty with cheese on a bun, often served with lettuce, tomato, onion, and pickles",
+          "thumb": null
+        },
+        {
+          "id": 66,
+          "name": "BBQ Ribs",
+          "price": 15,
+          "description": "Slow-cooked pork ribs coated in BBQ sauce and served with sides like coleslaw and cornbread",
+          "thumb": null
+        },
+        {
+          "id": 67,
+          "name": "Buffalo Wings",
+          "price": 9,
+          "description": "Deep-fried chicken wings coated in a vinegar-based cayenne pepper hot sauce and butter",
+          "thumb": null
+        },
+        {
+          "id": 68,
+          "name": "Apple Pie",
+          "price": 7,
+          "description": "Classic dessert made with a spiced apple filling in a flaky pastry crust",
+          "thumb": null
+        }
+      ]
+    },
+    {
+      "id": 61,
+      "name": "KFC",
+      "address": "Via Washington, 19",
+      "VAT": "IT987654321",
+      "phoneNumber": "0612345678",
+      "cuisineType": [
+        "Americano"
+      ],
+      "image": "Rist_americano.jpg",
+      "foodItem": [
+        {
+          "id": 65,
+          "name": "Cheeseburger",
+          "price": 10,
+          "description": "Grilled beef patty with cheese on a bun, often served with lettuce, tomato, onion, and pickles",
+          "thumb": null
+        },
+        {
+          "id": 66,
+          "name": "BBQ Ribs",
+          "price": 15,
+          "description": "Slow-cooked pork ribs coated in BBQ sauce and served with sides like coleslaw and cornbread",
+          "thumb": null
+        },
+        {
+          "id": 67,
+          "name": "Buffalo Wings",
+          "price": 9,
+          "description": "Deep-fried chicken wings coated in a vinegar-based cayenne pepper hot sauce and butter",
+          "thumb": null
+        },
+        {
+          "id": 68,
+          "name": "Apple Pie",
+          "price": 7,
+          "description": "Classic dessert made with a spiced apple filling in a flaky pastry crust",
+          "thumb": null
+        }
+      ]
+    },
+    {
+      "id": 62,
+      "name": "Star Ristò",
+      "address": "Via Washington, 19",
+      "VAT": "IT987654321",
+      "phoneNumber": "0612345678",
+      "cuisineType": [
+        "Americano"
+      ],
+      "image": "Rist_americano2.jpg",
+      "foodItem": [
+        {
+          "id": 65,
+          "name": "Cheeseburger",
+          "price": 10,
+          "description": "Grilled beef patty with cheese on a bun, often served with lettuce, tomato, onion, and pickles",
+          "thumb": null
+        },
+        {
+          "id": 66,
+          "name": "BBQ Ribs",
+          "price": 15,
+          "description": "Slow-cooked pork ribs coated in BBQ sauce and served with sides like coleslaw and cornbread",
+          "thumb": null
+        },
+        {
+          "id": 67,
+          "name": "Buffalo Wings",
+          "price": 9,
+          "description": "Deep-fried chicken wings coated in a vinegar-based cayenne pepper hot sauce and butter",
+          "thumb": null
+        },
+        {
+          "id": 68,
+          "name": "Apple Pie",
+          "price": 7,
+          "description": "Classic dessert made with a spiced apple filling in a flaky pastry crust",
+          "thumb": null
+        }
+      ]
+    },
+    {
+      "id": 63,
+      "name": "Stallone's",
+      "address": "Via Washington, 19",
+      "VAT": "IT987654321",
+      "phoneNumber": "0612345678",
+      "cuisineType": [
+        "Americano"
+      ],
+      "image": "Rist_americano1.jpg",
+      "foodItem": [
+        {
+          "id": 65,
+          "name": "Cheeseburger",
+          "price": 10,
+          "description": "Grilled beef patty with cheese on a bun, often served with lettuce, tomato, onion, and pickles",
+          "thumb": null
+        },
+        {
+          "id": 66,
+          "name": "BBQ Ribs",
+          "price": 15,
+          "description": "Slow-cooked pork ribs coated in BBQ sauce and served with sides like coleslaw and cornbread",
+          "thumb": null
+        },
+        {
+          "id": 67,
+          "name": "Buffalo Wings",
+          "price": 9,
+          "description": "Deep-fried chicken wings coated in a vinegar-based cayenne pepper hot sauce and butter",
+          "thumb": null
+        },
+        {
+          "id": 68,
+          "name": "Apple Pie",
+          "price": 7,
+          "description": "Classic dessert made with a spiced apple filling in a flaky pastry crust",
+          "thumb": null
+        }
+      ]
+    },
+    {
+      "id": 64,
+      "name": "Fiesta Loca",
+      "address": "Corso Grande, 102",
+      "VAT": "IT998877665",
+      "phoneNumber": "0623456789",
+      "cuisineType": [
+        "Messicano"
+      ],
+      "image": "Rist_messicano1.jpg",
+      "foodItem": [
+        {
+          "id": 69,
+          "name": "Nachos Supreme",
+          "price": 8,
+          "description": "Crispy corn tortillas topped with melted cheese, jalapeños, beans, and guacamole",
+          "thumb": null
+        },
+        {
+          "id": 70,
+          "name": "Chicken Fajitas",
+          "price": 14,
+          "description": "Grilled chicken strips served on a sizzling platter with peppers, onions, and tortillas",
+          "thumb": null
+        },
+        {
+          "id": 71,
+          "name": "Beef Tacos",
+          "price": 10,
+          "description": "Soft or crunchy tacos filled with seasoned beef, lettuce, cheese, and salsa",
+          "thumb": null
+        },
+        {
+          "id": 72,
+          "name": "Chili Con Carne",
+          "price": 12,
+          "description": "Spicy stew containing chili peppers, meat, tomatoes, beans, and spices",
+          "thumb": null
+        }
+      ]
+    },
+    {
+      "id": 65,
+      "name": "Andale Andale",
+      "address": "Corso Grande, 102",
+      "VAT": "IT998877665",
+      "phoneNumber": "0623456789",
+      "cuisineType": [
+        "Messicano"
+      ],
+      "image": "Rist_messicano2.jpg",
+      "foodItem": [
+        {
+          "id": 69,
+          "name": "Nachos Supreme",
+          "price": 8,
+          "description": "Crispy corn tortillas topped with melted cheese, jalapeños, beans, and guacamole",
+          "thumb": null
+        },
+        {
+          "id": 70,
+          "name": "Chicken Fajitas",
+          "price": 14,
+          "description": "Grilled chicken strips served on a sizzling platter with peppers, onions, and tortillas",
+          "thumb": null
+        },
+        {
+          "id": 71,
+          "name": "Beef Tacos",
+          "price": 10,
+          "description": "Soft or crunchy tacos filled with seasoned beef, lettuce, cheese, and salsa",
+          "thumb": null
+        },
+        {
+          "id": 72,
+          "name": "Chili Con Carne",
+          "price": 12,
+          "description": "Spicy stew containing chili peppers, meat, tomatoes, beans, and spices",
+          "thumb": null
+        }
+      ]
+    },
+    {
+      "id": 66,
+      "name": "El Cartel",
+      "address": "Corso Grande, 102",
+      "VAT": "IT998877665",
+      "phoneNumber": "0623456789",
+      "cuisineType": [
+        "Messicano"
+      ],
+      "image": "Rist_messicano.jpg",
+      "foodItem": [
+        {
+          "id": 69,
+          "name": "Nachos Supreme",
+          "price": 8,
+          "description": "Crispy corn tortillas topped with melted cheese, jalapeños, beans, and guacamole",
+          "thumb": null
+        },
+        {
+          "id": 70,
+          "name": "Chicken Fajitas",
+          "price": 14,
+          "description": "Grilled chicken strips served on a sizzling platter with peppers, onions, and tortillas",
+          "thumb": null
+        },
+        {
+          "id": 71,
+          "name": "Beef Tacos",
+          "price": 10,
+          "description": "Soft or crunchy tacos filled with seasoned beef, lettuce, cheese, and salsa",
+          "thumb": null
+        },
+        {
+          "id": 72,
+          "name": "Chili Con Carne",
+          "price": 12,
+          "description": "Spicy stew containing chili peppers, meat, tomatoes, beans, and spices",
+          "thumb": null
+        }
+      ]
+    },
+    {
+      "id": 67,
+      "name": "los pollos hermanos",
+      "address": "Corso Grande, 102",
+      "VAT": "IT998877665",
+      "phoneNumber": "0623456789",
+      "cuisineType": [
+        "Messicano"
+      ],
+      "image": "Rist_messicano1.jpg",
+      "foodItem": [
+        {
+          "id": 69,
+          "name": "Nachos Supreme",
+          "price": 8,
+          "description": "Crispy corn tortillas topped with melted cheese, jalapeños, beans, and guacamole",
+          "thumb": null
+        },
+        {
+          "id": 70,
+          "name": "Chicken Fajitas",
+          "price": 14,
+          "description": "Grilled chicken strips served on a sizzling platter with peppers, onions, and tortillas",
+          "thumb": null
+        },
+        {
+          "id": 71,
+          "name": "Beef Tacos",
+          "price": 10,
+          "description": "Soft or crunchy tacos filled with seasoned beef, lettuce, cheese, and salsa",
+          "thumb": null
+        },
+        {
+          "id": 72,
+          "name": "Chili Con Carne",
+          "price": 12,
+          "description": "Spicy stew containing chili peppers, meat, tomatoes, beans, and spices",
+          "thumb": null
+        }
+      ]
+    },
+    {
+      "id": 68,
+      "name": "los pollos hermanos 2",
+      "address": "Corso Grande, 102",
+      "VAT": "IT998877665",
+      "phoneNumber": "0623456789",
+      "cuisineType": [
+        "Messicano"
+      ],
+      "image": "Rist_messicano2.jpg",
+      "foodItem": [
+        {
+          "id": 69,
+          "name": "Nachos Supreme",
+          "price": 8,
+          "description": "Crispy corn tortillas topped with melted cheese, jalapeños, beans, and guacamole",
+          "thumb": null
+        },
+        {
+          "id": 70,
+          "name": "Chicken Fajitas",
+          "price": 14,
+          "description": "Grilled chicken strips served on a sizzling platter with peppers, onions, and tortillas",
+          "thumb": null
+        },
+        {
+          "id": 71,
+          "name": "Beef Tacos",
+          "price": 10,
+          "description": "Soft or crunchy tacos filled with seasoned beef, lettuce, cheese, and salsa",
+          "thumb": null
+        },
+        {
+          "id": 72,
+          "name": "Chili Con Carne",
+          "price": 12,
+          "description": "Spicy stew containing chili peppers, meat, tomatoes, beans, and spices",
+          "thumb": null
+        }
+      ]
+    },
     {
       "id": 69,
-      "name": "Nachos Supreme",
-      "price": 8,
-      "description": "Crispy corn tortillas topped with melted cheese, jalapeños, beans, and guacamole",
-      "thumb": null
+      "name": "Toretto's",
+      "address": "Corso Grande, 102",
+      "VAT": "IT998877665",
+      "phoneNumber": "0623456789",
+      "cuisineType": [
+        "Messicano"
+      ],
+      "image": "Rist_messicano.jpg",
+      "foodItem": [
+        {
+          "id": 69,
+          "name": "Nachos Supreme",
+          "price": 8,
+          "description": "Crispy corn tortillas topped with melted cheese, jalapeños, beans, and guacamole",
+          "thumb": null
+        },
+        {
+          "id": 70,
+          "name": "Chicken Fajitas",
+          "price": 14,
+          "description": "Grilled chicken strips served on a sizzling platter with peppers, onions, and tortillas",
+          "thumb": null
+        },
+        {
+          "id": 71,
+          "name": "Beef Tacos",
+          "price": 10,
+          "description": "Soft or crunchy tacos filled with seasoned beef, lettuce, cheese, and salsa",
+          "thumb": null
+        },
+        {
+          "id": 72,
+          "name": "Chili Con Carne",
+          "price": 12,
+          "description": "Spicy stew containing chili peppers, meat, tomatoes, beans, and spices",
+          "thumb": null
+        }
+      ]
     },
     {
       "id": 70,
-      "name": "Chicken Fajitas",
-      "price": 14,
-      "description": "Grilled chicken strips served on a sizzling platter with peppers, onions, and tortillas",
-      "thumb": null
+      "name": "Donde?!",
+      "address": "Corso Grande, 102",
+      "VAT": "IT998877665",
+      "phoneNumber": "0623456789",
+      "cuisineType": [
+        "Messicano"
+      ],
+      "image": "Rist_messicano1.jpg",
+      "foodItem": [
+        {
+          "id": 69,
+          "name": "Nachos Supreme",
+          "price": 8,
+          "description": "Crispy corn tortillas topped with melted cheese, jalapeños, beans, and guacamole",
+          "thumb": null
+        },
+        {
+          "id": 70,
+          "name": "Chicken Fajitas",
+          "price": 14,
+          "description": "Grilled chicken strips served on a sizzling platter with peppers, onions, and tortillas",
+          "thumb": null
+        },
+        {
+          "id": 71,
+          "name": "Beef Tacos",
+          "price": 10,
+          "description": "Soft or crunchy tacos filled with seasoned beef, lettuce, cheese, and salsa",
+          "thumb": null
+        },
+        {
+          "id": 72,
+          "name": "Chili Con Carne",
+          "price": 12,
+          "description": "Spicy stew containing chili peppers, meat, tomatoes, beans, and spices",
+          "thumb": null
+        }
+      ]
     },
     {
       "id": 71,
-      "name": "Beef Tacos",
-      "price": 10,
-      "description": "Soft or crunchy tacos filled with seasoned beef, lettuce, cheese, and salsa",
-      "thumb": null
+      "name": "Bangkok e Go",
+      "address": "Via Orientale, 58",
+      "VAT": "IT112233445",
+      "phoneNumber": "0634567890",
+      "cuisineType": [
+        "Thai"
+      ],
+      "image": "Rist_thai1.jpg",
+      "foodItem": [
+        {
+          "id": 73,
+          "name": "Pad Thai",
+          "price": 10,
+          "description": "Stir-fried rice noodles with eggs, tofu, tamarind pulp, and shrimp or chicken, garnished with peanuts",
+          "thumb": null
+        },
+        {
+          "id": 74,
+          "name": "Green Curry Chicken",
+          "price": 12,
+          "description": "Spicy and sweet green curry with chicken, eggplants, bamboo shoots, and basil leaves",
+          "thumb": null
+        },
+        {
+          "id": 75,
+          "name": "Tom Yum Goong",
+          "price": 13,
+          "description": "Hot and sour Thai soup with shrimp, mushrooms, tomatoes, lemongrass, galangal, and lime leaves",
+          "thumb": null
+        },
+        {
+          "id": 76,
+          "name": "Mango Sticky Rice",
+          "price": 7,
+          "description": "Sweet sticky rice with fresh mango slices and coconut milk",
+          "thumb": null
+        }
+      ]
     },
     {
       "id": 72,
-      "name": "Chili Con Carne",
-      "price": 12,
-      "description": "Spicy stew containing chili peppers, meat, tomatoes, beans, and spices",
-      "thumb": null
-    }
-  ]
-  },
-{
-  "id": 9,
-  "name": "Bangkok Bistro",
-  "address": "Via Orientale, 58",
-  "VAT": "IT112233445",
-  "phoneNumber": "0634567890",
-  "cuisineType": ["Thai"],
-  "image": "Rist_thai.jpg",
-  "foodItem": [
+      "name": "LadyB",
+      "address": "Via Orientale, 58",
+      "VAT": "IT112233445",
+      "phoneNumber": "0634567890",
+      "cuisineType": [
+        "Thai"
+      ],
+      "image": "Rist_thai2.jpg",
+      "foodItem": [
+        {
+          "id": 73,
+          "name": "Pad Thai",
+          "price": 10,
+          "description": "Stir-fried rice noodles with eggs, tofu, tamarind pulp, and shrimp or chicken, garnished with peanuts",
+          "thumb": null
+        },
+        {
+          "id": 74,
+          "name": "Green Curry Chicken",
+          "price": 12,
+          "description": "Spicy and sweet green curry with chicken, eggplants, bamboo shoots, and basil leaves",
+          "thumb": null
+        },
+        {
+          "id": 75,
+          "name": "Tom Yum Goong",
+          "price": 13,
+          "description": "Hot and sour Thai soup with shrimp, mushrooms, tomatoes, lemongrass, galangal, and lime leaves",
+          "thumb": null
+        },
+        {
+          "id": 76,
+          "name": "Mango Sticky Rice",
+          "price": 7,
+          "description": "Sweet sticky rice with fresh mango slices and coconut milk",
+          "thumb": null
+        }
+      ]
+    },
     {
       "id": 73,
-      "name": "Pad Thai",
-      "price": 10,
-      "description": "Stir-fried rice noodles with eggs, tofu, tamarind pulp, and shrimp or chicken, garnished with peanuts",
-      "thumb": null
+      "name": "Thai Square",
+      "address": "Via Orientale, 58",
+      "VAT": "IT112233445",
+      "phoneNumber": "0634567890",
+      "cuisineType": [
+        "Thai"
+      ],
+      "image": "Rist_thai3.jpg",
+      "foodItem": [
+        {
+          "id": 73,
+          "name": "Pad Thai",
+          "price": 10,
+          "description": "Stir-fried rice noodles with eggs, tofu, tamarind pulp, and shrimp or chicken, garnished with peanuts",
+          "thumb": null
+        },
+        {
+          "id": 74,
+          "name": "Green Curry Chicken",
+          "price": 12,
+          "description": "Spicy and sweet green curry with chicken, eggplants, bamboo shoots, and basil leaves",
+          "thumb": null
+        },
+        {
+          "id": 75,
+          "name": "Tom Yum Goong",
+          "price": 13,
+          "description": "Hot and sour Thai soup with shrimp, mushrooms, tomatoes, lemongrass, galangal, and lime leaves",
+          "thumb": null
+        },
+        {
+          "id": 76,
+          "name": "Mango Sticky Rice",
+          "price": 7,
+          "description": "Sweet sticky rice with fresh mango slices and coconut milk",
+          "thumb": null
+        }
+      ]
     },
     {
       "id": 74,
-      "name": "Green Curry Chicken",
-      "price": 12,
-      "description": "Spicy and sweet green curry with chicken, eggplants, bamboo shoots, and basil leaves",
-      "thumb": null
+      "name": "Thai Chokdee restaurant",
+      "address": "Via Orientale, 58",
+      "VAT": "IT112233445",
+      "phoneNumber": "0634567890",
+      "cuisineType": [
+        "Thai"
+      ],
+      "image": "Rist_thai.jpg",
+      "foodItem": [
+        {
+          "id": 73,
+          "name": "Pad Thai",
+          "price": 10,
+          "description": "Stir-fried rice noodles with eggs, tofu, tamarind pulp, and shrimp or chicken, garnished with peanuts",
+          "thumb": null
+        },
+        {
+          "id": 74,
+          "name": "Green Curry Chicken",
+          "price": 12,
+          "description": "Spicy and sweet green curry with chicken, eggplants, bamboo shoots, and basil leaves",
+          "thumb": null
+        },
+        {
+          "id": 75,
+          "name": "Tom Yum Goong",
+          "price": 13,
+          "description": "Hot and sour Thai soup with shrimp, mushrooms, tomatoes, lemongrass, galangal, and lime leaves",
+          "thumb": null
+        },
+        {
+          "id": 76,
+          "name": "Mango Sticky Rice",
+          "price": 7,
+          "description": "Sweet sticky rice with fresh mango slices and coconut milk",
+          "thumb": null
+        }
+      ]
     },
     {
       "id": 75,
-      "name": "Tom Yum Goong",
-      "price": 13,
-      "description": "Hot and sour Thai soup with shrimp, mushrooms, tomatoes, lemongrass, galangal, and lime leaves",
-      "thumb": null
+      "name": "Komenn Thai",
+      "address": "Via Orientale, 58",
+      "VAT": "IT112233445",
+      "phoneNumber": "0634567890",
+      "cuisineType": [
+        "Thai"
+      ],
+      "image": "Rist_thai1.jpg",
+      "foodItem": [
+        {
+          "id": 73,
+          "name": "Pad Thai",
+          "price": 10,
+          "description": "Stir-fried rice noodles with eggs, tofu, tamarind pulp, and shrimp or chicken, garnished with peanuts",
+          "thumb": null
+        },
+        {
+          "id": 74,
+          "name": "Green Curry Chicken",
+          "price": 12,
+          "description": "Spicy and sweet green curry with chicken, eggplants, bamboo shoots, and basil leaves",
+          "thumb": null
+        },
+        {
+          "id": 75,
+          "name": "Tom Yum Goong",
+          "price": 13,
+          "description": "Hot and sour Thai soup with shrimp, mushrooms, tomatoes, lemongrass, galangal, and lime leaves",
+          "thumb": null
+        },
+        {
+          "id": 76,
+          "name": "Mango Sticky Rice",
+          "price": 7,
+          "description": "Sweet sticky rice with fresh mango slices and coconut milk",
+          "thumb": null
+        }
+      ]
     },
     {
       "id": 76,
-      "name": "Mango Sticky Rice",
-      "price": 7,
-      "description": "Sweet sticky rice with fresh mango slices and coconut milk",
-      "thumb": null
-    }
-    ]
+      "name": "Oriental Thai Restaurant",
+      "address": "Via Orientale, 58",
+      "VAT": "IT112233445",
+      "phoneNumber": "0634567890",
+      "cuisineType": [
+        "Thai"
+      ],
+      "image": "Rist_thai2.jpg",
+      "foodItem": [
+        {
+          "id": 73,
+          "name": "Pad Thai",
+          "price": 10,
+          "description": "Stir-fried rice noodles with eggs, tofu, tamarind pulp, and shrimp or chicken, garnished with peanuts",
+          "thumb": null
+        },
+        {
+          "id": 74,
+          "name": "Green Curry Chicken",
+          "price": 12,
+          "description": "Spicy and sweet green curry with chicken, eggplants, bamboo shoots, and basil leaves",
+          "thumb": null
+        },
+        {
+          "id": 75,
+          "name": "Tom Yum Goong",
+          "price": 13,
+          "description": "Hot and sour Thai soup with shrimp, mushrooms, tomatoes, lemongrass, galangal, and lime leaves",
+          "thumb": null
+        },
+        {
+          "id": 76,
+          "name": "Mango Sticky Rice",
+          "price": 7,
+          "description": "Sweet sticky rice with fresh mango slices and coconut milk",
+          "thumb": null
+        }
+      ]
     },
     {
-  "id": 10,
-  "name": "Kebab King",
-  "address": "Via della Libertà, 45",
-  "VAT": "IT987654321",
-  "phoneNumber": "0643210987",
-  "cuisineType": ["Kebab"],
-   "image": "Rist_kebab.jpg",
-  "foodItem": [
-    {
       "id": 77,
-      "name": "Doner Kebab",
-      "price": 8,
-      "description": "Rotisserie grilled meat, served in a pita with salad and sauces",
-      "thumb": null
+      "name": "Dieci Fratelli",
+      "address": "Via della Libertà, 45",
+      "VAT": "IT987654321",
+      "phoneNumber": "0643210987",
+      "cuisineType": [
+        "Kebab"
+      ],
+      "image": "Rist_kebab1.jpg",
+      "foodItem": [
+        {
+          "id": 77,
+          "name": "Doner Kebab",
+          "price": 8,
+          "description": "Rotisserie grilled meat, served in a pita with salad and sauces",
+          "thumb": null
+        },
+        {
+          "id": 78,
+          "name": "Shish Kebab",
+          "price": 10,
+          "description": "Skewered and grilled cubes of meat, served with grilled vegetables",
+          "thumb": null
+        },
+        {
+          "id": 79,
+          "name": "Adana Kebab",
+          "price": 12,
+          "description": "Hand-minced meat kebab mounted on a wide iron skewer and grilled on an open mangal filled with burning charcoal",
+          "thumb": null
+        },
+        {
+          "id": 80,
+          "name": "Kebab Platter",
+          "price": 15,
+          "description": "A platter of mixed kebabs, including doner, shish, and Adana, served with sides of rice and salad",
+          "thumb": null
+        },
+        {
+          "id": 81,
+          "name": "Falafel Wrap",
+          "price": 7,
+          "description": "Deep-fried chickpea balls served in a wrap with vegetables and tahini sauce",
+          "thumb": null
+        }
+      ]
     },
     {
       "id": 78,
-      "name": "Shish Kebab",
-      "price": 10,
-      "description": "Skewered and grilled cubes of meat, served with grilled vegetables",
-      "thumb": null
+      "name": "Instambull",
+      "address": "Via della Libertà, 45",
+      "VAT": "IT987654321",
+      "phoneNumber": "0643210987",
+      "cuisineType": [
+        "Kebab"
+      ],
+      "image": "Rist_kebab2.jpg",
+      "foodItem": [
+        {
+          "id": 77,
+          "name": "Doner Kebab",
+          "price": 8,
+          "description": "Rotisserie grilled meat, served in a pita with salad and sauces",
+          "thumb": null
+        },
+        {
+          "id": 78,
+          "name": "Shish Kebab",
+          "price": 10,
+          "description": "Skewered and grilled cubes of meat, served with grilled vegetables",
+          "thumb": null
+        },
+        {
+          "id": 79,
+          "name": "Adana Kebab",
+          "price": 12,
+          "description": "Hand-minced meat kebab mounted on a wide iron skewer and grilled on an open mangal filled with burning charcoal",
+          "thumb": null
+        },
+        {
+          "id": 80,
+          "name": "Kebab Platter",
+          "price": 15,
+          "description": "A platter of mixed kebabs, including doner, shish, and Adana, served with sides of rice and salad",
+          "thumb": null
+        },
+        {
+          "id": 81,
+          "name": "Falafel Wrap",
+          "price": 7,
+          "description": "Deep-fried chickpea balls served in a wrap with vegetables and tahini sauce",
+          "thumb": null
+        }
+      ]
     },
     {
       "id": 79,
-      "name": "Adana Kebab",
-      "price": 12,
-      "description": "Hand-minced meat kebab mounted on a wide iron skewer and grilled on an open mangal filled with burning charcoal",
-      "thumb": null
+      "name": "King Kebab ",
+      "address": "Via della Libertà, 45",
+      "VAT": "IT987654321",
+      "phoneNumber": "0643210987",
+      "cuisineType": [
+        "Kebab"
+      ],
+      "image": "Rist_kebab3.jpg",
+      "foodItem": [
+        {
+          "id": 77,
+          "name": "Doner Kebab",
+          "price": 8,
+          "description": "Rotisserie grilled meat, served in a pita with salad and sauces",
+          "thumb": null
+        },
+        {
+          "id": 78,
+          "name": "Shish Kebab",
+          "price": 10,
+          "description": "Skewered and grilled cubes of meat, served with grilled vegetables",
+          "thumb": null
+        },
+        {
+          "id": 79,
+          "name": "Adana Kebab",
+          "price": 12,
+          "description": "Hand-minced meat kebab mounted on a wide iron skewer and grilled on an open mangal filled with burning charcoal",
+          "thumb": null
+        },
+        {
+          "id": 80,
+          "name": "Kebab Platter",
+          "price": 15,
+          "description": "A platter of mixed kebabs, including doner, shish, and Adana, served with sides of rice and salad",
+          "thumb": null
+        },
+        {
+          "id": 81,
+          "name": "Falafel Wrap",
+          "price": 7,
+          "description": "Deep-fried chickpea balls served in a wrap with vegetables and tahini sauce",
+          "thumb": null
+        }
+      ]
     },
     {
       "id": 80,
-      "name": "Kebab Platter",
-      "price": 15,
-      "description": "A platter of mixed kebabs, including doner, shish, and Adana, served with sides of rice and salad",
-      "thumb": null
+      "name": "Il Cavaliere",
+      "address": "Via della Libertà, 45",
+      "VAT": "IT987654321",
+      "phoneNumber": "0643210987",
+      "cuisineType": [
+        "Kebab"
+      ],
+      "image": "Rist_kebab1.jpg",
+      "foodItem": [
+        {
+          "id": 77,
+          "name": "Doner Kebab",
+          "price": 8,
+          "description": "Rotisserie grilled meat, served in a pita with salad and sauces",
+          "thumb": null
+        },
+        {
+          "id": 78,
+          "name": "Shish Kebab",
+          "price": 10,
+          "description": "Skewered and grilled cubes of meat, served with grilled vegetables",
+          "thumb": null
+        },
+        {
+          "id": 79,
+          "name": "Adana Kebab",
+          "price": 12,
+          "description": "Hand-minced meat kebab mounted on a wide iron skewer and grilled on an open mangal filled with burning charcoal",
+          "thumb": null
+        },
+        {
+          "id": 80,
+          "name": "Kebab Platter",
+          "price": 15,
+          "description": "A platter of mixed kebabs, including doner, shish, and Adana, served with sides of rice and salad",
+          "thumb": null
+        },
+        {
+          "id": 81,
+          "name": "Falafel Wrap",
+          "price": 7,
+          "description": "Deep-fried chickpea balls served in a wrap with vegetables and tahini sauce",
+          "thumb": null
+        }
+      ]
     },
     {
       "id": 81,
-      "name": "Falafel Wrap",
-      "price": 7,
-      "description": "Deep-fried chickpea balls served in a wrap with vegetables and tahini sauce",
-      "thumb": null
+      "name": "Kasmir Pizza",
+      "address": "Via della Libertà, 45",
+      "VAT": "IT987654321",
+      "phoneNumber": "0643210987",
+      "cuisineType": [
+        "Kebab", "Pizza"
+      ],
+      "image": "Rist_kebab2.jpg",
+      "foodItem": [
+        {
+          "id": 77,
+          "name": "Doner Kebab",
+          "price": 8,
+          "description": "Rotisserie grilled meat, served in a pita with salad and sauces",
+          "thumb": null
+        },
+        {
+          "id": 78,
+          "name": "Shish Kebab",
+          "price": 10,
+          "description": "Skewered and grilled cubes of meat, served with grilled vegetables",
+          "thumb": null
+        },
+        {
+          "id": 79,
+          "name": "Adana Kebab",
+          "price": 12,
+          "description": "Hand-minced meat kebab mounted on a wide iron skewer and grilled on an open mangal filled with burning charcoal",
+          "thumb": null
+        },
+        {
+          "id": 80,
+          "name": "Kebab Platter",
+          "price": 15,
+          "description": "A platter of mixed kebabs, including doner, shish, and Adana, served with sides of rice and salad",
+          "thumb": null
+        },
+        {
+          "id": 81,
+          "name": "Falafel Wrap",
+          "price": 7,
+          "description": "Deep-fried chickpea balls served in a wrap with vegetables and tahini sauce",
+          "thumb": null
+        }
+      ]
+    },
+    {
+      "id": 82,
+      "name": "Kebab King V",
+      "address": "Via della Libertà, 45",
+      "VAT": "IT987654321",
+      "phoneNumber": "0643210987",
+      "cuisineType": [
+        "Kebab"
+      ],
+      "image": "Rist_kebab3.jpg",
+      "foodItem": [
+        {
+          "id": 77,
+          "name": "Doner Kebab",
+          "price": 8,
+          "description": "Rotisserie grilled meat, served in a pita with salad and sauces",
+          "thumb": null
+        },
+        {
+          "id": 78,
+          "name": "Shish Kebab",
+          "price": 10,
+          "description": "Skewered and grilled cubes of meat, served with grilled vegetables",
+          "thumb": null
+        },
+        {
+          "id": 79,
+          "name": "Adana Kebab",
+          "price": 12,
+          "description": "Hand-minced meat kebab mounted on a wide iron skewer and grilled on an open mangal filled with burning charcoal",
+          "thumb": null
+        },
+        {
+          "id": 80,
+          "name": "Kebab Platter",
+          "price": 15,
+          "description": "A platter of mixed kebabs, including doner, shish, and Adana, served with sides of rice and salad",
+          "thumb": null
+        },
+        {
+          "id": 81,
+          "name": "Falafel Wrap",
+          "price": 7,
+          "description": "Deep-fried chickpea balls served in a wrap with vegetables and tahini sauce",
+          "thumb": null
+        }
+      ]
     }
   ]
 }
-
-]
-}
-
-
-
-
-

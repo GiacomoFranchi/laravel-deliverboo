@@ -25,9 +25,9 @@ class DatabaseSeeder extends Seeder
             UsersTableSeeder::class,
             RestaurantsDataSeeder::class,
             //RestaurantsTableSeeder::class,
-            //CusineTypesTableSeeder::class,
-            //CusineTypeRestaurantSeeder::class,
-            //Food_itemsTableSeeder::class,
+            CusineTypesTableSeeder::class,
+            CusineTypeRestaurantSeeder::class,
+            Food_itemsTableSeeder::class,
             OrderTableSeeder::class,
         ]);
     }
