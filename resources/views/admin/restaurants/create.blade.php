@@ -82,14 +82,12 @@
                     <label for="closure_day" class="form-label fw-bold">Select closure day:</label>
                     <select class="form-select @error('closure_day') is-invalid @enderror" name="closure_day"
                         id="closure_day">
-                        <option @selected(!old('closure_day')) value="none">No closure day</option>
-                        <option value="monday">Monday</option>
-                        <option value="tuesday">Tuesday</option>
-                        <option value="wednesday">Wednesday</option>
-                        <option value="thursday">Thursday</option>
-                        <option value="friday">Friday</option>
-                        <option value="saturday">Saturday</option>
-                        <option value="sunday">Sunday</option>
+                        @foreach (['None', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'] as $day)
+                            <option value="{{ strtolower($day) }}"
+                                {{ old('closure_day') == strtolower($day) ? 'selected' : '' }}>
+                                {{ $day === 'None' ? 'No closure day' : $day }}
+                            </option>
+                        @endforeach
                     </select>
 
                     @error('type_id')
