@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\RestaurantController;
 use App\Http\Controllers\Admin\Food_itemController;
 use App\Http\Controllers\Admin\OrderController as AdminOrderController;
 use App\Http\Controllers\Admin\Food_itemRestaurantController;
+use App\Http\Controllers\Admin\RestaurantStatisticController;
 use App\Models\Food_item;
 use App\Models\Restaurant;
 use Illuminate\Support\Facades\Route;
@@ -27,6 +28,7 @@ Route::get('/', function () {
 
 Route::get('/admin/orders/{restaurant}/food-items', [AdminOrderController::class, 'getFoodItemsForRestaurant']);
 Route::get('/admin/restaurants/{restaurant}/orders', [AdminOrderController::class, 'indexForRestaurant'])->name('admin.restaurant.orders.index');
+Route::get('/admin/restaurants/statistics', [RestaurantStatisticController::class, 'index'])->name('admin.restaurants.statistics.index');
 Route::get('/dashboard', function () {
     return view('admin.dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

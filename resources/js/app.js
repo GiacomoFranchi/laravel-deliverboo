@@ -1,5 +1,6 @@
 import "./bootstrap";
 import './restaurantSelect';
+import Chart from 'chart.js/auto';
 
 import "~resources/scss/app.scss";
 import * as bootstrap from "bootstrap";
