@@ -4,7 +4,10 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\GuestOrderRequest;
+use App\Mail\NewOrder;
+use App\Mail\NewOrderToCustomer;
 use App\Models\Food_item;
+use App\Models\Food_itemOrder;
 use App\Models\Order;
 use App\Models\Restaurant;
 use App\Services\BraintreeService;
@@ -12,6 +15,7 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
 use Symfony\Component\HttpFoundation\Response;
 class OrderController extends Controller
@@ -49,8 +53,20 @@ class OrderController extends Controller
 
             $paymentResult = $this->braintreeService->processPayment($request->paymentMethodNonce, $totalPrice);
             Log::info('Payment result', ['success' => $paymentResult->success, 'message' => $paymentResult->message]);
+
             if ($paymentResult->success) {
                 DB::commit();
+                $food_itemOrder = new Food_itemOrder();
+                $food_itemOrder->food_item_id = $item['id'];
+                $food_itemOrder->order_id = $order->id;
+                $food_itemOrder->quantity = $item['quantity'];
+                $food_itemOrder->save();
+    
+                Mail::to('email1@email.it')->send(new NewOrder($order));
+    
+                Mail::to($order->customers_email)->send(new NewOrderToCustomer ($food_itemOrder, $order));
+
+
                 return response()->json(['message' => 'Ordine creato e processato'], Response::HTTP_CREATED);
             }    // } else {
             //     DB::rollBack();
