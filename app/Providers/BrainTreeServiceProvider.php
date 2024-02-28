@@ -2,12 +2,6 @@
 
 namespace App\Providers;
 
-use Illuminate\Support\ServiceProvider;
-
-
-
-namespace App\Providers;
-
 use App\Services\BraintreeService;
 use Illuminate\Support\ServiceProvider;
 use Braintree\Gateway;
@@ -45,4 +39,3 @@ class BraintreeServiceProvider extends ServiceProvider
         //
     }
 }
-

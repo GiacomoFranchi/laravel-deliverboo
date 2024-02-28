@@ -30,5 +30,6 @@ Route::get('/restaurants/cusine_type/{cusine_types_name}', [RestaurantController
 Route::get('/cusine_types', [CuisineTypeController::class, 'index']);
 Route::get('/food_items', [FoodItemController::class, 'index']);
 Route::post('/restaurant/{slug}/orders', [OrderController::class, 'store']);
-Route::get('/braintree/token', [BrainTreeController::class, 'getToken'])->name('braintree.token');
-Route::post('/braintree/checkout', [BrainTreeController::class, 'checkout'])->name('braintree.checkout');
+Route::get('/payment/token', [BrainTreeController::class, 'getToken'])->name('payment.token');
+Route::post('/payment/checkout', [BrainTreeController::class, 'checkout'])->name('payment.checkout');
+

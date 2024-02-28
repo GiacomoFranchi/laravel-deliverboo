@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Braintree\Gateway;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class BrainTreeController extends Controller
 {
@@ -16,9 +17,15 @@ class BrainTreeController extends Controller
 
     public function getToken()
     {
-        $clientToken = $this->gateway->clientToken()->generate();
-        return response()->json(['token' => $clientToken]);
+        try {
+            $clientToken = $this->gateway->clientToken()->generate();
+            return response()->json(['token' => $clientToken]);
+        } catch (\Exception $e) {
+            Log::error("Error generating Braintree token: " . $e->getMessage());
+            return response()->json(['error' => 'An error occurred while generating the token'], 500);
+        }
     }
+
 
     public function checkout(Request $request)
     {
@@ -34,7 +41,7 @@ class BrainTreeController extends Controller
 
         $result = $this->gateway->transaction()->sale([
             'amount' => $amount,
-            'paymentMethodNonce' => $nonceFromTheClient,
+            'payment_method_nonce' => $nonceFromTheClient,
             // 'deviceData' => $deviceDataFromTheClient,
             'options' => [
                 'submitForSettlement' => True
