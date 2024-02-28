@@ -52,10 +52,11 @@ class OrderController extends Controller
             if ($paymentResult->success) {
                 DB::commit();
                 return response()->json(['message' => 'Ordine creato e processato'], Response::HTTP_CREATED);
-            } else {
-                DB::rollBack();
-                return response()->json(['error' => 'Processo di pagamento non riuscito'], Response::HTTP_BAD_REQUEST);
-            }
+            }    // } else {
+            //     DB::rollBack();
+            //     return response()->json(['error' => 'Processo di pagamento non riuscito'], Response::HTTP_BAD_REQUEST);
+            // }
+            DB::commit();
         } catch (\Exception $e) {
             DB::rollBack();
             Log::error('Error processing payment', ['exception' => $e->getMessage()]);

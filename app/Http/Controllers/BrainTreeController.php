@@ -26,6 +26,11 @@ class BrainTreeController extends Controller
         }
     }
 
+    // public function getToken()
+    // {
+    //     $clientToken = $this->gateway->clientToken()->generate();
+    //     return response()->json(['token' => $clientToken]);
+    // }
 
     public function checkout(Request $request)
     {
@@ -41,7 +46,7 @@ class BrainTreeController extends Controller
 
         $result = $this->gateway->transaction()->sale([
             'amount' => $amount,
-            'payment_method_nonce' => $nonceFromTheClient,
+            'paymentMethodNonce' => $nonceFromTheClient,
             // 'deviceData' => $deviceDataFromTheClient,
             'options' => [
                 'submitForSettlement' => True

@@ -14,17 +14,17 @@ class BraintreeService
     {
         $this->gateway = $gateway;
     }
-    
+
     public function generateClientToken()
     {
         return $this->gateway->clientToken()->generate();
     }
 
-    public function processPayment($nonceFromTheClient, $amount)
+    public function processPayment($nonce, $amount)
     {
         $result = $this->gateway->transaction()->sale([
             'amount' => $amount,
-            'payment_method_nonce' => $nonceFromTheClient,
+            'paymentMethodNonce' => $nonce,
             'options' => [
                 'submitForSettlement' => true
             ]
