@@ -22,8 +22,10 @@
 @section('scripts')
 
     <script>
-        // Make the restaurantsData a global variable so it can be accessed by mychart.js
+
         window.restaurantsData = @json($restaurantsData);
+        window.totalRestaurantsOwned= @json($totalRestaurantsOwned);
     </script>
     @vite(['resources/js/mychart.js'])
+
 @endsection
