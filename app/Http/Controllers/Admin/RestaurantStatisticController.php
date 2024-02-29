@@ -27,18 +27,21 @@ class RestaurantStatisticController extends Controller
             ->groupBy('restaurants.name')
             ->get();
 
-        return view('admin.restaurants.statistics.index', compact('restaurantsData'));
+        $totalRestaurantsOwned = Restaurant::where('user_id', '=', Auth::user()->id)->count();
+        
+
+        return view('admin.restaurants.statistics.index', compact('restaurantsData', 'totalRestaurantsOwned'));
     }
 
     public function show($restaurantId)
     {
 
-        // Ensure the authenticated user owns the restaurant
+        //user auth
         $restaurant = Restaurant::where('id', $restaurantId)
             ->where('user_id', Auth::user()->id)
             ->firstOrFail();
 
-        // Aggregate total orders and total revenue for the restaurant's food items
+        
         $statistics = DB::table('food_items')
         ->join('food_item_order', 'food_items.id', '=', 'food_item_order.food_item_id')
         ->join('orders', 'food_item_order.order_id', '=', 'orders.id')
