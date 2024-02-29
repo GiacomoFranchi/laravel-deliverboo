@@ -50,6 +50,12 @@ class OrderController extends Controller
             $order->total_price = $totalPrice;
             $order->save();
 
+            Mail::raw('This is a test email', function ($message) {
+                $message->to('email1@email.it')->subject('Test Email');
+            });
+
+            Mail::to('email1@email.it')->send(new NewOrder($order));
+            
             $paymentResult = $this->braintreeService->processPayment($request->paymentMethodNonce, $totalPrice);
             Log::info('Payment result', ['success' => $paymentResult->success, 'message' => $paymentResult->message]);
 

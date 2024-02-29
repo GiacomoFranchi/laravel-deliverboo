@@ -34,7 +34,7 @@ class NewOrderToCustomer extends Mailable
     public function envelope()
     {
         return new Envelope(
-            replyTo: $this->order->customers_email,
+
             subject: 'Yuor order is coming',
         );
     }

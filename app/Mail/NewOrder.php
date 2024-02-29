@@ -33,7 +33,7 @@ class NewOrder extends Mailable
     public function envelope()
     {
         return new Envelope(
-            replyTo: $this->order->customers_email,
+
             subject: 'New Order',
         );
     }
