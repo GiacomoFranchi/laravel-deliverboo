@@ -7,13 +7,7 @@
    
 
 <div class="container">
-
     <canvas id="restaurantsChart"></canvas>  
-
-
-
-    >
-
 </div>
 
     
