@@ -70,6 +70,13 @@
             </li>
         </ul>
 
+        <h2>Order Summary:</h2>
+        <ul>
+            @foreach($order->food_items as $food_item)
+            <li>{{ $food_item->name }}</span></li>
+            @endforeach
+        </ul>
+
         <strong>Total:</strong> {{ $order->total_price }} €
 
 

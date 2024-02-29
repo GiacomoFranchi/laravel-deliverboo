@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\GuestOrderRequest;
 use App\Mail\NewOrder;
+use App\Mail\NewOrderToCustomer;
 use App\Models\Food_item;
 use App\Models\Food_itemOrder;
 use App\Models\Order;
@@ -50,12 +51,9 @@ class OrderController extends Controller
             $order->total_price = $totalPrice;
             $order->save();
 
-            Mail::raw('This is a test email', function ($message) {
-                $message->to('email1@email.it')->subject('Test Email');
-            });
-
             Mail::to('email1@email.it')->send(new NewOrder($order));
-            
+            Mail::to($order->customers_email)->send(new NewOrderToCustomer ($order));
+
             $paymentResult = $this->braintreeService->processPayment($request->paymentMethodNonce, $totalPrice);
             Log::info('Payment result', ['success' => $paymentResult->success, 'message' => $paymentResult->message]);
 
@@ -67,9 +65,8 @@ class OrderController extends Controller
                 // $food_itemOrder->quantity = $item['quantity'];
                 // $food_itemOrder->save();
 
-                Mail::to('email1@email.it')->send(new NewOrder($order));
+                // Mail::to('email1@email.it')->send(new NewOrder($order));
 
-                // Mail::to($order->customers_email)->send(new NewOrderToCustomer ($food_itemOrder, $order));
 
 
                 return response()->json(['message' => 'Ordine creato e processato'], Response::HTTP_CREATED);
