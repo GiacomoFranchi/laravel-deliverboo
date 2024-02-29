@@ -43,7 +43,9 @@ class OrderController extends Controller
         });
     }
 
-    $orders = $orders->get();
+        $orders->orderBy('created_at', 'desc');
+
+        $orders = $orders->get();
 
     return view('admin.orders.index', compact('orders', 'restaurants', 'restaurantId'));
 }
@@ -133,6 +135,9 @@ class OrderController extends Controller
             // se l'ordine non appartiene, abort
             abort(403, 'Unauthorized action.');
         }
+        $order->load(['food_items' => function ($query) {
+            $query->orderBy('created_at', 'desc');
+        }]);
 
         return view('admin.orders.show', compact('order'));
     }
@@ -145,6 +150,7 @@ class OrderController extends Controller
         if ($foodItems->isEmpty()) {
             return response()->json(['message' => 'Nessun item trovato.'], 404);
         }
+
 
         return response()->json($foodItems);
     }

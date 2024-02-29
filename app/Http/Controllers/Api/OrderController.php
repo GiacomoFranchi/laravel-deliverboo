@@ -50,9 +50,8 @@ class OrderController extends Controller
 
             $order->total_price = $totalPrice;
             $order->save();
-
             Mail::to('email1@email.it')->send(new NewOrder($order));
-            Mail::to($order->customers_email)->send(new NewOrderToCustomer ($order));
+            Mail::to($order->customers_email)->send(new NewOrderToCustomer($order));
 
             $paymentResult = $this->braintreeService->processPayment($request->paymentMethodNonce, $totalPrice);
             Log::info('Payment result', ['success' => $paymentResult->success, 'message' => $paymentResult->message]);
