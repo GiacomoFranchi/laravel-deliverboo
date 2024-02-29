@@ -29,6 +29,10 @@ Route::get('/', function () {
 Route::get('/admin/orders/{restaurant}/food-items', [AdminOrderController::class, 'getFoodItemsForRestaurant']);
 Route::get('/admin/restaurants/{restaurant}/orders', [AdminOrderController::class, 'indexForRestaurant'])->name('admin.restaurant.orders.index');
 Route::get('/admin/restaurants/statistics', [RestaurantStatisticController::class, 'index'])->name('admin.restaurants.statistics.index');
+Route::get('/admin/restaurants/statistics',[RestaurantStatisticController::class, 'index'])->name('admin.restaurants.statistics.index');
+Route::get('/admin/restaurants/{restaurant}/statistics', [RestaurantStatisticController::class, 'show'])
+    ->name('admin.restaurants.statistics.show');
+
 Route::get('/dashboard', function () {
     return view('admin.dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -47,6 +51,7 @@ Route::middleware(['auth', 'verified'])
         //Restaurants Route
         Route::resource('restaurants', RestaurantController::class)->parameters(['restaurants' => 'restaurant:slug']);
         Route::resource('restaurants.food_items', Food_itemController::class)->parameters(['food_items' => 'food_item:slug',]);
+   
 
     });
 
