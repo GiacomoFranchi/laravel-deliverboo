@@ -50,6 +50,7 @@ class OrderController extends Controller
 
             $order->total_price = $totalPrice;
             $order->save();
+            
             Mail::to('email1@email.it')->send(new NewOrder($order));
             Mail::to($order->customers_email)->send(new NewOrderToCustomer($order));
 
@@ -58,15 +59,6 @@ class OrderController extends Controller
 
             if ($paymentResult->success) {
                 DB::commit();
-                // $food_itemOrder = new Food_itemOrder();
-                // $food_itemOrder->food_item_id = $item['id'];
-                // $food_itemOrder->order_id = $order->id;
-                // $food_itemOrder->quantity = $item['quantity'];
-                // $food_itemOrder->save();
-
-                // Mail::to('email1@email.it')->send(new NewOrder($order));
-
-
 
                 return response()->json(['message' => 'Ordine creato e processato'], Response::HTTP_CREATED);
             }    // } else {
