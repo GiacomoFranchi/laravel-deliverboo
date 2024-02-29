@@ -13,7 +13,7 @@ class NewOrderToCustomer extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $fooditemorder;
+
     public $order;
 
     /**
@@ -21,9 +21,8 @@ class NewOrderToCustomer extends Mailable
      *
      * @return void
      */
-    public function __construct($_fooditemorder,$_order)
+    public function __construct($_order)
     {
-        $this->fooditemorder = $_fooditemorder;
         $this->order = $_order;
     }
 
