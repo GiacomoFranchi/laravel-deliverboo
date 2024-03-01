@@ -81,7 +81,7 @@
                             <li class="nav-item">
                                 <a class="nav-link text-white {{ Route::currentRouteName() == 'admin.restaurants.statistics.index' ? 'bg-secondary' : '' }}"
                                     href="{{ route('admin.restaurants.statistics.index') }}"> 
-                                    <i class="fa-solid fa-receipt fa-lg fa-fw"></i> Stats
+                                    <i class="fa-solid fa-chart-simple ms-1" style="color: #ffffff;"></i> <span class="ms-1">Stats</span>
                                     
                                     
                                 </a>
