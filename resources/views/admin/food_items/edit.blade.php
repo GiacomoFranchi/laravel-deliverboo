@@ -18,8 +18,7 @@
         @endif
 
         {{-- Inizio Form --}}
-        <form
-            id="form"
+        <form id="form"
             action="{{ route('admin.restaurants.food_items.update', [$food_item->restaurant_id, 'food_item' => $food_item->slug]) }}"
             method="POST" enctype="multipart/form-data">
             @csrf
@@ -52,13 +51,15 @@
             </div>
 
             <div class="m-2 mx-auto w-100">
-                <img id="preview-img" src="{{ asset('storage/' . $food_item->image) }}" alt="" style="max-height: 250px">
+                <img id="preview-img" src="{{ asset('storage/' . $food_item->image) }}" alt=""
+                    style="max-height: 250px">
             </div>
 
             {{-- DESCRIZIONE --}}
             <div class="mb-3">
                 <label for="description" class="form-label">Plate Description:</label>
-                <textarea required minlength="5" class="form-control @error('description') is-invalid
+                <textarea required minlength="5"
+                    class="form-control @error('description') is-invalid
                     
                 @enderror"
                     name="description" id="description" rows="5">{{ old('description', $food_item->description) }}</textarea>
@@ -70,14 +71,18 @@
             {{-- PRICE --}}
             <div class="mb-3">
                 <label for="price" class="form-label">Price:</label>
-                <input type="text" required  min="0" pattern="^\d{1,3}(\.\d{1,2})?"
-                    class="form-control @error('price') is-invalid
+                <div class="input-group">
+                    <span class="input-group-text" id="basic-addon1">€</span>
+                    <input type="text" required min="0" pattern="^\d{1,3}(\.\d{1,2})?"
+                        class="form-control @error('price') is-invalid
                     
                 @enderror"
-                    style="max-height: 250px" id="price" name="price" value="{{ old('price', $food_item->price) }}">
-                @error('price')
-                    <div class="invalid-feedback">{{ $message }}</div>
-                @enderror
+                        style="max-height: 250px" id="price" name="price"
+                        value="{{ old('price', $food_item->price) }}">
+                    @error('price')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
+                </div>
             </div>
 
             {{-- DISPONIBILITA --}}
@@ -90,11 +95,11 @@
             <div class="form-check">
                 <input class="form-check-input" type="radio" value="1" name="is_visible" id="is_visible2" checked>
                 <label class="form-check-label" for="is_visible2">
-                   Available
+                    Available
                 </label>
             </div>
 
-            
+
 
             <button id="submitButton" class="btn btn-success" type="submit">Save</button>
 
@@ -106,5 +111,4 @@
 
 @section('scripts')
     @vite(['resources/js/RestaurantsForms.js'], ['resources/js/image-preview.js'])
-
 @endsection
