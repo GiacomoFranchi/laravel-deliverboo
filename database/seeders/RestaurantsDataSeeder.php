@@ -55,15 +55,17 @@ class RestaurantsDataSeeder extends Seeder
                 $restaurant->cusine_types()->syncWithoutDetaching([$cuisineType->id]);
             }
 
-           
             foreach ($restaurantData['foodItem'] as $foodItemData) {
+
+                
+                $imagePathFood = $foodItemData['thumb'] ? 'food_image/' . $foodItemData['thumb'] : null;
                 Food_item::updateOrCreate(
                     [
                         'restaurant_id' => $restaurant->id,
                         'name' => $foodItemData['name'],
                         'description' => $foodItemData['description'],
                         'price' => $foodItemData['price'],
-                        'image' => $faker->image(null, 640, 480), 
+                        'image' => $imagePathFood, 
                         'is_visible' => 1, 
                        
                     ]

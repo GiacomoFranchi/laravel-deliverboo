@@ -308,70 +308,70 @@
           "name": "Patatas Bravas",
           "price": 6,
           "description": "Fried potatoes with spicy tomato sauce",
-          "thumb": null
+          "thumb": "span2.jpg"
         },
         {
           "id": 38,
           "name": "Gambas al ajillo",
           "price": 15,
           "description": "Shrimp cooked in garlic",
-          "thumb": null
+          "thumb": "span.jpg"
         },
         {
           "id": 39,
           "name": "Jamón ibérico",
           "price": 20,
           "description": "Cured Iberian ham",
-          "thumb": null
+          "thumb": "span1.jpg"
         },
         {
           "id": 40,
           "name": "Tortilla española",
           "price": 10,
           "description": "Spanish omelette with potatoes and onions",
-          "thumb": null
+          "thumb": "span2.jpg"
         },
         {
           "id": 41,
           "name": "Chorizo al vino",
           "price": 12,
           "description": "Chorizo cooked in wine",
-          "thumb": null
+          "thumb": "span.jpg"
         },
         {
           "id": 42,
           "name": "Croquetas de jamón",
           "price": 8,
           "description": "Ham croquettes",
-          "thumb": null
+          "thumb": "span1.jpg"
         },
         {
           "id": 43,
           "name": "Pulpo a la gallega",
           "price": 18,
           "description": "Galician style octopus",
-          "thumb": null
+          "thumb": "span2.jpg"
         },
         {
           "id": 44,
           "name": "Pimientos de Padrón",
           "price": 7,
           "description": "Fried green peppers",
-          "thumb": null
+          "thumb": "span.jpg"
         },
         {
           "id": 45,
           "name": "Queso Manchego",
           "price": 9,
           "description": "Sheep's milk cheese from La Mancha",
-          "thumb": null
+          "thumb": "span1.jpg"
         },
         {
           "id": 46,
           "name": "Tarta de Santiago",
           "price": 7,
           "description": "Almond cake from Galicia",
-          "thumb": null
+          "thumb": "span2.jpg"
         }
       ]
     },
@@ -391,70 +391,70 @@
           "name": "Nigiri Sushi",
           "price": 3,
           "description": "Rice ball with a slice of fish on top",
-          "thumb": null
+          "thumb": "japan2.jpg"
         },
         {
           "id": 48,
           "name": "Sashimi",
           "price": 4,
           "description": "Sliced raw fish",
-          "thumb": null
+          "thumb": "japan3.jpg"
         },
         {
           "id": 49,
           "name": "Maki Sushi",
           "price": 5,
           "description": "Rolled sushi with seaweed outside",
-          "thumb": null
+          "thumb": "japan.jpg"
         },
         {
           "id": 50,
           "name": "Temaki Sushi",
           "price": 6,
           "description": "Hand-rolled cone-shaped sushi",
-          "thumb": null
+          "thumb": "japan1.jpg"
         },
         {
           "id": 51,
           "name": "Chirashi Sushi",
           "price": 12,
           "description": "Bowl of sushi rice topped with various sashimi",
-          "thumb": null
+          "thumb": "japan2.jpg"
         },
         {
           "id": 52,
           "name": "Edamame",
           "price": 2,
           "description": "Boiled soybeans in the pod",
-          "thumb": null
+          "thumb": "japan3.jpg"
         },
         {
           "id": 53,
           "name": "Misoshiru",
           "price": 3,
           "description": "Miso soup with tofu and seaweed",
-          "thumb": null
+          "thumb": "japan.jpg"
         },
         {
           "id": 54,
           "name": "Tempura",
           "price": 8,
           "description": "Battered and deep-fried vegetables or seafood",
-          "thumb": null
+          "thumb": "japan1.jpg"
         },
         {
           "id": 55,
           "name": "Unagi Don",
           "price": 15,
           "description": "Grilled eel over rice",
-          "thumb": null
+          "thumb": "japan2.jpg"
         },
         {
           "id": 56,
           "name": "Kaiseki",
           "price": 30,
           "description": "Traditional multi-course Japanese dinner",
-          "thumb": null
+          "thumb":" japan3.jpg"
         }
       ]
     },
@@ -474,28 +474,28 @@
           "name": "Moussaka",
           "price": 12,
           "description": "Layered eggplant, potato, and minced meat casserole topped with béchamel sauce",
-          "thumb": null
+          "thumb": "greek1.jpg"
         },
         {
           "id": 58,
           "name": "Souvlaki",
           "price": 10,
           "description": "Grilled skewers of marinated meat, typically served with pita and tzatziki",
-          "thumb": null
+          "thumb": "greek.jpg"
         },
         {
           "id": 59,
           "name": "Spanakopita",
           "price": 8,
           "description": "Spinach and feta cheese pie wrapped in phyllo pastry",
-          "thumb": null
+          "thumb": "greek2.jpg"
         },
         {
           "id": 60,
           "name": "Tzatziki",
           "price": 5,
           "description": "Yogurt, cucumber, and garlic dip, perfect as an appetizer or side",
-          "thumb": null
+          "thumb": "greek1.jpg"
         }
       ]
     },
@@ -515,28 +515,28 @@
           "name": "Cheeseburger",
           "price": 10,
           "description": "Grilled beef patty with cheese on a bun, often served with lettuce, tomato, onion, and pickles",
-          "thumb": null
+          "thumb": "american.jpg"
         },
         {
           "id": 66,
           "name": "BBQ Ribs",
           "price": 15,
           "description": "Slow-cooked pork ribs coated in BBQ sauce and served with sides like coleslaw and cornbread",
-          "thumb": null
+          "thumb": "american1.jpg"
         },
         {
           "id": 67,
           "name": "Buffalo Wings",
           "price": 9,
           "description": "Deep-fried chicken wings coated in a vinegar-based cayenne pepper hot sauce and butter",
-          "thumb": null
+          "thumb": "american2.jpg"
         },
         {
           "id": 68,
           "name": "Apple Pie",
           "price": 7,
           "description": "Classic dessert made with a spiced apple filling in a flaky pastry crust",
-          "thumb": null
+          "thumb": "american2.jpg"
         }
       ]
     },
@@ -556,28 +556,28 @@
           "name": "Nachos Supreme",
           "price": 8,
           "description": "Crispy corn tortillas topped with melted cheese, jalapeños, beans, and guacamole",
-          "thumb": null
+          "thumb": "messican.jpg"
         },
         {
           "id": 70,
           "name": "Chicken Fajitas",
           "price": 14,
           "description": "Grilled chicken strips served on a sizzling platter with peppers, onions, and tortillas",
-          "thumb": null
+          "thumb": "messican1.jpg"
         },
         {
           "id": 71,
           "name": "Beef Tacos",
           "price": 10,
           "description": "Soft or crunchy tacos filled with seasoned beef, lettuce, cheese, and salsa",
-          "thumb": null
+          "thumb": "messican2.jpg"
         },
         {
           "id": 72,
           "name": "Chili Con Carne",
           "price": 12,
           "description": "Spicy stew containing chili peppers, meat, tomatoes, beans, and spices",
-          "thumb": null
+          "thumb": "messican.jpg"
         }
       ]
     },
@@ -597,28 +597,28 @@
           "name": "Pad Thai",
           "price": 10,
           "description": "Stir-fried rice noodles with eggs, tofu, tamarind pulp, and shrimp or chicken, garnished with peanuts",
-          "thumb": null
+          "thumb": "thai.jpg"
         },
         {
           "id": 74,
           "name": "Green Curry Chicken",
           "price": 12,
           "description": "Spicy and sweet green curry with chicken, eggplants, bamboo shoots, and basil leaves",
-          "thumb": null
+          "thumb": "thai1.jpg"
         },
         {
           "id": 75,
           "name": "Tom Yum Goong",
           "price": 13,
           "description": "Hot and sour Thai soup with shrimp, mushrooms, tomatoes, lemongrass, galangal, and lime leaves",
-          "thumb": null
+          "thumb": "thai2.jpg"
         },
         {
           "id": 76,
           "name": "Mango Sticky Rice",
           "price": 7,
           "description": "Sweet sticky rice with fresh mango slices and coconut milk",
-          "thumb": null
+          "thumb": "thai.jpg"
         }
       ]
     },
@@ -638,35 +638,35 @@
           "name": "Doner Kebab",
           "price": 8,
           "description": "Rotisserie grilled meat, served in a pita with salad and sauces",
-          "thumb": null
+          "thumb": "keb.jpg"
         },
         {
           "id": 78,
           "name": "Shish Kebab",
           "price": 10,
           "description": "Skewered and grilled cubes of meat, served with grilled vegetables",
-          "thumb": null
+          "thumb": "keb2.jpg"
         },
         {
           "id": 79,
           "name": "Adana Kebab",
           "price": 12,
           "description": "Hand-minced meat kebab mounted on a wide iron skewer and grilled on an open mangal filled with burning charcoal",
-          "thumb": null
+          "thumb": "keb.jpg"
         },
         {
           "id": 80,
           "name": "Kebab Platter",
           "price": 15,
           "description": "A platter of mixed kebabs, including doner, shish, and Adana, served with sides of rice and salad",
-          "thumb": null
+          "thumb": "keb1.jpg"
         },
         {
           "id": 81,
           "name": "Falafel Wrap",
           "price": 7,
           "description": "Deep-fried chickpea balls served in a wrap with vegetables and tahini sauce",
-          "thumb": null
+          "thumb": "keb2.jpg"
         }
       ]
     },
@@ -2941,70 +2941,70 @@
           "name": "Patatas Bravas",
           "price": 6,
           "description": "Fried potatoes with spicy tomato sauce",
-          "thumb": null
+          "thumb": "span2.jpg"
         },
         {
           "id": 38,
           "name": "Gambas al ajillo",
           "price": 15,
           "description": "Shrimp cooked in garlic",
-          "thumb": null
+          "thumb": "span.jpg"
         },
         {
           "id": 39,
           "name": "Jamón ibérico",
           "price": 20,
           "description": "Cured Iberian ham",
-          "thumb": null
+          "thumb": "span1.jpg"
         },
         {
           "id": 40,
           "name": "Tortilla española",
           "price": 10,
           "description": "Spanish omelette with potatoes and onions",
-          "thumb": null
+          "thumb": "span2.jpg"
         },
         {
           "id": 41,
           "name": "Chorizo al vino",
           "price": 12,
           "description": "Chorizo cooked in wine",
-          "thumb": null
+          "thumb": "span.jpg"
         },
         {
           "id": 42,
           "name": "Croquetas de jamón",
           "price": 8,
           "description": "Ham croquettes",
-          "thumb": null
+          "thumb": "span1.jpg"
         },
         {
           "id": 43,
           "name": "Pulpo a la gallega",
           "price": 18,
           "description": "Galician style octopus",
-          "thumb": null
+          "thumb": "span2.jpg"
         },
         {
           "id": 44,
           "name": "Pimientos de Padrón",
           "price": 7,
           "description": "Fried green peppers",
-          "thumb": null
+          "thumb": "span.jpg"
         },
         {
           "id": 45,
           "name": "Queso Manchego",
           "price": 9,
           "description": "Sheep's milk cheese from La Mancha",
-          "thumb": null
+          "thumb": "span1.jpg"
         },
         {
           "id": 46,
           "name": "Tarta de Santiago",
           "price": 7,
           "description": "Almond cake from Galicia",
-          "thumb": null
+          "thumb": "span2.jpg"
         }
       ]
     },
@@ -3024,70 +3024,70 @@
           "name": "Patatas Bravas",
           "price": 6,
           "description": "Fried potatoes with spicy tomato sauce",
-          "thumb": null
+          "thumb": "span2.jpg"
         },
         {
           "id": 38,
           "name": "Gambas al ajillo",
           "price": 15,
           "description": "Shrimp cooked in garlic",
-          "thumb": null
+          "thumb": "span.jpg"
         },
         {
           "id": 39,
           "name": "Jamón ibérico",
           "price": 20,
           "description": "Cured Iberian ham",
-          "thumb": null
+          "thumb": "span1.jpg"
         },
         {
           "id": 40,
           "name": "Tortilla española",
           "price": 10,
           "description": "Spanish omelette with potatoes and onions",
-          "thumb": null
+          "thumb": "span2.jpg"
         },
         {
           "id": 41,
           "name": "Chorizo al vino",
           "price": 12,
           "description": "Chorizo cooked in wine",
-          "thumb": null
+          "thumb": "span.jpg"
         },
         {
           "id": 42,
           "name": "Croquetas de jamón",
           "price": 8,
           "description": "Ham croquettes",
-          "thumb": null
+          "thumb": "span1.jpg"
         },
         {
           "id": 43,
           "name": "Pulpo a la gallega",
           "price": 18,
           "description": "Galician style octopus",
-          "thumb": null
+          "thumb": "span2.jpg"
         },
         {
           "id": 44,
           "name": "Pimientos de Padrón",
           "price": 7,
           "description": "Fried green peppers",
-          "thumb": null
+          "thumb": "span.jpg"
         },
         {
           "id": 45,
           "name": "Queso Manchego",
           "price": 9,
           "description": "Sheep's milk cheese from La Mancha",
-          "thumb": null
+          "thumb": "span1.jpg"
         },
         {
           "id": 46,
           "name": "Tarta de Santiago",
           "price": 7,
           "description": "Almond cake from Galicia",
-          "thumb": null
+          "thumb": "span2.jpg"
         }
       ]
     },
@@ -3107,70 +3107,70 @@
           "name": "Patatas Bravas",
           "price": 6,
           "description": "Fried potatoes with spicy tomato sauce",
-          "thumb": null
+          "thumb": "span2.jpg"
         },
         {
           "id": 38,
           "name": "Gambas al ajillo",
           "price": 15,
           "description": "Shrimp cooked in garlic",
-          "thumb": null
+          "thumb": "span.jpg"
         },
         {
           "id": 39,
           "name": "Jamón ibérico",
           "price": 20,
           "description": "Cured Iberian ham",
-          "thumb": null
+          "thumb": "span1.jpg"
         },
         {
           "id": 40,
           "name": "Tortilla española",
           "price": 10,
           "description": "Spanish omelette with potatoes and onions",
-          "thumb": null
+          "thumb": "span2.jpg"
         },
         {
           "id": 41,
           "name": "Chorizo al vino",
           "price": 12,
           "description": "Chorizo cooked in wine",
-          "thumb": null
+          "thumb": "span.jpg"
         },
         {
           "id": 42,
           "name": "Croquetas de jamón",
           "price": 8,
           "description": "Ham croquettes",
-          "thumb": null
+          "thumb": "span1.jpg"
         },
         {
           "id": 43,
           "name": "Pulpo a la gallega",
           "price": 18,
           "description": "Galician style octopus",
-          "thumb": null
+          "thumb": "span2.jpg"
         },
         {
           "id": 44,
           "name": "Pimientos de Padrón",
           "price": 7,
           "description": "Fried green peppers",
-          "thumb": null
+          "thumb": "span.jpg"
         },
         {
           "id": 45,
           "name": "Queso Manchego",
           "price": 9,
           "description": "Sheep's milk cheese from La Mancha",
-          "thumb": null
+          "thumb": "span1.jpg"
         },
         {
           "id": 46,
           "name": "Tarta de Santiago",
           "price": 7,
           "description": "Almond cake from Galicia",
-          "thumb": null
+          "thumb": "span2.jpg"
         }
       ]
     },
@@ -3190,70 +3190,70 @@
           "name": "Patatas Bravas",
           "price": 6,
           "description": "Fried potatoes with spicy tomato sauce",
-          "thumb": null
+          "thumb": "span2.jpg"
         },
         {
           "id": 38,
           "name": "Gambas al ajillo",
           "price": 15,
           "description": "Shrimp cooked in garlic",
-          "thumb": null
+          "thumb": "span.jpg"
         },
         {
           "id": 39,
           "name": "Jamón ibérico",
           "price": 20,
           "description": "Cured Iberian ham",
-          "thumb": null
+          "thumb": "span1.jpg"
         },
         {
           "id": 40,
           "name": "Tortilla española",
           "price": 10,
           "description": "Spanish omelette with potatoes and onions",
-          "thumb": null
+          "thumb": "span2.jpg"
         },
         {
           "id": 41,
           "name": "Chorizo al vino",
           "price": 12,
           "description": "Chorizo cooked in wine",
-          "thumb": null
+          "thumb": "span.jpg"
         },
         {
           "id": 42,
           "name": "Croquetas de jamón",
           "price": 8,
           "description": "Ham croquettes",
-          "thumb": null
+          "thumb": "span1.jpg"
         },
         {
           "id": 43,
           "name": "Pulpo a la gallega",
           "price": 18,
           "description": "Galician style octopus",
-          "thumb": null
+          "thumb": "span2.jpg"
         },
         {
           "id": 44,
           "name": "Pimientos de Padrón",
           "price": 7,
           "description": "Fried green peppers",
-          "thumb": null
+          "thumb": "span.jpg"
         },
         {
           "id": 45,
           "name": "Queso Manchego",
           "price": 9,
           "description": "Sheep's milk cheese from La Mancha",
-          "thumb": null
+          "thumb": "span1.jpg"
         },
         {
           "id": 46,
           "name": "Tarta de Santiago",
           "price": 7,
           "description": "Almond cake from Galicia",
-          "thumb": null
+          "thumb": "span2.jpg"
         }
       ]
     },
@@ -3273,70 +3273,70 @@
           "name": "Patatas Bravas",
           "price": 6,
           "description": "Fried potatoes with spicy tomato sauce",
-          "thumb": null
+          "thumb": "span2.jpg"
         },
         {
           "id": 38,
           "name": "Gambas al ajillo",
           "price": 15,
           "description": "Shrimp cooked in garlic",
-          "thumb": null
+          "thumb": "span.jpg"
         },
         {
           "id": 39,
           "name": "Jamón ibérico",
           "price": 20,
           "description": "Cured Iberian ham",
-          "thumb": null
+          "thumb": "span1.jpg"
         },
         {
           "id": 40,
           "name": "Tortilla española",
           "price": 10,
           "description": "Spanish omelette with potatoes and onions",
-          "thumb": null
+          "thumb": "span2.jpg"
         },
         {
           "id": 41,
           "name": "Chorizo al vino",
           "price": 12,
           "description": "Chorizo cooked in wine",
-          "thumb": null
+          "thumb": "span.jpg"
         },
         {
           "id": 42,
           "name": "Croquetas de jamón",
           "price": 8,
           "description": "Ham croquettes",
-          "thumb": null
+          "thumb": "span1.jpg"
         },
         {
           "id": 43,
           "name": "Pulpo a la gallega",
           "price": 18,
           "description": "Galician style octopus",
-          "thumb": null
+          "thumb": "span2.jpg"
         },
         {
           "id": 44,
           "name": "Pimientos de Padrón",
           "price": 7,
           "description": "Fried green peppers",
-          "thumb": null
+          "thumb": "span.jpg"
         },
         {
           "id": 45,
           "name": "Queso Manchego",
           "price": 9,
           "description": "Sheep's milk cheese from La Mancha",
-          "thumb": null
+          "thumb": "span1.jpg"
         },
         {
           "id": 46,
           "name": "Tarta de Santiago",
           "price": 7,
           "description": "Almond cake from Galicia",
-          "thumb": null
+          "thumb": "span2.jpg"
         }
       ]
     },
@@ -3356,70 +3356,70 @@
           "name": "Patatas Bravas",
           "price": 6,
           "description": "Fried potatoes with spicy tomato sauce",
-          "thumb": null
+          "thumb": "span2.jpg"
         },
         {
           "id": 38,
           "name": "Gambas al ajillo",
           "price": 15,
           "description": "Shrimp cooked in garlic",
-          "thumb": null
+          "thumb": "span.jpg"
         },
         {
           "id": 39,
           "name": "Jamón ibérico",
           "price": 20,
           "description": "Cured Iberian ham",
-          "thumb": null
+          "thumb": "span1.jpg"
         },
         {
           "id": 40,
           "name": "Tortilla española",
           "price": 10,
           "description": "Spanish omelette with potatoes and onions",
-          "thumb": null
+          "thumb": "span2.jpg"
         },
         {
           "id": 41,
           "name": "Chorizo al vino",
           "price": 12,
           "description": "Chorizo cooked in wine",
-          "thumb": null
+          "thumb": "span.jpg"
         },
         {
           "id": 42,
           "name": "Croquetas de jamón",
           "price": 8,
           "description": "Ham croquettes",
-          "thumb": null
+          "thumb": "span1.jpg"
         },
         {
           "id": 43,
           "name": "Pulpo a la gallega",
           "price": 18,
           "description": "Galician style octopus",
-          "thumb": null
+          "thumb": "span2.jpg"
         },
         {
           "id": 44,
           "name": "Pimientos de Padrón",
           "price": 7,
           "description": "Fried green peppers",
-          "thumb": null
+          "thumb": "span.jpg"
         },
         {
           "id": 45,
           "name": "Queso Manchego",
           "price": 9,
           "description": "Sheep's milk cheese from La Mancha",
-          "thumb": null
+          "thumb": "span1.jpg"
         },
         {
           "id": 46,
           "name": "Tarta de Santiago",
           "price": 7,
           "description": "Almond cake from Galicia",
-          "thumb": null
+          "thumb": "span2.jpg"
         }
       ]
     },
@@ -3439,70 +3439,70 @@
           "name": "Nigiri Sushi",
           "price": 3,
           "description": "Rice ball with a slice of fish on top",
-          "thumb": null
+          "thumb": "japan2.jpg"
         },
         {
           "id": 48,
           "name": "Sashimi",
           "price": 4,
           "description": "Sliced raw fish",
-          "thumb": null
+          "thumb": "japan3.jpg"
         },
         {
           "id": 49,
           "name": "Maki Sushi",
           "price": 5,
           "description": "Rolled sushi with seaweed outside",
-          "thumb": null
+          "thumb": "japan.jpg"
         },
         {
           "id": 50,
           "name": "Temaki Sushi",
           "price": 6,
           "description": "Hand-rolled cone-shaped sushi",
-          "thumb": null
+          "thumb": "japan1.jpg"
         },
         {
           "id": 51,
           "name": "Chirashi Sushi",
           "price": 12,
           "description": "Bowl of sushi rice topped with various sashimi",
-          "thumb": null
+          "thumb": "japan2.jpg"
         },
         {
           "id": 52,
           "name": "Edamame",
           "price": 2,
           "description": "Boiled soybeans in the pod",
-          "thumb": null
+          "thumb": "japan3.jpg"
         },
         {
           "id": 53,
           "name": "Misoshiru",
           "price": 3,
           "description": "Miso soup with tofu and seaweed",
-          "thumb": null
+          "thumb": "japan.jpg"
         },
         {
           "id": 54,
           "name": "Tempura",
           "price": 8,
           "description": "Battered and deep-fried vegetables or seafood",
-          "thumb": null
+          "thumb": "japan1.jpg"
         },
         {
           "id": 55,
           "name": "Unagi Don",
           "price": 15,
           "description": "Grilled eel over rice",
-          "thumb": null
+          "thumb": "japan2.jpg"
         },
         {
           "id": 56,
           "name": "Kaiseki",
           "price": 30,
           "description": "Traditional multi-course Japanese dinner",
-          "thumb": null
+          "thumb":" japan3.jpg"
         }
       ]
     },
@@ -3522,70 +3522,70 @@
           "name": "Nigiri Sushi",
           "price": 3,
           "description": "Rice ball with a slice of fish on top",
-          "thumb": null
+          "thumb": "japan2.jpg"
         },
         {
           "id": 48,
           "name": "Sashimi",
           "price": 4,
           "description": "Sliced raw fish",
-          "thumb": null
+          "thumb": "japan3.jpg"
         },
         {
           "id": 49,
           "name": "Maki Sushi",
           "price": 5,
           "description": "Rolled sushi with seaweed outside",
-          "thumb": null
+          "thumb": "japan.jpg"
         },
         {
           "id": 50,
           "name": "Temaki Sushi",
           "price": 6,
           "description": "Hand-rolled cone-shaped sushi",
-          "thumb": null
+          "thumb": "japan1.jpg"
         },
         {
           "id": 51,
           "name": "Chirashi Sushi",
           "price": 12,
           "description": "Bowl of sushi rice topped with various sashimi",
-          "thumb": null
+          "thumb": "japan2.jpg"
         },
         {
           "id": 52,
           "name": "Edamame",
           "price": 2,
           "description": "Boiled soybeans in the pod",
-          "thumb": null
+          "thumb": "japan3.jpg"
         },
         {
           "id": 53,
           "name": "Misoshiru",
           "price": 3,
           "description": "Miso soup with tofu and seaweed",
-          "thumb": null
+          "thumb": "japan.jpg"
         },
         {
           "id": 54,
           "name": "Tempura",
           "price": 8,
           "description": "Battered and deep-fried vegetables or seafood",
-          "thumb": null
+          "thumb": "japan1.jpg"
         },
         {
           "id": 55,
           "name": "Unagi Don",
           "price": 15,
           "description": "Grilled eel over rice",
-          "thumb": null
+          "thumb": "japan2.jpg"
         },
         {
           "id": 56,
           "name": "Kaiseki",
           "price": 30,
           "description": "Traditional multi-course Japanese dinner",
-          "thumb": null
+          "thumb":" japan3.jpg"
         }
       ]
     },
@@ -3605,70 +3605,70 @@
           "name": "Nigiri Sushi",
           "price": 3,
           "description": "Rice ball with a slice of fish on top",
-          "thumb": null
+          "thumb": "japan2.jpg"
         },
         {
           "id": 48,
           "name": "Sashimi",
           "price": 4,
           "description": "Sliced raw fish",
-          "thumb": null
+          "thumb": "japan3.jpg"
         },
         {
           "id": 49,
           "name": "Maki Sushi",
           "price": 5,
           "description": "Rolled sushi with seaweed outside",
-          "thumb": null
+          "thumb": "japan.jpg"
         },
         {
           "id": 50,
           "name": "Temaki Sushi",
           "price": 6,
           "description": "Hand-rolled cone-shaped sushi",
-          "thumb": null
+          "thumb": "japan1.jpg"
         },
         {
           "id": 51,
           "name": "Chirashi Sushi",
           "price": 12,
           "description": "Bowl of sushi rice topped with various sashimi",
-          "thumb": null
+          "thumb": "japan2.jpg"
         },
         {
           "id": 52,
           "name": "Edamame",
           "price": 2,
           "description": "Boiled soybeans in the pod",
-          "thumb": null
+          "thumb": "japan3.jpg"
         },
         {
           "id": 53,
           "name": "Misoshiru",
           "price": 3,
           "description": "Miso soup with tofu and seaweed",
-          "thumb": null
+          "thumb": "japan.jpg"
         },
         {
           "id": 54,
           "name": "Tempura",
           "price": 8,
           "description": "Battered and deep-fried vegetables or seafood",
-          "thumb": null
+          "thumb": "japan1.jpg"
         },
         {
           "id": 55,
           "name": "Unagi Don",
           "price": 15,
           "description": "Grilled eel over rice",
-          "thumb": null
+          "thumb": "japan2.jpg"
         },
         {
           "id": 56,
           "name": "Kaiseki",
           "price": 30,
           "description": "Traditional multi-course Japanese dinner",
-          "thumb": null
+          "thumb":" japan3.jpg"
         }
       ]
     },
@@ -3688,70 +3688,70 @@
           "name": "Nigiri Sushi",
           "price": 3,
           "description": "Rice ball with a slice of fish on top",
-          "thumb": null
+          "thumb": "japan2.jpg"
         },
         {
           "id": 48,
           "name": "Sashimi",
           "price": 4,
           "description": "Sliced raw fish",
-          "thumb": null
+          "thumb": "japan3.jpg"
         },
         {
           "id": 49,
           "name": "Maki Sushi",
           "price": 5,
           "description": "Rolled sushi with seaweed outside",
-          "thumb": null
+          "thumb": "japan.jpg"
         },
         {
           "id": 50,
           "name": "Temaki Sushi",
           "price": 6,
           "description": "Hand-rolled cone-shaped sushi",
-          "thumb": null
+          "thumb": "japan1.jpg"
         },
         {
           "id": 51,
           "name": "Chirashi Sushi",
           "price": 12,
           "description": "Bowl of sushi rice topped with various sashimi",
-          "thumb": null
+          "thumb": "japan2.jpg"
         },
         {
           "id": 52,
           "name": "Edamame",
           "price": 2,
           "description": "Boiled soybeans in the pod",
-          "thumb": null
+          "thumb": "japan3.jpg"
         },
         {
           "id": 53,
           "name": "Misoshiru",
           "price": 3,
           "description": "Miso soup with tofu and seaweed",
-          "thumb": null
+          "thumb": "japan.jpg"
         },
         {
           "id": 54,
           "name": "Tempura",
           "price": 8,
           "description": "Battered and deep-fried vegetables or seafood",
-          "thumb": null
+          "thumb": "japan1.jpg"
         },
         {
           "id": 55,
           "name": "Unagi Don",
           "price": 15,
           "description": "Grilled eel over rice",
-          "thumb": null
+          "thumb": "japan2.jpg"
         },
         {
           "id": 56,
           "name": "Kaiseki",
           "price": 30,
           "description": "Traditional multi-course Japanese dinner",
-          "thumb": null
+          "thumb":" japan3.jpg"
         }
       ]
     },
@@ -3771,70 +3771,70 @@
           "name": "Nigiri Sushi",
           "price": 3,
           "description": "Rice ball with a slice of fish on top",
-          "thumb": null
+          "thumb": "japan2.jpg"
         },
         {
           "id": 48,
           "name": "Sashimi",
           "price": 4,
           "description": "Sliced raw fish",
-          "thumb": null
+          "thumb": "japan3.jpg"
         },
         {
           "id": 49,
           "name": "Maki Sushi",
           "price": 5,
           "description": "Rolled sushi with seaweed outside",
-          "thumb": null
+          "thumb": "japan.jpg"
         },
         {
           "id": 50,
           "name": "Temaki Sushi",
           "price": 6,
           "description": "Hand-rolled cone-shaped sushi",
-          "thumb": null
+          "thumb": "japan1.jpg"
         },
         {
           "id": 51,
           "name": "Chirashi Sushi",
           "price": 12,
           "description": "Bowl of sushi rice topped with various sashimi",
-          "thumb": null
+          "thumb": "japan2.jpg"
         },
         {
           "id": 52,
           "name": "Edamame",
           "price": 2,
           "description": "Boiled soybeans in the pod",
-          "thumb": null
+          "thumb": "japan3.jpg"
         },
         {
           "id": 53,
           "name": "Misoshiru",
           "price": 3,
           "description": "Miso soup with tofu and seaweed",
-          "thumb": null
+          "thumb": "japan.jpg"
         },
         {
           "id": 54,
           "name": "Tempura",
           "price": 8,
           "description": "Battered and deep-fried vegetables or seafood",
-          "thumb": null
+          "thumb": "japan1.jpg"
         },
         {
           "id": 55,
           "name": "Unagi Don",
           "price": 15,
           "description": "Grilled eel over rice",
-          "thumb": null
+          "thumb": "japan2.jpg"
         },
         {
           "id": 56,
           "name": "Kaiseki",
           "price": 30,
           "description": "Traditional multi-course Japanese dinner",
-          "thumb": null
+          "thumb":" japan3.jpg"
         }
       ]
     },
@@ -3854,70 +3854,70 @@
           "name": "Nigiri Sushi",
           "price": 3,
           "description": "Rice ball with a slice of fish on top",
-          "thumb": null
+          "thumb": "japan2.jpg"
         },
         {
           "id": 48,
           "name": "Sashimi",
           "price": 4,
           "description": "Sliced raw fish",
-          "thumb": null
+          "thumb": "japan3.jpg"
         },
         {
           "id": 49,
           "name": "Maki Sushi",
           "price": 5,
           "description": "Rolled sushi with seaweed outside",
-          "thumb": null
+          "thumb": "japan.jpg"
         },
         {
           "id": 50,
           "name": "Temaki Sushi",
           "price": 6,
           "description": "Hand-rolled cone-shaped sushi",
-          "thumb": null
+          "thumb": "japan1.jpg"
         },
         {
           "id": 51,
           "name": "Chirashi Sushi",
           "price": 12,
           "description": "Bowl of sushi rice topped with various sashimi",
-          "thumb": null
+          "thumb": "japan2.jpg"
         },
         {
           "id": 52,
           "name": "Edamame",
           "price": 2,
           "description": "Boiled soybeans in the pod",
-          "thumb": null
+          "thumb": "japan3.jpg"
         },
         {
           "id": 53,
           "name": "Misoshiru",
           "price": 3,
           "description": "Miso soup with tofu and seaweed",
-          "thumb": null
+          "thumb": "japan.jpg"
         },
         {
           "id": 54,
           "name": "Tempura",
           "price": 8,
           "description": "Battered and deep-fried vegetables or seafood",
-          "thumb": null
+          "thumb": "japan1.jpg"
         },
         {
           "id": 55,
           "name": "Unagi Don",
           "price": 15,
           "description": "Grilled eel over rice",
-          "thumb": null
+          "thumb": "japan2.jpg"
         },
         {
           "id": 56,
           "name": "Kaiseki",
           "price": 30,
           "description": "Traditional multi-course Japanese dinner",
-          "thumb": null
+          "thumb":" japan3.jpg"
         }
       ]
     },
@@ -3937,70 +3937,70 @@
           "name": "Nigiri Sushi",
           "price": 3,
           "description": "Rice ball with a slice of fish on top",
-          "thumb": null
+          "thumb": "japan2.jpg"
         },
         {
           "id": 48,
           "name": "Sashimi",
           "price": 4,
           "description": "Sliced raw fish",
-          "thumb": null
+          "thumb": "japan3.jpg"
         },
         {
           "id": 49,
           "name": "Maki Sushi",
           "price": 5,
           "description": "Rolled sushi with seaweed outside",
-          "thumb": null
+          "thumb": "japan.jpg"
         },
         {
           "id": 50,
           "name": "Temaki Sushi",
           "price": 6,
           "description": "Hand-rolled cone-shaped sushi",
-          "thumb": null
+          "thumb": "japan1.jpg"
         },
         {
           "id": 51,
           "name": "Chirashi Sushi",
           "price": 12,
           "description": "Bowl of sushi rice topped with various sashimi",
-          "thumb": null
+          "thumb": "japan2.jpg"
         },
         {
           "id": 52,
           "name": "Edamame",
           "price": 2,
           "description": "Boiled soybeans in the pod",
-          "thumb": null
+          "thumb": "japan3.jpg"
         },
         {
           "id": 53,
           "name": "Misoshiru",
           "price": 3,
           "description": "Miso soup with tofu and seaweed",
-          "thumb": null
+          "thumb": "japan.jpg"
         },
         {
           "id": 54,
           "name": "Tempura",
           "price": 8,
           "description": "Battered and deep-fried vegetables or seafood",
-          "thumb": null
+          "thumb": "japan1.jpg"
         },
         {
           "id": 55,
           "name": "Unagi Don",
           "price": 15,
           "description": "Grilled eel over rice",
-          "thumb": null
+          "thumb": "japan2.jpg"
         },
         {
           "id": 56,
           "name": "Kaiseki",
           "price": 30,
           "description": "Traditional multi-course Japanese dinner",
-          "thumb": null
+          "thumb":" japan3.jpg"
         }
       ]
     },
@@ -4020,28 +4020,28 @@
           "name": "Moussaka",
           "price": 12,
           "description": "Layered eggplant, potato, and minced meat casserole topped with béchamel sauce",
-          "thumb": null
+          "thumb": "greek1.jpg"
         },
         {
           "id": 58,
           "name": "Souvlaki",
           "price": 10,
           "description": "Grilled skewers of marinated meat, typically served with pita and tzatziki",
-          "thumb": null
+          "thumb": "greek.jpg"
         },
         {
           "id": 59,
           "name": "Spanakopita",
           "price": 8,
           "description": "Spinach and feta cheese pie wrapped in phyllo pastry",
-          "thumb": null
+          "thumb": "greek2.jpg"
         },
         {
           "id": 60,
           "name": "Tzatziki",
           "price": 5,
           "description": "Yogurt, cucumber, and garlic dip, perfect as an appetizer or side",
-          "thumb": null
+          "thumb": "greek1.jpg"
         }
       ]
     },
@@ -4061,28 +4061,28 @@
           "name": "Moussaka",
           "price": 12,
           "description": "Layered eggplant, potato, and minced meat casserole topped with béchamel sauce",
-          "thumb": null
+          "thumb": "greek1.jpg"
         },
         {
           "id": 58,
           "name": "Souvlaki",
           "price": 10,
           "description": "Grilled skewers of marinated meat, typically served with pita and tzatziki",
-          "thumb": null
+          "thumb": "greek.jpg"
         },
         {
           "id": 59,
           "name": "Spanakopita",
           "price": 8,
           "description": "Spinach and feta cheese pie wrapped in phyllo pastry",
-          "thumb": null
+          "thumb": "greek2.jpg"
         },
         {
           "id": 60,
           "name": "Tzatziki",
           "price": 5,
           "description": "Yogurt, cucumber, and garlic dip, perfect as an appetizer or side",
-          "thumb": null
+          "thumb": "greek1.jpg"
         }
       ]
     },
@@ -4102,28 +4102,28 @@
           "name": "Moussaka",
           "price": 12,
           "description": "Layered eggplant, potato, and minced meat casserole topped with béchamel sauce",
-          "thumb": null
+          "thumb": "greek1.jpg"
         },
         {
           "id": 58,
           "name": "Souvlaki",
           "price": 10,
           "description": "Grilled skewers of marinated meat, typically served with pita and tzatziki",
-          "thumb": null
+          "thumb": "greek.jpg"
         },
         {
           "id": 59,
           "name": "Spanakopita",
           "price": 8,
           "description": "Spinach and feta cheese pie wrapped in phyllo pastry",
-          "thumb": null
+          "thumb": "greek2.jpg"
         },
         {
           "id": 60,
           "name": "Tzatziki",
           "price": 5,
           "description": "Yogurt, cucumber, and garlic dip, perfect as an appetizer or side",
-          "thumb": null
+          "thumb": "greek1.jpg"
         }
       ]
     },
@@ -4143,28 +4143,28 @@
           "name": "Moussaka",
           "price": 12,
           "description": "Layered eggplant, potato, and minced meat casserole topped with béchamel sauce",
-          "thumb": null
+          "thumb": "greek1.jpg"
         },
         {
           "id": 58,
           "name": "Souvlaki",
           "price": 10,
           "description": "Grilled skewers of marinated meat, typically served with pita and tzatziki",
-          "thumb": null
+          "thumb": "greek.jpg"
         },
         {
           "id": 59,
           "name": "Spanakopita",
           "price": 8,
           "description": "Spinach and feta cheese pie wrapped in phyllo pastry",
-          "thumb": null
+          "thumb": "greek2.jpg"
         },
         {
           "id": 60,
           "name": "Tzatziki",
           "price": 5,
           "description": "Yogurt, cucumber, and garlic dip, perfect as an appetizer or side",
-          "thumb": null
+          "thumb": "greek1.jpg"
         }
       ]
     },
@@ -4184,28 +4184,28 @@
           "name": "Moussaka",
           "price": 12,
           "description": "Layered eggplant, potato, and minced meat casserole topped with béchamel sauce",
-          "thumb": null
+          "thumb": "greek1.jpg"
         },
         {
           "id": 58,
           "name": "Souvlaki",
           "price": 10,
           "description": "Grilled skewers of marinated meat, typically served with pita and tzatziki",
-          "thumb": null
+          "thumb": "greek.jpg"
         },
         {
           "id": 59,
           "name": "Spanakopita",
           "price": 8,
           "description": "Spinach and feta cheese pie wrapped in phyllo pastry",
-          "thumb": null
+          "thumb": "greek2.jpg"
         },
         {
           "id": 60,
           "name": "Tzatziki",
           "price": 5,
           "description": "Yogurt, cucumber, and garlic dip, perfect as an appetizer or side",
-          "thumb": null
+          "thumb": "greek1.jpg"
         }
       ]
     },
@@ -4225,28 +4225,28 @@
           "name": "Moussaka",
           "price": 12,
           "description": "Layered eggplant, potato, and minced meat casserole topped with béchamel sauce",
-          "thumb": null
+          "thumb": "greek1.jpg"
         },
         {
           "id": 58,
           "name": "Souvlaki",
           "price": 10,
           "description": "Grilled skewers of marinated meat, typically served with pita and tzatziki",
-          "thumb": null
+          "thumb": "greek.jpg"
         },
         {
           "id": 59,
           "name": "Spanakopita",
           "price": 8,
           "description": "Spinach and feta cheese pie wrapped in phyllo pastry",
-          "thumb": null
+          "thumb": "greek2.jpg"
         },
         {
           "id": 60,
           "name": "Tzatziki",
           "price": 5,
           "description": "Yogurt, cucumber, and garlic dip, perfect as an appetizer or side",
-          "thumb": null
+          "thumb": "greek1.jpg"
         }
       ]
     },
@@ -4266,28 +4266,28 @@
           "name": "Moussaka",
           "price": 12,
           "description": "Layered eggplant, potato, and minced meat casserole topped with béchamel sauce",
-          "thumb": null
+          "thumb": "greek1.jpg"
         },
         {
           "id": 58,
           "name": "Souvlaki",
           "price": 10,
           "description": "Grilled skewers of marinated meat, typically served with pita and tzatziki",
-          "thumb": null
+          "thumb": "greek.jpg"
         },
         {
           "id": 59,
           "name": "Spanakopita",
           "price": 8,
           "description": "Spinach and feta cheese pie wrapped in phyllo pastry",
-          "thumb": null
+          "thumb": "greek2.jpg"
         },
         {
           "id": 60,
           "name": "Tzatziki",
           "price": 5,
           "description": "Yogurt, cucumber, and garlic dip, perfect as an appetizer or side",
-          "thumb": null
+          "thumb": "greek1.jpg"
         }
       ]
     },
@@ -4307,28 +4307,28 @@
           "name": "Cheeseburger",
           "price": 10,
           "description": "Grilled beef patty with cheese on a bun, often served with lettuce, tomato, onion, and pickles",
-          "thumb": null
+          "thumb": "american.jpg"
         },
         {
           "id": 66,
           "name": "BBQ Ribs",
           "price": 15,
           "description": "Slow-cooked pork ribs coated in BBQ sauce and served with sides like coleslaw and cornbread",
-          "thumb": null
+          "thumb": "american1.jpg"
         },
         {
           "id": 67,
           "name": "Buffalo Wings",
           "price": 9,
           "description": "Deep-fried chicken wings coated in a vinegar-based cayenne pepper hot sauce and butter",
-          "thumb": null
+          "thumb": "american2.jpg"
         },
         {
           "id": 68,
           "name": "Apple Pie",
           "price": 7,
           "description": "Classic dessert made with a spiced apple filling in a flaky pastry crust",
-          "thumb": null
+          "thumb": "american2.jpg"
         }
       ]
     },
@@ -4348,28 +4348,28 @@
           "name": "Cheeseburger",
           "price": 10,
           "description": "Grilled beef patty with cheese on a bun, often served with lettuce, tomato, onion, and pickles",
-          "thumb": null
+          "thumb": "american.jpg"
         },
         {
           "id": 66,
           "name": "BBQ Ribs",
           "price": 15,
           "description": "Slow-cooked pork ribs coated in BBQ sauce and served with sides like coleslaw and cornbread",
-          "thumb": null
+          "thumb": "american1.jpg"
         },
         {
           "id": 67,
           "name": "Buffalo Wings",
           "price": 9,
           "description": "Deep-fried chicken wings coated in a vinegar-based cayenne pepper hot sauce and butter",
-          "thumb": null
+          "thumb": "american2.jpg"
         },
         {
           "id": 68,
           "name": "Apple Pie",
           "price": 7,
           "description": "Classic dessert made with a spiced apple filling in a flaky pastry crust",
-          "thumb": null
+          "thumb": "american2.jpg"
         }
       ]
     },
@@ -4389,28 +4389,28 @@
           "name": "Cheeseburger",
           "price": 10,
           "description": "Grilled beef patty with cheese on a bun, often served with lettuce, tomato, onion, and pickles",
-          "thumb": null
+          "thumb": "american.jpg"
         },
         {
           "id": 66,
           "name": "BBQ Ribs",
           "price": 15,
           "description": "Slow-cooked pork ribs coated in BBQ sauce and served with sides like coleslaw and cornbread",
-          "thumb": null
+          "thumb": "american1.jpg"
         },
         {
           "id": 67,
           "name": "Buffalo Wings",
           "price": 9,
           "description": "Deep-fried chicken wings coated in a vinegar-based cayenne pepper hot sauce and butter",
-          "thumb": null
+          "thumb": "american2.jpg"
         },
         {
           "id": 68,
           "name": "Apple Pie",
           "price": 7,
           "description": "Classic dessert made with a spiced apple filling in a flaky pastry crust",
-          "thumb": null
+          "thumb": "american2.jpg"
         }
       ]
     },
@@ -4430,28 +4430,28 @@
           "name": "Cheeseburger",
           "price": 10,
           "description": "Grilled beef patty with cheese on a bun, often served with lettuce, tomato, onion, and pickles",
-          "thumb": null
+          "thumb": "american.jpg"
         },
         {
           "id": 66,
           "name": "BBQ Ribs",
           "price": 15,
           "description": "Slow-cooked pork ribs coated in BBQ sauce and served with sides like coleslaw and cornbread",
-          "thumb": null
+          "thumb": "american1.jpg"
         },
         {
           "id": 67,
           "name": "Buffalo Wings",
           "price": 9,
           "description": "Deep-fried chicken wings coated in a vinegar-based cayenne pepper hot sauce and butter",
-          "thumb": null
+          "thumb": "american2.jpg"
         },
         {
           "id": 68,
           "name": "Apple Pie",
           "price": 7,
           "description": "Classic dessert made with a spiced apple filling in a flaky pastry crust",
-          "thumb": null
+          "thumb": "american2.jpg"
         }
       ]
     },
@@ -4471,28 +4471,28 @@
           "name": "Cheeseburger",
           "price": 10,
           "description": "Grilled beef patty with cheese on a bun, often served with lettuce, tomato, onion, and pickles",
-          "thumb": null
+          "thumb": "american.jpg"
         },
         {
           "id": 66,
           "name": "BBQ Ribs",
           "price": 15,
           "description": "Slow-cooked pork ribs coated in BBQ sauce and served with sides like coleslaw and cornbread",
-          "thumb": null
+          "thumb": "american1.jpg"
         },
         {
           "id": 67,
           "name": "Buffalo Wings",
           "price": 9,
           "description": "Deep-fried chicken wings coated in a vinegar-based cayenne pepper hot sauce and butter",
-          "thumb": null
+          "thumb": "american2.jpg"
         },
         {
           "id": 68,
           "name": "Apple Pie",
           "price": 7,
           "description": "Classic dessert made with a spiced apple filling in a flaky pastry crust",
-          "thumb": null
+          "thumb": "american2.jpg"
         }
       ]
     },
@@ -4512,28 +4512,28 @@
           "name": "Cheeseburger",
           "price": 10,
           "description": "Grilled beef patty with cheese on a bun, often served with lettuce, tomato, onion, and pickles",
-          "thumb": null
+          "thumb": "american.jpg"
         },
         {
           "id": 66,
           "name": "BBQ Ribs",
           "price": 15,
           "description": "Slow-cooked pork ribs coated in BBQ sauce and served with sides like coleslaw and cornbread",
-          "thumb": null
+          "thumb": "american1.jpg"
         },
         {
           "id": 67,
           "name": "Buffalo Wings",
           "price": 9,
           "description": "Deep-fried chicken wings coated in a vinegar-based cayenne pepper hot sauce and butter",
-          "thumb": null
+          "thumb": "american2.jpg"
         },
         {
           "id": 68,
           "name": "Apple Pie",
           "price": 7,
           "description": "Classic dessert made with a spiced apple filling in a flaky pastry crust",
-          "thumb": null
+          "thumb": "american2.jpg"
         }
       ]
     },
@@ -4553,28 +4553,28 @@
           "name": "Nachos Supreme",
           "price": 8,
           "description": "Crispy corn tortillas topped with melted cheese, jalapeños, beans, and guacamole",
-          "thumb": null
+          "thumb": "messican.jpg"
         },
         {
           "id": 70,
           "name": "Chicken Fajitas",
           "price": 14,
           "description": "Grilled chicken strips served on a sizzling platter with peppers, onions, and tortillas",
-          "thumb": null
+          "thumb": "messican1.jpg"
         },
         {
           "id": 71,
           "name": "Beef Tacos",
           "price": 10,
           "description": "Soft or crunchy tacos filled with seasoned beef, lettuce, cheese, and salsa",
-          "thumb": null
+          "thumb": "messican2.jpg"
         },
         {
           "id": 72,
           "name": "Chili Con Carne",
           "price": 12,
           "description": "Spicy stew containing chili peppers, meat, tomatoes, beans, and spices",
-          "thumb": null
+          "thumb": "messican.jpg"
         }
       ]
     },
@@ -4594,28 +4594,28 @@
           "name": "Nachos Supreme",
           "price": 8,
           "description": "Crispy corn tortillas topped with melted cheese, jalapeños, beans, and guacamole",
-          "thumb": null
+          "thumb": "messican.jpg"
         },
         {
           "id": 70,
           "name": "Chicken Fajitas",
           "price": 14,
           "description": "Grilled chicken strips served on a sizzling platter with peppers, onions, and tortillas",
-          "thumb": null
+          "thumb": "messican1.jpg"
         },
         {
           "id": 71,
           "name": "Beef Tacos",
           "price": 10,
           "description": "Soft or crunchy tacos filled with seasoned beef, lettuce, cheese, and salsa",
-          "thumb": null
+          "thumb": "messican2.jpg"
         },
         {
           "id": 72,
           "name": "Chili Con Carne",
           "price": 12,
           "description": "Spicy stew containing chili peppers, meat, tomatoes, beans, and spices",
-          "thumb": null
+          "thumb": "messican.jpg"
         }
       ]
     },
@@ -4635,28 +4635,28 @@
           "name": "Nachos Supreme",
           "price": 8,
           "description": "Crispy corn tortillas topped with melted cheese, jalapeños, beans, and guacamole",
-          "thumb": null
+          "thumb": "messican.jpg"
         },
         {
           "id": 70,
           "name": "Chicken Fajitas",
           "price": 14,
           "description": "Grilled chicken strips served on a sizzling platter with peppers, onions, and tortillas",
-          "thumb": null
+          "thumb": "messican1.jpg"
         },
         {
           "id": 71,
           "name": "Beef Tacos",
           "price": 10,
           "description": "Soft or crunchy tacos filled with seasoned beef, lettuce, cheese, and salsa",
-          "thumb": null
+          "thumb": "messican2.jpg"
         },
         {
           "id": 72,
           "name": "Chili Con Carne",
           "price": 12,
           "description": "Spicy stew containing chili peppers, meat, tomatoes, beans, and spices",
-          "thumb": null
+          "thumb": "messican.jpg"
         }
       ]
     },
@@ -4676,28 +4676,28 @@
           "name": "Nachos Supreme",
           "price": 8,
           "description": "Crispy corn tortillas topped with melted cheese, jalapeños, beans, and guacamole",
-          "thumb": null
+          "thumb": "messican.jpg"
         },
         {
           "id": 70,
           "name": "Chicken Fajitas",
           "price": 14,
           "description": "Grilled chicken strips served on a sizzling platter with peppers, onions, and tortillas",
-          "thumb": null
+          "thumb": "messican1.jpg"
         },
         {
           "id": 71,
           "name": "Beef Tacos",
           "price": 10,
           "description": "Soft or crunchy tacos filled with seasoned beef, lettuce, cheese, and salsa",
-          "thumb": null
+          "thumb": "messican2.jpg"
         },
         {
           "id": 72,
           "name": "Chili Con Carne",
           "price": 12,
           "description": "Spicy stew containing chili peppers, meat, tomatoes, beans, and spices",
-          "thumb": null
+          "thumb": "messican.jpg"
         }
       ]
     },
@@ -4717,28 +4717,28 @@
           "name": "Nachos Supreme",
           "price": 8,
           "description": "Crispy corn tortillas topped with melted cheese, jalapeños, beans, and guacamole",
-          "thumb": null
+          "thumb": "messican.jpg"
         },
         {
           "id": 70,
           "name": "Chicken Fajitas",
           "price": 14,
           "description": "Grilled chicken strips served on a sizzling platter with peppers, onions, and tortillas",
-          "thumb": null
+          "thumb": "messican1.jpg"
         },
         {
           "id": 71,
           "name": "Beef Tacos",
           "price": 10,
           "description": "Soft or crunchy tacos filled with seasoned beef, lettuce, cheese, and salsa",
-          "thumb": null
+          "thumb": "messican2.jpg"
         },
         {
           "id": 72,
           "name": "Chili Con Carne",
           "price": 12,
           "description": "Spicy stew containing chili peppers, meat, tomatoes, beans, and spices",
-          "thumb": null
+          "thumb": "messican.jpg"
         }
       ]
     },
@@ -4758,28 +4758,28 @@
           "name": "Nachos Supreme",
           "price": 8,
           "description": "Crispy corn tortillas topped with melted cheese, jalapeños, beans, and guacamole",
-          "thumb": null
+          "thumb": "messican.jpg"
         },
         {
           "id": 70,
           "name": "Chicken Fajitas",
           "price": 14,
           "description": "Grilled chicken strips served on a sizzling platter with peppers, onions, and tortillas",
-          "thumb": null
+          "thumb": "messican1.jpg"
         },
         {
           "id": 71,
           "name": "Beef Tacos",
           "price": 10,
           "description": "Soft or crunchy tacos filled with seasoned beef, lettuce, cheese, and salsa",
-          "thumb": null
+          "thumb": "messican2.jpg"
         },
         {
           "id": 72,
           "name": "Chili Con Carne",
           "price": 12,
           "description": "Spicy stew containing chili peppers, meat, tomatoes, beans, and spices",
-          "thumb": null
+          "thumb": "messican.jpg"
         }
       ]
     },
@@ -4799,28 +4799,28 @@
           "name": "Nachos Supreme",
           "price": 8,
           "description": "Crispy corn tortillas topped with melted cheese, jalapeños, beans, and guacamole",
-          "thumb": null
+          "thumb": "messican.jpg"
         },
         {
           "id": 70,
           "name": "Chicken Fajitas",
           "price": 14,
           "description": "Grilled chicken strips served on a sizzling platter with peppers, onions, and tortillas",
-          "thumb": null
+          "thumb": "messican1.jpg"
         },
         {
           "id": 71,
           "name": "Beef Tacos",
           "price": 10,
           "description": "Soft or crunchy tacos filled with seasoned beef, lettuce, cheese, and salsa",
-          "thumb": null
+          "thumb": "messican2.jpg"
         },
         {
           "id": 72,
           "name": "Chili Con Carne",
           "price": 12,
           "description": "Spicy stew containing chili peppers, meat, tomatoes, beans, and spices",
-          "thumb": null
+          "thumb": "messican.jpg"
         }
       ]
     },
@@ -4840,28 +4840,28 @@
           "name": "Pad Thai",
           "price": 10,
           "description": "Stir-fried rice noodles with eggs, tofu, tamarind pulp, and shrimp or chicken, garnished with peanuts",
-          "thumb": null
+          "thumb": "thai.jpg"
         },
         {
           "id": 74,
           "name": "Green Curry Chicken",
           "price": 12,
           "description": "Spicy and sweet green curry with chicken, eggplants, bamboo shoots, and basil leaves",
-          "thumb": null
+          "thumb": "thai1.jpg"
         },
         {
           "id": 75,
           "name": "Tom Yum Goong",
           "price": 13,
           "description": "Hot and sour Thai soup with shrimp, mushrooms, tomatoes, lemongrass, galangal, and lime leaves",
-          "thumb": null
+          "thumb": "thai2.jpg"
         },
         {
           "id": 76,
           "name": "Mango Sticky Rice",
           "price": 7,
           "description": "Sweet sticky rice with fresh mango slices and coconut milk",
-          "thumb": null
+          "thumb": "thai.jpg"
         }
       ]
     },
@@ -4881,28 +4881,28 @@
           "name": "Pad Thai",
           "price": 10,
           "description": "Stir-fried rice noodles with eggs, tofu, tamarind pulp, and shrimp or chicken, garnished with peanuts",
-          "thumb": null
+          "thumb": "thai.jpg"
         },
         {
           "id": 74,
           "name": "Green Curry Chicken",
           "price": 12,
           "description": "Spicy and sweet green curry with chicken, eggplants, bamboo shoots, and basil leaves",
-          "thumb": null
+          "thumb": "thai1.jpg"
         },
         {
           "id": 75,
           "name": "Tom Yum Goong",
           "price": 13,
           "description": "Hot and sour Thai soup with shrimp, mushrooms, tomatoes, lemongrass, galangal, and lime leaves",
-          "thumb": null
+          "thumb": "thai2.jpg"
         },
         {
           "id": 76,
           "name": "Mango Sticky Rice",
           "price": 7,
           "description": "Sweet sticky rice with fresh mango slices and coconut milk",
-          "thumb": null
+          "thumb": "thai.jpg"
         }
       ]
     },
@@ -4922,28 +4922,28 @@
           "name": "Pad Thai",
           "price": 10,
           "description": "Stir-fried rice noodles with eggs, tofu, tamarind pulp, and shrimp or chicken, garnished with peanuts",
-          "thumb": null
+          "thumb": "thai.jpg"
         },
         {
           "id": 74,
           "name": "Green Curry Chicken",
           "price": 12,
           "description": "Spicy and sweet green curry with chicken, eggplants, bamboo shoots, and basil leaves",
-          "thumb": null
+          "thumb": "thai1.jpg"
         },
         {
           "id": 75,
           "name": "Tom Yum Goong",
           "price": 13,
           "description": "Hot and sour Thai soup with shrimp, mushrooms, tomatoes, lemongrass, galangal, and lime leaves",
-          "thumb": null
+          "thumb": "thai2.jpg"
         },
         {
           "id": 76,
           "name": "Mango Sticky Rice",
           "price": 7,
           "description": "Sweet sticky rice with fresh mango slices and coconut milk",
-          "thumb": null
+          "thumb": "thai.jpg"
         }
       ]
     },
@@ -4963,28 +4963,28 @@
           "name": "Pad Thai",
           "price": 10,
           "description": "Stir-fried rice noodles with eggs, tofu, tamarind pulp, and shrimp or chicken, garnished with peanuts",
-          "thumb": null
+          "thumb": "thai.jpg"
         },
         {
           "id": 74,
           "name": "Green Curry Chicken",
           "price": 12,
           "description": "Spicy and sweet green curry with chicken, eggplants, bamboo shoots, and basil leaves",
-          "thumb": null
+          "thumb": "thai1.jpg"
         },
         {
           "id": 75,
           "name": "Tom Yum Goong",
           "price": 13,
           "description": "Hot and sour Thai soup with shrimp, mushrooms, tomatoes, lemongrass, galangal, and lime leaves",
-          "thumb": null
+          "thumb": "thai2.jpg"
         },
         {
           "id": 76,
           "name": "Mango Sticky Rice",
           "price": 7,
           "description": "Sweet sticky rice with fresh mango slices and coconut milk",
-          "thumb": null
+          "thumb": "thai.jpg"
         }
       ]
     },
@@ -5004,28 +5004,28 @@
           "name": "Pad Thai",
           "price": 10,
           "description": "Stir-fried rice noodles with eggs, tofu, tamarind pulp, and shrimp or chicken, garnished with peanuts",
-          "thumb": null
+          "thumb": "thai.jpg"
         },
         {
           "id": 74,
           "name": "Green Curry Chicken",
           "price": 12,
           "description": "Spicy and sweet green curry with chicken, eggplants, bamboo shoots, and basil leaves",
-          "thumb": null
+          "thumb": "thai1.jpg"
         },
         {
           "id": 75,
           "name": "Tom Yum Goong",
           "price": 13,
           "description": "Hot and sour Thai soup with shrimp, mushrooms, tomatoes, lemongrass, galangal, and lime leaves",
-          "thumb": null
+          "thumb": "thai2.jpg"
         },
         {
           "id": 76,
           "name": "Mango Sticky Rice",
           "price": 7,
           "description": "Sweet sticky rice with fresh mango slices and coconut milk",
-          "thumb": null
+          "thumb": "thai.jpg"
         }
       ]
     },
@@ -5045,28 +5045,28 @@
           "name": "Pad Thai",
           "price": 10,
           "description": "Stir-fried rice noodles with eggs, tofu, tamarind pulp, and shrimp or chicken, garnished with peanuts",
-          "thumb": null
+          "thumb": "thai.jpg"
         },
         {
           "id": 74,
           "name": "Green Curry Chicken",
           "price": 12,
           "description": "Spicy and sweet green curry with chicken, eggplants, bamboo shoots, and basil leaves",
-          "thumb": null
+          "thumb": "thai1.jpg"
         },
         {
           "id": 75,
           "name": "Tom Yum Goong",
           "price": 13,
           "description": "Hot and sour Thai soup with shrimp, mushrooms, tomatoes, lemongrass, galangal, and lime leaves",
-          "thumb": null
+          "thumb": "thai2.jpg"
         },
         {
           "id": 76,
           "name": "Mango Sticky Rice",
           "price": 7,
           "description": "Sweet sticky rice with fresh mango slices and coconut milk",
-          "thumb": null
+          "thumb": "thai.jpg"
         }
       ]
     },
@@ -5086,35 +5086,35 @@
           "name": "Doner Kebab",
           "price": 8,
           "description": "Rotisserie grilled meat, served in a pita with salad and sauces",
-          "thumb": null
+          "thumb": "keb.jpg"
         },
         {
           "id": 78,
           "name": "Shish Kebab",
           "price": 10,
           "description": "Skewered and grilled cubes of meat, served with grilled vegetables",
-          "thumb": null
+          "thumb": "keb2.jpg"
         },
         {
           "id": 79,
           "name": "Adana Kebab",
           "price": 12,
           "description": "Hand-minced meat kebab mounted on a wide iron skewer and grilled on an open mangal filled with burning charcoal",
-          "thumb": null
+          "thumb": "keb.jpg"
         },
         {
           "id": 80,
           "name": "Kebab Platter",
           "price": 15,
           "description": "A platter of mixed kebabs, including doner, shish, and Adana, served with sides of rice and salad",
-          "thumb": null
+          "thumb": "keb1.jpg"
         },
         {
           "id": 81,
           "name": "Falafel Wrap",
           "price": 7,
           "description": "Deep-fried chickpea balls served in a wrap with vegetables and tahini sauce",
-          "thumb": null
+          "thumb": "keb2.jpg"
         }
       ]
     },
@@ -5134,35 +5134,35 @@
           "name": "Doner Kebab",
           "price": 8,
           "description": "Rotisserie grilled meat, served in a pita with salad and sauces",
-          "thumb": null
+          "thumb": "keb.jpg"
         },
         {
           "id": 78,
           "name": "Shish Kebab",
           "price": 10,
           "description": "Skewered and grilled cubes of meat, served with grilled vegetables",
-          "thumb": null
+          "thumb": "keb2.jpg"
         },
         {
           "id": 79,
           "name": "Adana Kebab",
           "price": 12,
           "description": "Hand-minced meat kebab mounted on a wide iron skewer and grilled on an open mangal filled with burning charcoal",
-          "thumb": null
+          "thumb": "keb.jpg"
         },
         {
           "id": 80,
           "name": "Kebab Platter",
           "price": 15,
           "description": "A platter of mixed kebabs, including doner, shish, and Adana, served with sides of rice and salad",
-          "thumb": null
+          "thumb": "keb1.jpg"
         },
         {
           "id": 81,
           "name": "Falafel Wrap",
           "price": 7,
           "description": "Deep-fried chickpea balls served in a wrap with vegetables and tahini sauce",
-          "thumb": null
+          "thumb": "keb2.jpg"
         }
       ]
     },
@@ -5182,35 +5182,35 @@
           "name": "Doner Kebab",
           "price": 8,
           "description": "Rotisserie grilled meat, served in a pita with salad and sauces",
-          "thumb": null
+          "thumb": "keb.jpg"
         },
         {
           "id": 78,
           "name": "Shish Kebab",
           "price": 10,
           "description": "Skewered and grilled cubes of meat, served with grilled vegetables",
-          "thumb": null
+          "thumb": "keb2.jpg"
         },
         {
           "id": 79,
           "name": "Adana Kebab",
           "price": 12,
           "description": "Hand-minced meat kebab mounted on a wide iron skewer and grilled on an open mangal filled with burning charcoal",
-          "thumb": null
+          "thumb": "keb.jpg"
         },
         {
           "id": 80,
           "name": "Kebab Platter",
           "price": 15,
           "description": "A platter of mixed kebabs, including doner, shish, and Adana, served with sides of rice and salad",
-          "thumb": null
+          "thumb": "keb1.jpg"
         },
         {
           "id": 81,
           "name": "Falafel Wrap",
           "price": 7,
           "description": "Deep-fried chickpea balls served in a wrap with vegetables and tahini sauce",
-          "thumb": null
+          "thumb": "keb2.jpg"
         }
       ]
     },
@@ -5230,35 +5230,35 @@
           "name": "Doner Kebab",
           "price": 8,
           "description": "Rotisserie grilled meat, served in a pita with salad and sauces",
-          "thumb": null
+          "thumb": "keb.jpg"
         },
         {
           "id": 78,
           "name": "Shish Kebab",
           "price": 10,
           "description": "Skewered and grilled cubes of meat, served with grilled vegetables",
-          "thumb": null
+          "thumb": "keb2.jpg"
         },
         {
           "id": 79,
           "name": "Adana Kebab",
           "price": 12,
           "description": "Hand-minced meat kebab mounted on a wide iron skewer and grilled on an open mangal filled with burning charcoal",
-          "thumb": null
+          "thumb": "keb.jpg"
         },
         {
           "id": 80,
           "name": "Kebab Platter",
           "price": 15,
           "description": "A platter of mixed kebabs, including doner, shish, and Adana, served with sides of rice and salad",
-          "thumb": null
+          "thumb": "keb1.jpg"
         },
         {
           "id": 81,
           "name": "Falafel Wrap",
           "price": 7,
           "description": "Deep-fried chickpea balls served in a wrap with vegetables and tahini sauce",
-          "thumb": null
+          "thumb": "keb2.jpg"
         }
       ]
     },
@@ -5278,35 +5278,35 @@
           "name": "Doner Kebab",
           "price": 8,
           "description": "Rotisserie grilled meat, served in a pita with salad and sauces",
-          "thumb": null
+          "thumb": "keb.jpg"
         },
         {
           "id": 78,
           "name": "Shish Kebab",
           "price": 10,
           "description": "Skewered and grilled cubes of meat, served with grilled vegetables",
-          "thumb": null
+          "thumb": "keb2.jpg"
         },
         {
           "id": 79,
           "name": "Adana Kebab",
           "price": 12,
           "description": "Hand-minced meat kebab mounted on a wide iron skewer and grilled on an open mangal filled with burning charcoal",
-          "thumb": null
+          "thumb": "keb.jpg"
         },
         {
           "id": 80,
           "name": "Kebab Platter",
           "price": 15,
           "description": "A platter of mixed kebabs, including doner, shish, and Adana, served with sides of rice and salad",
-          "thumb": null
+          "thumb": "keb1.jpg"
         },
         {
           "id": 81,
           "name": "Falafel Wrap",
           "price": 7,
           "description": "Deep-fried chickpea balls served in a wrap with vegetables and tahini sauce",
-          "thumb": null
+          "thumb": "keb2.jpg"
         }
       ]
     },
@@ -5326,35 +5326,35 @@
           "name": "Doner Kebab",
           "price": 8,
           "description": "Rotisserie grilled meat, served in a pita with salad and sauces",
-          "thumb": null
+          "thumb": "keb.jpg"
         },
         {
           "id": 78,
           "name": "Shish Kebab",
           "price": 10,
           "description": "Skewered and grilled cubes of meat, served with grilled vegetables",
-          "thumb": null
+          "thumb": "keb2.jpg"
         },
         {
           "id": 79,
           "name": "Adana Kebab",
           "price": 12,
           "description": "Hand-minced meat kebab mounted on a wide iron skewer and grilled on an open mangal filled with burning charcoal",
-          "thumb": null
+          "thumb": "keb.jpg"
         },
         {
           "id": 80,
           "name": "Kebab Platter",
           "price": 15,
           "description": "A platter of mixed kebabs, including doner, shish, and Adana, served with sides of rice and salad",
-          "thumb": null
+          "thumb": "keb1.jpg"
         },
         {
           "id": 81,
           "name": "Falafel Wrap",
           "price": 7,
           "description": "Deep-fried chickpea balls served in a wrap with vegetables and tahini sauce",
-          "thumb": null
+          "thumb": "keb2.jpg"
         }
       ]
     }
