@@ -26,7 +26,7 @@ class OrderTableSeeder extends Seeder
         foreach ($restaurants as $restaurant) {
             $foodItems = $restaurant->food_items; 
 
-            for ($i = 0; $i < 25; $i++) { 
+            for ($i = 0; $i < 5; $i++) { 
                 $order = Order::create([
                     'order_time' => $faker->dateTimeBetween('now'),
                     'customers_name' => $faker->name,

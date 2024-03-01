@@ -8,7 +8,7 @@
         </h2>
     <div class="row d-flex mt-3">
          <div class="text-end">
-            <a class="btn btn-success" href="{{ route('admin.restaurants.statistics.index') }}">
+            <a class="btn btn-outline-secondary" href="{{ route('admin.restaurants.statistics.index') }}">
                 <i class="fa-solid fa-arrow-left"></i> Back
             </a>
         </div>
