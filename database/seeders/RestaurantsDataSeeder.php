@@ -36,7 +36,7 @@ class RestaurantsDataSeeder extends Seeder
                     'name' => $restaurantData['name'],
                     'address' => $restaurantData['address'],
                     'phone_number' => $faker->phoneNumber(),
-                    'user_id' =>$faker->numberBetween(1, 3),
+                    'user_id' =>$faker->numberBetween(1, 6),
                     'opening_time' => $openingTime->format('H:i:s'),
                     'closing_time' => $closingTime->format('H:i:s'),
                     'closure_day' => $faker->dayOfWeek(),

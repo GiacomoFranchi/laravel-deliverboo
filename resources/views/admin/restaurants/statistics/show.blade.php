@@ -3,14 +3,41 @@
 @section('content')
 
 <div class="container">
-    <div class="row">
+        <h2>
+            Statistics:
+        </h2>
+    <div class="row d-flex mt-3">
+         <div class="text-end">
+            <a class="btn btn-success" href="{{ route('admin.restaurants.statistics.index') }}">
+                <i class="fa-solid fa-arrow-left"></i> Back
+            </a>
+        </div>
+        
+        <div class="col">
+            <h3> {{$restaurant->name}}</h3>
+
+            <p>Total Orders: {{ $statistics->total_orders }}</p>
+            <p>Total Revenue: €{{ number_format($statistics->total_revenue, 2) }}</p>>
+        </div>
+        <div class="col">
+             <h3>Most Ordered Foods</h3>
+            <ul>
+                @foreach ($mostOrderedFoods as $food)
+                    <li>{{ $food->name }} - Ordered {{ $food->order_count }} times</li>
+                @endforeach
+            </ul>
+        </div>
+        
+
+
+
 
     </div>
 
 
 
 
-    <canvas id="restaurantShowChart">
+    <canvas id="restaurantShowChart" class="w-50 h-50 d-flex justify-content-center text-center">
 
 
     </canvas>
