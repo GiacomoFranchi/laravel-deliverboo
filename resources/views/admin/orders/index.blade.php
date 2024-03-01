@@ -44,20 +44,21 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">Orders ID</th>
+                        <th scope="col">ID</th>
+                        <th scope="col">Created: </th>
                         <th scope="col">Restaurant</th>
                         <th scope="col">Customer Name</th>
                         <th scope="col">Customer Email Address</th>
                         <th scope="col">Address</th>
                         <th scope="col">Total Price </th>
-                        <th scope="col">Status </th>
                         <th scope="col">Actions</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach ($orders as $order)
                         <tr>
-                            <th scope="row">{{ $order->id }}</th>
+                            <th scope="row"># {{ $order->id }}</th>
+                            <td>{{ $order->created_at->format('Y-m-d H:i') }}</td>
                             <td>
                                 @if (count($order->food_items) > 0)
                                     <p>{{ $order->food_items[0]->restaurant->name }}</p>
@@ -67,7 +68,6 @@
                             <td>{{ $order->customers_email }}</td>
                             <td>{{ $order->customers_address }}</td>
                             <td>{{ $order->total_price }}</td>
-                            <td> - </td>
                             <td>
                                 <a class="btn btn-success"
                                     href="{{ route('admin.orders.show', ['order' => $order->slug]) }}">
