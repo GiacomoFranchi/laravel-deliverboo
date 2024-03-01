@@ -49,7 +49,7 @@
                                                 <div class="card-body">
                                                     <h5 class="card-title">Restaurants</h5>
                                                     <p class="card-text"><small class="text-body-secondary">List of all your
-                                                            restaurants registered. Keep track of your restaurants Profile
+                                                            restaurants registered. Keep track of your restaurants profiles
                                                             and Menus</small></p>
                                                 </div>
                                             </div>
@@ -63,9 +63,7 @@
                                             <div class="col-md-12">
                                                 <div class="card-body">
                                                     <h5 class="card-title">Orders</h5>
-                                                    <p class="card-text"><small class="text-body-secondary">List of all your
-                                                            orders received in your restaurants, check the customer and
-                                                            order details of each one.</small></p>
+                                                    <p class="card-text"><small class="text-body-secondary">List of all your orders received in your restaurants, check customer and order details.</small></p>
                                                 </div>
                                             </div>
                                         </a>
