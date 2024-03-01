@@ -56,9 +56,6 @@
 
                 <div class="btn-wrapper mt-3">
                     <a href="{{ route('admin.orders.index') }}" class="btn btn-primary">Back</a>
-
-                    <a href="{{ route('admin.orders.edit', ['order' => $order->slug]) }}" class="btn btn-warning">
-                        Update</a>
                 </div>
             </div>
         </div>
