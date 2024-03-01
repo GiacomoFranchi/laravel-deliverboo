@@ -31,6 +31,8 @@ class RestaurantStatisticController extends Controller
 
         $totalRestaurantsOwned = Restaurant::where('user_id', '=', Auth::user()->id)->count();
 
+        $totalRevenueAll = $restaurantsData->sum('total_revenue');
+
         $totalOrderCount = Order::whereIn('id', function ($query) {
             $query->select('order_id')
             ->from('food_item_order')
@@ -46,7 +48,7 @@ class RestaurantStatisticController extends Controller
         })->count();
         
 
-        return view('admin.restaurants.statistics.index', compact('restaurantsData', 'totalRestaurantsOwned', 'totalOrderCount'));
+        return view('admin.restaurants.statistics.index', compact('restaurantsData', 'totalRestaurantsOwned', 'totalOrderCount','totalRevenueAll'));
     }
 
     public function show(Restaurant $restaurant)

@@ -18,6 +18,7 @@
                 <p> {{$totalRestaurantsOwned}}</p>
             <h5>Total Orders:</h5>
             <p> {{$totalOrderCount}}</p>
+            <h5>Total revenue across all restaurants: <strong>€{{ number_format($totalRevenueAll, 2) }}</strong></h5>
             <hr>
 
         <div class="row row-cols-4 d-flex justify-content-start gap-4 ">
