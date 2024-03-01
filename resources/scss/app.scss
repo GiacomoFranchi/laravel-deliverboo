@@ -3,3 +3,40 @@
 img {
     max-width: 100%;
 }
+
+.card-custom {
+    max-width: 30%;
+    transition: transform 0.3s ease-in-out;
+    &:hover {
+        transform: scale(0.95); 
+        cursor: pointer;
+    }
+}
+
+.fa-style {
+    height: 40px;
+    width: 40px;
+    font-size: 2rem;
+    padding: 12px;
+    margin-top: 20px;
+    text-align:center;
+    line-height:40px;
+    color: black;
+}
+
+#eye-slash-email {
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+#eye-slash-address {
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+a.row {
+    text-decoration: none;
+    color: inherit;
+}
