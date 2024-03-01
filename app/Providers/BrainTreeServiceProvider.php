@@ -15,6 +15,8 @@ class BraintreeServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        //  un'istanza singleton di Braintree\Gateway, ogni volta che la classe Gateway viene richiesta viene fornita questa istanza
+        
         $this->app->singleton(Gateway::class, function ($app) {
             return new Gateway([
                 'environment' => env('BRAINTREE_ENVIRONMENT'),
@@ -23,7 +25,7 @@ class BraintreeServiceProvider extends ServiceProvider
                 'privateKey' => env('BRAINTREE_PRIVATE_KEY'),
             ]);
         });
-
+        //istanza signleton per gestire le logiche di token e pagamento
         $this->app->singleton(BraintreeService::class, function ($app) {
             return new BraintreeService($app->make(Gateway::class));
         });

@@ -17,7 +17,7 @@
             <h3> {{$restaurant->name}}</h3>
 
             <p>Total Orders: {{ $statistics->total_orders }}</p>
-            <p>Total Revenue: €{{ number_format($statistics->total_revenue, 2) }}</p>>
+            <p>Total Revenue: €{{ number_format($statistics->total_revenue, 2) }}</p>
         </div>
         <div class="col">
              <h3>Most Ordered Foods</h3>
