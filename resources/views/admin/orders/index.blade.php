@@ -44,7 +44,7 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">ID</th>
+                        <th scope="col">No.</th>
                         <th scope="col">Created: </th>
                         <th scope="col">Restaurant</th>
                         <th scope="col">Customer Name</th>
@@ -57,8 +57,8 @@
                 <tbody>
                     @foreach ($orders as $order)
                         <tr>
-                            <th scope="row"># {{ $order->id }}</th>
-                            <td>{{ $order->created_at->format('Y-m-d H:i') }}</td>
+                            <th scope="row"># {{ $loop->count - $loop->iteration + 1 }}</th>
+                            <td>{{ $order->order_time->format('Y-m-d H:i') }}</td>
                             <td>
                                 @if (count($order->food_items) > 0)
                                     <p>{{ $order->food_items[0]->restaurant->name }}</p>
@@ -67,7 +67,7 @@
                             <td>{{ $order->customers_name }}</td>
                             <td>{{ $order->customers_email }}</td>
                             <td>{{ $order->customers_address }}</td>
-                            <td>{{ $order->total_price }}</td>
+                            <td> € {{ $order->total_price }}</td>
                             <td>
                                 <a class="btn btn-success"
                                     href="{{ route('admin.orders.show', ['order' => $order->slug]) }}">

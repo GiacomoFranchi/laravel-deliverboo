@@ -43,7 +43,7 @@ class OrderController extends Controller
         });
     }
 
-        $orders->orderBy('created_at', 'desc');
+        $orders->orderBy('order_time', 'desc');
 
         $orders = $orders->get();
 

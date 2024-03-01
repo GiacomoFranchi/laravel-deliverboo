@@ -23,7 +23,7 @@ const myChart = new Chart(ctx, {
             borderWidth: 1 // larghezza del bordo attorno le barre
         },
         {
-            label: 'Total Revenue', // label x secondo set di dati
+            label: 'Total Revenue in €', // label x secondo set di dati
             data: totalRevenue, // dati x total revenue
             backgroundColor: 'rgba(255, 99, 132, 0.2)', 
             borderColor: 'rgba(255, 99, 132, 1)', 

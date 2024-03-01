@@ -28,7 +28,7 @@ class OrderTableSeeder extends Seeder
 
             for ($i = 0; $i < 5; $i++) { 
                 $order = Order::create([
-                    'order_time' => $faker->dateTimeBetween('now'),
+                    'order_time' => $faker->dateTimeBetween('-2 month', 'now'),
                     'customers_name' => $faker->name,
                     'customers_address' => $faker->address,
                     'customers_email' => $faker->email,
@@ -41,7 +41,7 @@ class OrderTableSeeder extends Seeder
                 $selectedFoodItems = $foodItems->random(1); 
 
                 foreach ($selectedFoodItems as $foodItem) {
-                    $quantity = rand(1, 5); 
+                    $quantity = rand(3, 6); 
                     $totalPrice += $foodItem->price * $quantity; 
 
                     

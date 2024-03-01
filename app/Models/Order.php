@@ -45,4 +45,7 @@ class Order extends Model
             $order->save();
         });
     }
+    protected $casts = [
+        'order_time' => 'datetime',
+    ];
 }

@@ -17,24 +17,17 @@ class UsersTableSeeder extends Seeder
      */
     public function run(Faker $faker)
     {
-        $emails =[
-            "email1@email.com",
-            "email2@email.com",
-            "email3@email.com",
-            "email4@email.com",
-            "email5@email.com",
-            "email6@email.com",
-        ];
+        
         $password = "password123";
 
-        foreach ($emails as $email) {
+        for ($i = 1; $i <= 39; $i++) {
             $user = new User();
-            $user->name = $faker->word();
-            $user->last_name = $faker->word();
+            $user->name = $faker->firstName();
+            $user->last_name = $faker->lastName();
             $user->address = $faker->address();
             $user->phone_number = $faker->phoneNumber();
             $user->password = Hash::make($password);
-            $user->email =$email;
+            $user->email = "email{$i}@email.com"; 
             $user->save();
 
         }
