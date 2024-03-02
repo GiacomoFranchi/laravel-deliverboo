@@ -50,6 +50,10 @@ class BrainTreeController extends Controller
         $result = $this->braintreeService->processPayment($nonceFromTheClient, $amount);
 
         if ($result->success) {
+            Log::info('Pagamento riuscito', [
+                'transaction_id' => $result->transaction->id,
+                'amount' => $amount
+            ]);
             return response()->json(['success' => true, 'transaction' => ['id' => $result->transaction->id]]);
         } else {
             return response()->json(['success' => false, 'message' => $result->message]);

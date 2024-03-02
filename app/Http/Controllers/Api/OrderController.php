@@ -30,9 +30,9 @@ class OrderController extends Controller
 
     public function store(GuestOrderRequest $request)
     {
-        Log::info('Payment request initiated', ['request_data' => $request->all()]);
+    
+        $transactionId = $request->input('transactionId');
         $totalPrice = 0;
-
 
         DB::beginTransaction();
         Log::info(['request_data' => $request->all()]);
@@ -47,25 +47,20 @@ class OrderController extends Controller
                 $totalPrice += $item->price * $quantity;
                 $order->food_items()->attach($item->id, ['quantity' => $quantity]);
             }
-
             $order->total_price = $totalPrice;
+            $order->status = $transactionId;
             $order->save();
             
             Mail::to('email1@email.it')->send(new NewOrder($order));
             Mail::to($order->customers_email)->send(new NewOrderToCustomer($order));
 
-            $paymentResult = $this->braintreeService->processPayment($request->paymentMethodNonce, $totalPrice);
-            Log::info('Payment result', ['success' => $paymentResult->success, 'message' => $paymentResult->message]);
+            
 
-            if ($paymentResult->success) {
-                DB::commit();
-
-                return response()->json(['message' => 'Ordine creato e processato'], Response::HTTP_CREATED);
-            }    // } else {
-            //     DB::rollBack();
-            //     return response()->json(['error' => 'Processo di pagamento non riuscito'], Response::HTTP_BAD_REQUEST);
-            // }
+            
             DB::commit();
+
+            return response()->json(['message' => 'Ordine creato e processato'], Response::HTTP_CREATED);
+             
         } catch (\Exception $e) {
             DB::rollBack();
             Log::error('Error processing payment', ['exception' => $e->getMessage()]);
