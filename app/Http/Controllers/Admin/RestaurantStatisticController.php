@@ -79,10 +79,12 @@ class RestaurantStatisticController extends Controller
         ->where('food_items.restaurant_id', $restaurant->id)
         ->select(
             'food_items.name',
+            'food_items.price',
             DB::raw('COUNT(food_item_order.food_item_id) as order_count')
         )
-        ->groupBy('food_items.name')
+        ->groupBy('food_items.name', 'food_items.price')
         ->orderBy('order_count', 'desc')
+        ->orderBy('food_items.price', 'desc')
         ->get();
         
 
