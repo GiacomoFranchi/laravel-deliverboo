@@ -38,6 +38,10 @@
                         <span class="fw-bold ">Telephone number:</span>
                         {{ $order->customers_phone_number }}
                     </li>
+                    <li class="mt-4 fs-5 mb-4">
+                        <span class="fw-bold ">Order send at:</span>
+                        {{ $order->created_at->format('Y-m-d H:i') }}
+                    </li>
                 </ul>
                 
                 <hr>
