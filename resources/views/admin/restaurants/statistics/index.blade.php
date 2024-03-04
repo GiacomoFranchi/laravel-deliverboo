@@ -40,8 +40,11 @@
 
         </div>
     </div>
-
-    <canvas id="restaurantsChart"></canvas>  
+    <hr>
+    <div class="my-5"  :style="$totalRestaurantsOwned > 5?  'width: 100%;' : 'width: 50%'">
+        <canvas style="width: 100%!;"  id="restaurantsChart"></canvas>  
+    </div>
+   
 
 
 

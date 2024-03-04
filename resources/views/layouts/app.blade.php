@@ -86,7 +86,7 @@
             </div>
         </nav>
 
-        <main class="">
+        <main class="col-6">
             @yield('content')
         </main>
     </div>
