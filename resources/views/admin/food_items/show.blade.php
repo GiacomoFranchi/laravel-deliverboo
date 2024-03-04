@@ -4,12 +4,13 @@
     <div class="container mt-5 mb-5">
         <div>
             <div>
+                <h1>Restaurant: {{$food_item->restaurant->name}}</h1>
                 {{-- Name --}}
                 <h2 class="fs-1 mb-3">Dish: {{ $food_item->name }}</h2>
 
                 {{-- Controllo se esiste img --}}
                 @if ($food_item->image)
-                    <div class="mb-4">
+                    <div class="mb-4" style="width: 40%;">
                         <img src="{{ asset('storage/' . $food_item->image) }}" alt="">
                     </div>
                 @else
