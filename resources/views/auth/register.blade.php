@@ -2,8 +2,8 @@
 
 @section('content')
 <div class="container mt-4">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
+    <div class="row justify-content-center jumbotron">
+        <div class="col-8">
             <div class="card">
                 <div class="card-header">{{ __('Register') }}</div>
 
@@ -125,3 +125,13 @@
     </div>
 </div>
 @endsection
+
+<style>
+    .jumbotron {
+        width: 100vw;
+        height: 50vh;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+</style>
