@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 
-<div class="jumbotron p-5 mb-4 bg-light rounded-3"  style="background-image: url('/storage/food_image/back-g-home.avif'); width: 100%; height: 100%;">
+<div class="jumbotron p-5 mb-4 bg-light rounded-3"  style="background-image: url('/storage/food_image/back-g-home.avif'); width: 100vw; height: 50vh;">
     <div class="container py-5">
         
         <h1 class="display-5 fw-bold" style="text-align:center; color">
@@ -16,6 +16,18 @@
         </h3>
     </div>
 </div>
+
+<style>
+    .jumbotron {
+        background-image: url('/storage/food_image/back-g-home.avif');
+        width: 100vw;
+        height: 50vh;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        background-size:cover;
+    }
+</style>
 
 <div class="content">
     
