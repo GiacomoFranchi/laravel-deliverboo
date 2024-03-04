@@ -5,10 +5,16 @@
         <h2 class="fs-1 mb-3">Restaurant : {{ $restaurant->name }}</h2>
 
 
-        <div class="col-4">
-            <img class="img-fluid" src="{{ asset('storage/' . $restaurant->image) }}" alt="">
-        </div>
-
+        {{-- Controllo se esiste img --}}
+        @if ($restaurant->image)
+            <div class="mb-4" style="width: 40%;">
+                <img src="{{ asset('storage/' . $restaurant->image) }}" alt="">
+            </div>
+        @else
+            <div class="mb-4" style="width: 40%;">
+                <img src="{{ asset('storage/food_image/no_img.png') }}" alt="NO image">
+            </div>
+        @endif
 
         <hr>
 
@@ -66,8 +72,9 @@
         <a class="btn btn-success" href="{{ route('admin.restaurants.index') }}">
             View Restaurants
         </a>
-        <a  class="btn btn-primary" href="{{ route('admin.orders.index', ['restaurant_id' => $restaurant->id]) }}" class="btn btn-warning">
-           View Orders
+        <a class="btn btn-primary" href="{{ route('admin.orders.index', ['restaurant_id' => $restaurant->id]) }}"
+            class="btn btn-warning">
+            View Orders
         </a>
 
         <form action="{{ route('admin.restaurants.destroy', ['restaurant' => $restaurant->slug]) }}" class="d-inline-block"

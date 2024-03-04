@@ -14,7 +14,9 @@
                         <img src="{{ asset('storage/' . $food_item->image) }}" alt="">
                     </div>
                 @else
-                    <p>No image loaded</p>
+                    <div class="mb-4" style="width: 40%;">
+                        <img src="{{asset('storage/food_image/no_img.png')}}" alt="NO image">
+                    </div>
                 @endif
 
                 <hr>
@@ -23,7 +25,7 @@
 
                     {{-- Data Creazione --}}
                     <li class="mt-4 fs-5">
-                        <span class="fw-bold ">Created on: {{ $food_item->created_at }}
+                        <span class="fw-bold ">Created on: {{ $food_item->created_at->format('Y-m-d H:i') }}
                         </span>
                     </li>
 
