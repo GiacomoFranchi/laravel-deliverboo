@@ -105,12 +105,16 @@ class RestaurantController extends Controller
             if ($restaurant->image) {
                 Storage::delete($restaurant->image);
             }
-
             $path = Storage::put('restaurants_images', $request->image);
             $form_data['image'] = $path;
-        }else{
-            $restaurant->image = null;
+        } elseif ($request->input('image_removed') == '1') {
+            
+            if ($restaurant->image) {
+                Storage::delete($restaurant->image);
+            }
+            $form_data['image'] = null;
         }
+
         $restaurant->update($form_data);
 
         if ($request->has('cusine_types')) {

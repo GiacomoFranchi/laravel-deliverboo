@@ -87,7 +87,9 @@ if(image) {
 document.getElementById('delete-img-btn').addEventListener('click', function() {
     const imageInput = document.getElementById('image');
     const previewImgElem = document.getElementById('preview-img');
+    const imageRemovedCheckbox = document.getElementById('image_removed');
     imageInput.value = '';
     previewImgElem.src = '';
     previewImgElem.style.display = 'none';
+    imageRemovedCheckbox.value = '1';
 });

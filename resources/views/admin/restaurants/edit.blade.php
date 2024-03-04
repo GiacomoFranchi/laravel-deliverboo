@@ -105,6 +105,7 @@
                 <label for="image" class="fw-bold">Select new image:</label>
                 <div class="d-flex gap-2">
                     <input type="file" class="form-control w-50" id="image" name="image">
+                    <input type="hidden" name="image_removed" id="image_removed" value="0">
                     <button id="delete-img-btn" class="btn btn-danger" type="button">Remove</button>
                 </div>
             </div>

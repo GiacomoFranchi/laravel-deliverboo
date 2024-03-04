@@ -39,6 +39,7 @@
             {{-- IMMAGINE --}}
             <div class="mb-3">
                 <label for="image" class="form-label">Image of the dish:</label>
+                <input type="hidden" name="image_removed" id="image_removed" value="0">
                 <input type="file" nullable accept="image/*" size="512" name="image" id="image"
                     class="form-control @error('image') is-invalid
                     

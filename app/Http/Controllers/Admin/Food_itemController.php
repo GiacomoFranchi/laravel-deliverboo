@@ -119,8 +119,12 @@ class Food_itemController extends Controller
             }
             $path= Storage::put('food_image', $request->image);
             $form_data['image'] = $path;
-        } else{
-            $food_item->image = null;
+        } elseif ($request->input('image_removed') == '1') {
+
+            if ($food_item->image) {
+                Storage::delete($food_item->image);
+            }
+            $form_data['image'] = null;
         }
         $food_item->update($form_data);
 
