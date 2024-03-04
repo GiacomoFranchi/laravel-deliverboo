@@ -68,6 +68,9 @@
             <li style="margin-bottom: 0.75rem;">
                 <strong>Phone Number:</strong> {{ $order->customers_phone_number }}
             </li>
+            <li style="margin-bottom: 0.75rem;">
+                <strong>Ordine Emesso il:</strong> {{ $order->created_at->format('Y-m-d H:i') }}
+            </li>
         </ul>
 
         <h2>Order Summary:</h2>
