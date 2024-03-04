@@ -31,7 +31,9 @@ const myChart = new Chart(ctx, {
         }]
     },
     //options: oggetto che contiene svariati setting x personalizzare le chart
-    options: { 
+    options: {
+        responsive: true,
+        maintainAspectRatio: true, 
         scales: { // questo configura gli assi
             y: { // configurazione x asse Y
                 beginAtZero: true //l'asse y inizia a 0

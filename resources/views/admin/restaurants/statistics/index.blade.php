@@ -41,7 +41,13 @@
         </div>
     </div>
 
-    <canvas id="restaurantsChart"></canvas>  
+    <div class="chart-container justify-content-center align-items-center " style="position: relative; height:40vh; width:80vw">
+
+         <canvas id="restaurantsChart"></canvas>  
+
+    </div>
+
+   
 
 
 
