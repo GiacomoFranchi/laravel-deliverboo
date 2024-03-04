@@ -29,6 +29,8 @@ import Chart from 'chart.js/auto';
             }]
         },
         options: {
+            responsive: true,
+            maintainAspectRatio: true,
             scales: {
                 y: {
                     display: false
