@@ -19,7 +19,7 @@
         </div>
 
         {{-- FILTER FORM --}}
-        {{-- <form class="row" action="{{ route('admin.orders.index', ['restaurant_id' => $restaurantId]) }}" method="GET">
+         <form class="row" action="{{ route('admin.orders.index', ['restaurant_id' => $restaurantId]) }}" method="GET">
             <div class="mb-3">
                 <label for="restaurantFilter" class="form-label"><strong>Filter your orders by Restaurant:</strong></label>
                 <select class="form-select @error('restaurant_id') is-invalid @enderror" name="restaurant_id"
@@ -37,7 +37,7 @@
             </div>
 
             <button type="submit" class="btn btn-primary">Filter</button>
-        </form> --}}
+        </form> 
 
         {{-- ORDERS TABLE --}}
         <div class="p-5">

@@ -25,7 +25,7 @@ class GuestOrderRequest extends FormRequest
     {
         return [
             'customers_name' => 'required|string',
-            'customers_phone_number'=>'required|numeric',
+            'customers_phone_number'=>'required|string',
             'customers_address'=>'required|string',
             'customers_email'=>'required|string',
             'food_items' => 'required|array',
