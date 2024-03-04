@@ -21,9 +21,11 @@
         </div>
         <div class="col">
              <h3>Most Ordered Foods</h3>
-            <ul>
+            <ul class="list-group list-group-flush">
                 @foreach ($mostOrderedFoods as $food)
-                    <li>{{ $food->name }} - Ordered {{ $food->order_count }} times</li>
+                    <li class="list-group-item">{{ $food->name }} - Ordered {{ $food->order_count }} times - price:
+                        <strong> € {{ $food->price}} </strong>
+                    </li>
                 @endforeach
             </ul>
         </div>
