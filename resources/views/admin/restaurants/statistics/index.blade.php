@@ -24,7 +24,7 @@
         <div class="row row-cols-4 d-flex justify-content-start gap-4 ">
         
             @foreach ($restaurantsData as $restaurant)
-            <div class="col-3 rounded mt-2 mb-2 border border-secondary pb-2">
+            <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12 rounded mt-2 mb-2 border border-secondary pb-2">
                 <h4 class="pt-3"> No {{$restaurant->id}}, {{ $restaurant->name }}</h4>
                 <hr>
                 <p>Total Orders: {{ $restaurant->total_orders }}</p>
@@ -40,9 +40,11 @@
 
         </div>
     </div>
-    <hr>
-    <div class="my-5"  :style="$totalRestaurantsOwned > 5?  'width: 100%;' : 'width: 50%'">
-        <canvas style="width: 100%!;"  id="restaurantsChart"></canvas>  
+
+    <div class="chart-container justify-content-center align-items-center " style="position: relative; height:40vh; width:80vw">
+
+        <canvas id="restaurantsChart"></canvas>  
+
     </div>
    
 

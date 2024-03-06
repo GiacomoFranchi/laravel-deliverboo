@@ -48,20 +48,20 @@
                                 @endforeach
                             </td>
                             <td>
-                                <a class="btn btn-warning"
+                                <a class="btn btn-warning" data-bs-toggle="tooltip" data-bs-placement="top" title="Restaurant's Menu"
                                     href="{{ route('admin.restaurants.food_items.index', $restaurant->id) }}">
                                     <i class="fa-solid fa-scroll" style="color: #ffffff;"></i>
                                 </a>
                             </td>
                             <td>
-                                <a class="btn btn-primary" href="{{ route('admin.orders.index', ['restaurant_id' => $restaurant->id]) }}">
+                                <a class="btn btn-primary" href="{{ route('admin.orders.index', ['restaurant_id' => $restaurant->id]) }}" data-bs-toggle="tooltip" data-bs-placement="top" title="Restaurant's Orders">
                                     <i class="fa-solid fa-file-invoice-dollar" style="color: #ffffff;"></i>
                                 </a>
                             </td>
                             <td>
                                 {{-- show button --}}
                                 <a class="btn btn-success"
-                                    href="{{ route('admin.restaurants.show', ['restaurant' => $restaurant->slug]) }}">
+                                    href="{{ route('admin.restaurants.show', ['restaurant' => $restaurant->slug]) }}" data-bs-toggle="tooltip" data-bs-placement="top" title="Restaurant's Details">
                                     <i class="fa-solid fa-circle-info"></i>
                                 </a>
 
@@ -73,7 +73,7 @@
                                     @method('DELETE')
 
                                     <button class="btn btn-danger btn-delete" type="submit"
-                                        data-title="{{ $restaurant->name }}">
+                                        data-title="{{ $restaurant->name }}" data-bs-toggle="tooltip" data-bs-placement="top" title="Delete Restaurant">
                                         <i class="fa-solid fa-trash-can"></i>
                                     </button>
 

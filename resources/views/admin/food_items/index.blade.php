@@ -57,12 +57,12 @@
 
                             <td class="text-center">
                                 <a href="{{ route('admin.restaurants.food_items.show', [$food_item->restaurant_id, 'food_item' => $food_item->slug]) }}"
-                                    class="btn btn-primary">
+                                    class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="Product's Details">
                                     <i class="fa-solid fa-magnifying-glass"></i>
                                 </a>
 
                                 <a class="btn btn-warning"
-                                    href="{{ route('admin.restaurants.food_items.edit', [$food_item->restaurant_id, 'food_item' => $food_item->slug]) }}">
+                                    href="{{ route('admin.restaurants.food_items.edit', [$food_item->restaurant_id, 'food_item' => $food_item->slug]) }}" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit Product">
                                     <i class="fa-solid fa-pencil"></i>
                                 </a>
 

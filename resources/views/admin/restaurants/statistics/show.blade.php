@@ -16,7 +16,7 @@
     <div class="row d-flex mt-5">
         
         
-        <div class="col-lg-5 col-md-12 mb-2">
+        <div class="col-lg-5 col-md-12 col-sm-12 mb-2">
             <h3> {{$restaurant->name}}</h3>
 
             <p>Total Orders: {{ $statistics->total_orders }}</p>
@@ -30,7 +30,7 @@
                 @endforeach
             </ul>
         </div>
-        <div class="col-lg-6 col-md-12">
+        <div class="col-lg-6 col-md-12 col-sm-12">
 
             <canvas id="restaurantShowChart">
 
