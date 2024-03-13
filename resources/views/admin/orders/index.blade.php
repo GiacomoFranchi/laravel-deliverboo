@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container mt-5">
-        <h2>Orders</h2>
+        <h2 class="order text-center">Orders</h2>
 
         {{-- NEW ORDER BUTTON --}}
         {{-- <div class="text-end mt-4">
@@ -19,7 +19,7 @@
         </div>
 
         {{-- FILTER FORM --}}
-         <form class="row" action="{{ route('admin.orders.index', ['restaurant_id' => $restaurantId]) }}" method="GET">
+         <form action="{{ route('admin.orders.index', ['restaurant_id' => $restaurantId]) }}" method="GET">
             <div class="mb-3">
                 <label for="restaurantFilter" class="form-label"><strong>Filter your orders by Restaurant:</strong></label>
                 <select class="form-select @error('restaurant_id') is-invalid @enderror" name="restaurant_id"
@@ -36,7 +36,7 @@
                 @enderror
             </div>
 
-            <button type="submit" class="btn btn-primary">Filter</button>
+            <button type="submit" class="btn btn-warning filter">Filter</button>
         </form> 
 
         {{-- ORDERS TABLE --}}
@@ -61,13 +61,13 @@
                             <td>{{ $order->order_time->format('Y-m-d H:i') }}</td>
                             <td>
                                 @if (count($order->food_items) > 0)
-                                    <p>{{ $order->food_items[0]->restaurant->name }}</p>
+                                    <strong><p>{{ $order->food_items[0]->restaurant->name }}</p></strong>
                                 @endif
                             </td>
                             <td>{{ $order->customers_name }}</td>
-                            <td>{{ $order->customers_email }}</td>
+                            <td><strong>{{ $order->customers_email }}</strong></td>
                             <td>{{ $order->customers_address }}</td>
-                            <td> € {{ $order->total_price }}</td>
+                            <td><strong> € {{ $order->total_price }}</strong></td>
                             <td>
                                 <a class="btn btn-success"
                                     href="{{ route('admin.orders.show', ['order' => $order->slug]) }}">

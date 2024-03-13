@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container mt-5">
-        <h2>
+        <h2 class="resta-own">
             Restaurant Menu
         </h2>
 
@@ -30,19 +30,19 @@
             <table class="table table-striped mt-5">
                 <thead>
                     <tr>
-                        <th scope="col">Dish Name</th>
-                        <th scope="col">Description</th>
-                        <th scope="col">Price</th>
-                        <th scope="col" class="text-center">Availability</th>
-                        <th scope="col" class="text-center">Actions</th>
+                        <th class="text-white" scope="col" style="background-color: rgb(47 38 38)">Dish Name</th>
+                        <th class="text-white" scope="col" style="background-color: rgb(47 38 38)">Description</th>
+                        <th class="text-white" scope="col" style="background-color: rgb(47 38 38)">Price</th>
+                        <th class="text-white" scope="col" class="text-center" style="background-color: rgb(47 38 38)">Availability</th>
+                        <th class="text-white" scope="col" class="text-center" style="background-color: rgb(47 38 38)">Actions</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach ($food_items as $food_item)
                         <tr>
-                            <td scope="row">{{ $food_item->name }}</td>
+                            <td scope="row"> <strong>{{ $food_item->name }} </strong></td>
                             <td class="w-50">{{ $food_item->description }}</td>
-                            <td>{{ $food_item->price }}€</td>
+                            <td> <strong>{{ $food_item->price }}€ <strong></td>
                             <td class="text-center">
                                 @if ($food_item->is_visible)
                                     <p class="card-subtitle mb-2 text-muted">

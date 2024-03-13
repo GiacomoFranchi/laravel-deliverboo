@@ -25,11 +25,13 @@
 </head>
 
 <body>
-    <div id="app">
+    <div id="app" style="background-color: rgb(197 170 106)">
 
-        <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-2 shadow">
+        <header class="navbar navbar-dark sticky-top flex-md-nowrap p-2 shadow" style="background-color: rgb(47 38 38)">
             <div class="row justify-content-between">
-                <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="/">DeliveBoo</a>
+                <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="/">
+                    <img class="logo" src="{{ Vite::asset("resources/images/deliveboo-logo2.svg") }}" alt="">
+            </a>
                 <button class="navbar-toggler position-absolute d-md-none collapsed" type="button"
                     data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -50,30 +52,36 @@
             </div>
         </header>
 
-        <div class="container-fluid vh-100">
+        <div class="container-fluid vh-100" >
             <div class="row h-100">
                 <!-- Definire solo parte del menu di navigazione inizialmente per poi
         aggiungere i link necessari giorno per giorno
         -->
-                <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-dark navbar-dark sidebar collapse">
+                <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block navbar-dark sidebar collapse" style="background-color: rgb(47 38 38)">
                     <div class="position-sticky pt-3">
                         <ul class="nav flex-column">
                             <li class="nav-item">
                                 <a class="nav-link text-white"
                                     href="{{ route('dashboard') }}">
-                                    <i class="fa-solid fa-tachometer-alt fa-lg fa-fw"></i> Dashboard
+                                    <i class="fa-solid fa-tachometer-alt fa-lg fa-fw" style="color: rgb(242 200 2);"></i> <strong>
+                                        Dashboard
+                                    </strong>
                                 </a>
                             </li>
                             <li>
                                 <a class="nav-link text-white"
                                 href="{{ route('admin.restaurants.index') }}">
-                                    <i class="fa-solid fa-utensils fa-lg fa-fw"></i> Restaurants
+                                    <i class="fa-solid fa-utensils fa-lg fa-fw" style="color: rgb(242 200 2);"></i> <strong>
+                                        Restaurants
+                                    </strong>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-white {{ Route::currentRouteName() == 'admin.orders.index' ? 'bg-secondary' : '' }}"
                                     href="{{ route('admin.orders.index') }}"> 
-                                    <i class="fa-solid fa-receipt fa-lg fa-fw"></i> Orders
+                                    <i class="fa-solid fa-receipt fa-lg fa-fw" style="color: rgb(242 200 2);"></i> <strong>
+                                        Orders
+                                        </strong>
                                     
                                     
                                 </a>
@@ -81,7 +89,8 @@
                             <li class="nav-item">
                                 <a class="nav-link text-white {{ Route::currentRouteName() == 'admin.restaurants.statistics.index' ? 'bg-secondary' : '' }}"
                                     href="{{ route('admin.restaurants.statistics.index') }}"> 
-                                    <i class="fa-solid fa-chart-simple ms-1" style="color: #ffffff;"></i> <span class="ms-1">Stats</span>
+                                    <i class="fa-solid fa-chart-simple ms-1" style="color: rgb(242 200 2);"></i> <span class="ms-1">
+                                        <strong>Stats</strong></span>
                                     
                                     
                                 </a>
@@ -92,7 +101,7 @@
                     </div>
                 </nav>
 
-                <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4" style="background-color: rgb(197 170 106)">
                     @yield('content')
                 </main>
             </div>
@@ -104,3 +113,4 @@
 </body>
 
 </html>
+

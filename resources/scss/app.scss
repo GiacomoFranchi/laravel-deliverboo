@@ -8,7 +8,7 @@ img {
     max-width: 30%;
     transition: transform 0.3s ease-in-out;
     &:hover {
-        transform: scale(0.95); 
+        transform: scale(0.95);
         cursor: pointer;
     }
 }
@@ -19,8 +19,8 @@ img {
     font-size: 2rem;
     padding: 12px;
     margin-top: 20px;
-    text-align:center;
-    line-height:40px;
+    text-align: center;
+    line-height: 40px;
     color: black;
 }
 
@@ -40,3 +40,111 @@ a.row {
     text-decoration: none;
     color: inherit;
 }
+
+.logo {
+    width: 70%;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+
+.navbar {
+    border-bottom: 4px solid rgb(255 193 7);
+}
+
+.hr {
+    border: 2px solid rgb(255 193 7);
+}
+
+.card {
+    border: 2px solid black;
+    box-shadow: 2.5px 3px 15px 2px rgba(0, 0, 0, 1);
+}
+
+.resta {
+    background-color: rgb(47 38 38);
+    padding: 12px;
+    border-radius: 1rem;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.table {
+    border: 2px solid black;
+    box-shadow: 2.5px 3px 15px 2px rgba(0, 0, 0, 1);
+}
+
+.badge {
+    background-color: rgb(213 195 150) !important;
+}
+
+.order {
+    background-color: rgb(47 38 38);
+    padding: 12px;
+    border-radius: 1rem;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.filter {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stat {
+    background-color: rgb(47 38 38);
+    padding: 12px;
+    border-radius: 1rem;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.bord {
+    border: 2px solid black;
+    box-shadow: 2.5px 3px 15px 2px rgba(0, 0, 0, 1);
+}
+
+.name-rest {
+    background-color: rgb(47 38 38);
+    padding: 15px;
+    border-radius: 1rem;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.border {
+    border: 2px solid black !important;
+    box-shadow: 2.5px 3px 15px 2px rgba(0, 0, 0, 1);
+}
+
+.resta-own {
+    background-color: rgb(47 38 38);
+    padding: 15px;
+    border-radius: 1rem;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+    width: 25%;
+}
+
+.tot-ord {
+    background-color: rgb(47 38 38);
+    padding: 15px;
+    border-radius: 1rem;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+    width: 20%;
+}
+
+.tot-rev {
+    background-color: rgb(47 38 38);
+    padding: 15px;
+    border-radius: 1rem;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+    width: 40%;
+}
+
+
+

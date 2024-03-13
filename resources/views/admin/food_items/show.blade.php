@@ -4,9 +4,9 @@
     <div class="container mt-5 mb-5">
         <div>
             <div>
-                <h1>Restaurant: {{$food_item->restaurant->name}}</h1>
+                <h1 class="resta text-center">Restaurant: {{$food_item->restaurant->name}}</h1>
                 {{-- Name --}}
-                <h2 class="fs-1 mb-3">Dish: {{ $food_item->name }}</h2>
+                <h2 class="fs-1 mb-3 resta-own mt-3">Dish: {{ $food_item->name }}</h2>
 
                 {{-- Controllo se esiste img --}}
                 @if ($food_item->image)

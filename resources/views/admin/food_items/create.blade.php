@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container mt-5">
-        <h2 class="text-center">Add a new dish:</h2>
+        <h2 class="text-center resta">Add a new dish:</h2>
         {{-- debug  --}}
         {{-- @if (isset($selectedRestaurant))
             <p>Id del ristorante  {{ $selectedRestaurant->id }}</p>
@@ -19,7 +19,7 @@
 
             {{-- NAME --}}
             <div class="mb-3" style="max-height: 250px">
-                <label for="name" class="form-label">Dish Name</label>
+                <label for="name" class="form-label badge text-dark p-2">Dish Name</label>
                 <input required minlength="5" maxlength="100" type="text"
                     class="form-control @error('name') is-invalid 
                 @enderror" style="max-height: 250px"
@@ -31,7 +31,7 @@
 
             {{-- IMAGE --}}
             <div class="mb-3">
-                <label for="image" class="form-label">Image: </label>
+                <label for="image" class="form-label badge text-dark p-2">Image: </label>
                 <input type="file" nullable accept="image/*" size="512" name="image" id="image"
                     class="form-control @error('image') is-invalid
                 @enderror">
@@ -42,7 +42,7 @@
 
             {{-- DESCRIPTION --}}
             <div class="mb-3">
-                <label for="description" class="form-label">Description</label>
+                <label for="description" class="form-label badge text-dark p-2">Description</label>
                 <textarea required minlength="5"
                     class="form-control @error('description') is-invalid
                     
@@ -55,7 +55,7 @@
 
             {{-- PRICE --}}
             <div class="mb-3">
-                <label for="price" class="form-label">Price</label>
+                <label for="price" class="form-label badge text-dark p-2">Price</label>
                 <div class="input-group">
                     <span class="input-group-text" id="basic-addon1">€</span>
                     <input required min="0" pattern="^\d{1,3}(\.\d{1,2})?" type="text"

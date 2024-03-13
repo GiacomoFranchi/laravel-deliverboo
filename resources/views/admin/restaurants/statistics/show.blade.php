@@ -4,27 +4,29 @@
 
 <div class="container mt-3">
     <div class="d-flex  fle-row justify-content-between">
-        <h2>
+        <h2 class="stat">
             Statistics:
         </h2>
-        <a class="btn btn-outline-secondary" href="{{ route('admin.restaurants.statistics.index') }}">
+
+        <a class="btn btn-warning" href="{{ route('admin.restaurants.statistics.index') }}">
                 <i class="fa-solid fa-arrow-left"></i> Back
         </a>
 
     </div>
         
-    <div class="row d-flex mt-5">
+    <div class="row mt-5">
         
         
         <div class="col-lg-5 col-md-12 col-sm-12 mb-2">
-            <h3> {{$restaurant->name}}</h3>
+            <h3 class="stat text-center"> {{$restaurant->name}}</h3>
 
-            <p>Total Orders: {{ $statistics->total_orders }}</p>
-            <p>Total Revenue: €{{ number_format($statistics->total_revenue, 2) }}
-            <h3>Most Ordered Foods</h3>
-            <ul class="list-group list-group-flush">
+            <p><strong>Total Orders:</strong> {{ $statistics->total_orders }}</p>
+            <p><strong>Total Revenue:</strong> €{{ number_format($statistics->total_revenue, 2) }}
+
+            <h3 class="mt-3 mb-3 stat">Most Ordered Foods</h3>
+            <ul class="list-group list-group-flush border">
                 @foreach ($mostOrderedFoods as $food)
-                    <li class="list-group-item">{{ $food->name }} - Ordered {{ $food->order_count }} times - price:
+                    <li class="list-group-item"><strong class="badge text-dark p-2">{{ $food->name }}</strong> - Ordered {{ $food->order_count }} times - price:
                         <strong> € {{ $food->price}} </strong>
                     </li>
                 @endforeach

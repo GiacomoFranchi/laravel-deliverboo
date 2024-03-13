@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container mt-5">
-        <h2 class="text-center">Edit dish:</h2>
+        <h2 class="text-center resta">Edit dish:</h2>
 
         {{-- Messaggi errore di Validazione --}}
         @if ($errors->any())
@@ -24,8 +24,8 @@
             @csrf
             @method('PUT')
             {{-- NOME PIATTO --}}
-            <div class="mb-3">
-                <label for="name" class="form-label">Plate Name:</label>
+            <div class="mb-3 mt-3">
+                <label for="name" class="form-label badge text-dark p-2">Plate Name:</label>
                 <input type="text" required minlength="5" maxlength="100"
                     class="form-control @error('name') is-invalid
                     
@@ -38,7 +38,7 @@
 
             {{-- IMMAGINE --}}
             <div class="mb-3">
-                <label for="image" class="form-label">Image of the dish:</label>
+                <label for="image" class="form-label badge text-dark p-2">Image of the dish:</label>
                 <input type="hidden" name="image_removed" id="image_removed" value="0">
                 <input type="file" nullable accept="image/*" size="512" name="image" id="image"
                     class="form-control @error('image') is-invalid
@@ -48,7 +48,7 @@
                     <div class="invalid-feedback">{{ $message }}</div>
                 @enderror
 
-                <button id="delete-img-btn" class="mt-2 btn btn-danger" type="button">Elimina</button>
+                <button id="delete-img-btn" class="mt-2 btn btn-danger" type="button">Delete</button>
             </div>
 
             <div class="m-2 mx-auto w-100">
@@ -58,7 +58,7 @@
 
             {{-- DESCRIZIONE --}}
             <div class="mb-3">
-                <label for="description" class="form-label">Plate Description:</label>
+                <label for="description" class="form-label badge text-dark p-2">Plate Description:</label>
                 <textarea required minlength="5"
                     class="form-control @error('description') is-invalid
                     
@@ -71,7 +71,7 @@
 
             {{-- PRICE --}}
             <div class="mb-3">
-                <label for="price" class="form-label">Price:</label>
+                <label for="price" class="form-label badge text-dark p-2">Price:</label>
                 <div class="input-group">
                     <span class="input-group-text" id="basic-addon1">€</span>
                     <input type="text" required min="0" pattern="^\d{1,3}(\.\d{1,2})?"
@@ -102,7 +102,7 @@
 
 
 
-            <button id="submitButton" class="btn btn-success" type="submit">Save</button>
+            <button id="submitButton" class="btn btn-success mt-3" type="submit">Save</button>
 
         </form>
 
